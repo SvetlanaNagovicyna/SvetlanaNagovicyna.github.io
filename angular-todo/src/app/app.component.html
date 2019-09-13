@@ -1,0 +1,13 @@
+
+<h1>{{title}}</h1>
+
+<input #newTaskInput type="text">
+<button (click)="add(newTaskInput.value)">add</button>
+
+<ul>
+  <task *ngFor="let item of tasks; let i = index"
+    [item]="item"
+    [tasks]="tasks"
+    [index]="i">
+  </task>
+</ul>
