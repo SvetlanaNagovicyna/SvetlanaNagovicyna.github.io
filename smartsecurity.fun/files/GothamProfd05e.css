@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('subset-GothamPro-Lightcf033.woff2') format('woff2'),
+        url('subset-GothamPro-Lightaab04.woff') format('woff'),
+        url('subset-GothamPro-Light2da3e.hxd') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('subset-GothamPro0d68f.woff2') format('woff2'),
+        url('subset-GothamPro763d0.woff') format('woff'),
+        url('subset-GothamProf11fd.hxd') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('subset-GothamPro-Mediumfb4e8.woff2') format('woff2'),
+        url('subset-GothamPro-Mediumec3e7.woff') format('woff'),
+        url('subset-GothamPro-Medium15c45.hxd') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('subset-GothamPro-Bold1504c.woff2') format('woff2'),
+        url('subset-GothamPro-Bolddc75c.woff') format('woff'),
+        url('subset-GothamPro-Boldf15e9.hxd') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
