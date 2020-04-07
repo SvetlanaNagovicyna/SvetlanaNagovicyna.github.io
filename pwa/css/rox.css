@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {   
+    background: #fff;
+    background-position: center center;      
+    background-repeat: no-repeat;      
+    background-attachment: fixed;      
+    background-size: cover;
+    margin: 0 auto; 
+    font-family: Roboto;     
+}
+
+img {
+    border-radius: 10px;
+    height: 100px;
+    
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    padding-left: 11px;
+    margin-top: 8px;
+}
+li {
+    font-size: 14px;
+}
+.header {
+    display: flex;
+    background: #2b842b;
+    border-bottom: 2px solid #1e691e;
+}
+.name p{
+    color: #fff;
+    margin: 0;
+    padding: 12px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot');
+  src:  url('../fonts/icomoon.eot') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before {
+  content: "\ea40";
+}
+
+
+.back a{
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+    color: #fff;
+    padding: 15px 25px;
+    cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.elementor-button-content-wrapper {
+    display: flex;
+    padding-top: 20px;
+}
+.wrap {
+    margin: 0 12px;
+}
+.line {
+    width: 2px;
+    height: 63px;
+    border-left: 1px solid #808080a1;
+    margin-top: 13px;
+    margin: 29px 18px 9px 29px;
+}
+.btn {
+    color: #fff;
+    background: #2b842b;
+    border-radius: 15px;
+    padding: 10px 19px;
+    font-size: 27px;
+}
+.button {
+    text-align: center;
+ /*   padding-top: 30px;*/
+}
+.discription {
+    padding-top: 5px;
+}
+.discription p{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.elementor-button-text ul {
+    list-style: unset;
+}
+.name1 {
+      font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 13px;
+    font-style: italic;
+  text-decoration: underline;
+}
+@media (max-width: 425px) {
+    body {
+        overflow-y: scroll;
+    }
+    .offer-wrap {
+      padding-bottom: 90px;
+    }
+    .button {
+      justify-content: center;
+    display: flex;
+    bottom: 32px;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+.discription {
+  padding-bottom: 7px;
+}
+    }
