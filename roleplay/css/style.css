@@ -223,6 +223,10 @@ body {
 
 
 @media screen and (min-width: 320px){
+	body {
+	background-color: #fff;
+	overflow-y: scroll;
+	}
 	.wrapper {
 		background-image: url(../img/image-3.png);
 	   background-repeat: no-repeat;
