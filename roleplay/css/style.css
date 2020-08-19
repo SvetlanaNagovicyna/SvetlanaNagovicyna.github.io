@@ -386,6 +386,10 @@ body {
 		-o-flex-direction: column;
 		flex-direction: column;
 	}
+	.main__btn-1 {
+    margin-top: 0;
+    margin-bottom: 86px;
+	}
 	.main__logo {
 		padding-bottom: 31px;
 	}
@@ -393,7 +397,7 @@ body {
 		width: 223px;
 	}
 	.main__logo-1 img{
-		width: 223px;
+		width: 164px;
 		padding-bottom: 480px;
 	}
 	.main__title {
