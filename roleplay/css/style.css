@@ -102,7 +102,7 @@ body {
 }
 .main__logo-1 img{
 	width: 164px;
-	padding-bottom: 480px;
+	padding-bottom: 440px;
 }
 .main__title {
 	font-family: Red Hat Text;
@@ -156,7 +156,7 @@ body {
 	background: linear-gradient(8deg, #C42414 19.48%, #FF7769 198.07%);
 	box-shadow: 0px 20px 30px rgba(196, 36, 20, 0.38), 0px 6px 20px rgba(161, 180, 196, 0.62), inset 0px -5px 10px #FF7769;
 }
-.popup {
+.popup, .popup-back {
 	position: absolute;
 	width: 794px;
 	height: 419px;
@@ -220,12 +220,55 @@ body {
 	color: #cb4134;
 	font-weight: 400;
 }
+#card {
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.popup-back {
+	transform: rotateY( 180deg);
+}
+#card.flipped {
+  transform: rotateY( 180deg);
+}
+#card .popup, #card .popup-back {
+  margin: 0;
+  position: absolute;
+  backface-visibility: hidden;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
 
 
 @media screen and (min-width: 320px){
+	#card {
+	  width: 100%;
+	  position: absolute;
+	  transform-style: preserve-3d;
+	  transition: transform 1s;
+	}
+	.popup-back {
+		transform: rotateY( 180deg);
+	}
+	#card.flipped {
+	  transform: rotateY( 180deg);
+	}
+	#card .popup, #card .popup-back {
+	  margin: 0;
+	  position: absolute;
+	  backface-visibility: hidden;
+	  left: 0;
+	  right: 0;
+	  margin: 0 auto;
+	}
+	.main__body{
+		perspective: 1000px;
+	}
 	body {
-	background-color: #fff;
-	overflow-y: scroll;
+		background-color: #fff;
+		overflow-y: scroll;
 	}
 	.wrapper {
 		background-image: url(../img/image-3.png);
@@ -252,6 +295,9 @@ body {
 		word-break: break-all;
 		line-height: 113px;
 	}
+	.main__title span {
+		display: block;
+	}
 	.main__logo {
 	   padding-bottom: 4px;
 	}
@@ -262,7 +308,7 @@ body {
 	   width: 181px;
 		padding-bottom: 700px;
 	}
-	.popup {
+	.popup, .popup-back {
 		display: block;
 	   padding: 34px 42px 0 35px;
 	   width: 281px;
@@ -272,10 +318,11 @@ body {
 	   right: 0;
 	}
 	.main__btn-1{
-		margin-top: 72px;
-	   margin-bottom: 86px;
+		margin-top: 62px;
+	   margin-bottom: 56px;
 	}
 	.button-1 {
+		margin: 20px 0;
 		padding: 27px 38px 26px 40px;
 	}
 	.block__left .block__left-item:last-child {
@@ -293,7 +340,7 @@ body {
 	.main__logo-1 img {
    	padding-bottom: 500px;
 	}
-	.popup {
+	.popup, .popup-back {
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -304,16 +351,19 @@ body {
 		margin: 60px auto 0;
 		padding: 61px 36px 0 47px;
 	}
+	.main__btn-1{
+		margin-top: 0;
+	   margin-bottom: 0;
+	}
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 	.main__logo-1 img {
-   	padding-bottom: 500px;
+   	padding-bottom: 460px;
 	}
 	.main__logo img {
 		padding-bottom: 46px;
 	}
-	.popup {
+	.popup, .popup-back{
 	   display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -326,6 +376,9 @@ body {
 	}
 }
 @media screen and (min-width: 1024px) {
+	body {
+		overflow-y: hidden;
+	}
 	.wrapper {
 		position: relative;
 		min-height: 100vh;
@@ -391,6 +444,7 @@ body {
 		-ms-flex-direction: column;
 		-o-flex-direction: column;
 		flex-direction: column;
+		perspective: 1000px;
 	}
 	.main__btn-1 {
     margin-top: 0;
@@ -404,7 +458,7 @@ body {
 	}
 	.main__logo-1 img{
 		width: 164px;
-		padding-bottom: 480px;
+		padding-bottom: 440px;
 	}
 	.main__title {
 		font-family: Red Hat Text;
@@ -424,7 +478,7 @@ body {
 	.button-1 {
 		padding: 27px 66px 26px 67px;
 	}
-	.popup {
+	.popup, .popup-back {
 		position: absolute;
 		width: 794px;
 		height: 419px;
@@ -487,5 +541,8 @@ body {
 	.text span {
 		color: #cb4134;
 		font-weight: 400;
+	}
+	.main__title span {
+     display: unset; 
 	}
 }
