@@ -223,22 +223,34 @@ body {
 #card {
   width: 100%;
   position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: transform 1s;
 }
 .popup-back {
-	transform: rotateY( 180deg);
+		-webkit-transform: rotateY(180deg);
+	  -ms-transform: rotateY(180deg);
+	  -o-transform: rotateY(180deg);
+	  transform: rotateY(180deg);
 }
 #card.flipped {
-  transform: rotateY( 180deg);
+ 	 -webkit-transform: rotateY(180deg);
+	  -ms-transform: rotateY(180deg);
+	  -o-transform: rotateY(180deg);
+	  transform: rotateY(180deg);
 }
 #card .popup, #card .popup-back {
-  margin: 0;
-  position: absolute;
-  backface-visibility: hidden;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+	  margin: 0;
+	  position: absolute;
+	  -webkit-backface-visibility: hidden;
+	  -ms-backface-visibility: hidden;
+	  -o-backface-visibility: hidden;
+	  backface-visibility: hidden;
+	  left: 0;
+	  right: 0;
+	  margin: 0 auto;
 }
 
 
@@ -246,24 +258,39 @@ body {
 	#card {
 	  width: 100%;
 	  position: absolute;
+	  -webkit-transform-style: preserve-3d;
+	  -ms-transform-style: preserve-3d;
+	  -o-transform-style: preserve-3d;
 	  transform-style: preserve-3d;
 	  transition: transform 1s;
 	}
 	.popup-back {
-		transform: rotateY( 180deg);
+		-webkit-transform: rotateY(180deg);
+	  -ms-transform: rotateY(180deg);
+	  -o-transform: rotateY(180deg);
+	  transform: rotateY(180deg);
 	}
 	#card.flipped {
-	  transform: rotateY( 180deg);
+	  -webkit-transform: rotateY(180deg);
+	  -ms-transform: rotateY(180deg);
+	  -o-transform: rotateY(180deg);
+	  transform: rotateY(180deg);
 	}
 	#card .popup, #card .popup-back {
 	  margin: 0;
 	  position: absolute;
+	  -webkit-backface-visibility: hidden;
+	  -ms-backface-visibility: hidden;
+	  -o-backface-visibility: hidden;
 	  backface-visibility: hidden;
 	  left: 0;
 	  right: 0;
 	  margin: 0 auto;
 	}
 	.main__body{
+		-webkit-perspective: 1000px;
+	  -ms-perspective: 1000px;
+	  -o-perspective: 1000px;
 		perspective: 1000px;
 	}
 	body {
@@ -445,6 +472,9 @@ body {
 		-o-flex-direction: column;
 		flex-direction: column;
 		perspective: 1000px;
+		-webkit-perspective: 1000px;
+	  -ms-perspective: 1000px;
+	  -o-perspective: 1000px;
 	}
 	.main__btn-1 {
     margin-top: 0;
