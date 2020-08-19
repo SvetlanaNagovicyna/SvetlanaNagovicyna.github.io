@@ -24,6 +24,7 @@ html, body {
 }
 body {
 	background-color: #fff;
+	overflow: hidden;
 }
 .wrapper {
 	position: relative;
