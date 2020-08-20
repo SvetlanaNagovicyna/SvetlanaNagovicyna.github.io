@@ -44,7 +44,7 @@ body {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	top: -100%;
+	top: -100vh;
 	left: 0;
 	-webkit-flex-direction: column;
 	-moz-flex-direction: column;
