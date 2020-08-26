@@ -156,19 +156,16 @@ body {
 	background: linear-gradient(8deg, #C42414 19.48%, #FF7769 198.07%);
 	box-shadow: 0px 20px 30px rgba(196, 36, 20, 0.38), 0px 6px 20px rgba(161, 180, 196, 0.62), inset 0px -5px 10px #FF7769;
 }
+
 .popup, .popup-back {
 	position: absolute;
 	width: 794px;
-	height: 419px;
+	height: 433px;
 	top: 111px;
 	background: #fafafa;
 	box-shadow: 0px 20px 80px rgba(190, 132, 132, 0.25);
 	border-radius: 30px;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
+	display: block;
 	justify-content: space-between;
 	-webkit-flex-wrap: nowrap;
 	-moz-flex-wrap: nowrap;
@@ -182,7 +179,25 @@ body {
 	-ms-flex-direction: row;
 	-o-flex-direction: row;
 	flex-direction: row;
-	padding: 66px 76px 73px 101px;
+	padding: 43px 76px 40px 101px;
+}
+.popup__wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.title {
+   padding-bottom: 54px;
+   font-family: Red Hat Text;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 15px;
+   line-height: 20px;
+}
+.title span{
+	color: #cb4134;
 }
 .popup__blocks {
 	flex: 1 0 50%;
@@ -230,27 +245,27 @@ body {
   transition: transform 1s;
 }
 .popup-back {
-		-webkit-transform: rotateY(180deg);
-	  -ms-transform: rotateY(180deg);
-	  -o-transform: rotateY(180deg);
-	  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 #card.flipped {
- 	 -webkit-transform: rotateY(180deg);
-	  -ms-transform: rotateY(180deg);
-	  -o-transform: rotateY(180deg);
-	  transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+   -ms-transform: rotateY(180deg);
+   -o-transform: rotateY(180deg);
+   transform: rotateY(180deg);
 }
 #card .popup, #card .popup-back {
-	  margin: 0;
-	  position: absolute;
-	  -webkit-backface-visibility: hidden;
-	  -ms-backface-visibility: hidden;
-	  -o-backface-visibility: hidden;
-	  backface-visibility: hidden;
-	  left: 0;
-	  right: 0;
-	  margin: 0 auto;
+  margin: 0;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 
@@ -339,10 +354,16 @@ body {
 		display: block;
 	   padding: 34px 42px 0 35px;
 	   width: 281px;
-		height: 723px;
+		height: 769px;
 		left: 0;
 	   margin: 20px auto 0;
 	   right: 0;
+	}
+	.popup__wrap {
+		display: block;
+	}
+	.title {
+		padding-bottom: 31px;
 	}
 	.main__btn-1{
 		margin-top: 62px;
@@ -361,6 +382,9 @@ body {
 	.main__logo img{
 		padding-bottom: 40px;
 	}
+	.popup__wrap {
+		display: block;
+	}
 }
 
 @media screen and (min-width: 768px){
@@ -368,11 +392,7 @@ body {
    	padding-bottom: 500px;
 	}
 	.popup, .popup-back {
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
+		display: block;
 		width: 700px;
 		height: 417px;
 		margin: 60px auto 0;
@@ -391,15 +411,11 @@ body {
 		padding-bottom: 46px;
 	}
 	.popup, .popup-back{
-	   display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
+		display: block;
 	   width: 794px;
-		height: 419px;
+		height: 433px;
 	   margin: 60px auto 0;
-	   padding: 66px 76px 73px 101px;
+	   padding: 43px 76px 73px 101px;
 	}
 }
 @media screen and (min-width: 1024px) {
@@ -508,19 +524,22 @@ body {
 	.button-1 {
 		padding: 27px 66px 26px 67px;
 	}
-	.popup, .popup-back {
-		position: absolute;
-		width: 794px;
-		height: 419px;
-		top: 111px;
-		background: #fafafa;
-		box-shadow: 0px 20px 80px rgba(190, 132, 132, 0.25);
-		border-radius: 30px;
+	.popup__wrap {
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
+	}
+	.popup, .popup-back {
+		position: absolute;
+		width: 794px;
+		height: 433px;
+		top: 111px;
+		background: #fafafa;
+		box-shadow: 0px 20px 80px rgba(190, 132, 132, 0.25);
+		border-radius: 30px;
+		display: block;
 		justify-content: space-between;
 		-webkit-flex-wrap: nowrap;
 		-moz-flex-wrap: nowrap;
@@ -534,7 +553,7 @@ body {
 		-ms-flex-direction: row;
 		-o-flex-direction: row;
 		flex-direction: row;
-		padding: 66px 76px 73px 101px;
+		padding: 43px 76px 40px 101px;
 	}
 	.popup__blocks {
 		flex: 1 0 50%;
