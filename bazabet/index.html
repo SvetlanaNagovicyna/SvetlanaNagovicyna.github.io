@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+	<title>Bazabet</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+</head>
+<body class="body">
+	<header class="header">
+		<div class="container">
+			<div class="header-wrap">
+	         <a class="header-wrap__logo" href="#">
+	            <img src="img/logo1.png" alt="Bazabet">
+	         </a>
+	         <div class="header-wrap__desc">
+	          	<span>Bazabet</span> – создан игроками для игроков
+	         </div>
+	         </div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="bonus">
+			<div data-offset="20" class="scene parallax"></div>
+	         <div data-offset="30" class="player1 parallax"><img src="img/player1.png" alt="player1"></div>
+	         <div data-offset="30" class="player2 parallax"><img src="img/player2.png" alt="player2"></div>
+	         <div data-offset="30" class="player3 parallax"><img src="img/player3.png" alt="player3"></div>
+	         <div data-offset="30" class="player4 parallax"><img src="img/player4.png" alt="player4"></div>
+	
+	         <div class="container">
+	         	<div class="content">
+	         		<div class="txt__row">
+	         			<div class="txt__bonus">БОНУС</div>
+	         			<div class="txt__percent" data-text="100%">100%</div>
+	         			<div class="txt__dep">На первый депозит</div>
+	         			<div class="txt__replenish">
+	         				<div class="txt__replenish-first">Пополняй счет и получай</div>
+	         				<div class="txt__replenish-second">В 2 раза больше денег</div>
+	         			</div>
+	         			<div class="btn">
+	         				<a href="#" class="getBonus">Получить бонус</a>
+	         			</div>
+	         		</div>
+	         	</div>
+	         	<div class="truck">
+	         		<img src="img/truck.png" alt="">
+	         	</div>
+	         	<div data-offset="30" class="man parallax"><img src="img/man.png" alt="man"></div>
+	         </div>
+	         
+		</section>
+		<section class="steps">
+			<div class="container">
+				<ul class="steps-list">
+					<li class="steps-list__item">
+						Регистрируйся
+						<div class="steps-list__arrow">
+							<img src="img/arrow.svg" alt="">
+							<img src="img/arrow.svg" alt="">
+							<img src="img/arrow.svg" alt="">
+						</div>
+					</li>
+					<li class="steps-list__item">
+						Пополняй счет
+						<div class="steps-list__arrow">
+							<img src="img/arrow.svg" alt="">
+							<img src="img/arrow.svg" alt="">
+							<img src="img/arrow.svg" alt="">
+						</div>
+					</li>
+					<li class="steps-list__item">
+						Получи бонус
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<ul class="features">
+				<li class="features__item">
+					<div class="features__item-wrap">
+						<div class="features__item-img">
+							<img src="img/feature-1.png" alt="" class="icon">
+						</div>
+						<div class="features__item-text">
+							Лицензия Министерства Финансов Украины
+						</div>
+					</div>
+				</li>
+				<li class="features__item">
+					<div class="features__item-wrap">
+						<img src="img/feature-2.png" alt="" class="icon">
+						<div class="features__item-text">
+							Принимаем ставки 24/7
+						</div>
+					</div>
+				</li>
+				<li class="features__item">
+					<div class="features__item-wrap">
+					<img src="img/feature-3.png" alt="" class="icon">
+						<div class="features__item-text">
+							Высокие коэффициенты
+						</div>
+					</div>
+				</li>
+				<li class="features__item">
+					<div class="features__item-wrap">
+					<img src="img/feature-4.png" alt="" class="icon">
+						<div class="features__item-text">
+							Гарантированные выплаты
+						</div>
+					</div>
+				</li>
+				<li class="features__item">
+					<div class="features__item-wrap">
+					<img src="img/feature-5.png" alt="" class="icon">
+						<div class="features__item-text">
+							Live ставки
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="payments">
+				<li class="pay">
+					<img src="img/visa.png" alt="">
+				</li>
+				<li class="pay">
+					<img src="img/mastercard.png" alt="">
+				</li>
+				<li class="pay">
+					<img src="img/privat24.png" alt="">
+				</li>
+				<li class="pay">
+					<img src="img/liqpay.png" alt="">
+				</li>
+				<li class="pay">
+					<img src="img/sofort.png" alt="">
+				</li>
+				<li class="pay">
+					<img src="img/payments-5.png" alt="">
+				</li>
+			</ul>
+			<div class="copyright">
+				Copyright © 2018 Bazabet.com.ua. Все права защищены.
+			</div>
+		</div>
+
+	</footer>
+ <script>
+<!-- 
+// $(window).on('mousemove resize', (function (e) {
+//             var w = $(window).width();
+//             var h = $(window).height();
+//             var offsetX = 0.7 - e.pageX / w;
+//             $(".parallax").each((function (i, el) {
+//                 var offset = parseInt($(el).data('offset'));
+//                 var translate = "translateX(" + Math.round(offsetX * offset) + "px";
+//                 $(el).css({
+//                     'transform': translate
+//                 });
+//             }));
+//         }));
+	</script>
+</body>
+</html>
+
