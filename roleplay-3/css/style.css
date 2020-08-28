@@ -366,7 +366,7 @@ body {
 		padding-bottom: 31px;
 	}
 	.main__btn-1{
-		margin-top: 62px;
+		margin-top: 95px;
 	   margin-bottom: 56px;
 	}
 	.button-1 {
@@ -378,7 +378,7 @@ body {
 	}
 }
 
-@media screen and (min-width: 400px) and (max-width: 500px) {
+@media screen and (min-width: 400px) and (max-width: 768px) {
 	.main__logo img{
 		padding-bottom: 40px;
 	}
@@ -423,6 +423,9 @@ body {
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
+	}
+	.main__btn-1 {
+		margin-top: 0;
 	}
 }
 @media screen and (min-width: 1024px) {
