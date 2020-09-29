@@ -1,0 +1,37 @@
+/* Пока без обнуляющих стилей, не забегаем вперед */
+.about__title,
+.about__block-title {
+   color: red;
+}
+
+.about__text a {
+   color: yellow;
+}
+
+a.second__link {
+   color: green;
+}
+
+.about__text p {
+   color: blueviolet;
+}
+
+.about__text span {
+   color: red;
+}
+
+.about__text .about__link {
+   color: yellow;
+}
+
+.about__block>p {
+   color: cyan;
+}
+
+.about__list {
+   color: fuchsia;
+}
+
+.myhomework a {
+   color: olive;
+}

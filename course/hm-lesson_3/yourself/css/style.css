@@ -1,0 +1,38 @@
+/* Пока без обнуляющих стилей, не забегаем вперед */
+.header__title,
+.main__content h2 {
+   color: green;
+}
+
+.main__title {
+   color: indigo;
+}
+
+.main__content h4 {
+   color: crimson;
+}
+
+.main__text>p {
+   color: darkgoldenrod;
+}
+
+p.main__image-title {
+   color: blue;
+}
+
+.notes,
+.main__text span {
+   color: darkmagenta;
+}
+
+.notes span {
+   color: red;
+}
+
+.footer a {
+   color: limegreen;
+}
+
+.map__list .map__item {
+   color: maroon;
+}
