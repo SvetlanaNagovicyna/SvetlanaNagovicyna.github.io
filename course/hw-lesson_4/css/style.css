@@ -96,7 +96,6 @@ body {
 
 .section__second {
    font-size: 20px;
-   text-align: center;
 }
 
 .section__second p {
@@ -110,6 +109,7 @@ body {
    color: #0400ff;
    text-shadow: 2px 3px 4px #6f0fbe;
    text-transform: uppercase;
+   text-align: center;
 }
 
 .section__list {
