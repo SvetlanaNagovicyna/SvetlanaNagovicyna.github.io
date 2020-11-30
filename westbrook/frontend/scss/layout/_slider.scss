@@ -1,0 +1,51 @@
+.slider {
+   min-width: 0;
+   display: flex;
+   // flex: 1 1 33.333%;
+   width: 120%;
+
+   &__item {
+      width: 33.333%;
+   }
+
+   .slick-slider {
+      display: flex;
+   }
+
+   .slick-arrow {
+      position: absolute;
+      top: 115%;
+      font-size: 0;
+      width: 19px;
+      height: 34px;
+      z-index: 10;
+      border: none;
+
+      &.slick-prev {
+         left: 0;
+         background: url(../img/not_main/arrow-prev.svg) 0 0 / 100% no-repeat;
+      }
+
+      &.slick-next {
+         left: 5%;
+         background: url(../img/not_main/arrow-next.svg) 0 0 / 100% no-repeat;
+      }
+   }
+
+   .slick-list {
+      overflow: hidden;
+   }
+
+   .slick-track {
+      display: flex;
+   }
+}
+
+
+// .slick-list {
+//    overflow: hidden;
+// }
+
+// .slick-track {
+//    display: flex;
+// }

@@ -1,0 +1,56 @@
+.footer {
+	z-index: 1;
+	flex: 0 0 auto;
+	position: relative;
+	width: 100%;
+	font-size: .245em;
+	padding-bottom: 3.8em;
+
+	.container {
+		max-width: 72.5vw;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.social {
+			display: flex;
+			align-items: center;
+
+			&__icon {
+				display: flex;
+
+				&--item {
+					margin: 0 1em;
+
+					img {
+						height: 100%;
+
+
+					}
+
+					&:hover {
+						color: red;
+					}
+				}
+			}
+
+		}
+
+		.menu {
+			&__list {
+				display: flex;
+
+				&--item {
+					margin: 0 .35em;
+					transition: .3s;
+
+					&:hover {
+						text-decoration: underline;
+						color: #D82020;
+					}
+				}
+			}
+		}
+	}
+}
