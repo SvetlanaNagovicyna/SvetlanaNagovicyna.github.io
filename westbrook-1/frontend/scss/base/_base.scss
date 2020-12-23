@@ -1,0 +1,21 @@
+html {
+	height: 100%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: 100%;
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	background: #ffffff;
+	overflow-x: hidden;
+	// &.modal_open{
+	// 	overflow: hidden;
+	// }
+}
+
+.arrow {
+	animation: arrow .8s alternate infinite;
+}

@@ -1,0 +1,94 @@
+// .button{
+// 	display: inline-flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	box-sizing: border-box;
+// 	border: 0.11vw solid;
+// 	border-radius: .3vw;
+// 	vertical-align: middle;
+// 	cursor: pointer;
+// 	transition: all 300ms;
+// 	&--in{
+// 		font-size: 1vw;
+// 		color: #fff;
+// 		padding: 0 2.1vw;
+// 		font-family: 'Roboto Condensed';
+// 		border-color: #fff;
+// 		&:hover{
+// 			color: #000;
+// 			background: #fff;
+// 		}
+// 	}
+// 	&--register{
+// 		font-size: 1.2vw;
+// 		padding: 0 2.1vw;
+// 		font-family: 'Roboto Condensed';
+// 		font-weight: bold;
+// 		color: #000;
+// 		background: #F8FF13;
+// 		border-color: #F8FF13;
+// 		&:hover{
+// 			background: #fff;
+// 			border-color: #fff;
+// 		}
+// 	}
+// 	&--cta{
+// 		border: none;
+// 		display: block;
+// 		width: 100%;
+// 		padding: .7em 0px;
+// 		background: #F8FF13;
+// 		color: #000;
+// 		font-family: 'Circe';
+// 		font-weight: bold;
+// 		font-style: normal;
+// 		text-transform: none;
+// 		font-size: 1.9vw;
+// 		border-radius: 0.5vw;
+// 		&:hover{
+// 			background: #fff;
+// 		}
+// 	}
+
+// }
+
+// @media (orientation: portrait) , (max-width: 500px){
+// 	.button{
+// 		border-width: 0.45vw;
+// 		border-radius: 1.7vw;
+// 		&--in{
+// 			font-size: 3.5vw;
+// 			padding: 0 4.5vw;
+// 		}
+// 		&--register{
+// 			font-size: 4.5vw;
+// 			padding: 0 4.5vw;
+// 		}
+// 		&--cta{
+// 			border: none;
+// 			// display: none;
+// 		}
+// 	}
+// 	@media (min-aspect-ratio: 570/350){
+
+
+// 	}
+// }
+
+// @media (orientation: portrait){
+// 	@media (min-width: 500px){
+// 		.button{
+// 			border-radius: 7px;
+// 			border-width: 2px;
+// 			&--in{
+// 				font-size: 20px;
+// 				padding: 0 25px;
+// 			}
+// 			&--register{
+// 				font-size: 22px;
+// 				padding: 0 25px;
+// 			}
+// 		}
+// 	}
+
+// }

@@ -1,0 +1,54 @@
+.socials{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//width: calc(33vw - 1.7vw);
+	box-sizing: border-box;
+	padding-left: 1.7vw;
+	&__item{
+		img{
+			height: 1vw;
+			margin: 0 .8vw;
+		}
+	}
+	&__18plus{
+		margin-right: auto;
+		&.desctop{
+
+		}
+		&.mob{
+			display: none;
+		}
+		img{
+			height: 1.4vw;
+		}
+	}
+}
+
+@media (orientation: portrait){
+	.socials{
+		width: 100%;
+		margin-top: 2vw;
+		justify-content: space-between;
+		&__item{
+			img{
+				height: 5.2vw;
+				margin: 0 2vw;
+				max-height: 20px;
+			}
+		}
+		&__18plus{
+			margin-right: 3vw;
+			&.desctop{
+				display: none;
+			}
+			&.mob{
+				display: block;
+			}
+			img{
+				height: auto;
+				max-height: 25px;
+			}
+		}
+	}
+}
