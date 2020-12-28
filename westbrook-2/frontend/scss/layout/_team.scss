@@ -1,0 +1,26 @@
+.team{
+    font-size: rem(16,19.2);
+    padding: em(212/2) 0 em(270);
+    position: relative;
+    &__bg{
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 48%;
+        opacity: 0;
+        transition: opacity 700ms;
+        .visible &{
+            opacity: 1;
+        }
+    }
+    @media (max-width: 768px) {
+        padding: 0;
+        &__bg{
+            position: relative;
+            top: 0;
+            transform: translateY(0);
+            width: 100%;
+        }
+    }
+}

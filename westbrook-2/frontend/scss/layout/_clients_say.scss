@@ -1,0 +1,94 @@
+.clients_say{
+    font-size: rem(16,19.2);
+    padding: em(150) 0;
+    &__wrap{
+        padding: em(80) 0 em(120);
+        overflow: hidden;
+        background: url(../img/rewiews_slider__bg.svg) right/auto 100% no-repeat;
+    }
+    .slick{
+        &-list{
+            overflow: visible;
+            margin: 0 auto;
+            max-width: calc(75vw + #{em(60)});
+            @media (max-width: 1500px) {
+            max-width: calc(90vw + #{em(60)});
+            }
+            @media (max-width: 1200px) {
+                max-width: calc(96vw + #{em(60)});
+            }
+            @media (max-width: 768px) {
+                max-width: 90vw;
+                margin: 0;
+            }
+        }
+        &-arrow{
+            // position: absolute;
+            // bottom: 0;
+            // left: 0;
+            width: em(40);
+            height: em(35);
+            border: none;
+            filter: brightness(1.01);
+            transition: filter 300ms, opacity 300ms;
+            &:hover{
+                filter: brightness(.8);
+            }
+        }
+
+        &-prev{
+            background: url(../img/ui/arrow-left--red.svg) 0 50%/auto 100% no-repeat;
+        }
+        &-next{
+            background: url(../img/ui/arrow-right--red.svg) 100% 50%/auto 100% no-repeat;
+        }
+        &-disabled{
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+    &__slide{
+        margin: 0 em(30);
+    }
+    &__img{
+        width: em(106);
+        height: em(106);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: em(70);
+        img{
+            display: block;
+        }
+    }
+    &__name{
+        color: $dark;
+        transition: color 300ms;
+        font-size: em(40);
+        font-family: 'Playfair Display';
+        font-weight: bold;
+        margin-bottom: 1em;
+        .clients_say__slide:hover &{
+            color: $red;
+        }
+    }
+    &__text-content{
+        font-size: em(25);
+    }
+    &__button{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+    @media (max-width: 500px) {
+        font-size: 10px;
+        &__wrap{
+            background-size: 50%;
+            background-position: 100% 0;
+        }
+    }
+
+        
+}

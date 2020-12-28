@@ -1,0 +1,57 @@
+.email_form{
+    max-width: em(700);
+    margin: auto;
+    background: $dark;
+    border: 1px solid #DFE9EE;
+    display: flex;
+    font-size: rem(16,19.2);
+    border-radius: em(5);
+    color: #fff;
+    &__item{
+        position: relative;
+        width: 100%;
+    }
+    &__input{
+        font-size: em(18);
+        padding: em(27,18) em(10,18) em(27,18) em(70,18);
+        width: 100%;
+        background: none;
+        border: none;
+        flex-shrink: 1;
+    }
+    &__icon{
+        position: absolute;
+        top: 50%;
+        left: em(35);
+        transform: translateY(-50%);
+        max-width: em(19);
+    }
+    &__submit{
+        font-size: em(18);
+        margin: em(8,18);
+        font-weight: bold;
+        padding: em(20) em(40);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        background: $red;
+        border: none;
+        color: #fff;
+        border-radius: em(5,18);
+        flex-shrink: 0;
+        transition: background 300ms;
+        &:hover{
+            background: darken($red,10);
+        }
+    }
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+    @media (max-width: 500px) {
+        font-size: 1.8rem;
+        max-width: 43rem;
+    
+    }
+}

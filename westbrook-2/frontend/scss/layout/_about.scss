@@ -1,0 +1,14 @@
+.about{
+    font-size: rem(16,19.2);
+    padding: em(160) 0 em(212/2);
+    .about__head{
+        position: sticky;
+        top: 1em;
+    }
+    @media (max-width: 768px) {
+        .about__head{
+            position: relative;
+            top: 0;
+        }
+    }
+}

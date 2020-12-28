@@ -1,0 +1,22 @@
+.main_text{
+    font-size: rem(18,19.2);
+    p{
+        margin-bottom: em(30,18);
+    }
+    &--big{
+        font-size: rem(25,19.2);
+        color: $red;
+        p{
+            margin-bottom: em(80,25);
+        }
+    }
+    @media (max-width: 768px) {
+        font-size: rem(16,14);
+    }
+    @media (max-width: 768px) {
+        font-size: 12px;
+        &--big{
+            font-size: 14px;
+        }
+    }
+}

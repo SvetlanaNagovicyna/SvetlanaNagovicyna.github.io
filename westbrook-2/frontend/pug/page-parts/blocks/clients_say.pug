@@ -1,0 +1,23 @@
+.clients_say#clients_say
+    .container
+        .main_head.main_head--with-image
+            | What our 
+            br
+            | clients say 
+            br
+            | about us
+            img.main_head__img.main_head__img--right(src="public/img/quote_head--bg.svg", alt="")
+    .clients_say__wrap
+        - var n = 0;
+        while n < 9
+            - n++;
+            .clients_say__slide
+                .clients_say__img
+                    img(src="public/img/slider/photo.jpg", alt="")
+                .clients_say__name Aleksey Chepalyga
+                .clients_say__text-content We offer a range of real estate services, including sales, purchases, mortgage consulting, financial services, real estate investments, property valuation, rental property management and relocation services. 
+    
+    .container
+        .clients_say__button
+            .clients_say__arrows
+            a(href="#").button.button--red View all

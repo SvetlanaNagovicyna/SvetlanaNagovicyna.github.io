@@ -1,0 +1,63 @@
+.technologies{
+    font-size: rem(16,19.2);
+    padding: em(120) 0;
+    width: 100%;
+    overflow: hidden;
+    &__wrap{
+        .main_text{
+            width: 50%;
+            margin-left: auto;
+        }
+    }
+    &__item{
+        font-family: 'Playfair Display';
+        font-weight: bold;
+        font-size: em(40);
+        margin: 2em 0;
+        transform: translateX(50%);
+        transition: transform 300ms;
+        &.visible{
+            transform: translateX(0);
+        }
+        .color{
+            color: $red;
+            display: inline;
+        }
+        span{
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    img{
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 300ms,visibility 300ms;
+        z-index: 1;
+        transform: translate(-50%,-50%);
+        max-width: 30vw;
+        &.hover{
+            opacity: 1;
+            visibility: visible;
+        }
+        @media (pointer: coarse){
+            display: none;
+        }
+    }
+    @media (max-width: 500px) {
+        &__item{
+            font-size: 18px;
+        }
+        &__wrap{
+            .main_text{
+                width: 100%;
+                margin-left: auto;
+                max-width: 400px;
+            }
+        }
+    }
+}

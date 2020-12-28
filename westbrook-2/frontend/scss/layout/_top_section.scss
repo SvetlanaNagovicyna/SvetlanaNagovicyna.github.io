@@ -1,0 +1,111 @@
+.top_section{
+    font-size: rem(16,19.2);
+    min-height: em(1120);
+    padding-top: em(40);
+    // background: url(../img/top_section__bg.svg) center bottom/100% no-repeat;
+    position: relative;
+    overflow: hidden;
+    &.visible{
+        .email_form,
+        .main_head{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    &__bg{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 700ms 500ms;
+        .visible &{
+            opacity: 1;
+        }
+    }
+    &__menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: em(60);
+        opacity: 0;
+        transform: translateY(-10%);
+        transition: opacity 700ms 300ms, transform 700ms 300ms;
+        .visible &{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &--item{
+            font-size: em(18);
+            border-radius: em(5,18);
+            padding: em(19,18) em(40,18);
+            color: $red;
+            text-decoration: underline;
+            margin: 0 em(20,18);
+            transition: color 300ms, background 300ms;
+            font-weight: 500;
+            &:hover{
+                background: #DFE9EE;
+                color: #2B3337;
+                text-decoration: none;
+            }
+        }
+    }
+    .main_head{
+        opacity: 0;
+        transform: translateY(-5%);
+        transition: opacity 700ms 600ms, transform 700ms 600ms;
+
+    }
+    &__descr{
+        text-align: center;
+        margin: auto;
+        font-size: em(25);
+        max-width: em(500,25);        
+        margin-top: em(47,25);
+        margin-bottom: em(56,25);
+        opacity: 0;
+        transform: translateY(-5%);
+        transition: opacity 700ms 900ms, transform 700ms 900ms;
+        .visible &{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .email_form{
+        opacity: 0;
+        transform: scale(.8);
+        transition: opacity 700ms 1200ms, transform 700ms 1200ms;
+    }
+    &__bottom_arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: em(80);
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity 700ms 1800ms, transform 700ms 1800ms;
+        .visible &{
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+    }
+    @media (max-width: 768px) {
+        font-size: 1.1em;
+        min-height: 60em;
+        &__menu{
+            &--item{
+                margin: 0 .6em;
+                padding: 0.6em;
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        &__menu{
+            font-size: 1.5em;
+        }
+        
+    }
+}

@@ -1,0 +1,32 @@
+.contacts{
+    font-size: rem(16,19.2);
+    padding: em(100) 0 em(120); 
+    &__item{
+        font-size: em(25);
+        margin-bottom: em(60,25);
+        color: $dark;
+        font-family: 'Roboto';
+        font-weight: normal;
+        opacity: 0;
+        transform: translateX(-10%);
+        transition: opacity 500ms, transform 500ms;
+        .visible &{
+            transform: translateX(0);
+            opacity: 1;
+        }
+        a{
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    &__head{
+        color: $red;
+    }
+    @media (max-width: 768px) {
+        font-size: rem(14,14);
+    }
+    @media (max-width: 500px) {
+        font-size: 10px;
+    }
+}

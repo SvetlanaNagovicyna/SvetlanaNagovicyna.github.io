@@ -1,0 +1,130 @@
+mixin label(name,value)
+    label.popups__form--label
+        input(type="radio" name="name" value=value)
+        span= value
+.popups
+    .popups__popup.order
+        .popups__content
+            .popups__load_line
+                span.popups__load_line--inner(style="width: 30%;")
+            .popups__scroll
+                .popups__slider
+                    .popups__slide
+                        .popups__head Find out what your house is worth
+                        .popups__descript.popups__descript--small-size We only work with best agents and this means they keep busy! We protect our agents by veryfying our clients’ contact information so we only make meaningful connections. Once you’re verified your phone number you’ll never have to do this again. 
+                        .popups__enter_code
+                            .popups__enter_code--head Enter the 4-digit code we sent to your phone number ending in (1231).
+                            form(action="/" method="POST")
+                                input(type="text")
+                                input(type="text")
+                                input(type="text")
+                                input(type="text")
+                            .popups__enter_code--not_send
+                                | Don’t get it? Click 
+                                a(href="#") here 
+                                | to resend
+                                br
+                                a(href="#") Edit phone number
+
+                    .popups__slide
+                        .popups__head What is the best way to contact you?
+                        .popups__descript You’ ll decide which agents to meet with and when.
+                        form(action="/" method="POST").popups__form
+                            input(type="email" placeholder="Email adress").popups__form--input
+                            input(type="text" placeholder="Phone").popups__form--input
+                            button.button.button--red Get Free Estimate
+
+                        .popups__descript By clicking "Generate Matches", I consent to HomeLight’s Terms of Service and Privacy Policy, and I consent to have HomeLight or one of its partners to contact me via autodialed phone calls and text messages, and prerecorded messages, on the landline or cell number I provided even if I'm on any Do-Not-Call list and even if I am charged for the call or text. I understand that my consenting is not a condition of my receiving HomeLight’s services, and that I can call 866-627-3398 for services if I do not consent.
+                   
+                    .popups__slide
+                        .popups__head See your top agents
+                        .popups__descript Our service is 100% free. Ni strings attached
+                        form(action="/" method="POST").popups__form
+                            input(type="text" placeholder="Full name").popups__form--input
+                            button.button.button--red Get Free Estimate
+
+                    .popups__slide
+                        .popups__head How did you hear about us?
+                        form(action="/" method="POST").popups__form
+                            +label('temp1',"Google ot Bing search")
+                            +label('temp1',"Social media")
+                            +label('temp1',"Television")
+                            +label('temp1',"Radio")
+                            +label('temp1',"Podcast")
+                            +label('temp1',"Mailer")
+                            +label('temp1',"Friend or Family")
+                            +label('temp1',"Other")
+
+                    .popups__slide
+                        .popups__head Are you looking to buy a property?
+                        form(action="/" method="POST").popups__form
+                            +label('temp2',"Yes")
+                            +label('temp2',"No")
+                            
+                    .popups__slide
+                        .popups__head How soon are you looking to sell
+                        form(action="/" method="POST").popups__form
+                            +label('temp3',"ASAP")
+                            +label('temp3',"1-3 months")
+                            +label('temp3',"3-6 months")
+                            +label('temp3',"6-12 months")
+                            +label('temp3',"12+ months")
+                            
+                    .popups__slide
+                        .popups__head
+                            | Roughtly, how much is your 
+                            br
+                            | home worth?
+                        form(action="/" method="POST").popups__form
+                            +label('temp4',"$100K or less")
+                            +label('temp4',"$ 100K - $200K")
+                            +label('temp4',"$200K - $450K")
+                            +label('temp4',"$450K - $800K")
+                            +label('temp4',"$800K - $1.5 M")
+                            +label('temp4',"$1.5M or more")
+                            
+                    .popups__slide
+                        .popups__head
+                            | What kind of home are you 
+                            br
+                            | looking to sell?
+                        form(action="/" method="POST").popups__form
+                            +label('temp5',"Single family")
+                            +label('temp5',"Condominium")
+                            +label('temp5',"Townhouse")
+                            +label('temp5',"Mobile home")
+                            +label('temp5',"Commercial")
+                            +label('temp5',"Vacant lot")
+                            
+                    .popups__slide
+                        .popups__head
+                            | We think this address has a unit 
+                            br
+                            | number, can you enter it here?
+                        .popups__descript Arizona Road, Limestone, Maine 04750
+
+                        .popups__map
+                            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.2326114398197!2d-67.89460808439252!3d46.93746717914608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbcc602ab7bf5a5%3A0x7cd2edf8a0257f2a!2zQXJpem9uYSBSZCwgTGltZXN0b25lLCBNRSAwNDc1MCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1609097842522!5m2!1sru!2sua' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+                        form(action="/" method="POST").popups__form
+                            input(type="text" placeholder="Enter unit number").popups__form--input
+                            .popups__form--row
+                                .button.button--grey
+                                    | No unit number
+                                button.button.button--red Submit
+                            
+                    .popups__slide
+                        .popups__head
+                            | Is this the correct address?
+                        .popups__descript With the correct address, we’ll be able to dig through our database of thousands of agents and properties sold in last 10 years in your city and figure out which one is the best for your specific property.
+
+                        .popups__map
+                            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.2326114398197!2d-67.89460808439252!3d46.93746717914608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbcc602ab7bf5a5%3A0x7cd2edf8a0257f2a!2zQXJpem9uYSBSZCwgTGltZXN0b25lLCBNRSAwNDc1MCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1609097842522!5m2!1sru!2sua' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+                        
+                        .popups__descript Arizona Road, Limestone, Maine 04750
+                        
+                        .popups__form
+                            .popups__form--row
+                                .button.button--grey
+                                    | No
+                                .button.button--red Yes
+

@@ -1,0 +1,30 @@
+.button{
+    font-size: rem(18,19.2);
+    font-weight: bold;
+    padding: em(18) em(40) em(20);
+    display: inline-block;
+    border-radius: em(5,18);
+    cursor: pointer;
+    border: none;
+    transition: background 300ms;
+    &--red{
+        color: #fff;
+        background: $red;
+        &:hover{
+            background: darken($red,10);
+        }
+    }
+    &--grey{
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        &:hover{
+            background: rgba(255, 255, 255, 0.5);
+        }
+    }
+    @media (max-width: 768px) {
+        font-size: rem(14,14);
+    }
+    @media (max-width: 500px) {
+        font-size: 12px;
+    }
+}

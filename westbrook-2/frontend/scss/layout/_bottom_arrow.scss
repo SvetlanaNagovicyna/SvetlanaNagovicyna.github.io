@@ -1,0 +1,21 @@
+.bottom_arrow{
+    font-size: rem(16,19.2);
+    max-width: em(32);
+    display: inline-block;
+    animation: arrow_down .75s ease-in-out infinite alternate;
+    &__wrap{
+        // text-align: center;
+        padding: rem(10,19.2) 0;
+    }
+    @media (max-width: 768px) {
+        &__wrap{
+            display: none;
+            padding: rem(30,19.2) 0;
+        }
+    }
+}
+@keyframes arrow_down{
+    to{
+        transform: translateY(70%);
+    }
+}
