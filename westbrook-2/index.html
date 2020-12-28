@@ -6,7 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="./public/css/style.min.css">
   </head>
-  <body class="modal_open">
+  <body>
     <div class="body-wrap">
       <header class="header">
         <div class="container">
@@ -198,7 +198,7 @@
                 <div class="contacts__head">Broker License :</div><a class="contacts__link" href="#">DRE - 02066917</a>
               </div>
             </div>
-            <form class="contacts_form">
+            <form class="contacts_form" action="/" method="POST">
               <div class="contacts_form__row">
                 <input type="text" name="name" placeholder="Name">
               </div>
@@ -232,44 +232,30 @@
       <div class="popups">
         <div class="popups__popup order">
           <div class="popups__content">
-            <div class="popups__load_line"><span class="popups__load_line--inner" style="width: 30%;"></span></div>
+            <div class="popups__load_line"><span class="popups__load_line--inner" style="width: 0%;"></span></div>
             <div class="popups__scroll">
-              <div class="popups__slider">
-                <div class="popups__slide">
-                  <div class="popups__head">Find out what your house is worth</div>
-                  <div class="popups__descript popups__descript--small-size">We only work with best agents and this means they keep busy! We protect our agents by veryfying our clients’ contact information so we only make meaningful connections. Once you’re verified your phone number you’ll never have to do this again. </div>
-                  <div class="popups__enter_code">
-                    <div class="popups__enter_code--head">Enter the 4-digit code we sent to your phone number ending in (1231).</div>
-                    <form action="/" method="POST">
-                      <input type="text">
-                      <input type="text">
-                      <input type="text">
-                      <input type="text">
-                    </form>
-                    <div class="popups__enter_code--not_send">Don’t get it? Click <a href="#">here </a>to resend<br><a href="#">Edit phone number</a></div>
-                  </div>
-                </div>
+              <form class="popups__slider" action="/" method="POST">
                 <div class="popups__slide">
                   <div class="popups__head">What is the best way to contact you?</div>
                   <div class="popups__descript">You’ ll decide which agents to meet with and when.</div>
-                  <form class="popups__form" action="/" method="POST">
+                  <div class="popups__form">
                     <input class="popups__form--input" type="email" placeholder="Email adress">
                     <input class="popups__form--input" type="text" placeholder="Phone">
-                    <button class="button button--red">Get Free Estimate</button>
-                  </form>
+                    <div class="button button--red popups__gonext">Get Free Estimate</div>
+                  </div>
                   <div class="popups__descript">By clicking "Generate Matches", I consent to HomeLight’s Terms of Service and Privacy Policy, and I consent to have HomeLight or one of its partners to contact me via autodialed phone calls and text messages, and prerecorded messages, on the landline or cell number I provided even if I'm on any Do-Not-Call list and even if I am charged for the call or text. I understand that my consenting is not a condition of my receiving HomeLight’s services, and that I can call 866-627-3398 for services if I do not consent.</div>
                 </div>
                 <div class="popups__slide">
                   <div class="popups__head">See your top agents</div>
                   <div class="popups__descript">Our service is 100% free. Ni strings attached</div>
-                  <form class="popups__form" action="/" method="POST">
+                  <div class="popups__form">
                     <input class="popups__form--input" type="text" placeholder="Full name">
-                    <button class="button button--red">Get Free Estimate</button>
-                  </form>
+                    <div class="button button--red popups__gonext">Get Free Estimate</div>
+                  </div>
                 </div>
                 <div class="popups__slide">
                   <div class="popups__head">How did you hear about us?</div>
-                  <form class="popups__form" action="/" method="POST">
+                  <div class="popups__form">
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="Google ot Bing search"><span>Google ot Bing search</span>
                           </label>
@@ -294,22 +280,22 @@
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="Other"><span>Other</span>
                           </label>
-                  </form>
+                  </div>
                 </div>
                 <div class="popups__slide">
                   <div class="popups__head">Are you looking to buy a property?</div>
-                  <form class="popups__form" action="/" method="POST">
+                  <div class="popups__form">
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="Yes"><span>Yes</span>
                           </label>
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="No"><span>No</span>
                           </label>
-                  </form>
+                  </div>
                 </div>
                 <div class="popups__slide">
                   <div class="popups__head">How soon are you looking to sell</div>
-                  <form class="popups__form" action="/" method="POST">
+                  <div class="popups__form">
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="ASAP"><span>ASAP</span>
                           </label>
@@ -325,11 +311,11 @@
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="12+ months"><span>12+ months</span>
                           </label>
-                  </form>
+                  </div>
                 </div>
                 <div class="popups__slide">
                   <div class="popups__head">Roughtly, how much is your <br>home worth?</div>
-                  <form class="popups__form" action="/" method="POST">
+                  <div class="popups__form">
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="$100K or less"><span>$100K or less</span>
                           </label>
@@ -348,11 +334,11 @@
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="$1.5M or more"><span>$1.5M or more</span>
                           </label>
-                  </form>
+                  </div>
                 </div>
                 <div class="popups__slide">
                   <div class="popups__head">What kind of home are you <br>looking to sell?</div>
-                  <form class="popups__form" action="/" method="POST">
+                  <div class="popups__form">
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="Single family"><span>Single family</span>
                           </label>
@@ -371,7 +357,7 @@
                           <label class="popups__form--label">
                             <input type="radio" name="name" value="Vacant lot"><span>Vacant lot</span>
                           </label>
-                  </form>
+                  </div>
                 </div>
                 <div class="popups__slide">
                   <div class="popups__head">We think this address has a unit <br>number, can you enter it here?</div>
@@ -379,13 +365,13 @@
                   <div class="popups__map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.2326114398197!2d-67.89460808439252!3d46.93746717914608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbcc602ab7bf5a5%3A0x7cd2edf8a0257f2a!2zQXJpem9uYSBSZCwgTGltZXN0b25lLCBNRSAwNDc1MCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1609097842522!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                   </div>
-                  <form class="popups__form" action="/" method="POST">
+                  <div class="popups__form">
                     <input class="popups__form--input" type="text" placeholder="Enter unit number">
                     <div class="popups__form--row">
-                      <div class="button button--grey">No unit number</div>
-                      <button class="button button--red">Submit</button>
+                      <div class="button button--grey popups__gonext">No unit number</div>
+                      <div class="button button--red popups__gonext popups__gonext--disable">Submit</div>
                     </div>
-                  </form>
+                  </div>
                 </div>
                 <div class="popups__slide">
                   <div class="popups__head">Is this the correct address?</div>
@@ -396,12 +382,12 @@
                   <div class="popups__descript">Arizona Road, Limestone, Maine 04750</div>
                   <div class="popups__form">
                     <div class="popups__form--row">
-                      <div class="button button--grey">No</div>
-                      <div class="button button--red">Yes</div>
+                      <div class="button button--grey popups__return">No</div>
+                      <button class="button button--red">Yes</button>
                     </div>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

@@ -13,6 +13,12 @@
         color: #fff;
         font-family: 'Roboto';
         padding: 0 5px;
+        transition: opacity 300ms, visibility 300ms;
+        &:not(.active){
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+        }
     }
     &__load_line{
         width: 100%;
@@ -35,7 +41,7 @@
     &__content{
         width: 100%;
         max-height: 100%;
-        padding: em(90) 0;
+        padding: em(80) 0 0;
         display: flex;
         margin: auto;
         // max-width: 900px;
@@ -188,6 +194,12 @@
             width: 100vw;
             margin-left: -50vw;
             height: 100%;
+        }
+    }
+    &__gonext{
+        &--disable{
+            pointer-events: none;
+            filter: brightness(.4);
         }
     }
     @media (max-width: 768px) {
