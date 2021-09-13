@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яндекс Карта</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <script
+        src="https://api-maps.yandex.ru/2.1?apikey=b5e922fa-4187-4969-b87a-8d51c7a9c9e0&load=package.full&lang=ru_RU"></script>
+    <script type="text/javascript">
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map("YMapsID", {
+                center: [55.76, 37.64],
+                zoom: 10
+            });
+            // Создаем круг.
+            var myCircle = new ymaps.Circle([
+                // Координаты центра круга.
+                [55.816541, 37.342266],
+                // Радиус круга в метрах.
+                15000
+            ], {
+                // Описываем свойства круга.
+                // Содержимое балуна.
+                balloonContent: "Красных Дима",
+                // Содержимое хинта.
+                hintContent: "Радиус круга - 15 км"
+            }, {
+                // Задаем опции круга.
+                // Включаем возможность перетаскивания круга.
+                draggable: false,
+                // Цвет заливки.
+                // Последний байт (77) определяет прозрачность.
+                // Прозрачность заливки также можно задать используя опцию "fillOpacity".
+                fillColor: "#DB709377",
+                // Цвет обводки.
+                strokeColor: "#990066",
+                // Прозрачность обводки.
+                strokeOpacity: 0.8,
+                // Ширина обводки в пикселях.
+                strokeWidth: 5
+            });
+
+            // Добавляем круг на карту.
+            myMap.geoObjects.add(myCircle);
+
+
+            // Создаем геообъект с типом геометрии "Точка".
+            myGeoObject = new ymaps.GeoObject({
+                // Описание геометрии.
+                geometry: {
+                    type: "Point",
+                    coordinates: [55.816541, 37.342266]
+                },
+                // Свойства.
+                properties: {
+                    // Контент метки.
+                    iconContent: 'Красных Дима'
+                }
+            }, {
+                // Опции.
+                // Иконка метки будет растягиваться под размер ее содержимого.
+                preset: 'islands#blackStretchyIcon',
+                // Метку можно перемещать.
+                draggable: false
+            })
+            myMap.geoObjects.add(myGeoObject);
+
+        });
+    </script>
+
+    <div id="YMapsID"></div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
