@@ -8,10 +8,10 @@ new Swiper('.top-section__slider', {
     spaceBetween: 22,
     slidesPerGroup: 1,
     loop: true,
-    // autoplay: {
-    //     delay: 1000,
-    //     disableOnInteraction: false
-    // },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
     speed: 800,
     effect: 'slide'
 });
@@ -28,10 +28,10 @@ new Swiper('.offers__slider', {
     spaceBetween: 10,
     slidesPerGroup: 1,
     loop: true,
-    // autoplay: {
-    //     delay: 1000,
-    //     disableOnInteraction: false
-    // },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
     speed: 800,
     effect: 'cube',
     grabCursor: true,
@@ -51,11 +51,11 @@ new Swiper('.reviews__slider', {
     whatchOverflow: true,
     spaceBetween: 20,
     slidesPerGroup: 1,
-    // loop: true,
-    // autoplay: {
-    //     delay: 1000,
-    //     disableOnInteraction: false
-    // },
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
     speed: 800,
     effect: 'slide'
 });
