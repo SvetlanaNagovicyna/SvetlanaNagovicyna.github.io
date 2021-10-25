@@ -29,7 +29,7 @@ new Swiper('.offers__slider', {
     slidesPerGroup: 1,
     loop: true,
     autoplay: {
-        delay: 2000,
+        delay: 3000,
         disableOnInteraction: false
     },
     speed: 800,
@@ -52,10 +52,10 @@ new Swiper('.reviews__slider', {
     spaceBetween: 20,
     slidesPerGroup: 1,
     loop: true,
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false
-    },
+    // autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false
+    // },
     speed: 800,
     effect: 'slide'
 });
