@@ -163,13 +163,13 @@ html
 							.tariffs__column.tariffs__column_1
 								.tariffs__item
 									.tariffs__price
-										span 99₽
-										sup 1700₽
+										span 1₽
+										//- sup 1700₽
 									.tariffs__label
 										.tariffs__label-subtitle 
 											span Экономия 1601 ₽
 										.tariffs__label-title 
-											span Lite + Pro аналитика
+											span "Lite + Pro кешбек"
 									.tariffs__text
 										.tariffs__text-title 
 											span Максимальный доход
@@ -179,11 +179,16 @@ html
 											br 
 											|платите позже.
 									.tariffs__select
-										select(name="days")
-											option(value="0") Первые 5 дней
-											option(value="1") Первые 5 дней
-											option(value="2") 5 дней
-											option(value="3") 14 дней
+										.select
+											.input
+												.selected
+													.days
+														span.day 3 
+														span.text дня
+													.sale
+														|Скидка 
+														span 0
+														|%
 									.tariffs__button
 										a(href="#").btn
 											span Попробовать
@@ -193,12 +198,13 @@ html
 										.tariffs__footer-list
 											ul 
 												li.tariffs__footer-item
-													span Включает все из Lite и Pro
+													span Включает в себя все из Lite и Pro
 
 							.tariffs__column.tariffs__column_2
 								.tariffs__item
 									.tariffs__price
-										span 220₽
+										span.price 290
+											| ₽
 										sup 235₽
 										.discont 
 											span -2%
@@ -206,20 +212,49 @@ html
 										.tariffs__label-subtitle 
 											span Экономия 15 ₽
 										.tariffs__label-title 
-											span Lite - аналитика
+											span Тариф "Lite"
 									.tariffs__text
 										.tariffs__text-title 
 											span Количество дней
 										.tariffs__text-subtitle 
 											span Чем больше дней подписки, тем больше общая скидка.
 									.tariffs__select
-										select(name="days")
-											option(value="0")
-												span 5 дней
-											option(value="1") 5 дней
-											option(value="2") 10 дней
-											option(value="3") 30 дней
-											option(value="4") 100 дней
+										.select
+											.input
+												.selected(onclick='page_plans_open_list(this);')
+													.days
+														span.day 3 
+														span.text дня
+													.sale
+														|Скидка 
+														span 0
+														|%
+											.list
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='1' data-plan_days='3' data-plan_days_text=' дня' data-plan_sale='0' data-plan_economy='0' data-plan_price='290₽')
+													.days 
+														span.day 3   
+														span.text дня
+													.sale Скидка 0%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='2' data-plan_days='5' data-plan_days_text=' дней' data-plan_sale='5' data-plan_economy='0' data-plan_price='563₽')
+													.days 
+														span.day 5  
+														span.text дней
+													.sale Скидка 5%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='3' data-plan_days='10' data-plan_days_text=' дней' data-plan_sale='10' data-plan_economy='0' data-plan_price='1276₽')
+													.days 
+														span.day 10  
+														span.text  дней
+													.sale Скидка 10%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='4' data-plan_days='30' data-plan_days_text=' дней' data-plan_sale='20' data-plan_economy='0' data-plan_price='2320₽')
+													.days 
+														span.day 30  
+														span.text  дней
+													.sale Скидка 20%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='5' data-plan_days='100' data-plan_days_text=' дней' data-plan_sale='50' data-plan_economy='0' data-plan_price='3205₽')
+													.days 
+														span.day 100  
+														span.text  дней
+													.sale Скидка 50%
 									.tariffs__button
 										a(href="#").btn
 											span Активировать
@@ -229,21 +264,18 @@ html
 										.tariffs__footer-list
 											ul 
 												li.tariffs__footer-item
-													span Прогнозы до 10 в день
+													span Стандартный кэшбек
 												li.tariffs__footer-item
-													span Коеффициенты от 1,3 до 3,0
+													span Актуальные новости
 												li.tariffs__footer-item
-													span Дисциплины DOTA2 и CS:GO
+													span Акции и промокоды
 												li.tariffs__footer-item
-													span Личный телеграм бот
-												li.tariffs__footer-item
-													span Live ставки
-												li.tariffs__footer-item.not
-													span Экспресс ставки
+													span Оперативная тех.поддержка
 							.tariffs__column.tariffs__column_3
 								.tariffs__item
 									.tariffs__price
-										span 1500₽
+										span.price 890
+											| ₽
 										sup 2300₽
 										.discont 
 											span -5%
@@ -251,17 +283,49 @@ html
 										.tariffs__label-subtitle 
 											span Экономия 15 ₽
 										.tariffs__label-title 
-											span Lite - аналитика
+											span Тариф "Pro"
 									.tariffs__text
 										.tariffs__text-title 
 											span Количество дней
 										.tariffs__text-subtitle 
 											span Чем больше дней подписки, тем больше общая скидка.
 									.tariffs__select
-										select(name="days")
-											option(value="0") 14 дней
-											option(value="1") 5 дней
-											option(value="2") 14 дней
+										.select
+											.input
+												.selected(onclick='page_plans_open_list(this);')
+													.days
+														span.day 3 
+														span.text дня
+													.sale
+														|Скидка 
+														span 0
+														|%
+											.list
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='6' data-plan_days='3' data-plan_days_text=' дня' data-plan_sale='0' data-plan_economy='0' data-plan_price='290₽')
+													.days 
+														span.day 3   
+														span.text дня
+													.sale Скидка 0%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='7' data-plan_days='5' data-plan_days_text=' дней' data-plan_sale='5' data-plan_economy='0' data-plan_price='563₽')
+													.days 
+														span.day 5  
+														span.text дней
+													.sale Скидка 5%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='8' data-plan_days='10' data-plan_days_text=' дней' data-plan_sale='10' data-plan_economy='0' data-plan_price='1276₽')
+													.days 
+														span.day 10  
+														span.text  дней
+													.sale Скидка 10%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='9' data-plan_days='30' data-plan_days_text=' дней' data-plan_sale='20' data-plan_economy='0' data-plan_price='2320₽')
+													.days 
+														span.day 30  
+														span.text  дней
+													.sale Скидка 20%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='10' data-plan_days='100' data-plan_days_text=' дней' data-plan_sale='50' data-plan_economy='0' data-plan_price='3205₽')
+													.days 
+														span.day 100  
+														span.text  дней
+													.sale Скидка 50%
 									.tariffs__button
 										a(href="#").btn
 											span Активировать
@@ -271,17 +335,15 @@ html
 										.tariffs__footer-list
 											ul 
 												li.tariffs__footer-item
-													span Прогнозы до 20 в день
+													span Повышенный кэшбек
 												li.tariffs__footer-item
-													span Коеффициенты от 1,3 до 10,0
+													span Актуальные новости
 												li.tariffs__footer-item
-													span Дисциплины DOTA2 и CS:GO, LoL
+													span Акции и промокоды
 												li.tariffs__footer-item
-													span Личный телеграм бот
+													span Личный telegram bot
 												li.tariffs__footer-item
-													span Live ставки
-												li.tariffs__footer-item
-													span Экспресс ставки
+													span Приоритетная тех.поддержка
 				.reviews._container
 					.reviews__title.title
 						| Отзывы 

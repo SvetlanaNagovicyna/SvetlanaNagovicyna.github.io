@@ -108,82 +108,133 @@ new Swiper('.reviews__slider', {
 
 /////////////////////////////Select
 
-var select, selElmnt, div, div2, c
-/*look for any elements with the class "custom-select":*/
-let sel = document.getElementsByClassName("tariffs__select")
+// var select, selElmnt, div, div2, c
+// /*look for any elements with the class "custom-select":*/
+// let sel = document.getElementsByClassName("tariffs__select")
 
-    for (var i = 0; i < sel.length; i++) {
+//     for (var i = 0; i < sel.length; i++) {
     
-        selElmnt = sel[i].getElementsByTagName("select")[0];
-        /*for each element, create a new DIV that will act as the selected item:*/
-        div = document.createElement("DIV");
-        div.setAttribute("class", "select-selected");
-        div.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-        sel[i].appendChild(div);
+//         selElmnt = sel[i].getElementsByTagName("select")[0];
+//         /*for each element, create a new DIV that will act as the selected item:*/
+//         div = document.createElement("DIV");
+//         div.setAttribute("class", "select-selected");
+//         // div.setAttribute("data-date", tr);
+//         div.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+//         sel[i].appendChild(div);
+//         // for (var i = 0; i < arr.length; i++) {
+//         //     sel[i].setAttribute("data-date", arr[i])
+//         // }
     
     
-        /*for each element, create a new DIV that will contain the option list:*/
-        div2 = document.createElement("DIV");
-        div2.setAttribute("class", "select-items select-hide");
-        for (let j = 1; j < selElmnt.length; j++) {
-            /*for each option in the original select element,
-            create a new DIV that will act as an option item:*/
-            c = document.createElement("DIV");
-            c.innerHTML = selElmnt.options[j].innerHTML;
-            c.addEventListener("click", function (e) {
-                /*when an item is clicked, update the original select box,
-                    and the selected item:*/
-                var y, s, h;
-                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                h = this.parentNode.previousSibling;
-                for (let i = 0; i < s.length; i++) {
-                    if (s.options[i].innerHTML == this.innerHTML) {
-                        s.selectedIndex = i;
-                        h.innerHTML = this.innerHTML;
-                        y = this.parentNode.getElementsByClassName("same-as-selected");
-                        for (let k = 0; k < y.length; k++) {
-                            y[k].removeAttribute("class");
-                        }
-                        this.setAttribute("class", "same-as-selected");
-                        break;
-                    }
-                }
-                h.click();
-            });
-            div2.appendChild(c);
-        }
-        sel[i].appendChild(div2)
+//         /*for each element, create a new DIV that will contain the option list:*/
+//         div2 = document.createElement("DIV");
+//         div2.setAttribute("class", "select-items select-hide");
+//         for (let j = 1; j < selElmnt.length; j++) {
+//             /*for each option in the original select element,
+//             create a new DIV that will act as an option item:*/
+//             c = document.createElement("DIV");
+//             // c.setAttribute("data-date", "10%");
+//             // var arr = ["0%", "10%"];
+//             c.innerHTML = selElmnt.options[j].innerHTML;
+//             // for (var i = 0; i < arr.length; i++) {
+//             //     c.setAttribute("data-date", arr[i])
+//             // };
+//             c.addEventListener("click", function (e) {
+//                 /*when an item is clicked, update the original select box,
+//                     and the selected item:*/
+//                 var y, s, h;
+//                 s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+//                 h = this.parentNode.previousSibling;
+//                 for (let i = 0; i < s.length; i++) {
+//                     if (s.options[i].innerHTML == this.innerHTML) {
+//                         s.selectedIndex = i;
+//                         h.innerHTML = this.innerHTML;
+//                         y = this.parentNode.getElementsByClassName("same-as-selected");
+//                         for (let k = 0; k < y.length; k++) {
+//                             y[k].removeAttribute("class");
+//                         }
+//                         this.setAttribute("class", "same-as-selected");
+//                         // this.setAttribute("data-date", "10%");
+//                         break;
+//                     }
+//                 }
+//                 h.click();
+//             });
+//             div2.appendChild(c);
+//         }
+//         sel[i].appendChild(div2)
     
-        div.addEventListener("click", function (e) {
-            /*when the select box is clicked, close any other select boxes,
-            and open/close the current select box:*/
-            e.stopPropagation();
-            closeAllSelect(this);
-            this.nextSibling.classList.toggle("select-hide");
-            this.classList.toggle("select-arrow-active");
-        });
+//         div.addEventListener("click", function (e) {
+//             /*when the select box is clicked, close any other select boxes,
+//             and open/close the current select box:*/
+//             e.stopPropagation();
+//             closeAllSelect(this);
+//             this.nextSibling.classList.toggle("select-hide");
+//             this.classList.toggle("select-arrow-active");
+//         });
     
-    }
+//     }
 
-    function closeAllSelect(elmnt) {
-        /*a function that will close all select boxes in the document,
-        except the current select box:*/
-        var x, y, i, arrNo = [];
-        x = document.getElementsByClassName("select-items");
-        y = document.getElementsByClassName("select-selected");
-        for (i = 0; i < y.length; i++) {
-            if (elmnt == y[i]) {
-                arrNo.push(i)
-            } else {
-                y[i].classList.remove("select-arrow-active");
-            }
-        }
-        for (i = 0; i < x.length; i++) {
-            if (arrNo.indexOf(i)) {
-                x[i].classList.add("select-hide");
-            }
-        }
+//     function closeAllSelect(elmnt) {
+//         /*a function that will close all select boxes in the document,
+//         except the current select box:*/
+//         var x, y, i, arrNo = [];
+//         x = document.getElementsByClassName("select-items");
+//         y = document.getElementsByClassName("select-selected");
+//         for (i = 0; i < y.length; i++) {
+//             if (elmnt == y[i]) {
+//                 arrNo.push(i)
+//             } else {
+//                 y[i].classList.remove("select-arrow-active");
+//             }
+//         }
+//         for (i = 0; i < x.length; i++) {
+//             if (arrNo.indexOf(i)) {
+//                 x[i].classList.add("select-hide");
+//             }
+//         }
+//     }
+//     /*if the user clicks anywhere outside the select box,
+//     then close all select boxes:*/
+//     document.addEventListener("click", closeAllSelect);
+   //// **********************
+// let elements = document.querySelectorAll('.tariffs__column_2 .select-items > div');
+// let elements2 = document.querySelectorAll('.tariffs__column_2 .select-selected');
+   
+// //    for (let elem of elements) {
+// //        if (elem.classList.contains('same-as-selected')) {
+// //            for (let elem2 of elements2) {
+// //                elem2.style.cssText('.select-selected:before{content:"5r"}')
+// //            };
+// //        };
+// //    }
+//    for (let elem of elements2) {
+//                elem.style.margin = '20px'
+   
+//        };
+ 
+    //************ */
+
+    function page_plans_open_list(e) {
+        $(e).parent().next().addClass("active");
     }
-    /*if the user clicks anywhere outside the select box,
-    then close all select boxes:*/
-    document.addEventListener("click", closeAllSelect);
+    function page_plans_list_choose(e) {
+        var plan_id = $(e).data("plan_id"),
+            plan_days = $(e).data("plan_days"),
+            plan_days_text = $(e).data("plan_days_text"),
+            plan_sale = $(e).data("plan_sale"),
+            plan_economy = $(e).data("plan_economy"),
+            plan_price = $(e).data("plan_price"),
+            btn = $(e).parent().parent().next();
+            
+        $(e).parent().parent().parent().parent().find(".tariffs__price span.price").html(plan_price);
+        $(e).parent().parent().parent().find(".economy span").html(plan_economy);
+        
+        $(e).parent().prev().find(".days span.day").html(plan_days);
+        $(e).parent().prev().find(".days span.text").html(plan_days_text);
+        $(e).parent().prev().find(".sale span").html(plan_sale);
+        
+        $(btn).data("plan_id", plan_id);
+        
+        $(e).parent().removeClass("active");
+    }
