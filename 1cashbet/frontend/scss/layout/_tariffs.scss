@@ -203,9 +203,37 @@
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
+				position: relative;
+
+				&:before {
+					content: "";
+					border-bottom: em(1) solid #afc4d266;
+					position: absolute;
+					width: 85%;
+					left: 50%;
+					bottom: 0;
+					transform: translateX(-50%);
+				}
 
 				&:hover {
-					background-color: rgba(0, 0, 0, 0.1);
+					background-color: #afc4d266;
+					border-radius: 0;
+
+					&:before {
+						border-bottom: em(1) solid transparent;
+					}
+				}
+
+				&:first-child {
+					border-radius: em(10) em(10) 0 0;
+				}
+
+				&:last-child {
+					border-radius: 0 0 em(10) em(10);
+
+					&:before {
+						border-bottom: em(1) solid transparent;
+					}
 				}
 			}
 
