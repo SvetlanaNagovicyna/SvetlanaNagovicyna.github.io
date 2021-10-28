@@ -1,3 +1,70 @@
+/* Please, don't do shit-code  */
+Element.prototype.closest || (Element.prototype.closest = function (t) {
+    for (var e = this; e;) {
+        if (e.matches(t)) return e;
+        e = e.parentElement
+    }
+    return null
+});
+
+Element.prototype.matches || (Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector);
+
+Object.assign || Object.defineProperty(Object, "assign", {
+    enumerable: !1,
+    configurable: !0,
+    writable: !0,
+    value: function (e) {
+        "use strict";
+        if (null == e) throw new TypeError("Cannot convert first argument to object");
+        for (var t = Object(e), n = 1; n < arguments.length; n++) {
+            var o = arguments[n];
+            if (null != o)
+                for (var a = Object.keys(Object(o)), c = 0, b = a.length; c < b; c++) {
+                    var i = a[c],
+                        l = Object.getOwnPropertyDescriptor(o, i);
+                    void 0 !== l && l.enumerable && (t[i] = o[i])
+                }
+        }
+        return t
+    }
+});
+
+window.NodeList && !NodeList.prototype.forEach && (NodeList.prototype.forEach = Array.prototype.forEach);
+
+function $$(e, o, t) {
+    "function" != typeof o ? o = o || document : (t = o, o = document);
+    var c = o.querySelectorAll(e);
+    return c = Array.prototype.slice.call(o.querySelectorAll(e)), "function" == typeof t && c.forEach(function (e, o, c) {
+        t(e, o, c)
+    }), c
+}
+
+function addCss(r, s) {
+    var a = function (r) {
+        Object.assign(r.style, s)
+    };
+    if (Array.isArray(r))
+        for (var n = r.length - 1; n >= 0; n--) a(r[n]);
+    else a(r)
+}
+
+function getElementIndex(e) {
+    for (var n = 0; e = e.previousElementSibling;) n++;
+    return n
+}
+
+function h_el(r) {
+    return !!(Array.isArray(r) && r.length > 0)
+}
+
+function debugging() {
+    [].forEach.call($$("*"), function (n) {
+        n.style.outline = "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16)
+    })
+}
+
+
+
 new Swiper('.top-section__slider', {
     navigation: {
         nextEl: '.swiper-button-next',
@@ -18,7 +85,7 @@ new Swiper('.top-section__slider', {
 
 
 
-new Swiper('.offers__slider', {
+let cube = new Swiper('.offers__slider', {
     navigation: {
         nextEl: '.offers__slider .swiper-button-next',
         prevEl: '.offers__slider .swiper-button-prev'
@@ -28,17 +95,18 @@ new Swiper('.offers__slider', {
     spaceBetween: 10,
     slidesPerGroup: 1,
     loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false
+    // },
     speed: 800,
     effect: 'cube',
     grabCursor: true,
         cubeEffect: {
           shadow: false,
           slideShadows: false,
-        },
+    },
+
 });
 
 
@@ -104,116 +172,16 @@ new Swiper('.reviews__slider', {
 //     }
 // });
 
-
-
-/////////////////////////////Select
-
-// var select, selElmnt, div, div2, c
-// /*look for any elements with the class "custom-select":*/
-// let sel = document.getElementsByClassName("tariffs__select")
-
-//     for (var i = 0; i < sel.length; i++) {
-    
-//         selElmnt = sel[i].getElementsByTagName("select")[0];
-//         /*for each element, create a new DIV that will act as the selected item:*/
-//         div = document.createElement("DIV");
-//         div.setAttribute("class", "select-selected");
-//         // div.setAttribute("data-date", tr);
-//         div.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-//         sel[i].appendChild(div);
-//         // for (var i = 0; i < arr.length; i++) {
-//         //     sel[i].setAttribute("data-date", arr[i])
-//         // }
-    
-    
-//         /*for each element, create a new DIV that will contain the option list:*/
-//         div2 = document.createElement("DIV");
-//         div2.setAttribute("class", "select-items select-hide");
-//         for (let j = 1; j < selElmnt.length; j++) {
-//             /*for each option in the original select element,
-//             create a new DIV that will act as an option item:*/
-//             c = document.createElement("DIV");
-//             // c.setAttribute("data-date", "10%");
-//             // var arr = ["0%", "10%"];
-//             c.innerHTML = selElmnt.options[j].innerHTML;
-//             // for (var i = 0; i < arr.length; i++) {
-//             //     c.setAttribute("data-date", arr[i])
-//             // };
-//             c.addEventListener("click", function (e) {
-//                 /*when an item is clicked, update the original select box,
-//                     and the selected item:*/
-//                 var y, s, h;
-//                 s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-//                 h = this.parentNode.previousSibling;
-//                 for (let i = 0; i < s.length; i++) {
-//                     if (s.options[i].innerHTML == this.innerHTML) {
-//                         s.selectedIndex = i;
-//                         h.innerHTML = this.innerHTML;
-//                         y = this.parentNode.getElementsByClassName("same-as-selected");
-//                         for (let k = 0; k < y.length; k++) {
-//                             y[k].removeAttribute("class");
-//                         }
-//                         this.setAttribute("class", "same-as-selected");
-//                         // this.setAttribute("data-date", "10%");
-//                         break;
-//                     }
-//                 }
-//                 h.click();
-//             });
-//             div2.appendChild(c);
-//         }
-//         sel[i].appendChild(div2)
-    
-//         div.addEventListener("click", function (e) {
-//             /*when the select box is clicked, close any other select boxes,
-//             and open/close the current select box:*/
-//             e.stopPropagation();
-//             closeAllSelect(this);
-//             this.nextSibling.classList.toggle("select-hide");
-//             this.classList.toggle("select-arrow-active");
-//         });
-    
-//     }
-
-//     function closeAllSelect(elmnt) {
-//         /*a function that will close all select boxes in the document,
-//         except the current select box:*/
-//         var x, y, i, arrNo = [];
-//         x = document.getElementsByClassName("select-items");
-//         y = document.getElementsByClassName("select-selected");
-//         for (i = 0; i < y.length; i++) {
-//             if (elmnt == y[i]) {
-//                 arrNo.push(i)
-//             } else {
-//                 y[i].classList.remove("select-arrow-active");
-//             }
-//         }
-//         for (i = 0; i < x.length; i++) {
-//             if (arrNo.indexOf(i)) {
-//                 x[i].classList.add("select-hide");
-//             }
-//         }
-//     }
-//     /*if the user clicks anywhere outside the select box,
-//     then close all select boxes:*/
-//     document.addEventListener("click", closeAllSelect);
-   //// **********************
-// let elements = document.querySelectorAll('.tariffs__column_2 .select-items > div');
-// let elements2 = document.querySelectorAll('.tariffs__column_2 .select-selected');
-   
-// //    for (let elem of elements) {
-// //        if (elem.classList.contains('same-as-selected')) {
-// //            for (let elem2 of elements2) {
-// //                elem2.style.cssText('.select-selected:before{content:"5r"}')
-// //            };
-// //        };
-// //    }
-//    for (let elem of elements2) {
-//                elem.style.margin = '20px'
-   
-//        };
+/***********Video */
+$(document).ready(function () {
+    $(".youtube-preview-cover").on("click", function () {
+        $(this).hide().after('<div style="width:101%; height:31.6em" class="embed-responsive embed-responsive-16by9">\n' +
+            '<iframe width="642" height="510" style="border-radius:15px;width:101%; height:31.6em" src="' + $(this).data('uri') + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n' +
+            '</div>');
+    });
+});
  
-    //************ */
+    //************ Select*/
 
     function page_plans_open_list(e) {
         $(e).parent().next().addClass("active");
@@ -225,10 +193,12 @@ new Swiper('.reviews__slider', {
             plan_sale = $(e).data("plan_sale"),
             plan_economy = $(e).data("plan_economy"),
             plan_price = $(e).data("plan_price"),
+            plan_discont = $(e).data("plan_discont"),
             btn = $(e).parent().parent().next();
             
         $(e).parent().parent().parent().parent().find(".tariffs__price span.price").html(plan_price);
-        $(e).parent().parent().parent().find(".economy span").html(plan_economy);
+        $(e).parent().parent().parent().parent().find(".tariffs__label-subtitle span").html(plan_economy);
+        $(e).parent().parent().parent().parent().find(".tariffs__price span.discont-count").html(plan_discont);
         
         $(e).parent().prev().find(".days span.day").html(plan_days);
         $(e).parent().prev().find(".days span.text").html(plan_days_text);
@@ -237,4 +207,83 @@ new Swiper('.reviews__slider', {
         $(btn).data("plan_id", plan_id);
         
         $(e).parent().removeClass("active");
-    }
+}
+
+
+///// radio on calculator
+    const sum = data => document.querySelector('#sum').value = data;
+
+    let $selectors = document.querySelectorAll('.block-calc__options .block-calc__options-item input[type="radio"]');
+    $selectors.forEach($radio => {
+      $radio.addEventListener('change', function() {
+        sum(this.getAttribute('data-price') + " ₽");
+      });
+    });
+
+
+
+  /////// calculator function
+
+  
+
+
+
+let inputSum = document.querySelector('#sum');
+let inputCashback = document.querySelector('#cashback');
+let footerCashback = document.querySelector('.offers__footer-cashback span');
+let sliderCashback = document.querySelector('.slider-offers__item.swiper-slide-active span.proc');
+
+// console.log(sliderCashback);
+
+cube.on('slideChangeTransitionStart', function () {
+    sliderCashback = document.querySelector('.slider-offers__item.swiper-slide-active span.proc');
+    // console.log(sliderCashback);
+    calc()
+})
+
+console.log(sliderCashback);
+
+function calc() {
+    let sliderCashbackVal = parseInt(sliderCashback.textContent);
+    console.log(sliderCashbackVal);
+    console.log(typeof (sliderCashbackVal));
+    
+    // let inputSumVal = parseInt(inputSum.value.slice(0, -2));
+    let inputSumVal = parseInt(inputSum.value);
+    console.log(inputSumVal);
+    
+
+    let procent = (inputSumVal / 100) * sliderCashbackVal;
+    console.log(procent);
+
+    inputCashback.value = procent + ' ₽';
+    footerCashback.innerHTML = procent;
+    
+};
+
+function inputBlur() {
+    $$('#sum')[0].value = $$('#sum')[0].value + " ₽";
+}
+
+inputBlur();
+calc();
+
+
+$$('#sum', el => {
+    el.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/gim, '');
+        calc();
+
+    });
+
+    el.addEventListener('focus', function () {
+        this.value = this.value.replace(/[^0-9]/gim, '');
+      
+    });
+
+    el.addEventListener('blur', function () {
+        inputBlur();
+    });
+
+})
+// calc();

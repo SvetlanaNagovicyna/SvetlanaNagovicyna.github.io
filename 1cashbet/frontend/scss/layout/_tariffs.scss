@@ -25,21 +25,27 @@
 		&_1 {
 			align-self: flex-start;
 
+
 			.tariffs__select {
 				pointer-events: none;
 
-				.select-selected {
-					&::before {
-						display: none;
-					}
-				}
+				.input {
+					background-color: rgba(0, 0, 0, 0.1);
+					border: em(1) solid rgba(26, 38, 69, 0.3);
 
-				.select-items div {
-					&::after {
+					.days {
+						color: rgba(26, 38, 69, 0.8);
+					}
+
+					&:after {
 						display: none;
 					}
 				}
 			}
+		}
+
+		&_2 {
+			align-self: flex-start;
 		}
 	}
 
@@ -66,7 +72,7 @@
 		}
 
 		sup {
-			font-weight: 500;
+			font-weight: 400;
 			font-size: em(24);
 			line-height: em(29, 24);
 			text-decoration: line-through;
@@ -90,6 +96,11 @@
 				color: #FFFFFF;
 				font-size: em(18);
 				line-height: em(22, 18);
+			}
+
+			.discont-count {
+				font-size: em(16);
+				line-height: em(22, 16);
 			}
 		}
 	}
@@ -226,6 +237,7 @@
 
 				&:first-child {
 					border-radius: em(10) em(10) 0 0;
+
 				}
 
 				&:last-child {

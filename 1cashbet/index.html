@@ -54,8 +54,11 @@
                 </div>
                 <div class="top-section__button"><a class="top-section__button-top btn" href="#"><span>Подписаться за 1₽</span></a></div>
               </div>
-              <div class="top-section__video"><a class="top-section__video-link" href="#"><img class="top-section__video-img" src="public/img/play.svg" alt="">
-                  <p class="top-section__video-text">Смотреть <span class="text-red">видео</span></p></a></div>
+              <div class="top-section__video">
+                <div class="top-section__video-link youtube-preview-cover" loading="lazy" data-uri="https://www.youtube.com/embed/vzPsAW0JaVU?autoplay=1&amp;modestbranding=1&amp;rel=0"><img class="top-section__video-img" src="public/img/play.svg" alt="">
+                  <p class="top-section__video-text">Смотреть <span class="text-red">видео</span></p>
+                </div>
+              </div>
             </div>
             <div class="top-section__company">
               <div class="top-section__title title">Букмекерские <span class="text-red">компании</span></div>
@@ -104,23 +107,23 @@
               <div class="block-calc__wrap">
                 <div class="block-calc__sum">
                   <label for="sum">Начальная сумма:</label>
-                  <input id="sum" type="text" value="500 ₽">
+                  <input id="sum" type="text" value="500">
                 </div>
                 <div class="block-calc__cashback">
                   <label for="cashback">Возможный кэшбек:</label>
-                  <input id="cashback" type="text" value="37,50 ₽">
+                  <input id="cashback" type="text" readonly value="37,50 ₽">
                 </div>
                 <div class="block-calc__options">
                   <div class="block-calc__options-item">
-                    <input class="block-calc__options-input" id="check1" checked="" name="cash" type="radio">
+                    <input class="block-calc__options-input" id="check1" checked name="cash" type="radio" data-price="500">
                     <label class="block-calc__options-label" for="check1">500₽</label>
                   </div>
                   <div class="block-calc__options-item">
-                    <input class="block-calc__options-input" id="check2" name="cash" type="radio">
+                    <input class="block-calc__options-input" id="check2" name="cash" type="radio" data-price="1500">
                     <label class="block-calc__options-label" for="check2">1500₽</label>
                   </div>
                   <div class="block-calc__options-item">
-                    <input class="block-calc__options-input" id="check3" name="cash" type="radio">
+                    <input class="block-calc__options-input" id="check3" name="cash" type="radio" data-price="5000">
                     <label class="block-calc__options-label" for="check3">5000₽</label>
                   </div>
                 </div>
@@ -135,22 +138,22 @@
                     <div class="slider-offers__item swiper-slide">
                       <div class="slider-offers__item-title"><span>1Х Ставка</span></div>
                       <div class="slider-offers__item-logo"><img src="public/img/company/1xstavka.png" alt=""></div>
-                      <div class="slider-offers__item-cashback"><span class="icon"><img src="public/img/procent.svg" alt=""></span><span class="text">Кэшбек <span class="proc">5%</span></span></div>
+                      <div class="slider-offers__item-cashback"><span class="icon"><img src="public/img/procent.svg" alt=""></span><span class="text">Кэшбек <span class="proc">5</span><span class="symbol">%</span></span></div>
                     </div>
                     <div class="slider-offers__item swiper-slide">
                       <div class="slider-offers__item-title"><span>Tennisi</span></div>
                       <div class="slider-offers__item-logo"><img src="public/img/company/tennisi.png" alt=""></div>
-                      <div class="slider-offers__item-cashback"><span class="icon"><img src="public/img/procent.svg" alt=""></span><span class="text">Кэшбек <span class="proc">8%</span></span></div>
+                      <div class="slider-offers__item-cashback"><span class="icon"><img src="public/img/procent.svg" alt=""></span><span class="text">Кэшбек <span class="proc">10</span><span class="symbol">%</span></span></div>
                     </div>
                     <div class="slider-offers__item swiper-slide">
                       <div class="slider-offers__item-title"><span>GGbet</span></div>
                       <div class="slider-offers__item-logo"><img src="public/img/company/ggbet.png" alt=""></div>
-                      <div class="slider-offers__item-cashback"><span class="icon"><img src="public/img/procent.svg" alt=""></span><span class="text">Кэшбек <span class="proc">5%</span></span></div>
+                      <div class="slider-offers__item-cashback"><span class="icon"><img src="public/img/procent.svg" alt=""></span><span class="text">Кэшбек <span class="proc">5</span><span class="symbol">%</span></span></div>
                     </div>
                     <div class="slider-offers__item swiper-slide">
                       <div class="slider-offers__item-title"><span>Tennisi</span></div>
                       <div class="slider-offers__item-logo"><img src="public/img/company/tennisi.png" alt=""></div>
-                      <div class="slider-offers__item-cashback"><span class="icon"><img src="public/img/procent.svg" alt=""></span><span class="text">Кэшбек <span class="proc">8%</span></span></div>
+                      <div class="slider-offers__item-cashback"><span class="icon"><img src="public/img/procent.svg" alt=""></span><span class="text">Кэшбек <span class="proc">8</span><span class="symbol">%</span></span></div>
                     </div>
                   </div>
                   <div class="swiper-button-prev"></div>
@@ -159,7 +162,7 @@
               </div>
               <div class="offers__footer">
                 <div class="offers__footer-title"><span>Возможный кэшбек</span></div>
-                <div class="offers__footer-cashback"><span>+37,50 ₽</span></div>
+                <div class="offers__footer-cashback">+<span>37,50</span> ₽</div>
               </div>
             </div>
           </div>
@@ -170,9 +173,9 @@
             <div class="tariffs__row">
               <div class="tariffs__column tariffs__column_1">
                 <div class="tariffs__item">
-                  <div class="tariffs__price"><span>1₽</span></div>
+                  <div class="tariffs__price"><span>1₽</span><sup>1180₽</sup></div>
                   <div class="tariffs__label">
-                    <div class="tariffs__label-subtitle"> <span>Экономия 1601 ₽</span></div>
+                    <div class="tariffs__label-subtitle"> <span>Экономия 1179 ₽</span></div>
                     <div class="tariffs__label-title"> <span>"Lite + Pro кешбек"</span></div>
                   </div>
                   <div class="tariffs__text">
@@ -184,7 +187,6 @@
                       <div class="input">
                         <div class="selected">
                           <div class="days"><span class="day">3 </span><span class="text">дня</span></div>
-                          <div class="sale">Скидка <span>0</span>%</div>
                         </div>
                       </div>
                     </div>
@@ -203,11 +205,13 @@
               <div class="tariffs__column tariffs__column_2">
                 <div class="tariffs__item">
                   <div class="tariffs__price"><span class="price">
-                      290₽</span><sup>235₽</sup>
-                    <div class="discont"> <span>-2%</span></div>
+                      290₽</span>
+                    <div class="discont"> <span>
+                         -<span class="discont-count">0</span>%</span></div>
                   </div>
                   <div class="tariffs__label">
-                    <div class="tariffs__label-subtitle"> <span>Экономия 15 ₽</span></div>
+                    <div class="tariffs__label-subtitle">
+                       Экономия<span> 0  </span> ₽</div>
                     <div class="tariffs__label-title"> <span>Тариф "Lite"</span></div>
                   </div>
                   <div class="tariffs__text">
@@ -223,23 +227,23 @@
                         </div>
                       </div>
                       <div class="list">
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="1" data-plan_days="3" data-plan_days_text=" дня" data-plan_sale="0" data-plan_economy="0" data-plan_price="290₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="1" data-plan_days="3" data-plan_days_text=" дня" data-plan_sale="0" data-plan_economy=" 0" data-plan_discont="0" data-plan_price="290₽">
                           <div class="days"> <span class="day">3   </span><span class="text">дня</span></div>
                           <div class="sale">Скидка 0%</div>
                         </div>
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="2" data-plan_days="5" data-plan_days_text=" дней" data-plan_sale="5" data-plan_economy="0" data-plan_price="563₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="2" data-plan_days="5" data-plan_days_text=" дней" data-plan_sale="5" data-plan_economy=" 23" data-plan_discont="5" data-plan_price="460₽">
                           <div class="days"> <span class="day">5  </span><span class="text">дней</span></div>
                           <div class="sale">Скидка 5%</div>
                         </div>
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="3" data-plan_days="10" data-plan_days_text=" дней" data-plan_sale="10" data-plan_economy="0" data-plan_price="1276₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="3" data-plan_days="10" data-plan_days_text=" дней" data-plan_sale="10" data-plan_economy=" 97" data-plan_discont="10" data-plan_price="870₽">
                           <div class="days"> <span class="day">10  </span><span class="text"> дней</span></div>
                           <div class="sale">Скидка 10%</div>
                         </div>
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="4" data-plan_days="30" data-plan_days_text=" дней" data-plan_sale="20" data-plan_economy="0" data-plan_price="2320₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="4" data-plan_days="30" data-plan_days_text=" дней" data-plan_sale="20" data-plan_economy=" 580" data-plan_discont="20" data-plan_price="2320₽">
                           <div class="days"> <span class="day">30  </span><span class="text"> дней</span></div>
                           <div class="sale">Скидка 20%</div>
                         </div>
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="5" data-plan_days="100" data-plan_days_text=" дней" data-plan_sale="50" data-plan_economy="0" data-plan_price="3205₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="5" data-plan_days="100" data-plan_days_text=" дней" data-plan_sale="50" data-plan_economy=" 4833" data-plan_discont="50" data-plan_price="4833₽">
                           <div class="days"> <span class="day">100  </span><span class="text"> дней</span></div>
                           <div class="sale">Скидка 50%</div>
                         </div>
@@ -255,6 +259,7 @@
                         <li class="tariffs__footer-item"><span>Актуальные новости</span></li>
                         <li class="tariffs__footer-item"><span>Акции и промокоды</span></li>
                         <li class="tariffs__footer-item"><span>Оперативная тех.поддержка</span></li>
+                        <li class="tariffs__footer-item not"><span>Экспресс ставки</span></li>
                       </ul>
                     </div>
                   </div>
@@ -263,11 +268,13 @@
               <div class="tariffs__column tariffs__column_3">
                 <div class="tariffs__item">
                   <div class="tariffs__price"><span class="price">
-                      890₽</span><sup>2300₽</sup>
-                    <div class="discont"> <span>-5%</span></div>
+                      890₽</span>
+                    <div class="discont"> <span>
+                         -<span class="discont-count">0</span>%</span></div>
                   </div>
                   <div class="tariffs__label">
-                    <div class="tariffs__label-subtitle"> <span>Экономия 15 ₽</span></div>
+                    <div class="tariffs__label-subtitle">
+                       Экономия<span> 0  </span> ₽</div>
                     <div class="tariffs__label-title"> <span>Тариф "Pro"</span></div>
                   </div>
                   <div class="tariffs__text">
@@ -283,23 +290,23 @@
                         </div>
                       </div>
                       <div class="list">
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="6" data-plan_days="3" data-plan_days_text=" дня" data-plan_sale="0" data-plan_economy="0" data-plan_price="290₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="6" data-plan_days="3" data-plan_days_text=" дня" data-plan_sale="0" data-plan_economy=" 0" data-plan_discont="0" data-plan_price="290₽">
                           <div class="days"> <span class="day">3   </span><span class="text">дня</span></div>
                           <div class="sale">Скидка 0%</div>
                         </div>
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="7" data-plan_days="5" data-plan_days_text=" дней" data-plan_sale="5" data-plan_economy="0" data-plan_price="563₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="7" data-plan_days="5" data-plan_days_text=" дней" data-plan_sale="5" data-plan_economy=" 23" data-plan_discont="5" data-plan_price="460₽">
                           <div class="days"> <span class="day">5  </span><span class="text">дней</span></div>
                           <div class="sale">Скидка 5%</div>
                         </div>
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="8" data-plan_days="10" data-plan_days_text=" дней" data-plan_sale="10" data-plan_economy="0" data-plan_price="1276₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="8" data-plan_days="10" data-plan_days_text=" дней" data-plan_sale="10" data-plan_economy=" 97" data-plan_discont="10" data-plan_price="870₽">
                           <div class="days"> <span class="day">10  </span><span class="text"> дней</span></div>
                           <div class="sale">Скидка 10%</div>
                         </div>
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="9" data-plan_days="30" data-plan_days_text=" дней" data-plan_sale="20" data-plan_economy="0" data-plan_price="2320₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="9" data-plan_days="30" data-plan_days_text=" дней" data-plan_sale="20" data-plan_economy=" 580" data-plan_discont="20" data-plan_price="2320₽">
                           <div class="days"> <span class="day">30  </span><span class="text"> дней</span></div>
                           <div class="sale">Скидка 20%</div>
                         </div>
-                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="10" data-plan_days="100" data-plan_days_text=" дней" data-plan_sale="50" data-plan_economy="0" data-plan_price="3205₽">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="10" data-plan_days="100" data-plan_days_text=" дней" data-plan_sale="50" data-plan_economy=" 4833" data-plan_discont="50" data-plan_price="4833₽">
                           <div class="days"> <span class="day">100  </span><span class="text"> дней</span></div>
                           <div class="sale">Скидка 50%</div>
                         </div>
@@ -316,6 +323,7 @@
                         <li class="tariffs__footer-item"><span>Акции и промокоды</span></li>
                         <li class="tariffs__footer-item"><span>Личный telegram bot</span></li>
                         <li class="tariffs__footer-item"><span>Приоритетная тех.поддержка</span></li>
+                        <li class="tariffs__footer-item"><span>Экспресс ставки</span></li>
                       </ul>
                     </div>
                   </div>

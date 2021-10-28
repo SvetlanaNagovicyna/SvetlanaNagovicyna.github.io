@@ -84,6 +84,14 @@
 
 		&__cashback {
 			margin-bottom: em(17);
+
+			input {
+
+				&:focus {
+					outline: none;
+					border: em(1, 24) solid rgba(126, 175, 209, 0.23);
+				}
+			}
 		}
 
 		&__options {
@@ -247,7 +255,8 @@
 						margin-right: em(6, 24);
 					}
 
-					.proc {
+					.proc,
+					.symbol {
 						font-weight: 700;
 					}
 				}

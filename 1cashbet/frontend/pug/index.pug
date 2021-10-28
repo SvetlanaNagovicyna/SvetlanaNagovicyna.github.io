@@ -31,7 +31,7 @@ html
 										span Подписаться за 1₽
 
 							.top-section__video
-								a.top-section__video-link(href="#")
+								.top-section__video-link.youtube-preview-cover(loading='lazy' data-uri='https://www.youtube.com/embed/vzPsAW0JaVU?autoplay=1&modestbranding=1&rel=0')
 									img.top-section__video-img(src="public/img/play.svg", alt="")
 									p.top-section__video-text
 										|Смотреть 
@@ -84,19 +84,19 @@ html
 							.block-calc__wrap
 								.block-calc__sum
 									label(for="sum") Начальная сумма:
-									input#sum(type="text" value="500 ₽")
+									input#sum(type="text" value="500")
 								.block-calc__cashback
 									label(for="cashback") Возможный кэшбек:
-									input#cashback(type="text" value="37,50 ₽")
+									input#cashback(type="text" readonly value="37,50 ₽")
 								.block-calc__options
 									.block-calc__options-item
-										input#check1.block-calc__options-input(checked='' name='cash' type="radio")
+										input#check1.block-calc__options-input(checked name='cash' type="radio" data-price="500")
 										label.block-calc__options-label(for="check1") 500₽
 									.block-calc__options-item
-										input#check2.block-calc__options-input(name='cash' type="radio") 
+										input#check2.block-calc__options-input(name='cash' type="radio" data-price="1500") 
 										label.block-calc__options-label(for="check2") 1500₽
 									.block-calc__options-item
-										input#check3.block-calc__options-input(name='cash' type="radio") 
+										input#check3.block-calc__options-input(name='cash' type="radio" data-price="5000") 
 										label.block-calc__options-label(for="check3") 5000₽
 								.block-calc__button
 									a(href="#").btn
@@ -116,7 +116,8 @@ html
 												span.icon
 													img(src="public/img/procent.svg", alt="")
 												span.text Кэшбек 
-													span.proc 5%
+													span.proc 5
+													span.symbol %
 										.slider-offers__item.swiper-slide
 											.slider-offers__item-title
 												span Tennisi
@@ -126,7 +127,8 @@ html
 												span.icon
 													img(src="public/img/procent.svg", alt="")
 												span.text Кэшбек 
-													span.proc 8%
+													span.proc 10
+													span.symbol %
 										.slider-offers__item.swiper-slide
 											.slider-offers__item-title
 												span GGbet
@@ -136,7 +138,8 @@ html
 												span.icon
 													img(src="public/img/procent.svg", alt="")
 												span.text Кэшбек 
-													span.proc 5%
+													span.proc 5
+													span.symbol %
 										.slider-offers__item.swiper-slide
 											.slider-offers__item-title
 												span Tennisi
@@ -146,14 +149,17 @@ html
 												span.icon
 													img(src="public/img/procent.svg", alt="")
 												span.text Кэшбек 
-													span.proc 8%
+													span.proc 8
+													span.symbol %
 									.swiper-button-prev
 									.swiper-button-next
 							.offers__footer
 								.offers__footer-title
 									span Возможный кэшбек
 								.offers__footer-cashback
-									span +37,50 ₽
+									|+
+									span 37,50
+									|  ₽
 				.tariffs._container
 					.tariffs__title.title
 						| Наши 
@@ -164,10 +170,10 @@ html
 								.tariffs__item
 									.tariffs__price
 										span 1₽
-										//- sup 1700₽
+										sup 1180₽
 									.tariffs__label
 										.tariffs__label-subtitle 
-											span Экономия 1601 ₽
+											span Экономия 1179 ₽
 										.tariffs__label-title 
 											span "Lite + Pro кешбек"
 									.tariffs__text
@@ -185,10 +191,6 @@ html
 													.days
 														span.day 3 
 														span.text дня
-													.sale
-														|Скидка 
-														span 0
-														|%
 									.tariffs__button
 										a(href="#").btn
 											span Попробовать
@@ -205,12 +207,16 @@ html
 									.tariffs__price
 										span.price 290
 											| ₽
-										sup 235₽
 										.discont 
-											span -2%
+											span 
+												|-
+												span.discont-count 0
+												|%
 									.tariffs__label
 										.tariffs__label-subtitle 
-											span Экономия 15 ₽
+											| Экономия
+											span  0  
+											|  ₽
 										.tariffs__label-title 
 											span Тариф "Lite"
 									.tariffs__text
@@ -230,27 +236,27 @@ html
 														span 0
 														|%
 											.list
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='1' data-plan_days='3' data-plan_days_text=' дня' data-plan_sale='0' data-plan_economy='0' data-plan_price='290₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='1' data-plan_days='3' data-plan_days_text=' дня' data-plan_sale='0' data-plan_economy=' 0' data-plan_discont='0' data-plan_price='290₽')
 													.days 
 														span.day 3   
 														span.text дня
 													.sale Скидка 0%
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='2' data-plan_days='5' data-plan_days_text=' дней' data-plan_sale='5' data-plan_economy='0' data-plan_price='563₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='2' data-plan_days='5' data-plan_days_text=' дней' data-plan_sale='5' data-plan_economy=' 23' data-plan_discont='5' data-plan_price='460₽')
 													.days 
 														span.day 5  
 														span.text дней
 													.sale Скидка 5%
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='3' data-plan_days='10' data-plan_days_text=' дней' data-plan_sale='10' data-plan_economy='0' data-plan_price='1276₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='3' data-plan_days='10' data-plan_days_text=' дней' data-plan_sale='10' data-plan_economy=' 97' data-plan_discont='10' data-plan_price='870₽')
 													.days 
 														span.day 10  
 														span.text  дней
 													.sale Скидка 10%
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='4' data-plan_days='30' data-plan_days_text=' дней' data-plan_sale='20' data-plan_economy='0' data-plan_price='2320₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='4' data-plan_days='30' data-plan_days_text=' дней' data-plan_sale='20' data-plan_economy=' 580' data-plan_discont='20' data-plan_price='2320₽')
 													.days 
 														span.day 30  
 														span.text  дней
 													.sale Скидка 20%
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='5' data-plan_days='100' data-plan_days_text=' дней' data-plan_sale='50' data-plan_economy='0' data-plan_price='3205₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='5' data-plan_days='100' data-plan_days_text=' дней' data-plan_sale='50' data-plan_economy=' 4833' data-plan_discont='50' data-plan_price='4833₽')
 													.days 
 														span.day 100  
 														span.text  дней
@@ -271,17 +277,23 @@ html
 													span Акции и промокоды
 												li.tariffs__footer-item
 													span Оперативная тех.поддержка
+												li.tariffs__footer-item.not
+													span Экспресс ставки
 							.tariffs__column.tariffs__column_3
 								.tariffs__item
 									.tariffs__price
 										span.price 890
 											| ₽
-										sup 2300₽
 										.discont 
-											span -5%
+											span 
+												|-
+												span.discont-count 0
+												|%
 									.tariffs__label
 										.tariffs__label-subtitle 
-											span Экономия 15 ₽
+											| Экономия
+											span  0  
+											|  ₽
 										.tariffs__label-title 
 											span Тариф "Pro"
 									.tariffs__text
@@ -301,27 +313,27 @@ html
 														span 0
 														|%
 											.list
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='6' data-plan_days='3' data-plan_days_text=' дня' data-plan_sale='0' data-plan_economy='0' data-plan_price='290₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='6' data-plan_days='3' data-plan_days_text=' дня' data-plan_sale='0' data-plan_economy=' 0' data-plan_discont='0' data-plan_price='290₽')
 													.days 
 														span.day 3   
 														span.text дня
 													.sale Скидка 0%
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='7' data-plan_days='5' data-plan_days_text=' дней' data-plan_sale='5' data-plan_economy='0' data-plan_price='563₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='7' data-plan_days='5' data-plan_days_text=' дней' data-plan_sale='5' data-plan_economy=' 23' data-plan_discont='5' data-plan_price='460₽')
 													.days 
 														span.day 5  
 														span.text дней
 													.sale Скидка 5%
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='8' data-plan_days='10' data-plan_days_text=' дней' data-plan_sale='10' data-plan_economy='0' data-plan_price='1276₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='8' data-plan_days='10' data-plan_days_text=' дней' data-plan_sale='10' data-plan_economy=' 97' data-plan_discont='10' data-plan_price='870₽')
 													.days 
 														span.day 10  
 														span.text  дней
 													.sale Скидка 10%
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='9' data-plan_days='30' data-plan_days_text=' дней' data-plan_sale='20' data-plan_economy='0' data-plan_price='2320₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='9' data-plan_days='30' data-plan_days_text=' дней' data-plan_sale='20' data-plan_economy=' 580' data-plan_discont='20' data-plan_price='2320₽')
 													.days 
 														span.day 30  
 														span.text  дней
 													.sale Скидка 20%
-												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='10' data-plan_days='100' data-plan_days_text=' дней' data-plan_sale='50' data-plan_economy='0' data-plan_price='3205₽')
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='10' data-plan_days='100' data-plan_days_text=' дней' data-plan_sale='50' data-plan_economy=' 4833' data-plan_discont='50' data-plan_price='4833₽')
 													.days 
 														span.day 100  
 														span.text  дней
@@ -344,6 +356,8 @@ html
 													span Личный telegram bot
 												li.tariffs__footer-item
 													span Приоритетная тех.поддержка
+												li.tariffs__footer-item
+													span Экспресс ставки
 				.reviews._container
 					.reviews__title.title
 						| Отзывы 
