@@ -217,12 +217,12 @@ function radio() {
     let $selectors = document.querySelectorAll('.block-calc__options .block-calc__options-item input[type="radio"]');
     $selectors.forEach($radio => {
         $radio.addEventListener('change', function () {
+            sum(this.getAttribute('data-price') + " ₽");
             calc();
-        sum(this.getAttribute('data-price') + " ₽");
       });
     });
 }
-radio()
+radio();
 
   /////// calculator function
 
@@ -240,13 +240,13 @@ let sliderCashback = document.querySelector('.slider-offers__item.swiper-slide-a
 cube.on('slideChangeTransitionStart', function () {
     sliderCashback = document.querySelector('.slider-offers__item.swiper-slide-active span.proc');
     // console.log(sliderCashback);
-    calc()
+    calc();
 })
 
 console.log(sliderCashback);
 
 function calc() {
-
+  
     let sliderCashbackVal = parseInt(sliderCashback.textContent);
     console.log(sliderCashbackVal);
     console.log(typeof (sliderCashbackVal));
