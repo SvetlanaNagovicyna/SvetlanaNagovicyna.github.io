@@ -224,6 +224,13 @@ function radio() {
 }
 radio();
 
+function radio2() {
+
+let $selectors2 = document.querySelectorAll('.block-calc__options .block-calc__options-item input[type="radio"]');
+$selectors2.forEach($radio2 => {
+    $radio2.checked = false;
+});
+}
   /////// calculator function
 
   
@@ -245,14 +252,21 @@ cube.on('slideChangeTransitionStart', function () {
 
 console.log(sliderCashback);
 
+
+function inputValue(inputVal) {
+    let inputSumVal = inputSum.value === '' ? 0 : parseInt(inputSum.value);
+    return inputSumVal;
+}
+
+
+
 function calc() {
   
     let sliderCashbackVal = parseInt(sliderCashback.textContent);
     console.log(sliderCashbackVal);
     console.log(typeof (sliderCashbackVal));
     
-    // let inputSumVal = parseInt(inputSum.value.slice(0, -2));
-    let inputSumVal = parseInt(inputSum.value);
+    let inputSumVal = inputSum.value === '' ? 0 : parseInt(inputSum.value);
     console.log(inputSumVal);
     
 
@@ -262,11 +276,13 @@ function calc() {
     inputCashback.value = procent + ' ₽';
     footerCashback.innerHTML = procent;
 
-    
+
 };
 
 function inputBlur() {
-    $$('#sum')[0].value = $$('#sum')[0].value + " ₽";
+    // $$('#sum')[0].value !== '' ?  $$('#sum')[0].value + " ₽" : 0 + " ₽";
+    $$('#sum')[0].value = inputValue($$('#sum')[0].value) + " ₽";
+    // inputSum.value === '' ? 0 + "1" : parseInt(inputSum.value);
 }
 
 inputBlur();
@@ -275,13 +291,13 @@ calc();
 
 $$('#sum', el => {
     el.addEventListener('input', function () {
-        this.value = this.value.replace(/[^0-9]/gim, '');
+        this.value = this.value.replace(/[^0-9]/gim, '', /\d/);
         calc();
     });
 
     el.addEventListener('focus', function () {
-        this.value = this.value.replace(/[^0-9]/gim, '');
-      
+        this.value = this.value.replace(/[^0-9]/gim, '', /\d/);
+        radio2();
     });
 
     el.addEventListener('blur', function () {
