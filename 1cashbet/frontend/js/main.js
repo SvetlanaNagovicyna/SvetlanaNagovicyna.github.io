@@ -211,16 +211,18 @@ $(document).ready(function () {
 
 
 ///// radio on calculator
+function radio() {
     const sum = data => document.querySelector('#sum').value = data;
 
     let $selectors = document.querySelectorAll('.block-calc__options .block-calc__options-item input[type="radio"]');
     $selectors.forEach($radio => {
-      $radio.addEventListener('change', function() {
+        $radio.addEventListener('change', function () {
+            calc();
         sum(this.getAttribute('data-price') + " ₽");
       });
     });
-
-
+}
+radio()
 
   /////// calculator function
 
@@ -244,6 +246,7 @@ cube.on('slideChangeTransitionStart', function () {
 console.log(sliderCashback);
 
 function calc() {
+
     let sliderCashbackVal = parseInt(sliderCashback.textContent);
     console.log(sliderCashbackVal);
     console.log(typeof (sliderCashbackVal));
@@ -258,6 +261,7 @@ function calc() {
 
     inputCashback.value = procent + ' ₽';
     footerCashback.innerHTML = procent;
+
     
 };
 
@@ -273,7 +277,6 @@ $$('#sum', el => {
     el.addEventListener('input', function () {
         this.value = this.value.replace(/[^0-9]/gim, '');
         calc();
-
     });
 
     el.addEventListener('focus', function () {
