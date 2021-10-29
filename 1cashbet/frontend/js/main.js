@@ -74,13 +74,55 @@ new Swiper('.top-section__slider', {
     whatchOverflow: true,
     spaceBetween: 22,
     slidesPerGroup: 1,
+
+    slidesPerColumnFill: 'row',
     loop: true,
     autoplay: {
         delay: 2000,
         disableOnInteraction: false
     },
     speed: 800,
-    effect: 'slide'
+    effect: 'slide',
+    breakpoints: {
+        320: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            slidesPerColumnFill: 'column',
+            autoHeight: false,
+            loop: false,
+            autoplay: false,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true
+            }   
+        },
+        550: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+        },
+
+       768: {
+            slidesPerView: 5,
+            spaceBetween: 16
+        },
+        991: {
+            slidesPerView: 5,
+            spaceBetween: 16
+        },
+        1100: {
+            slidesPerView: 6,
+            spaceBetween: 16
+        },
+        1200: {
+            slidesPerView: 6,
+            spaceBetween: 18
+        },
+        // when window width is >= 640px
+        1440: {
+            slidesPerView: 6,
+            spaceBetween: 20
+        }
+    }
 });
 
 
@@ -95,10 +137,6 @@ let cube = new Swiper('.offers__slider', {
     spaceBetween: 10,
     slidesPerGroup: 1,
     loop: true,
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false
-    // },
     speed: 800,
     effect: 'cube',
     grabCursor: true,
@@ -106,6 +144,20 @@ let cube = new Swiper('.offers__slider', {
           shadow: false,
           slideShadows: false,
     },
+    breakpoints: {
+        320: {
+            spaceBetween: 0,
+            slidesPerGroup: 1,
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            //     draggable: true
+            // },
+        },
+        550: {
+            spaceBetween: 10,
+            slidesPerGroup: 1,
+        },
+    }
 
 });
 
@@ -125,7 +177,44 @@ new Swiper('.reviews__slider', {
     //     disableOnInteraction: false
     // },
     speed: 800,
-    effect: 'slide'
+    effect: 'slide',
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true
+            },
+            loop: false,
+        },
+        550: {
+            slidesPerView: 3,
+            spaceBetween: 10
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 10
+        },
+        991: {
+            slidesPerView: 3,
+            spaceBetween: 10
+        },
+        1100: {
+            slidesPerView: 3,
+            spaceBetween: 16
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 18
+        },
+        // when window width is >= 640px
+        1440: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
+    }
 });
 // new Swiper('.reviews__slider', {
 //     navigation: {
@@ -176,7 +265,7 @@ new Swiper('.reviews__slider', {
 $(document).ready(function () {
     $(".youtube-preview-cover").on("click", function () {
         $(this).hide().after('<div style="width:101%; height:31.6em" class="embed-responsive embed-responsive-16by9">\n' +
-            '<iframe width="642" height="510" style="border-radius:15px;width:101%; height:31.6em" src="' + $(this).data('uri') + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n' +
+            '<iframe width="642" height="510" class="iframe-video" src="' + $(this).data('uri') + '" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n' +
             '</div>');
     });
 });

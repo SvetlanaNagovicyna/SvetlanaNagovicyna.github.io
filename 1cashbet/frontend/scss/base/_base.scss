@@ -2,10 +2,40 @@ html {
   // font-size: 1.111111vw;
   font-size: 16px;
   height: 100%;
+
+  @media(min-width:1500px) {
+    font-size: 1.111111vw;
+  }
+
+  @media(max-width:1350px) {
+    font-size: 15px;
+  }
+
+  @media(max-width:1300px) {
+    font-size: 14px;
+  }
+
+  @media(max-width:1200px) {
+    font-size: 13px;
+  }
+
+  @media(max-width:1100px) {
+    font-size: 12px;
+  }
+
+  @media(max-width:992px) {
+    font-size: 9px;
+  }
+
+  @media(max-width:768px) {
+    font-size: 6.8px;
+  }
 }
-svg { 
+
+svg {
   width: 100%;
 }
+
 img {
   display: block;
   width: 100%;
@@ -42,8 +72,8 @@ body {
   margin: 0 auto;
   width: 100%;
 
-  @media (max-width:1024px) {
-    max-width: 100%;
+  @media (max-width:551px) {
+    max-width: 37.5em;
   }
 }
 
@@ -54,10 +84,17 @@ body {
 }
 
 .title {
-    font-weight: 500;
-    font-size: em(36.7);
-    line-height: em(44, 36.7);
-    color: #F5FBFF;
+  font-weight: 500;
+  font-size: em(36.7);
+  line-height: em(44, 36.7);
+  color: #F5FBFF;
+
+  @media (max-width:551px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4em;
+  }
 }
 
 .modal_content.modal-mob {

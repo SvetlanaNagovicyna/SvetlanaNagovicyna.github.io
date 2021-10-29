@@ -91,4 +91,77 @@
 			}
 		}
 	}
+
+	@media (max-width: 551px) {
+		background-color: #080F20;
+		padding: 2.625em 0 0.625em;
+
+		&__content {
+			&._container {
+				max-width: 32.2em;
+			}
+		}
+
+		&__description {
+			flex-direction: column;
+			align-items: flex-start;
+			border: none;
+
+			&-logo {
+				width: 9em;
+				margin-bottom: 1.5em;
+			}
+
+			&-slogan {
+				font-size: 1.2em;
+			}
+		}
+
+		&__body {
+			flex-direction: column;
+			align-items: center;
+			font-size: 1.5875em;
+			margin-top: 0.8875em;
+		}
+
+		&__wrap {
+			flex-wrap: wrap;
+			width: 100%;
+			flex-direction: column;
+			font-size: .8em;
+
+		}
+
+		&__column {
+			flex: 0 1 50%;
+			padding: 0;
+
+			&:nth-child(2) {
+				margin-top: 0;
+
+				.footer__list {
+					margin-left: 0;
+
+				}
+			}
+
+			&:nth-child(4) {
+				margin-top: -1.7em;
+			}
+
+		}
+
+		&__list {
+			li {
+				margin-bottom: 1em;
+			}
+		}
+
+		.payments {
+			&__list {
+				max-width: 16.375em;
+				justify-content: center;
+			}
+		}
+	}
 }
