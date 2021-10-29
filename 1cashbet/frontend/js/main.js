@@ -70,59 +70,47 @@ new Swiper('.top-section__slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
     },
-    slidesPerView: 6,
+    slidesPerView: 3,
     whatchOverflow: true,
-    spaceBetween: 22,
+    // spaceBetween: 16,
     slidesPerGroup: 1,
+    slidesPerColumn: 2,
+
 
     slidesPerColumnFill: 'row',
-    loop: true,
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false
-    },
+    // loop: true,
+    // autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false
+    // },
     speed: 800,
     effect: 'slide',
     breakpoints: {
         320: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            slidesPerColumnFill: 'column',
-            autoHeight: false,
+            slidesPerView: 2.5,
+            slidesPerGroup: 1,
             loop: false,
-            autoplay: false,
             scrollbar: {
                 el: '.swiper-scrollbar',
                 draggable: true
-            }   
+            }
         },
         550: {
-            slidesPerView: 5,
-            spaceBetween: 10,
+            slidesPerView: 6,
+            slidesPerGroup: 1,
+            loop: true,
+            scrollbar: false,
         },
-
-       768: {
-            slidesPerView: 5,
-            spaceBetween: 16
-        },
+      
         991: {
-            slidesPerView: 5,
-            spaceBetween: 16
-        },
-        1100: {
-            slidesPerView: 6,
-            spaceBetween: 16
-        },
-        1200: {
-            slidesPerView: 6,
-            spaceBetween: 18
-        },
-        // when window width is >= 640px
-        1440: {
-            slidesPerView: 6,
-            spaceBetween: 20
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            loop: true,
+            scrollbar: false,
         }
     }
+  
+  
 });
 
 
@@ -140,9 +128,9 @@ let cube = new Swiper('.offers__slider', {
     speed: 800,
     effect: 'cube',
     grabCursor: true,
-        cubeEffect: {
-          shadow: false,
-          slideShadows: false,
+    cubeEffect: {
+        shadow: false,
+        slideShadows: false,
     },
     breakpoints: {
         320: {
@@ -156,7 +144,7 @@ let cube = new Swiper('.offers__slider', {
         550: {
             spaceBetween: 10,
             slidesPerGroup: 1,
-        },
+        }
     }
 
 });
@@ -167,11 +155,11 @@ new Swiper('.reviews__slider', {
         nextEl: '.reviews__slider .swiper-button-next',
         prevEl: '.reviews__slider .swiper-button-prev'
     },
-    slidesPerView: 3,
+    // slidesPerView: 3,
     whatchOverflow: true,
     spaceBetween: 20,
     slidesPerGroup: 1,
-    loop: true,
+    loop: false,
     // autoplay: {
     //     delay: 2000,
     //     disableOnInteraction: false
@@ -181,17 +169,16 @@ new Swiper('.reviews__slider', {
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 2,
-            spaceBetween: 10,
+            slidesPerView: 1.28,
+            spaceBetween: 20,
             scrollbar: {
                 el: '.swiper-scrollbar',
                 draggable: true
             },
-            loop: false,
         },
         550: {
             slidesPerView: 3,
-            spaceBetween: 10
+            spaceBetween: 10,
         },
         768: {
             slidesPerView: 3,
@@ -269,33 +256,34 @@ $(document).ready(function () {
             '</div>');
     });
 });
- 
-    //************ Select*/
 
-    function page_plans_open_list(e) {
-        $(e).parent().next().addClass("active");
-    }
-    function page_plans_list_choose(e) {
-        var plan_id = $(e).data("plan_id"),
-            plan_days = $(e).data("plan_days"),
-            plan_days_text = $(e).data("plan_days_text"),
-            plan_sale = $(e).data("plan_sale"),
-            plan_economy = $(e).data("plan_economy"),
-            plan_price = $(e).data("plan_price"),
-            plan_discont = $(e).data("plan_discont"),
-            btn = $(e).parent().parent().next();
-            
-        $(e).parent().parent().parent().parent().find(".tariffs__price span.price").html(plan_price);
-        $(e).parent().parent().parent().parent().find(".tariffs__label-subtitle span").html(plan_economy);
-        $(e).parent().parent().parent().parent().find(".tariffs__price span.discont-count").html(plan_discont);
-        
-        $(e).parent().prev().find(".days span.day").html(plan_days);
-        $(e).parent().prev().find(".days span.text").html(plan_days_text);
-        $(e).parent().prev().find(".sale span").html(plan_sale);
-        
-        $(btn).data("plan_id", plan_id);
-        
-        $(e).parent().removeClass("active");
+//************ Select*/
+
+function page_plans_open_list(e) {
+    $(e).parent().next().addClass("active");
+}
+
+function page_plans_list_choose(e) {
+    var plan_id = $(e).data("plan_id"),
+        plan_days = $(e).data("plan_days"),
+        plan_days_text = $(e).data("plan_days_text"),
+        plan_sale = $(e).data("plan_sale"),
+        plan_economy = $(e).data("plan_economy"),
+        plan_price = $(e).data("plan_price"),
+        plan_discont = $(e).data("plan_discont"),
+        btn = $(e).parent().parent().next();
+
+    $(e).parent().parent().parent().parent().find(".tariffs__price span.price").html(plan_price);
+    $(e).parent().parent().parent().parent().find(".tariffs__label-subtitle span").html(plan_economy);
+    $(e).parent().parent().parent().parent().find(".tariffs__price span.discont-count").html(plan_discont);
+
+    $(e).parent().prev().find(".days span.day").html(plan_days);
+    $(e).parent().prev().find(".days span.text").html(plan_days_text);
+    $(e).parent().prev().find(".sale span").html(plan_sale);
+
+    $(btn).data("plan_id", plan_id);
+
+    $(e).parent().removeClass("active");
 }
 
 
@@ -308,21 +296,21 @@ function radio() {
         $radio.addEventListener('change', function () {
             sum(this.getAttribute('data-price') + " ₽");
             calc();
-      });
+        });
     });
 }
 radio();
 
 function radio2() {
 
-let $selectors2 = document.querySelectorAll('.block-calc__options .block-calc__options-item input[type="radio"]');
-$selectors2.forEach($radio2 => {
-    $radio2.checked = false;
-});
+    let $selectors2 = document.querySelectorAll('.block-calc__options .block-calc__options-item input[type="radio"]');
+    $selectors2.forEach($radio2 => {
+        $radio2.checked = false;
+    });
 }
-  /////// calculator function
+/////// calculator function
 
-  
+
 
 
 
@@ -350,14 +338,14 @@ function inputValue(inputVal) {
 
 
 function calc() {
-  
+
     let sliderCashbackVal = parseInt(sliderCashback.textContent);
     console.log(sliderCashbackVal);
     console.log(typeof (sliderCashbackVal));
-    
+
     let inputSumVal = inputSum.value === '' ? 0 : parseInt(inputSum.value);
     console.log(inputSumVal);
-    
+
 
     let procent = (inputSumVal / 100) * sliderCashbackVal;
     console.log(procent);

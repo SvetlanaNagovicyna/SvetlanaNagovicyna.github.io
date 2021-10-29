@@ -30,6 +30,10 @@ html {
   @media(max-width:768px) {
     font-size: 6.8px;
   }
+
+  @media (min-width: 320px) and (max-width: 551px) {
+    font-size: 2.35vw;
+  }
 }
 
 svg {

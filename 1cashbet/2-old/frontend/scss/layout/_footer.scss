@@ -1,0 +1,167 @@
+.footer {
+	width: 100%;
+	padding: em(26) 0 em(58);
+	z-index: 100;
+	display: flex;
+	flex: 0 0 auto;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__description {
+		display: flex;
+		align-items: center;
+		padding: em(37) 0;
+		border-top: em(1) solid #7f8cab;
+		border-bottom: em(1) solid #7f8cab;
+		width: 100%;
+
+		&-logo {
+			width: em(192);
+			margin-right: em(85);
+		}
+
+		&-slogan {
+			font-weight: normal;
+			max-width: em(571);
+
+			span {
+				font-size: em(13.1);
+				line-height: em(14, 13.1);
+				color: #8da5b5;
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		margin-top: em(43);
+	}
+
+	&__wrap {
+		display: flex;
+		width: em(960);
+		margin: 0 em(-20);
+
+	}
+
+	&__column {
+		flex: 0 1 25%;
+		padding: 0 em(20);
+
+		&:nth-child(2) {
+			.footer__list {
+				margin-left: em(57);
+			}
+		}
+	}
+
+	&__list {
+
+		li {
+			margin-bottom: em(24, 14);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__link {
+		font-size: em(13);
+		color: #8DA5B5;
+	}
+
+	&__payments {
+		.payments {
+			&__list {
+				display: flex;
+				flex-wrap: wrap;
+				max-width: em(230);
+			}
+
+			&__item {
+				min-height: em(20);
+				margin: 0 em(13) em(24);
+			}
+		}
+	}
+
+	@media (max-width: 551px) {
+		background-color: #080F20;
+		padding: 2.625em 0 0.625em;
+
+		&__content {
+			&._container {
+				max-width: 32.2em;
+			}
+		}
+
+		&__description {
+			flex-direction: column;
+			align-items: flex-start;
+			border: none;
+
+			&-logo {
+				width: 9em;
+				margin-bottom: 1.5em;
+			}
+
+			&-slogan {
+				font-size: 1.2em;
+			}
+		}
+
+		&__body {
+			flex-direction: column;
+			align-items: center;
+			font-size: 1.5875em;
+			margin-top: 0.8875em;
+		}
+
+		&__wrap {
+			flex-wrap: wrap;
+			width: 100%;
+			flex-direction: column;
+			font-size: .8em;
+
+		}
+
+		&__column {
+			flex: 0 1 50%;
+			padding: 0;
+
+			&:nth-child(2) {
+				margin-top: 0;
+
+				.footer__list {
+					margin-left: 0;
+
+				}
+			}
+
+			&:nth-child(4) {
+				margin-top: -1.7em;
+			}
+
+		}
+
+		&__list {
+			li {
+				margin-bottom: 1em;
+			}
+		}
+
+		.payments {
+			&__list {
+				max-width: 16.375em;
+				justify-content: center;
+			}
+		}
+	}
+}

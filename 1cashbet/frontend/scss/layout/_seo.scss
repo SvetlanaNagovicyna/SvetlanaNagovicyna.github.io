@@ -26,14 +26,19 @@
 	}
 
 	@media (max-width: 551px) {
+		font-size: 1.075em;
+		margin-bottom: 2.4em;
+
 		&._container {
-			max-width: 32.2em;
+			max-width: 35.9em;
 		}
 
 		&__description {
 			font-size: 1.2em;
 
 			p {
+				font-size: 1.025em;
+				line-height: 1.7em;
 
 				&:nth-child(2),
 				&:nth-child(3),

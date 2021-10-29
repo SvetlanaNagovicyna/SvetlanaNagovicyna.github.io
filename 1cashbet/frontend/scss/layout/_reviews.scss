@@ -54,6 +54,10 @@
 		&-logo {
 			width: em(76);
 			margin-bottom: em(22);
+
+			img {
+				border-radius: 50%;
+			}
 		}
 
 		&-name {
@@ -184,7 +188,10 @@
 	}
 
 	@media (max-width: 551px) {
+		font-size: 1.31em;
 		align-items: center;
+		margin-top: -0.4em;
+		margin-bottom: 3.575em;
 
 		&._container {
 			max-width: 100%;
@@ -192,11 +199,19 @@
 
 		&__title {
 			text-align: center;
-			font-size: 3.34em;
+			font-size: 3.05em;
+			margin-bottom: 0.9em;
+		}
+
+		&__wrap {
+			padding: 0 1.5em;
+			width: auto;
 		}
 
 		&__slider {
+			// padding: 0 1.5em 3.7em;
 			padding-bottom: 3.7em;
+			max-width: 100%;
 
 			.swiper-button-next,
 			.swiper-button-prev {
@@ -213,6 +228,24 @@
 
 			.swiper-scrollbar-drag {
 				background-color: #FFD84E;
+			}
+		}
+
+		&__item {
+			font-size: 1.26em;
+			// min-width: 19.7em;
+			padding: 2.125em 1.575em 1.1em;
+			min-height: 14em;
+			max-width: 40em;
+			min-width: unset;
+			width: auto;
+
+			&-name {
+				margin-bottom: 0.975em;
+			}
+
+			&-text {
+				line-height: 1.4em;
 			}
 		}
 	}
