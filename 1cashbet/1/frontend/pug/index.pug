@@ -1,0 +1,503 @@
+- var title = "";
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap
+			include sections/header
+			main.main
+				.top-section
+					.top-section__wrap._container
+						.top-section__block
+							.top-section__text
+								.top-section__title.title
+									.title__top
+										| Вернем 
+										span.text-red до 35%
+									.title__middle 
+										span.text-red кэшбека 
+										| со всех
+									.title__bottom ставок на спорт
+								.top-section__steps
+									ul
+										li.top-section__steps-item 
+											p Оформи подписку за 1 рубль
+										li.top-section__steps-item 
+											p Выбирай БК и делай ставки
+										li.top-section__steps-item 
+											p Получай кэшбек и выводи на карту
+								.top-section__button
+									a(href="#").top-section__button-top.btn
+										span Подписаться за 1₽
+
+							.top-section__video
+								.top-section__video-link.youtube-preview-cover(loading='lazy' data-uri='https://www.youtube.com/embed/vzPsAW0JaVU?&modestbranding=1&rel=0')
+									img.top-section__video-img(src="public/img/play.svg", alt="")
+									p.top-section__video-text
+										|Смотреть 
+										span.text-red видео
+						.top-section__company
+							.top-section__title.title
+								| Букмекерские 
+								span.text-red компании
+							.top-section__slider.swiper-container
+								.slider.swiper-wrapper
+									.slider__item.swiper-slide
+										.slider__block
+											.slider__item-text GGBet
+											.slider__item-logo
+												img(src="public/img/company/ggbet.png", alt="")
+										.slider__block
+											.slider__item-text Fonbet
+											.slider__item-logo
+												img(src="public/img/company/fonbet.png", alt="")
+									.slider__item.swiper-slide
+										.slider__block
+											.slider__item-text Fonbet
+											.slider__item-logo
+												img(src="public/img/company/fonbet.png", alt="")
+										.slider__block
+											.slider__item-text Winline
+											.slider__item-logo
+												img(src="public/img/company/winline.png", alt="")
+									.slider__item.swiper-slide
+										.slider__block
+											.slider__item-text Winline
+											.slider__item-logo
+												img(src="public/img/company/winline.png", alt="")
+										.slider__block
+											.slider__item-text 1xStavka
+											.slider__item-logo
+												img(src="public/img/company/1xstavka.png", alt="")
+									.slider__item.swiper-slide
+										.slider__block
+											.slider__item-text Winline
+											.slider__item-logo
+												img(src="public/img/company/winline.png", alt="")
+										.slider__block
+											.slider__item-text 1xStavka
+											.slider__item-logo
+												img(src="public/img/company/1xstavka.png", alt="")
+									.slider__item.swiper-slide
+										.slider__block
+											.slider__item-text Winline
+											.slider__item-logo
+												img(src="public/img/company/winline.png", alt="")
+										.slider__block
+											.slider__item-text 1xStavka
+											.slider__item-logo
+												img(src="public/img/company/1xstavka.png", alt="")
+									.slider__item.swiper-slide
+										.slider__block
+											.slider__item-text Winline
+											.slider__item-logo
+												img(src="public/img/company/winline.png", alt="")
+										.slider__block
+											.slider__item-text 1xStavka
+											.slider__item-logo
+												img(src="public/img/company/1xstavka.png", alt="")
+									
+								.swiper-button-prev
+								.swiper-button-next
+								.swiper-scrollbar
+							.top-section__button-bonus
+								a(href="#").top-section__button.btn
+									span получить кэшбэк
+				.calculator._container
+					.calculator__title.title
+						| Калькулятор 
+						span.text-red кэшбэка
+					.calculator__wrap
+						.calculator__block.block-calc
+							.block-calc__wrap
+								.block-calc__sum
+									label(for="sum") Начальная сумма:
+									input#sum(type="text" value="500")
+								.block-calc__cashback
+									label(for="cashback") Возможный кэшбек:
+									input#cashback(type="text" readonly value="37,50 ₽")
+								.block-calc__options
+									.block-calc__options-item
+										input#check1.block-calc__options-input(checked name='cash' type="radio" data-price="500")
+										label.block-calc__options-label(for="check1") 500₽
+									.block-calc__options-item
+										input#check2.block-calc__options-input(name='cash' type="radio" data-price="1500") 
+										label.block-calc__options-label(for="check2") 1500₽
+									.block-calc__options-item
+										input#check3.block-calc__options-input(name='cash' type="radio" data-price="5000") 
+										label.block-calc__options-label(for="check3") 5000₽
+								.block-calc__button
+									a(href="#").btn
+										span получить кэшбэк
+						.calculator__offers.offers
+							.offers__title 
+								span Наше предложение
+							.offers__wrap-slider
+								.offers__slider.slider-offers.swiper-container
+									.slider-offers__wrap.swiper-wrapper
+										.slider-offers__item.swiper-slide
+											.slider-offers__item-title
+												span 1Х Ставка
+											.slider-offers__item-logo
+												img(src="public/img/company/1xstavka.png", alt="")
+											.slider-offers__item-cashback
+												span.icon
+													img(src="public/img/procent.svg", alt="")
+												span.text Кэшбек 
+													span.proc 5
+													span.symbol %
+										.slider-offers__item.swiper-slide
+											.slider-offers__item-title
+												span Tennisi
+											.slider-offers__item-logo
+												img(src="public/img/company/tennisi.png", alt="")
+											.slider-offers__item-cashback
+												span.icon
+													img(src="public/img/procent.svg", alt="")
+												span.text Кэшбек 
+													span.proc 10
+													span.symbol %
+										.slider-offers__item.swiper-slide
+											.slider-offers__item-title
+												span GGbet
+											.slider-offers__item-logo
+												img(src="public/img/company/ggbet.png", alt="")
+											.slider-offers__item-cashback
+												span.icon
+													img(src="public/img/procent.svg", alt="")
+												span.text Кэшбек 
+													span.proc 5
+													span.symbol %
+										.slider-offers__item.swiper-slide
+											.slider-offers__item-title
+												span Tennisi
+											.slider-offers__item-logo
+												img(src="public/img/company/tennisi.png", alt="")
+											.slider-offers__item-cashback
+												span.icon
+													img(src="public/img/procent.svg", alt="")
+												span.text Кэшбек 
+													span.proc 8
+													span.symbol %
+									.swiper-button-prev
+									.swiper-button-next
+							.offers__footer
+								.offers__footer-title
+									span Возможный кэшбек
+								.offers__footer-cashback
+									|+
+									span 37,50
+									|  ₽
+				.tariffs._container
+					.tariffs__title.title
+						| Наши 
+						span.text-red тарифы
+					.tariffs__body
+						.tariffs__row
+							.tariffs__column.tariffs__column_1
+								.tariffs__item
+									.tariffs__price
+										span 1₽
+										sup 1180₽
+									.tariffs__label
+										.tariffs__label-subtitle 
+											span Экономия 1179 ₽
+										.tariffs__label-title 
+											span "Lite + Pro кешбек"
+									.tariffs__text
+										.tariffs__text-title 
+											span Максимальный доход
+										.tariffs__text-subtitle 
+											span 
+											|Заработайте сейчас — 
+											br 
+											|платите позже.
+									.tariffs__select
+										.select
+											.input
+												.selected
+													.days
+														span.day 3 
+														span.text дня
+									.tariffs__button
+										a(href="#").btn
+											span Попробовать
+									.tariffs__footer
+										.tariffs__footer-title
+											span О тарифе:
+										.tariffs__footer-list
+											ul 
+												li.tariffs__footer-item
+													span Включает в себя все из Lite и Pro
+
+							.tariffs__column.tariffs__column_2
+								.tariffs__item
+									.tariffs__price
+										span.price 290
+											| ₽
+										.discont 
+											span 
+												|-
+												span.discont-count 0
+												|%
+									.tariffs__label
+										.tariffs__label-subtitle 
+											| Экономия
+											span  0  
+											|  ₽
+										.tariffs__label-title 
+											span Тариф "Lite"
+									.tariffs__text
+										.tariffs__text-title 
+											span Количество дней
+										.tariffs__text-subtitle 
+											span Чем больше дней подписки, тем больше общая скидка.
+									.tariffs__select
+										.select
+											.input
+												.selected(onclick='page_plans_open_list(this);')
+													.days
+														span.day 3 
+														span.text дня
+													.sale
+														|Скидка 
+														span 0
+														|%
+											.list
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='1' data-plan_days='3' data-plan_days_text=' дня' data-plan_sale='0' data-plan_economy=' 0' data-plan_discont='0' data-plan_price='290₽')
+													.days 
+														span.day 3   
+														span.text дня
+													.sale Скидка 0%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='2' data-plan_days='5' data-plan_days_text=' дней' data-plan_sale='5' data-plan_economy=' 23' data-plan_discont='5' data-plan_price='460₽')
+													.days 
+														span.day 5  
+														span.text дней
+													.sale Скидка 5%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='3' data-plan_days='10' data-plan_days_text=' дней' data-plan_sale='10' data-plan_economy=' 97' data-plan_discont='10' data-plan_price='870₽')
+													.days 
+														span.day 10  
+														span.text  дней
+													.sale Скидка 10%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='4' data-plan_days='30' data-plan_days_text=' дней' data-plan_sale='20' data-plan_economy=' 580' data-plan_discont='20' data-plan_price='2320₽')
+													.days 
+														span.day 30  
+														span.text  дней
+													.sale Скидка 20%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='5' data-plan_days='100' data-plan_days_text=' дней' data-plan_sale='50' data-plan_economy=' 4833' data-plan_discont='50' data-plan_price='4833₽')
+													.days 
+														span.day 100  
+														span.text  дней
+													.sale Скидка 50%
+									.tariffs__button
+										a(href="#").btn
+											span Активировать
+									.tariffs__footer
+										.tariffs__footer-title
+											span О тарифе:
+										.tariffs__footer-list
+											ul 
+												li.tariffs__footer-item
+													span Стандартный кэшбек
+												li.tariffs__footer-item
+													span Актуальные новости
+												li.tariffs__footer-item
+													span Акции и промокоды
+												li.tariffs__footer-item
+													span Оперативная тех.поддержка
+												li.tariffs__footer-item.not
+													span Экспресс ставки
+							.tariffs__column.tariffs__column_3
+								.tariffs__item
+									.tariffs__price
+										span.price 890
+											| ₽
+										.discont 
+											span 
+												|-
+												span.discont-count 0
+												|%
+									.tariffs__label
+										.tariffs__label-subtitle 
+											| Экономия
+											span  0  
+											|  ₽
+										.tariffs__label-title 
+											span Тариф "Pro"
+									.tariffs__text
+										.tariffs__text-title 
+											span Количество дней
+										.tariffs__text-subtitle 
+											span Чем больше дней подписки, тем больше общая скидка.
+									.tariffs__select
+										.select
+											.input
+												.selected(onclick='page_plans_open_list(this);')
+													.days
+														span.day 3 
+														span.text дня
+													.sale
+														|Скидка 
+														span 0
+														|%
+											.list
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='6' data-plan_days='3' data-plan_days_text=' дня' data-plan_sale='0' data-plan_economy=' 0' data-plan_discont='0' data-plan_price='290₽')
+													.days 
+														span.day 3   
+														span.text дня
+													.sale Скидка 0%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='7' data-plan_days='5' data-plan_days_text=' дней' data-plan_sale='5' data-plan_economy=' 23' data-plan_discont='5' data-plan_price='460₽')
+													.days 
+														span.day 5  
+														span.text дней
+													.sale Скидка 5%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='8' data-plan_days='10' data-plan_days_text=' дней' data-plan_sale='10' data-plan_economy=' 97' data-plan_discont='10' data-plan_price='870₽')
+													.days 
+														span.day 10  
+														span.text  дней
+													.sale Скидка 10%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='9' data-plan_days='30' data-plan_days_text=' дней' data-plan_sale='20' data-plan_economy=' 580' data-plan_discont='20' data-plan_price='2320₽')
+													.days 
+														span.day 30  
+														span.text  дней
+													.sale Скидка 20%
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='10' data-plan_days='100' data-plan_days_text=' дней' data-plan_sale='50' data-plan_economy=' 4833' data-plan_discont='50' data-plan_price='4833₽')
+													.days 
+														span.day 100  
+														span.text  дней
+													.sale Скидка 50%
+									.tariffs__button
+										a(href="#").btn
+											span Активировать
+									.tariffs__footer
+										.tariffs__footer-title
+											span О тарифе:
+										.tariffs__footer-list
+											ul 
+												li.tariffs__footer-item
+													span Повышенный кэшбек
+												li.tariffs__footer-item
+													span Актуальные новости
+												li.tariffs__footer-item
+													span Акции и промокоды
+												li.tariffs__footer-item
+													span Личный telegram bot
+												li.tariffs__footer-item
+													span Приоритетная тех.поддержка
+												li.tariffs__footer-item
+													span Экспресс ставки
+				.reviews._container
+					.reviews__title.title
+						| Отзывы 
+						span.text-red наших клиентов
+					.reviews__slider.swiper-container
+						.reviews__wrap.swiper-wrapper
+							.reviews__item.swiper-slide
+								.reviews__item-logo
+									img(src="public/img/reviews/icon-1.png", alt="")
+								.reviews__item-name Андрей Колесник
+								.reviews__item-text Вот сколько кидал мне попадалось, я уже думал, что адекватной аналитики на ставки не существует. Оказывается это я не там искал, а здесь на сайте все четко. Прогнозы приходят вовремя, почти без ошибок, так что я каждый день теперь в плюсе. 
+							.reviews__item.swiper-slide
+								.reviews__item-logo
+									img(src="public/img/reviews/icon-2.png", alt="")
+								.reviews__item-name Кама Пуля
+								.reviews__item-text Виктор Демин, мошенник. С 30 экспрессов зашёл только 1 полностью, и 2 с возвратами. Статистика «спортивного аналитика» желает лучшего. Много потрачено времени и средств. Схемы как описаны ниже, верны. 
+							.reviews__item.swiper-slide
+								.reviews__item-logo
+									img(src="public/img/reviews/icon-3.png", alt="")
+								.reviews__item-name Иль-Нам Сергеевич
+								.reviews__item-text Несмотря на то, что в опубликованном выше посте подробно описывается вся схема работы «диванного аналитика», по одному отзыву делать выводы рано, поэтому от тех кто пользовался платными услугами диванного аналитика ждем реальных отзывов. 
+							.reviews__item.swiper-slide
+								.reviews__item-logo
+									img(src="public/img/reviews/icon-1.png", alt="")
+								.reviews__item-name Андрей Колесник
+								.reviews__item-text Вот сколько кидал мне попадалось, я уже думал, что адекватной аналитики на ставки не существует. Оказывается это я не там искал, а здесь на сайте все четко. Прогнозы приходят вовремя, почти без ошибок, так что я каждый день теперь в плюсе. 
+							.reviews__item.swiper-slide
+								.reviews__item-logo
+									img(src="public/img/reviews/icon-1.png", alt="")
+								.reviews__item-name Андрей Колесник
+								.reviews__item-text Вот сколько кидал мне попадалось, я уже думал, что адекватной аналитики на ставки не существует. Оказывается это я не там искал, а здесь на сайте все четко. Прогнозы приходят вовремя, почти без ошибок, так что я каждый день теперь в плюсе. 
+							.reviews__item.swiper-slide
+								.reviews__item-logo
+									img(src="public/img/reviews/icon-1.png", alt="")
+								.reviews__item-name Андрей Колесник
+								.reviews__item-text Вот сколько кидал мне попадалось, я уже думал, что адекватной аналитики на ставки не существует. Оказывается это я не там искал, а здесь на сайте все четко. Прогнозы приходят вовремя, почти без ошибок, так что я каждый день теперь в плюсе. 
+						.swiper-button-prev
+						.swiper-button-next
+						.swiper-scrollbar
+				.seo._container
+					.seo__title
+						span Заголовок для SEO
+					.seo__description
+						p Каждый день команда собирает и анализирует большое количество информации о командах, турнирах, а также новых игроках. Каждая деталь, даже самая мелкая, играет важную роль при составлении прогнозов, только при таких условиях гарантируется успешный исход.
+						p Полноценное знание игровой сферы плюс высококачественная аналитическая информация позволяют предоставлять только точные и надежные прогнозы. С профессиональной командой заработать сможет каждый.
+						p Киберспорт — это современный тренд, стремительно развивающийся. Сегодня самое время стать частью индустрии получить первый заработок на этом. Тебе не нужно трудиться, профессиональная команда даёт прогнозы, а ты ставишь ставки и выигрываешь.
+						p Начни сегодня и разбогатей уже завтра!
+
+			include sections/footer
+			//- .modal-wrap.modal-rules
+			//- 	.modal
+			//- 		.close
+			//- 			img(src="./public/img/close.svg")
+			//- 		.modal_header
+			//- 			h2 ПРАВИЛА АКЦИИ
+			//- 		.modal_content(data-simplebar)
+			//- 			br
+			//- 			ul
+			//- 				li Настоящие правила регламентируют условия проведения рекламной кампании «10 000 Р новым клиентам» (далее Акция) для клиентов букмекерской компании Betcity.
+					
+			//- 			h3 1. Термины и определения
+			//- 			ul
+			//- 				li.
+			//- 					1.1. Организатор – Общество с ограниченной̆ ответственностью «Фортуна», лицензия №5 от 30.06.2009 на осуществление деятельности по организации и проведению азартных игр в букмекерских конторах или тотализаторах (услуга по заключению с участниками азартных игр основанных на риске соглашений о выигрыше).
+			//- 				li
+			//- 					|1.2. Сайт Организатора – интернет-сайт 
+			//- 					a(href="https://betcity.ru/ru/") https://betcity.ru/ru/ 
+			//- 					| или 
+			//- 					a(href="https://m.betcity.ru/ru/") https://m.betcity.ru/ru/.
+			//- 				li
+			//- 					|1.3. Общие правила приёма интерактивных ставок, выплаты выигрышей и заключения пари 
+			//- 					a(href="https://betcity.ru/ru/rules#1") https://betcity.ru/ru/rules#1.
+			//- 				li.
+			//- 					1.4. Участник – физическое лицо, достигшее возраста 18 лет, принимающее условие данной акции посредством регистрации на сайте Организатора и выполнившие условия Акции.
+			//- 				li.
+			//- 					1.5. Депозит – пополнение баланса, путем совершения интерактивного пари, согласно Общих правил.
+			//- 				li.
+			//- 					1.6. Ставка – пари, основанное на риске соглашение о выигрыше, заключённое между клиентом и букмекерской конторой согласно установленным Общим правилам.
+			//- 				li.
+			//- 					1.7. Бонусный счет – счет предназначенный для зачисления бонусных средств за выполнение условий различных маркетинговых мероприятий, программ лояльности, акции. Один бонус на бонусном счету равен одному рублю. Бонусный счет не предусматривает снятие бонусов и доступен только для совершения ставок.
+			//- 				li.
+			//- 					1.8. Ставки за бонусы – ставки, совершаемые клиентом с бонусного счета. Выигрыш по ставкам за бонусы начисляется на основной счет в виде чистого выигрыша, который рассчитывается, как разница между выигрышем и суммой ставки за бонусы.
+			//- 				li.
+			//- 					1.9. Фрибет – бонусные средства, зачисляемые участнику акции на бонусный счет, по факту выполнения условий. Выигрыш по ставкам за бонусные средства переводится на основной счет в виде чистого выигрыша - за минусом суммы ставки за бонусные средства.
+						
+						
+			//- 			h3 2. Сроки и условия участия в Акции
+			//- 			ul
+			//- 				li.
+			//- 					2.1. Участие в акции доступно для каждого зарегистрированного, прошедшего процедуру идентификации клиента, совершившего первый депозит на сумму не менее 500Р в период проведения акции.
+			//- 				li.
+			//- 					2.2. Для зачисления фрибета необходимо заключить одну или несколько ставок на сумму в 6 раз больше первого депозита, в течение 30 дней с момента совершения первого депозита.
+			//- 				li.
+			//- 					2.3. В зачет выполнения условий идут только рассчитанные ставки с коэффициентом не менее 1.8 типа «экспресс» и «ординар» на Live и прематч события.
+			//- 				li.
+			//- 					2.4. Размер фрибета рассчитывается, как 50% от суммы первого депозита, но не более 10000 рублей.
+			//- 				li.
+			//- 					2.5. Фрибет зачисляется на бонусный счет сразу после выполнения условий.
+			//- 				li.
+			//- 					2.6. Срок действия начисленного фрибета по акции – 30 дней.
+			//- 				li.
+			//- 					2.7. Максимальный коэффициент на использование фрибета – 3,00.
+			//- 				li.
+			//- 					2.8. Период проведения акции – с 10.04.2021 (00:00) – 31.12.2021 (23:59). Сроки проведения акции могут быть изменены организатором без предварительного уведомления.
+			//- 				li.
+			//- 					2.9. Акция может быть завершена досрочно по одностороннему решению Организатора, путем размещения соответствующего уведомления на Сайте и/или в мобильном приложении.
+
+			//- 			h3 3. Заключительные положения
+			//- 			ul
+			//- 				li.
+			//- 					3.1. В случае выявления факта мошенничества, злоупотребления бонусным предложением, организатор в праве прекратить участие таких клиентов в рекламной кампании. В этих случаях остаток на бонусном счете аннулируется.
+			//- 				li.
+			//- 					3.2. Один бонусный счет доступен для одного пользователя (на одну семью, один адрес, один общий компьютер, общий IP-адрес, на любые одинаковые данные аккаунта, как адрес e-mail, банковский счёт, информация о кредитной карте, аккаунт платёжной системы). Любое нарушение правил рекламной кампании ведёт к аннулированию участия, а также к принятию дополнительных мер, направленных на предотвращение подобных действий.
+						
+		include includes/foot
