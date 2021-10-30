@@ -78,11 +78,11 @@ new Swiper('.top-section__slider', {
 
 
     slidesPerColumnFill: 'row',
-    // loop: true,
-    // autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false
-    // },
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
     speed: 800,
     effect: 'slide',
     breakpoints: {
@@ -222,31 +222,155 @@ new Swiper('.reviews__slider', {
 // });
 
 
+// Open Modal GET
+function openModalGet() {
+    document.querySelector('.modal.get').style.display = 'flex';
+    setTimeout(() => {
+        document.querySelector('.modal.get').classList.add('open');
+    }, 1)
+};
+
+var modal = document.querySelector('.modal.get');
+var closeClickOverlay = document.querySelector('.modal.get .close img');
 
 
-// // Open Modal
-// function openModal() {
-//     document.querySelector('.modal-wrap.modal-rules').style.display = 'flex';
-//     document.querySelector('body').style.overflow = "hidden";
-//     setTimeout(() => {
-//         document.querySelector('.modal-wrap.modal-rules').classList.add('open');
-//     }, 1)
-// };
-
-// var modal = document.querySelector('.modal-wrap.modal-rules');
-// var closeClickOverlay = document.querySelector('.close img');
+document.querySelector(".top-section__button-top").addEventListener('click', openModalGet);
+document.querySelector('.modal.get').addEventListener('click', (e) => {
+    if (e.target === modal || e.target === closeClickOverlay) {
+        document.querySelector('.modal.get').classList.remove('open');
+        setTimeout(() => {
+            document.querySelector('.modal.get').style.display = 'none';
+        }, 500)
+    }
+});
 
 
-// document.querySelector(".rules").addEventListener('click', openModal);
-// document.querySelector('.modal-wrap.modal-rules').addEventListener('click', (e) => {
-//     if (e.target === modal || e.target === closeClickOverlay) {
-//         document.querySelector('.modal-wrap.modal-rules').classList.remove('open');
-//         document.querySelector('body').style.overflow = "";
-//         setTimeout(() => {
-//             document.querySelector('.modal-wrap.modal-rules').style.display = 'none';
-//         }, 500)
-//     }
-// });
+// Open Modal LOGIN
+function openModalLogin() {
+    document.querySelector('.modal.login').style.display = 'flex';
+    setTimeout(() => {
+        document.querySelector('.modal.login').classList.add('open');
+    }, 1)
+};
+
+var modalLogin = document.querySelector('.modal.login');
+var closeClickOverlayLogin = document.querySelector('.modal.login .close img');
+
+
+document.querySelector(".header__user-action").addEventListener('click', openModalLogin);
+document.querySelector('.modal.login').addEventListener('click', (e) => {
+    if (e.target === modalLogin || e.target === closeClickOverlayLogin) {
+        document.querySelector('.modal.login').classList.remove('open');
+        setTimeout(() => {
+            document.querySelector('.modal.login').style.display = 'none';
+        }, 500)
+    }
+});
+
+// Open Modal REG
+function openModalReg() {
+    document.querySelector('.modal.reg').style.display = 'flex';
+    setTimeout(() => {
+        document.querySelector('.modal.reg').classList.add('open');
+    }, 1)
+};
+
+var modalReg = document.querySelector('.modal.reg');
+var closeClickOverlayReg = document.querySelector('.modal.reg .close img');
+
+
+document.querySelector(".link-reg").addEventListener('click', openModalReg);
+document.querySelector('.modal.reg').addEventListener('click', (e) => {
+    if (e.target === modalReg || e.target === closeClickOverlayReg) {
+        document.querySelector('.modal.reg').classList.remove('open');
+        setTimeout(() => {
+            document.querySelector('.modal.reg').style.display = 'none';
+        }, 500)
+    }
+});
+
+// Open Modal REESET
+function openModalReset() {
+    document.querySelector('.modal.reset').style.display = 'flex';
+    setTimeout(() => {
+        document.querySelector('.modal.reset').classList.add('open');
+        document.querySelector('.modal.login').classList.remove('open');
+        document.querySelector('.modal.login').style.display = 'none';
+    }, 1)
+};
+
+var modalReset = document.querySelector('.modal.reset');
+var closeClickOverlayReset = document.querySelector('.modal.reset .close img');
+
+
+document.querySelector(".modal.login .passforget").addEventListener('click', openModalReset);
+document.querySelector('.modal.reset').addEventListener('click', (e) => {
+    if (e.target === modalLogin || e.target === closeClickOverlayReset) {
+        document.querySelector('.modal.reset').classList.remove('open');
+        setTimeout(() => {
+            document.querySelector('.modal.reset').style.display = 'none';
+        }, 500)
+    }
+});
+
+
+// REMEMBER PASS
+function openModalRemember() {
+    document.querySelector('.modal.login').style.display = 'flex';
+    setTimeout(() => {
+        document.querySelector('.modal.reset').classList.remove('open');
+        document.querySelector('.modal.login').classList.add('open');
+        document.querySelector('.modal.reset').style.display = 'none';
+        
+    }, 1)
+};
+
+var modalRemember = document.querySelector('.modal.login');
+var closeClickOverlayRemember = document.querySelector('.modal.login .close img');
+
+
+document.querySelector(".modal.reset .passforget").addEventListener('click', openModalRemember);
+document.querySelector('.modal.login').addEventListener('click', (e) => {
+    if (e.target === modalRemember || e.target === closeClickOverlayRemember) {
+        document.querySelector('.modal.login').classList.remove('open');
+        setTimeout(() => {
+            document.querySelector('.modal.login').style.display = 'none';
+        }, 500)
+    }
+});
+
+
+
+
+
+
+///////Tabs
+
+const tab = function () {
+    let tabNav = document.querySelectorAll('.swich__link'),
+        tabContent = document.querySelectorAll('.tab'),
+        tabName;
+
+    tabNav.forEach(item => {
+        item.addEventListener('click', saveTabNav)
+    });
+
+    function saveTabNav() {
+        tabNav.forEach(item => {
+            item.classList.remove('swich__active');
+        });
+        this.classList.add('swich__active');
+        tabName = this.getAttribute('data-tab-name');
+        selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+        tabContent.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('contentActive') : item.classList.remove('contentActive');
+        })
+    }
+};
+tab();
 
 /***********Video */
 $(document).ready(function () {

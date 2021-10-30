@@ -8,12 +8,15 @@
 	display: block;
 	transition: background-color .3s ease-in-out;
 	text-align: center;
+	cursor: pointer;
+
 	span {
 		font-weight: 600;
 		font-size: em(20.3);
 		line-height: em(28, 20.3);
 		text-align: center;
 	}
+
 	&:hover {
 		background-color: rgba(184, 5, 5, 1);
 	}
