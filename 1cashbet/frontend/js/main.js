@@ -70,7 +70,7 @@ new Swiper('.top-section__slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
     },
-    slidesPerView: 3,
+    slidesPerView: 1,
     whatchOverflow: true,
     // spaceBetween: 16,
     slidesPerGroup: 1,
@@ -83,7 +83,7 @@ new Swiper('.top-section__slider', {
         delay: 2000,
         disableOnInteraction: false
     },
-    speed: 800,
+    speed: 1200,
     effect: 'slide',
     breakpoints: {
         320: {
