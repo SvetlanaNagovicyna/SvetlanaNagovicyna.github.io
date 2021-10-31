@@ -108,14 +108,27 @@
         }
 
         &-icon {
-            margin-right: em(10);
+            display: none;
+            margin-right: 0;
             width: em(12);
+            margin-top: em(3);
         }
 
         &-text {
-            color: #FFFFFF;
-            font-size: em(13);
-            line-height: em(16, 13);
+            color: #0B142A;
+            background-color: #FFD84E;
+            border-radius: em(15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: em(6.5) em(16);
+
+            span {
+                font-size: em(13);
+                line-height: em(16, 13);
+                font-weight: 600;
+                text-align: center;
+            }
         }
     }
 
@@ -153,7 +166,7 @@
             margin: 0 0 0 em(18);
 
             &-icon {
-                margin-right: 0;
+                display: block;
             }
 
             &-text {

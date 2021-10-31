@@ -27,7 +27,7 @@ html
 										li.top-section__steps-item 
 											p Получай кэшбек и выводи на карту
 								.top-section__button
-									a.top-section__button-top.btn
+									a(href="register.html").top-section__button-top.btn
 										span Подписаться за 1₽
 
 							.top-section__video
@@ -101,7 +101,7 @@ html
 								.swiper-button-next
 								.swiper-scrollbar
 							.top-section__button-bonus
-								a.top-section__button.link-reg.btn
+								a(href="register.html").top-section__button.link-reg.btn
 									span получить кэшбэк
 				.calculator._container
 					.calculator__title.title
@@ -118,16 +118,16 @@ html
 									input#cashback(type="text" readonly value="37,50 ₽")
 								.block-calc__options
 									.block-calc__options-item
-										input#check1.block-calc__options-input(checked name='cash' type="radio" data-price="500")
+										input#check1.block-calc__options-input(name='cash' type="radio" data-price="500")
 										label.block-calc__options-label(for="check1") 500₽
 									.block-calc__options-item
-										input#check2.block-calc__options-input(name='cash' type="radio" data-price="1500") 
+										input#check2.block-calc__options-input(checked name='cash' type="radio" data-price="1500") 
 										label.block-calc__options-label(for="check2") 1500₽
 									.block-calc__options-item
 										input#check3.block-calc__options-input(name='cash' type="radio" data-price="5000") 
 										label.block-calc__options-label(for="check3") 5000₽
 								.block-calc__button
-									a(href="#").btn
+									a(href="register.html").btn
 										span получить кэшбэк
 						.calculator__offers.offers
 							.offers__title 
@@ -231,7 +231,7 @@ html
 														span.day 3 
 														span.text дня
 									.tariffs__button
-										a(href="#").btn
+										a(href="register.html").btn
 											span Попробовать
 									.tariffs__footer
 										.tariffs__footer-title
@@ -301,7 +301,7 @@ html
 														span.text  дней
 													.sale Скидка 50%
 									.tariffs__button
-										a(href="#").btn
+										a(href="register.html").btn
 											span Активировать
 									.tariffs__footer
 										.tariffs__footer-title
@@ -378,7 +378,7 @@ html
 														span.text  дней
 													.sale Скидка 50%
 									.tariffs__button
-										a(href="#").btn
+										a(href="register.html").btn
 											span Активировать
 									.tariffs__footer
 										.tariffs__footer-title
@@ -407,7 +407,8 @@ html
 								.reviews__item-logo
 									img(src="public/img/reviews/1.jpg", alt="")
 								.reviews__item-name Алексей Пономарев
-								.reviews__item-text Очень люблю делать ставки на спорт с этим сервисом. Весь кэшбек можно вывести практически сразу на карту. Рекомендую всем друзьям ваш сайт, спасибо разработчикам! 
+								.reviews__item-text 
+									span Очень люблю делать ставки на спорт с этим сервисом. Весь кэшбек можно вывести практически сразу на карту. Рекомендую всем друзьям ваш сайт, спасибо разработчикам! 
 							.reviews__item.swiper-slide
 								.reviews__item-logo
 									img(src="public/img/reviews/2.jpg", alt="")
@@ -417,7 +418,7 @@ html
 								.reviews__item-logo
 									img(src="public/img/reviews/9.jpg", alt="")
 								.reviews__item-name Grimer15
-								.reviews__item-text Классный сайт! Хороший процент кэшбека от проигрышей, ставлю ставки регулярно и этот сайт возвращает нехилую сумму постоянно, никаких проблем за месяц пользования не возникло, выплаты быстрые	
+								.reviews__item-text Что-то новенькое, сделала ставку с этим сервисом и уже уверена, что не проиграешь, ведь часть денег сразу можно вернуть на карту, это реально радует, классный сайт 👍
 							.reviews__item.swiper-slide
 								.reviews__item-logo
 									img(src="public/img/reviews/5.jpg", alt="")
@@ -447,7 +448,7 @@ html
 								.reviews__item-logo
 									img(src="public/img/reviews/3.jpg", alt="")
 								.reviews__item-name qawaiii_210
-								.reviews__item-text Что-то новенькое, сделал ставку с этим сервисом и уже уверен, что не проиграешь, ведь часть денег сразу можно вернуть на карту, это реально радует, классный сайт 👍 
+								.reviews__item-text Классный сайт! Хороший процент кэшбека от проигрышей, ставлю ставки регулярно и этот сайт возвращает нехилую сумму постоянно, никаких проблем за месяц пользования не возникло, выплаты быстрые
 							.reviews__item.swiper-slide
 								.reviews__item-logo
 									img(src="public/img/reviews/10.jpg", alt="")
@@ -467,5 +468,5 @@ html
 						p Начни сегодня и разбогатей уже завтра!
 
 			include sections/footer
-			include sections/modal
+			//- include sections/modal
 		include includes/foot

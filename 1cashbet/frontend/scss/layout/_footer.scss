@@ -150,11 +150,11 @@
 		&__wrap {
 			flex-wrap: wrap;
 			width: 100%;
-			flex-direction: column;
 			font-size: .8em;
 			border-top: em(1) solid #7f8cab;
 			border-bottom: em(1) solid #7f8cab;
 			padding-top: 2.3em;
+			padding-bottom: 2.3em;
 
 		}
 
@@ -173,12 +173,11 @@
 			}
 
 			&:nth-child(3) {
-				padding-left: 1.2em;
+				margin-top: 1em;
 			}
 
 			&:nth-child(4) {
-				margin-top: -1.8em;
-				padding-left: 1.2em;
+				margin-top: -1em;
 			}
 
 		}
