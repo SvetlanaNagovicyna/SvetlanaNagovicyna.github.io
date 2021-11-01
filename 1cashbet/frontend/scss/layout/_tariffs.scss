@@ -320,7 +320,7 @@
 
 	@media (max-width: 551px) {
 		font-size: 1.25em;
-		margin-bottom: 0;
+		margin-bottom: 1em;
 
 		&._container {
 			max-width: 100%;
@@ -341,7 +341,13 @@
 
 			&::-webkit-scrollbar {
 				width: 0;
+				display: none;
 			}
+		}
+
+		&__column {
+			margin: 0 0.6875em;
+			padding: 0;
 		}
 
 		&__item {
