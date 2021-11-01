@@ -95,22 +95,22 @@
     &__user {
         margin: 0 em(37) 0 auto;
 
-        &-action {
-            display: flex;
-            align-items: center;
-            transition: all .3s ease-out;
-            cursor: pointer;
+        // &-action {
+        //     display: flex;
+        //     align-items: center;
+        //     transition: all .3s ease-out;
+        //     cursor: pointer;
 
-            &:hover {
-                path {
-                    fill: #FFD84E;
-                }
+        //     &:hover {
+        //         path {
+        //             fill: #FFD84E;
+        //         }
 
-                .header__user-text {
-                    color: #FFD84E;
-                }
-            }
-        }
+        //         .header__user-text {
+        //             color: #FFD84E;
+        //         }
+        //     }
+        // }
 
         &-icon {
             display: none;
@@ -127,12 +127,22 @@
             align-items: center;
             justify-content: center;
             padding: em(6.5) em(16);
+            transition: all .3s ease-in-out;
 
             span {
                 font-size: em(13);
                 line-height: em(16, 13);
                 font-weight: 600;
                 text-align: center;
+                transform: translateY(-.1em);
+            }
+
+            &:hover {
+                background-color: #ffffff;
+
+                span {
+                    color: #0B142A;
+                }
             }
         }
     }
