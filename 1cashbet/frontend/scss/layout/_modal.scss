@@ -1,5 +1,5 @@
 .modal {
-	z-index: 110;
+	z-index: 2;
 	width: 100%;
 	height: 100%;
 	left: 0;
@@ -56,6 +56,8 @@
 	}
 
 	.socials {
+		// font-size: 1.2em;
+
 		&__title {
 			font-weight: 600;
 			font-size: em(13);
@@ -193,7 +195,8 @@
 
 	.form {
 		margin: 0 auto;
-		width: em(334);
+		// width: em(334);
+		width: 16.875em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -578,7 +581,7 @@
 
 		&__socials {
 			padding: em(8) 0 em(13);
-			width: em(234);
+			// width: em(234);
 			border-bottom: em(2) dotted #AFC4D2;
 			border-top: em(2) dotted #AFC4D2;
 			margin-bottom: em(16);
@@ -628,7 +631,7 @@
 		}
 
 		&__socials {
-			width: em(234);
+			// width: em(234);
 			border-bottom: em(2) dotted #AFC4D2;
 			padding-bottom: em(13);
 			margin-bottom: em(17);
@@ -671,9 +674,13 @@
 @media (max-width: 420px) {
 	.modal {
 		width: 95%;
+
+		.checkbox {
+			width: 15.875em;
+		}
 	}
 
 	.modal__wrap {
-		font-size: 11.8px;
+		font-size: 2.2em;
 	}
 }
