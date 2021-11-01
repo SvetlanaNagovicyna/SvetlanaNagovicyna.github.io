@@ -151,6 +151,7 @@
 
         &__menu {
             margin: 0 em(26) 0 0;
+            width: 1.4625em;
         }
 
         &__logo {
@@ -160,6 +161,8 @@
         &__tg {
             &-icon {
                 margin-right: 0;
+                width: 1.2125em;
+                margin-top: 0.3em;
             }
 
             &-text {
@@ -172,6 +175,7 @@
 
             &-icon {
                 display: block;
+                width: 1.05em;
             }
 
             &-text {
