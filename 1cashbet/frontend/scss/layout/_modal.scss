@@ -150,7 +150,7 @@
 		border: em(1) solid #DEE7ED;
 		border-radius: em(15);
 		width: em(168);
-		height: em(38);
+		height: em(39);
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
@@ -162,7 +162,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin: 0 em(8);
+			margin: 0 .4em;
 			cursor: pointer;
 
 			&:nth-child(1) {
@@ -209,6 +209,7 @@
 		&__item {
 			width: 100%;
 			margin-bottom: em(10);
+			padding: 0 0.08em
 		}
 
 		input {
@@ -220,13 +221,13 @@
 			color: #1A2645;
 			padding: 0 em(22);
 			height: em(44, 12);
-			outline: none;
+			// outline: none;
 
 			&:focus-visible,
 			&:focus {
-				outline: none;
-				border: em(2, 12) solid #1A2645;
-				-webkit-border: em(2, 12) solid #1A2645;
+				outline: em(2, 12) solid #1A2645;
+				// border: em(2, 12) solid #1A2645;
+				// -webkit-border: em(2, 12) solid #1A2645;
 			}
 		}
 
@@ -334,16 +335,16 @@
 			}
 
 			&::after {
-				transform: scale(0);
+				opacity: 0;
 				transition: all 0.3s ease 0s;
 				content: "";
 				width: em(9);
 				height: em(9);
 				position: absolute;
-				left: em(1.2);
+				left: em(1.55);
 				top: em(3);
 				margin: 0 em(10) 0 0;
-				background-color: #FF3C2B;
+				background: url(../img/check.svg) center / 100% no-repeat;
 				border-radius: em(1);
 				transition: all .3s ease-in-out;
 			}
@@ -351,7 +352,7 @@
 	}
 
 	.checkbox__item:checked+.checkbox__label::after {
-		transform: scale(1);
+		opacity: 1;
 	}
 
 
@@ -375,7 +376,7 @@
 			background: #C5FFE0;
 			border-radius: em(10);
 			padding: em(9) em(10) em(9) em(13);
-			margin-bottom: em(12);
+			margin-bottom: em(15);
 
 			&-text {
 				font-weight: bold;
@@ -408,13 +409,13 @@
 
 		&__list {
 			padding-left: em(8);
-			margin-bottom: em(12);
+			margin-bottom: em(15);
 
 			&-item {
 				display: flex;
 				align-items: center;
 				justify-content: flex-start;
-				margin-bottom: em(5);
+				margin-bottom: em(10);
 
 				&_icon {
 					width: em(10);
@@ -524,6 +525,10 @@
 		}
 
 		&__payments {
+			margin-top: em(27);
+			padding-top: em(30);
+			border-top: em(2) dotted #AFC4D2;
+
 			&-title {
 				font-weight: 600;
 				font-size: em(13);
