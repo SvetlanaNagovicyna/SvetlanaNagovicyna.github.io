@@ -59,13 +59,14 @@ html
 									span Зарегистрироваться
 						.reg__checkbox
 							.checkbox
-								input#rules1.checkbox__item(checked name='form[]' value='1' type='checkbox' )
-								label.checkbox__label(for='rules1')
-									span Соглашаюсь с правилами лицензионного договора оферты и условиями предоставления услуг по платной подписке на аналитику.
+								label.checkbox__label
+									input.checkbox__item(checked name='form[]' value='1' type='checkbox')
+									span.check
+									span.text Соглашаюсь с правилами лицензионного договора оферты и условиями предоставления услуг по платной подписке на аналитику.
 							.checkbox
-								input#rules2.checkbox__item(name='form[]' value='1' type='checkbox')
-								label.checkbox__label(for='rules2')
-									span Согласен с правилами предоставления доступа к сервису по подписке с использованием автоплатежа и уведомлен о подключении платной подписки стоимостью 1 руб. за первые 5 дней доступа, далее с подключенной карты списывается оплата за тариф "Start" - 99 руб., "Key" - 290 руб. и "Combo" - 1390 руб. за каждые 5 дней. Подписку можно отменить в любое время в личном кабинете.
-
+								label.checkbox__label
+									input.checkbox__item(name='form[]' value='1' type='checkbox')
+									span.check
+									span.text Согласен с правилами предоставления доступа к сервису по подписке с использованием автоплатежа и уведомлен о подключении платной подписки стоимостью 1 руб. за первые 5 дней доступа, далее с подключенной карты списывается оплата за тариф "Start" - 99 руб., "Key" - 290 руб. и "Combo" - 1390 руб. за каждые 5 дней. Подписку можно отменить в любое время в личном кабинете.
 			include sections/footer
 		include includes/foot
