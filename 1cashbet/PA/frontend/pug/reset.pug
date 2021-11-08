@@ -1,0 +1,28 @@
+- var title = "";
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap
+			include sections/header
+			main.main
+				.modal.reset.open
+					.modal__wrap
+						//- .close
+						//- 	img(src="./public/img/popups/close.svg")
+						.modal__header.reset__header Сброс пароля
+						.reset__content 
+							.reset__title Email
+						form#form-emailReset.form.phone-form.tab.tab-1.contentActive(action='#')
+							.form__item
+								input#emailReset.input-email(type='email' placeholder='Введите email' name='email' required='' data-valid='false' data-name='email' autocomplete='email')
+							.form__item
+								button.input-submit.btn 
+									span Отправить
+						a(href="login.html").passforget Вспомнили пароль?
+						.footer_rorm 
+							.footer_rorm-acc Еще нет аккаунта?
+							a(href="register.html").footer_rorm-reg Зарегистрироваться
+
+			include sections/footer
+		include includes/foot

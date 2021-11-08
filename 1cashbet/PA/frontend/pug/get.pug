@@ -1,0 +1,90 @@
+- var title = "";
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap
+			include sections/header
+			main.main
+				.modal.get
+					.modal__wrap
+						//- .close
+						//- 	img(src="./public/img/popups/close.svg")
+						.modal__header.get__header
+							|Всего за 1₽ 
+							br
+							|вы получите
+						.get__content
+							.get__sale
+								.get__sale-text Lite и Pro кешбек на 3 дня
+								.get__sale-pla АКЦИЯ!
+							ul.get__list
+								li.get__list-item
+									.get__list-item_icon
+										img(src="./public/img/popups/icon-1.svg", alt="")
+									.get__list-item_text Повышенный кэшбек
+								li.get__list-item
+									.get__list-item_icon 
+										img(src="./public/img/popups/icon-2.svg", alt="")
+									.get__list-item_text Актуальные новости
+								li.get__list-item
+									.get__list-item_icon 
+										img(src="./public/img/popups/icon-3.svg", alt="")
+									.get__list-item_text Акции и промокоды
+								li.get__list-item
+									.get__list-item_icon 
+										img(src="./public/img/popups/icon-4.svg", alt="")
+									.get__list-item_text Личный telegram bot
+								li.get__list-item
+									.get__list-item_icon 
+										img(src="./public/img/popups/icon-5.svg", alt="")
+									.get__list-item_text Приоритетная тех.поддержка
+								li.get__list-item
+									.get__list-item_icon 
+										img(src="./public/img/popups/icon-6.svg", alt="")
+									.get__list-item_text Экспресс ставки
+							//- .get__gift.gift
+							//- 	.gift__img
+							//- 		img(src="./public/img/popups/gift.png", alt="")
+							//- 	.gift__text
+							//- 		.gift__text-title Pro-аналитика в подарок!
+							//- 		.gift__text-subtitle 5 дней Pro-аналитики за 
+							//- 			span 1500 ₽
+							//- 		.gift__text-label СОВЕРШЕННО БЕСПЛАТНО
+							#btnGift.get__button
+								a(href="#").btn 
+									span Оплатить 1₽
+							//- .get__desc 
+							//- 	|5 дней за 1 рубль,далее 200 рубв 5 дней. После 
+							//- 	br
+							//- 	|окончания пробного периода сумма с карты
+							//- 	br
+							//- 	| списывается автоматически, 
+							//- 	a.get__desc-link(href="#") подробнее.
+							.get__payments 
+								.get__payments-title Доступные способы оплаты
+								ul.get__payments-list
+									li.get__payments-item
+										img(src="./public/img/popups/visa.svg", alt="")
+									li.get__payments-item
+										img(src="./public/img/popups/mastercard.svg", alt="")
+									li.get__payments-item
+										img(src="./public/img/popups/google-pay.svg", alt="")
+									li.get__payments-item
+										img(src="./public/img/popups/apple-pay.svg", alt="")
+									li.get__payments-item
+										img(src="./public/img/popups/mir.svg", alt="")
+							.get__secure
+								ul.get__secure-list
+									li.get__secure-item
+										img(src="./public/img/popups/ssl.svg", alt="")
+									li.get__secure-item
+										img(src="./public/img/popups/verified-visa.svg", alt="")
+									li.get__secure-item
+										img(src="./public/img/popups/pci.svg", alt="")
+									li.get__secure-item
+										img(src="./public/img/popups/mc-secure.svg", alt="")
+									li.get__secure-item
+										img(src="./public/img/popups/mir-accept.png", alt="")
+			include sections/footer
+		include includes/foot

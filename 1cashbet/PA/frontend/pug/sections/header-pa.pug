@@ -1,0 +1,42 @@
+header.header-pa
+	._container
+		.header-pa__menu
+			img(src="public/img/menu.svg" alt="")
+		.header-pa__logo
+			a(href="index.html")
+				img(src="public/img/logo.svg" alt="")
+		ul.header-pa__list
+			li
+				a(href="#").header-pa__list-item
+					.text 
+						| Пригласить друга 
+						span +20%
+			li
+				a(href="#").header-pa__list-item
+					.text Список БК
+			li
+				a(href="#").header-pa__list-item
+					.text 
+						| Cохранено: 
+						span 100,000 ₽
+			li
+				a(href="#").header-pa__list-item
+					.text 
+						| Баланс: 
+						span 43,000 / 22,000 ₽
+		a(href="#").header-pa__notice
+			img(src="public/img/notice.svg", alt="")
+			span 5
+		.header-pa__user
+			.header-pa__user-icon
+				img(src="public/img/user-logo.png" alt="")
+			.header-pa__user-text
+				span Aleksey90
+	.letter
+		.letter__text Подтверди свой emaiil, что бы получать уведомления о кэшбэке. Мы отправили письмо со ссылкой подтверждения на 
+		.letter__email 
+			span  email@email.com
+		a(href="#").letter__btn.send
+			span Отправить повторно
+		a(href="#").letter__btn.change
+			span Изменить email
