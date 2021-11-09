@@ -64,6 +64,9 @@
                     </svg>
                   </div>
                   <div class="text">Акции и промокоды</div></a></li>
+              <li>
+                <div class="line"></div>
+              </li>
               <li> <a class="menu__list-item" href="#">
                   <div class="icon"> 
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,6 +90,9 @@
                     </svg>
                   </div>
                   <div class="text">Реферальная программа</div></a></li>
+              <li>
+                <div class="line"></div>
+              </li>
               <li> <a class="menu__list-item" href="#">
                   <div class="icon"> 
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,8 +121,40 @@
               <div class="banner__img"> <img src="public/img/banners/banner.png" alt=""></div>
             </div>
             <div class="center">
-              <div class="general"></div>
-              <div class="ad"></div>
+              <div class="general-news general">
+                <div class="general-news__top"> 
+                  <div class="general-news__title">Новости</div>
+                  <div class="general-news__filter"> 
+                    <div class="select">
+                      <div class="input">
+                        <div class="selected" onclick="page_plans_open_list(this);">
+                          <div class="text"><span>Самые популярные</span></div>
+                        </div>
+                      </div>
+                      <div class="list">
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="15" data-plan_text="Самые популярные">
+                          <div class="text"><span>Самые популярные</span></div>
+                        </div>
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="16" data-plan_text="Самые популярные2">
+                          <div class="text"><span>Самые популярные2</span></div>
+                        </div>
+                        <div class="list__item" onclick="page_plans_list_choose(this);" data-plan_id="17" data-plan_text="Самые популярные3">
+                          <div class="text"><span>Самые популярные3</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="general-news__block"> 
+                  <div class="general-news__block-item"> </div>
+                </div>
+              </div>
+              <div class="ad">
+                <div class="ad__banner"> <img src="public/img/banners/ad1.png" alt=""></div>
+                <div class="ad__banner"> <img src="public/img/banners/ad2.png" alt=""></div>
+                <div class="ad__banner"> <img src="public/img/banners/ad3.png" alt=""></div>
+                <div class="ad__banner"> <img src="public/img/banners/ad4.png" alt=""></div>
+              </div>
             </div>
           </div>
         </div>

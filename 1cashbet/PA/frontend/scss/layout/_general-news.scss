@@ -1,0 +1,128 @@
+.general-news {
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: em(36);
+		line-height: em(44, 36);
+		color: #F5FBFF;
+
+	}
+
+	&__filter {
+		position: relative;
+
+		.text {
+			font-size: em(12);
+			line-height: em(15, 12);
+			padding-left: em(17, 12);
+			color: #F5FBFF;
+		}
+
+		.input {
+			border-radius: em(8);
+			border: em(1) solid #F5FBFF;
+			height: em(36);
+			width: em(211);
+			cursor: pointer;
+			display: flex;
+
+			.selected {
+				overflow: hidden;
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				align-items: center;
+				z-index: 1;
+				position: relative;
+				height: em(35);
+			}
+
+			&:after {
+				will-change: transform;
+				position: absolute;
+				content: "";
+				top: 50%;
+				right: em(15);
+				width: em(6);
+				height: em(6);
+				transform: translateY(-50%);
+				background: url(../img/arrow-select.svg) center / 100% 100% no-repeat;
+				z-index: 0;
+			}
+		}
+
+		.list {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			border: em(1) solid #F5FBFF;
+			border-radius: em(8);
+			display: none;
+			z-index: 3;
+			background-color: #1A2645;
+
+			&__item {
+				overflow: hidden;
+				height: em(45);
+				line-height: em(45);
+				cursor: pointer;
+				color: #1A2645;
+				border-radius: em(8);
+				height: em(35);
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				position: relative;
+
+				&:before {
+					content: "";
+					// border-bottom: em(1) solid #afc4d266;
+					position: absolute;
+					width: 85%;
+					left: 50%;
+					bottom: 0;
+					transform: translateX(-50%);
+				}
+
+				&:hover {
+					background-color: #afc4d266;
+					border-radius: 0;
+
+					.list__item~.list__item:before {
+
+						border: em(1) solid transparent;
+
+					}
+
+					&:before {
+						border: em(1) solid transparent;
+					}
+				}
+
+				&:first-child {
+					border-radius: em(7) em(7) 0 0;
+
+				}
+
+				&:last-child {
+					border-radius: 0 0 em(7) em(7);
+
+					&:before {
+						border-bottom: em(1) solid transparent;
+					}
+				}
+			}
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+}

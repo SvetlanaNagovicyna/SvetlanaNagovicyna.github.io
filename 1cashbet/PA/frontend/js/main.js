@@ -395,6 +395,8 @@ function page_plans_list_choose(e) {
         plan_economy = $(e).data("plan_economy"),
         plan_price = $(e).data("plan_price"),
         plan_discont = $(e).data("plan_discont"),
+
+        plan_text = $(e).data("plan_text"),
         btn = $(e).parent().parent().next();
 
     $(e).parent().parent().parent().parent().find(".tariffs__price span.price").html(plan_price);
@@ -404,6 +406,9 @@ function page_plans_list_choose(e) {
     $(e).parent().prev().find(".days span.day").html(plan_days);
     $(e).parent().prev().find(".days span.text").html(plan_days_text);
     $(e).parent().prev().find(".sale span").html(plan_sale);
+
+    
+    $(e).parent().prev().find(".text span").html(plan_text);
 
     $(btn).data("plan_id", plan_id);
 
