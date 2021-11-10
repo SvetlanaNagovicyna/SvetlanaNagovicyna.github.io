@@ -3,6 +3,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: em(19);
 	}
 
 	&__title {
@@ -122,6 +123,93 @@
 
 			&.active {
 				display: block;
+			}
+		}
+	}
+
+	&__block {
+		display: flex;
+		margin: 0 em(-5);
+
+		&-column {
+			flex-direction: column;
+			flex: 0 1 em(273);
+			margin: 0 em(5);
+		}
+
+		&-item {
+			background: #ffffff;
+			border-radius: em(12);
+			padding: em(19) em(18) em(24) em(25);
+			margin-bottom: em(10);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&.yellow {
+				background: #FAD44E;
+
+				.read {
+					span {
+						transition: all .3s ease-in-out;
+					}
+
+					&:hover {
+						span {
+							color: #FFFFFF;
+						}
+					}
+				}
+			}
+
+			.title {
+				font-weight: 700;
+				font-size: em(18);
+				line-height: em(22, 18);
+				color: #1A2645;
+				margin-bottom: em(15, 18);
+			}
+
+			.image {
+				width: em(230);
+				margin: 0 auto 0;
+				margin-bottom: em(15);
+				border-radius: em(10);
+			}
+
+			.description {
+				font-weight: 400;
+				font-size: em(12);
+				line-height: em(15, 12);
+				color: #1A2645;
+				margin-bottom: em(17, 12);
+			}
+
+			.read {
+				display: inline-flex;
+				align-items: center;
+				justify-content: flex-start;
+
+				span {
+					font-weight: 700;
+					font-size: em(14);
+					line-height: em(17, 14);
+					color: #1A2645;
+					position: relative;
+					padding-left: em(10);
+					transition: all .3s ease-in-out;
+				}
+
+				img {
+					width: em(14);
+				}
+
+				&:hover {
+					span {
+						color: #FAD44E;
+					}
+				}
 			}
 		}
 	}
