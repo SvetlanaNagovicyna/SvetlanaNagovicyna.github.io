@@ -350,6 +350,8 @@
 		}
 
 		&__filter {
+			z-index: 10;
+
 			.input {
 				width: 16.4em;
 			}

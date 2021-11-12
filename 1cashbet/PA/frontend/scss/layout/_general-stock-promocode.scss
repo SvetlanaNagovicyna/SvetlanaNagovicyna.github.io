@@ -355,6 +355,18 @@
 
 		}
 
+		.bonus {
+			z-index: 12;
+		}
+
+		.bookie {
+			z-index: 11;
+		}
+
+		.selection {
+			z-index: 10;
+		}
+
 		&__checkbox {
 			font-size: .8em;
 			overflow-x: auto;
