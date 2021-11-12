@@ -14,5 +14,139 @@
 
 	}
 
+	&__balance {
+		display: flex;
+		align-items: flex-start;
+
+		&-now {
+			background: #FFFFFF;
+			border-radius: em(10);
+			padding: em(14) em(25) 0 em(25);
+			width: em(273);
+			margin-right: em(10);
+
+		}
+
+		.title {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			font-size: em(18);
+			line-height: em(22, 18);
+			margin-bottom: em(12, 18);
+
+			.text {
+				font-weight: 600;
+				color: #1A2645;
+			}
+
+			.icon {
+				width: em(15, 18);
+				height: em(15, 18);
+			}
+		}
+
+		.price {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: em(36);
+			line-height: em(44, 36);
+			margin-bottom: em(15, 36);
+
+			.text {
+				font-weight: 600;
+				color: #25C16C;
+			}
+
+			.icon {
+				width: em(15, 36);
+				height: em(15, 36);
+			}
+		}
+
+		.button {
+			width: em(223);
+			padding-top: em(16);
+			position: relative;
+			padding-bottom: em(21);
+
+			.btn {
+				text-transform: initial;
+				white-space: nowrap;
+				height: em(44);
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				span {
+					font-size: em(18);
+				}
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: em(-4);
+				left: 50%;
+				transform: translateX(-50%);
+				width: em(258);
+				border-bottom: em(4) dotted #AFC4D2;
+			}
+		}
+
+		&-other {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.other-balance {
+			&__top {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: em(27);
+				width: em(556);
+
+
+				&--item {
+					width: em(273);
+					background: #FFFFFF;
+					border-radius: em(10);
+					padding: em(14) em(25) 0 em(25);
+
+					.price {
+						.text {
+							color: #8DA5B5;
+
+							&.yellow {
+								color: #FAC600;
+							}
+						}
+					}
+				}
+			}
+
+			&__text {
+				display: flex;
+				align-items: flex-start;
+				margin-left: em(14);
+
+				.icon {
+					width: em(15);
+					height: em(15);
+					margin-right: em(15);
+				}
+
+				.text {
+					font-size: em(12);
+					line-height: em(16, 12);
+					color: #8DA5B5;
+					letter-spacing: em(1.2, 12);
+					width: em(501, 12);
+				}
+			}
+		}
+	}
 
 }

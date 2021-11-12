@@ -114,40 +114,54 @@
 		justify-content: center;
 		width: 100%;
 		background: #FAC600;
-		height: em(34);
+		min-height: em(34);
+
+		&__block {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__buttons {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
 		&__text {
 			font-size: em(12);
 			line-height: em(15, 12);
 			color: #1A2645;
 			letter-spacing: em(-.4, 12);
+
+			span {
+				font-weight: 700;
+				color: #1A2645;
+				padding: 0 em(8) 0 em(5);
+			}
 		}
 
-		&__email {
-			font-size: em(12);
-			line-height: em(15, 12);
-			font-weight: 700;
-			color: #1A2645;
-			padding: 0 em(8) 0 em(5);
-		}
 
 		&__btn {
 			border-radius: em(4);
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			padding: em(4.3) em(4.7);
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			margin: 0 em(3);
 			transition: all .3s ease-in-out;
+			height: em(23);
 
 			&.send {
 				background-color: #ffffff;
+				width: em(139);
 
 				span {
 					font-size: em(12);
-					line-height: em(15, 12);
+					line-height: 1.1;
 					color: #FF3C2B;
-					transform: translateY(-.02em);
 				}
 
 				&:hover {
@@ -157,13 +171,13 @@
 
 			&.change {
 				background-color: #FF3C2B;
-				padding: em(4.3) em(7.2);
+				// padding: em(4.3) em(7.2);
+				width: em(113);
 
 				span {
 					font-size: em(12);
-					line-height: em(15, 12);
+					line-height: 1.1;
 					color: #ffffff;
-					transform: translateY(-.02em);
 				}
 
 				&:hover {
@@ -173,50 +187,56 @@
 		}
 	}
 
-	@media (max-width: 1024px) {
-		padding: 0 em(50);
-	}
-
-	@media (max-width: 768px) {
-		padding: 0 em(30);
-	}
 
 	@media (max-width: 551px) {
 		font-size: 2.15em;
-		padding: 0 em(15);
+
+		._container {
+			padding: 0 em(15);
+		}
 
 		&__menu {
-			margin: 0 em(26) 0 0;
+			margin: 0 em(18) 0 0;
 			width: 1.4625em;
 		}
 
 		&__logo {
-			margin: 0 auto;
+			margin-right: auto;
+			width: 7.9375em;
 		}
 
-		&__tg {
-			&-icon {
-				margin-right: 0;
-				width: 1.2125em;
-				margin-top: 0.3em;
-			}
-
-			&-text {
-				display: none;
-			}
+		&__list {
+			display: none;
 		}
+
 
 		&__user {
-			margin: 0 0 0 em(18);
+			margin: 0 0 0 em(14);
 
 			&-icon {
 				display: block;
-				width: 1.05em;
+				width: 1.5em;
 			}
 
 			&-text {
 				display: none;
 			}
+		}
+
+		.letter {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+
+			&__text {
+				margin: .5em 0;
+			}
+
+			&__buttons {
+				margin-bottom: .5em;
+			}
+
 		}
 	}
 }

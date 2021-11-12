@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./public/css/style.min.css">
   </head>
   <body>
-    <div class="body-wrap">
+    <div class="body-wrap body-wrap_page">
       <header class="header-pa">
         <div class="_container">
           <div class="header-pa__menu"><img src="public/img/menu.svg" alt=""></div>
@@ -32,8 +32,11 @@
           </div>
         </div>
         <div class="letter">
-          <div class="letter__text">Подтверди свой emaiil, что бы получать уведомления о кэшбэке. Мы отправили письмо со ссылкой подтверждения на </div>
-          <div class="letter__email"> <span> email@email.com</span></div><a class="letter__btn send" href="#"><span>Отправить повторно</span></a><a class="letter__btn change" href="#"><span>Изменить email</span></a>
+          <div class="letter__block">
+            <div class="letter__text">
+               Подтверди свой emaiil, что бы получать уведомления о кэшбэке. Мы отправили письмо со ссылкой подтверждения на<span>email@email.com</span></div>
+          </div>
+          <div class="letter__buttons"><a class="letter__btn send" href="#"><span>Отправить повторно</span></a><a class="letter__btn change" href="#"><span>Изменить email</span></a></div>
         </div>
       </header>
       <main class="stock-promocode">
@@ -224,7 +227,7 @@
                 </div>
                 <div class="general-stock-promocode__block">
                   <div class="general-stock-promocode__block-title">Промокоды <span class="text-red">сегодня</span></div>
-                  <div class="general-stock-promocode__block-bonus">
+                  <div class="general-stock-promocode__block-bonus promo">
                     <div class="general-stock-promocode__block-column">
                       <div class="title"><span>
                            Минус 20%<br>на футбол</span></div>

@@ -175,6 +175,7 @@
 					line-height: em(16, 13);
 					padding-left: em(19, 13);
 					display: inline-block;
+					white-space: nowrap;
 				}
 
 				.check {
@@ -305,6 +306,97 @@
 						line-height: em(22, 18);
 						text-transform: initial;
 					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 551px) {
+	.general-stock-promocode {
+		font-size: 2.6em;
+		width: 100%;
+		padding-bottom: 0;
+
+		&__top {
+			flex-direction: column;
+			margin-bottom: 0.55em;
+		}
+
+		&__title {
+			font-size: 1.15em;
+			padding-left: 0.5em;
+			margin-bottom: .8em;
+			display: block;
+			width: 100%;
+		}
+
+		&__bookie {
+			margin: 0;
+
+			&-item {
+				width: 16.4em;
+				margin-bottom: .5em;
+
+			}
+		}
+
+		.bonus,
+		.bookie,
+		.selection {
+			margin-left: 0;
+			margin-right: 0;
+
+			.input {
+				width: 16.4em;
+				margin-bottom: .5em;
+
+			}
+
+		}
+
+		&__checkbox {
+			font-size: .8em;
+			overflow-x: auto;
+			border: none;
+			padding-bottom: 0;
+			padding-left: .3em;
+			padding-right: .3em;
+
+			&::-webkit-scrollbar {
+				width: 0;
+				display: none;
+			}
+
+			.checkbox {
+				.tr {
+					padding: 0.7625em 1.4375em;
+					border-radius: .55em;
+				}
+			}
+		}
+
+		&__block {
+
+			&-title {
+				font-size: 0.95em;
+				margin-left: .85em;
+				margin-bottom: 0.7em;
+			}
+
+			&-bonus {
+				font-size: 0.85em;
+				overflow-x: auto;
+				padding: 0 0.4em;
+				margin: 0 0 1.5em;
+
+				&::-webkit-scrollbar {
+					width: 0;
+					display: none;
+				}
+
+				&.promo {
+					margin-bottom: 0;
 				}
 			}
 		}

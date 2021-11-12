@@ -33,10 +33,12 @@ header.header-pa
 			.header-pa__user-text
 				span Aleksey90
 	.letter
-		.letter__text Подтверди свой emaiil, что бы получать уведомления о кэшбэке. Мы отправили письмо со ссылкой подтверждения на 
-		.letter__email 
-			span  email@email.com
-		a(href="#").letter__btn.send
-			span Отправить повторно
-		a(href="#").letter__btn.change
-			span Изменить email
+		.letter__block
+			.letter__text 
+				| Подтверди свой emaiil, что бы получать уведомления о кэшбэке. Мы отправили письмо со ссылкой подтверждения на
+				span email@email.com
+		.letter__buttons
+			a(href="#").letter__btn.send
+				span Отправить повторно
+			a(href="#").letter__btn.change
+				span Изменить email
