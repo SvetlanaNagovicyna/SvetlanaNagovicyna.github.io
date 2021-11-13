@@ -278,6 +278,7 @@
 			transform: translateX(-50%);
 			width: em(390);
 			border-bottom: em(3.23) dotted #AFC4D2;
+			-webkit-border-bottom: em(3.23) dotted #AFC4D2;
 		}
 
 		&-title {

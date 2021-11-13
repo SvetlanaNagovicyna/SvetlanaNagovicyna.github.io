@@ -254,6 +254,7 @@
 
 					&::after {
 						border-bottom: em(5) dotted #121C33;
+						-webkit-border-bottom: em(5) dotted #121C33;
 					}
 				}
 			}
@@ -293,6 +294,7 @@
 					transform: translateX(-50%);
 					width: em(258, 12);
 					border-bottom: em(5) dotted #AFC4D2;
+					-webkit-border-bottom: em(5) dotted #AFC4D2;
 				}
 			}
 

@@ -263,6 +263,7 @@
 		color: #8DA5B5;
 		padding-bottom: em(13, 11);
 		border-bottom: em(2) dotted #AFC4D2;
+		-webkit-border-bottom: em(2) dotted #AFC4D2;
 		cursor: pointer;
 		width: em(234, 11);
 		margin: 0 auto em(17, 11);
@@ -508,6 +509,7 @@
 			color: #8DA5B5;
 			padding-top: em(9, 8);
 			border-top: em(2, 8) dotted #AFC4D2;
+			-webkit-border-top: em(2, 8) dotted #AFC4D2;
 			margin: em(14, 8) 0 em(10, 8);
 
 			&-link {
@@ -580,7 +582,9 @@
 			padding: em(8) 0 em(13);
 			width: em(234);
 			border-bottom: em(2) dotted #AFC4D2;
+			-webkit-border-bottom: em(2) dotted #AFC4D2;
 			border-top: em(2) dotted #AFC4D2;
+			-webkit-border-top: em(2) dotted #AFC4D2;
 			margin-bottom: em(16);
 		}
 
@@ -630,6 +634,7 @@
 		&__socials {
 			width: em(234);
 			border-bottom: em(2) dotted #AFC4D2;
+			-webkit-border-bottom: em(2) dotted #AFC4D2;
 			padding-bottom: em(13);
 			margin-bottom: em(17);
 		}
