@@ -17,6 +17,10 @@
 	&__balance {
 		display: flex;
 		align-items: flex-start;
+		padding: em(31) 0 em(26);
+		margin-bottom: em(23);
+		border-top: em(1) solid rgba(32, 46, 81, 0.6);
+		border-bottom: em(1) solid rgba(32, 46, 81, 0.6);
 
 		&-now {
 			background: #FFFFFF;
