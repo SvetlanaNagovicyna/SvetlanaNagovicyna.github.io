@@ -63,7 +63,17 @@ function debugging() {
     })
 }
 
+///menu
 
+$('.menu-mob').click(function(){
+    // actual-pricing
+    const state = $(this).closest('.menu').hasClass('active');
+    $(this).closest('.body-wrap').find('.menu').removeClass('active');
+    if (!state) $(this).closest('.menu').addClass('active');
+    // $(this).closest('.actual-pricing__pricing_menu').toggleClass('active');
+})
+
+///swipers
 
 new Swiper('.top-section__slider', {
     navigation: {

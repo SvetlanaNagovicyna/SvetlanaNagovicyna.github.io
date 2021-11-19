@@ -7,7 +7,18 @@ html
 			include sections/header-pa
 			main.news
 				.wrapper
-					.menu
+					.menu.active
+						.menu-mob
+							ul.menu-mob__list
+								li 
+									.menu-mob__list-item
+										.icon 
+											svg(width='9' height='10' viewBox='0 0 9 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+												path(d='M0 1C0 0.447715 0.447715 0 1 0H8C8.55229 0 9 0.447715 9 1C9 1.55228 8.55229 2 8 2H1C0.447715 2 0 1.55228 0 1Z' fill='white')
+												path(d='M0 5C0 4.44772 0.447715 4 1 4H8C8.55229 4 9 4.44772 9 5C9 5.55228 8.55229 6 8 6H1C0.447715 6 0 5.55228 0 5Z' fill='white')
+												path(d='M0 9C0 8.44771 0.447715 8 1 8H8C8.55229 8 9 8.44771 9 9C9 9.55229 8.55229 10 8 10H1C0.447715 10 0 9.55229 0 9Z' fill='white')
+										.text Меню кабинета
+							.line-mob
 						ul.menu__list
 							li 
 								a(href="news.html").menu__list-item
@@ -77,63 +88,130 @@ html
 							.banner__img 
 								img(src="public/img/banners/banner.png", alt="")
 						.center
-							.general-cashback.general
-								.general-cashback__top 
-									.general-cashback__title Мой кэшбек
-								.general-cashback__balance
-									.general-cashback__balance-now
-										.title 
-											.text
+							.general-cashback
+								.general
+									.general-cashback__top 
+										.general-cashback__title Мой кэшбек
+									.general-cashback__balance
+										.general-cashback__balance-now
+											.title 
+												.text
+													span
+														|Сейчас 
+														br
+														|на балансе
+												.icon 
+													img(src="public/img/icon.svg", alt="")
+											.price 
+												.text
+													span 66 500 ₽
+												.icon 
+													svg.icon-green(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
+														circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
+														path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
+														path(d='M7 3H8V11H7V3Z' fill='#25C16C')
+											.button
+												a(href="register.html").btn
+													span Вывести средства
+										.general-cashback__balance-other.other-balance
+											.other-balance__top
+												.other-balance__top--item
+													.title 
+														.text
+															span
+																|Ожидают
+																br
+																|зачисления
+														.icon 
+															img(src="public/img/icon.svg", alt="")
+													.price
+														.text
+															span 2 500 ₽
+														.icon 
+															svg.icon-gray(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
+																circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
+																path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
+																path(d='M7 3H8V11H7V3Z' fill='#25C16C')
+												.other-balance__top--item
+													.title 
+														.text
+															span
+																|Сэкономил
+																br
+																|за все время
+													.price
+														.text.yellow
+															span 2 566 500 ₽
+											.other-balance__text
+												.icon 
+													img(src="public/img/icon-4.svg", alt="")
+												.text
+													span Суммы возврата кэшбэка обновляются ежедневно и является оценочной до подтверждения букмекером. Могут происходить задержки при подтверждении возврата кэшбэка. Подтвержденные суммы указаны в разделе вывод средств.
+									.general-cashback__top 
+										.general-cashback__title Как получить кэшбек
+									.general-cashback__steps
+										.general-cashback__steps-column
+											.step
+												span Шаг 1
+											.title
 												span
-													|Сейчас 
+													|Ставь ставки 
 													br
-													|на балансе
-											.icon 
-												img(src="public/img/icon.svg", alt="")
-										.price 
-											.text
-												span 66 500 ₽
-											.icon 
-												img(src="public/img/icon-1.svg", alt="")
-										.button
-											a(href="register.html").btn
-												span Вывести средства
-									.general-cashback__balance-other.other-balance
-										.other-balance__top
-											.other-balance__top--item
-												.title 
-													.text
-														span
-															|Ожидают
-															br
-															|зачисления
-													.icon 
-														img(src="public/img/icon.svg", alt="")
-												.price
-													.text
-														span 2 500 ₽
-													.icon 
-														img(src="public/img/icon-2.svg", alt="")
-											.other-balance__top--item
-												.title 
-													.text
-														span
-															|Сэкономил
-															br
-															|за все время
-												.price
-													.text.yellow
-														span 2 566 500 ₽
-										.other-balance__text
-											.icon 
-												img(src="public/img/icon-4.svg", alt="")
-											.text
-												span Суммы возврата кэшбэка обновляются ежедневно и является оценочной до подтверждения букмекером. Могут происходить задержки при подтверждении возврата кэшбэка. Подтвержденные суммы указаны в разделе вывод средств.
-								.general-cashback__top 
-									.general-cashback__title Как получить кэшбек
-								.general-cashback__steps 
-									
-
+													|с кэшбэком
+											.desc 
+												span Сразу после регистрации ты поулчишь повышенный кешбек сроком на 30 дней Під Райфкартка мається на увазі тарифна модель Райфкартка+. 
+											.button
+												a(href="register.html").btn
+													span Конторы с кешбеком
+										.general-cashback__steps-column
+											.step
+												span Шаг 2
+											.title
+												span Подожди подтверждения
+											.status
+												.icon 
+													svg.icon-gray(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
+														circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
+														path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
+														path(d='M7 3H8V11H7V3Z' fill='#25C16C')
+												.text
+													span В ожидании
+											.desc 
+												span Сразу после регистрации ты поулчишь повышенный кешбек сроком на 30 дней Під Райфкартка мається на увазі тарифна модель Райфкартка+. 
+										
+										.general-cashback__steps-column
+											.step
+												span Шаг 3
+											.title
+												span Кэшбэк зачислен
+											.status
+												.icon 
+													svg.icon-green(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
+														circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
+														path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
+														path(d='M7 3H8V11H7V3Z' fill='#25C16C')
+												.text
+													span Зачислено
+											.desc 
+												span Сразу после регистрации ты поулчишь повышенный кешбек сроком на 30 дней Під Райфкартка мається на увазі тарифна модель Райфкартка+.
+								.general-cashback__title.enrollment История зачислений
+								//- .general-cashback__enrollment
+								//- 	.general-cashback__enrollment-row 
+								//- 		.logo 
+								//- 			img(src="public/img/company/parimatch.svg", alt="")
+								//- 		.date 
+								//- 			span 29.10.21
+								//- 		.sum 
+								//- 			span 56 088 ₽
+								//- 		.status
+								//- 			.text.text-green
+								//- 				span Зачислено
+								//- 			.icon 
+								//- 				svg.icon-green(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
+								//- 					circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
+								//- 					path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
+								//- 					path(d='M7 3H8V11H7V3Z' fill='#25C16C')
+										
 									
 							.ad
 								.ad__banner 

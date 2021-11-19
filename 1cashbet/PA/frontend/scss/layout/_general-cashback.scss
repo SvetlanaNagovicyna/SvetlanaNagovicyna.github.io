@@ -1,4 +1,37 @@
 .general-cashback {
+
+	.icon-gray {
+		path {
+			fill: #AFC4D2;
+		}
+
+		circle {
+			stroke: #AFC4D2;
+		}
+	}
+
+	.icon-green {
+		path {
+			fill: #25C16C;
+		}
+
+		circle {
+			stroke: #25C16C;
+		}
+	}
+
+	.icon-red {
+		path {
+			fill: #FF3C2B;
+		}
+
+		circle {
+			stroke: #FF3C2B;
+		}
+	}
+
+
+
 	&__top {
 		display: flex;
 		justify-content: space-between;
@@ -47,6 +80,7 @@
 			.icon {
 				width: em(15, 18);
 				height: em(15, 18);
+				margin-top: em(3, 18);
 			}
 		}
 
@@ -66,6 +100,12 @@
 			.icon {
 				width: em(15, 36);
 				height: em(15, 36);
+
+				svg {
+					display: block;
+					width: em(15, 36);
+					height: em(15, 36);
+				}
 			}
 		}
 
@@ -152,6 +192,162 @@
 				}
 			}
 		}
+	}
+
+	&__steps {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 em(-5);
+
+		&-title {
+			font-size: em(24);
+			line-height: em(29, 24);
+			font-weight: 500;
+			color: #F5FBFF;
+			margin-bottom: em(24, 24);
+		}
+
+		&-bonus {
+			display: flex;
+			margin: 0 em(-5) em(24);
+			width: 100%;
+
+		}
+
+		&-column {
+			flex: 0 1 em(273);
+			max-width: em(273);
+			margin: 0 em(5);
+			background: #FFFFFF;
+			border-radius: em(10);
+			padding: em(16) em(25) em(24) em(25);
+			color: #1A2645;
+			transition: all .3s ease-in-out;
+			cursor: pointer;
+
+
+			&:hover,
+			&:active {
+				background: #FAD44E;
+
+				.desc {
+					transition: all .3s ease-in-out;
+
+					&::after {
+						border-bottom: em(5) dotted #121C33;
+						-webkit-border-bottom: em(5) dotted #121C33;
+					}
+				}
+			}
+
+			.step {
+				font-weight: 700;
+				font-size: em(18);
+				line-height: em(22, 18);
+				color: #1A2645;
+				margin-bottom: em(19, 18);
+			}
+
+			.title {
+				font-weight: 700;
+				font-size: em(24);
+				line-height: em(29, 24);
+				color: #1A2645;
+			}
+
+			.status {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				font-size: em(12);
+				line-height: em(12, 12);
+				margin-bottom: em(15, 12);
+				background: #ECF4FA;
+				border-radius: em(10, 12);
+				height: em(52, 12);
+				padding: 0 em(20, 12);
+				margin-top: em(13, 12);
+
+				.text {
+					font-weight: 600;
+					color: #7F8CAB;
+				}
+
+				.icon {
+					width: em(15, 12);
+					height: em(15, 12);
+					margin-right: em(11, 12);
+
+					svg {
+						display: block;
+						width: em(15, 12);
+						height: em(15, 12);
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				.status {
+
+					.text {
+						color: #25C06C;
+					}
+				}
+			}
+
+			.desc {
+				font-size: em(12);
+				line-height: em(15, 12);
+				position: relative;
+				margin-bottom: em(46, 12);
+				margin-top: em(19, 12);
+
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: em(-25);
+					left: 50%;
+					transform: translateX(-50%);
+					width: em(258, 12);
+					border-bottom: em(5) dotted #AFC4D2;
+					-webkit-border-bottom: em(5) dotted #AFC4D2;
+				}
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				.desc {
+					margin-bottom: 0;
+
+					&::after {
+						display: none;
+					}
+				}
+			}
+
+			.button {
+				.btn {
+					padding: 0;
+					font-weight: 600;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: em(44);
+
+					span {
+						font-size: em(18);
+						line-height: em(22, 18);
+						text-transform: initial;
+						transform: translateY(.1em);
+					}
+				}
+			}
+		}
+	}
+
+	.enrollment {
+		margin: em(28, 36) 0 em(62, 36) em(30, 36);
+		z-index: 2;
 	}
 
 }

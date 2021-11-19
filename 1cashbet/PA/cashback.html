@@ -41,7 +41,24 @@
       </header>
       <main class="news">
         <div class="wrapper">
-          <div class="menu">
+          <div class="menu active">
+            <div class="menu-mob">
+              <ul class="menu-mob__list">
+                <li> 
+                  <div class="menu-mob__list-item">
+                    <div class="icon"> 
+                      <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1C0 0.447715 0.447715 0 1 0H8C8.55229 0 9 0.447715 9 1C9 1.55228 8.55229 2 8 2H1C0.447715 2 0 1.55228 0 1Z" fill="white"></path>
+                        <path d="M0 5C0 4.44772 0.447715 4 1 4H8C8.55229 4 9 4.44772 9 5C9 5.55228 8.55229 6 8 6H1C0.447715 6 0 5.55228 0 5Z" fill="white"></path>
+                        <path d="M0 9C0 8.44771 0.447715 8 1 8H8C8.55229 8 9 8.44771 9 9C9 9.55229 8.55229 10 8 10H1C0.447715 10 0 9.55229 0 9Z" fill="white"></path>
+                      </svg>
+                    </div>
+                    <div class="text">Меню кабинета</div>
+                  </div>
+                </li>
+              </ul>
+              <div class="line-mob"></div>
+            </div>
             <ul class="menu__list">
               <li> <a class="menu__list-item" href="news.html">
                   <div class="icon"> 
@@ -124,53 +141,105 @@
               <div class="banner__img"> <img src="public/img/banners/banner.png" alt=""></div>
             </div>
             <div class="center">
-              <div class="general-cashback general">
-                <div class="general-cashback__top"> 
-                  <div class="general-cashback__title">Мой кэшбек</div>
-                </div>
-                <div class="general-cashback__balance">
-                  <div class="general-cashback__balance-now">
-                    <div class="title"> 
-                      <div class="text"><span>Сейчас <br>на балансе</span></div>
-                      <div class="icon"> <img src="public/img/icon.svg" alt=""></div>
-                    </div>
-                    <div class="price"> 
-                      <div class="text"><span>66 500 ₽</span></div>
-                      <div class="icon"> <img src="public/img/icon-1.svg" alt=""></div>
-                    </div>
-                    <div class="button"><a class="btn" href="register.html"><span>Вывести средства</span></a></div>
+              <div class="general-cashback">
+                <div class="general">
+                  <div class="general-cashback__top"> 
+                    <div class="general-cashback__title">Мой кэшбек</div>
                   </div>
-                  <div class="general-cashback__balance-other other-balance">
-                    <div class="other-balance__top">
-                      <div class="other-balance__top--item">
-                        <div class="title"> 
-                          <div class="text"><span>Ожидают<br>зачисления</span></div>
-                          <div class="icon"> <img src="public/img/icon.svg" alt=""></div>
-                        </div>
-                        <div class="price">
-                          <div class="text"><span>2 500 ₽</span></div>
-                          <div class="icon"> <img src="public/img/icon-2.svg" alt=""></div>
+                  <div class="general-cashback__balance">
+                    <div class="general-cashback__balance-now">
+                      <div class="title"> 
+                        <div class="text"><span>Сейчас <br>на балансе</span></div>
+                        <div class="icon"> <img src="public/img/icon.svg" alt=""></div>
+                      </div>
+                      <div class="price"> 
+                        <div class="text"><span>66 500 ₽</span></div>
+                        <div class="icon"> 
+                          <svg class="icon-green" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7.5" cy="7.5" r="7" stroke="#25C16C"></circle>
+                            <path d="M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z" fill="#25C16C"></path>
+                            <path d="M7 3H8V11H7V3Z" fill="#25C16C"></path>
+                          </svg>
                         </div>
                       </div>
-                      <div class="other-balance__top--item">
-                        <div class="title"> 
-                          <div class="text"><span>Сэкономил<br>за все время</span></div>
+                      <div class="button"><a class="btn" href="register.html"><span>Вывести средства</span></a></div>
+                    </div>
+                    <div class="general-cashback__balance-other other-balance">
+                      <div class="other-balance__top">
+                        <div class="other-balance__top--item">
+                          <div class="title"> 
+                            <div class="text"><span>Ожидают<br>зачисления</span></div>
+                            <div class="icon"> <img src="public/img/icon.svg" alt=""></div>
+                          </div>
+                          <div class="price">
+                            <div class="text"><span>2 500 ₽</span></div>
+                            <div class="icon"> 
+                              <svg class="icon-gray" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7" stroke="#25C16C"></circle>
+                                <path d="M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z" fill="#25C16C"></path>
+                                <path d="M7 3H8V11H7V3Z" fill="#25C16C"></path>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
-                        <div class="price">
-                          <div class="text yellow"><span>2 566 500 ₽</span></div>
+                        <div class="other-balance__top--item">
+                          <div class="title"> 
+                            <div class="text"><span>Сэкономил<br>за все время</span></div>
+                          </div>
+                          <div class="price">
+                            <div class="text yellow"><span>2 566 500 ₽</span></div>
+                          </div>
                         </div>
                       </div>
+                      <div class="other-balance__text">
+                        <div class="icon"> <img src="public/img/icon-4.svg" alt=""></div>
+                        <div class="text"><span>Суммы возврата кэшбэка обновляются ежедневно и является оценочной до подтверждения букмекером. Могут происходить задержки при подтверждении возврата кэшбэка. Подтвержденные суммы указаны в разделе вывод средств.</span></div>
+                      </div>
                     </div>
-                    <div class="other-balance__text">
-                      <div class="icon"> <img src="public/img/icon-4.svg" alt=""></div>
-                      <div class="text"><span>Суммы возврата кэшбэка обновляются ежедневно и является оценочной до подтверждения букмекером. Могут происходить задержки при подтверждении возврата кэшбэка. Подтвержденные суммы указаны в разделе вывод средств.</span></div>
+                  </div>
+                  <div class="general-cashback__top"> 
+                    <div class="general-cashback__title">Как получить кэшбек</div>
+                  </div>
+                  <div class="general-cashback__steps">
+                    <div class="general-cashback__steps-column">
+                      <div class="step"><span>Шаг 1</span></div>
+                      <div class="title"><span>Ставь ставки <br>с кэшбэком</span></div>
+                      <div class="desc"> <span>Сразу после регистрации ты поулчишь повышенный кешбек сроком на 30 дней Під Райфкартка мається на увазі тарифна модель Райфкартка+. </span></div>
+                      <div class="button"><a class="btn" href="register.html"><span>Конторы с кешбеком</span></a></div>
+                    </div>
+                    <div class="general-cashback__steps-column">
+                      <div class="step"><span>Шаг 2</span></div>
+                      <div class="title"><span>Подожди подтверждения</span></div>
+                      <div class="status">
+                        <div class="icon"> 
+                          <svg class="icon-gray" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7.5" cy="7.5" r="7" stroke="#25C16C"></circle>
+                            <path d="M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z" fill="#25C16C"></path>
+                            <path d="M7 3H8V11H7V3Z" fill="#25C16C"></path>
+                          </svg>
+                        </div>
+                        <div class="text"><span>В ожидании</span></div>
+                      </div>
+                      <div class="desc"> <span>Сразу после регистрации ты поулчишь повышенный кешбек сроком на 30 дней Під Райфкартка мається на увазі тарифна модель Райфкартка+. </span></div>
+                    </div>
+                    <div class="general-cashback__steps-column">
+                      <div class="step"><span>Шаг 3</span></div>
+                      <div class="title"><span>Кэшбэк зачислен</span></div>
+                      <div class="status">
+                        <div class="icon"> 
+                          <svg class="icon-green" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7.5" cy="7.5" r="7" stroke="#25C16C"></circle>
+                            <path d="M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z" fill="#25C16C"></path>
+                            <path d="M7 3H8V11H7V3Z" fill="#25C16C"></path>
+                          </svg>
+                        </div>
+                        <div class="text"><span>Зачислено</span></div>
+                      </div>
+                      <div class="desc"> <span>Сразу после регистрации ты поулчишь повышенный кешбек сроком на 30 дней Під Райфкартка мається на увазі тарифна модель Райфкартка+.</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="general-cashback__top"> 
-                  <div class="general-cashback__title">Как получить кэшбек</div>
-                </div>
-                <div class="general-cashback__steps"> </div>
+                <div class="general-cashback__title enrollment">История зачислений</div>
               </div>
               <div class="ad">
                 <div class="ad__banner"> <img src="public/img/banners/ad1.png" alt=""></div>

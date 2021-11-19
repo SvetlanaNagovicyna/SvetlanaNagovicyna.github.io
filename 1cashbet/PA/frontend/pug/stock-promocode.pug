@@ -7,7 +7,18 @@ html
 			include sections/header-pa
 			main.stock-promocode
 				.wrapper
-					.menu
+					.menu.active
+						.menu-mob
+							ul.menu-mob__list
+								li 
+									.menu-mob__list-item
+										.icon 
+											svg(width='9' height='10' viewBox='0 0 9 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+												path(d='M0 1C0 0.447715 0.447715 0 1 0H8C8.55229 0 9 0.447715 9 1C9 1.55228 8.55229 2 8 2H1C0.447715 2 0 1.55228 0 1Z' fill='white')
+												path(d='M0 5C0 4.44772 0.447715 4 1 4H8C8.55229 4 9 4.44772 9 5C9 5.55228 8.55229 6 8 6H1C0.447715 6 0 5.55228 0 5Z' fill='white')
+												path(d='M0 9C0 8.44771 0.447715 8 1 8H8C8.55229 8 9 8.44771 9 9C9 9.55229 8.55229 10 8 10H1C0.447715 10 0 9.55229 0 9Z' fill='white')
+										.text Меню кабинета
+							.line-mob
 						ul.menu__list
 							li 
 								a(href="news.html").menu__list-item
