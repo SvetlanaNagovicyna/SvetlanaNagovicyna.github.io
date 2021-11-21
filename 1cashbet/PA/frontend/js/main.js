@@ -213,6 +213,62 @@ new Swiper('.reviews__slider', {
         }
     }
 });
+
+
+
+
+// // Open Modal logout
+function openModal2() {
+    document.querySelector('.popup.logout').style.display = 'flex';
+    setTimeout(() => {
+        document.querySelector('.popup.logout').classList.add('open');
+    }, 1)
+};
+
+var popup2 = document.querySelector('.popup.logout');
+var close2 = document.querySelector('.popup.logout .close img');
+
+
+document.querySelector('.logout').addEventListener('click', openModal2);
+
+document.querySelector('.popup.logout').addEventListener('click', (e) => {
+    if (e.target === popup2 || e.target === close2) {
+        document.querySelector('.popup.logout').classList.remove('open');
+        setTimeout(() => {
+            document.querySelector('.popup.logout').style.display = 'none';
+        }, 500)
+    }
+});
+
+
+// // Open Modal
+function openModal() {
+    document.querySelector('.popup.subscription').style.display = 'flex';
+    setTimeout(() => {
+        document.querySelector('.popup.subscription').classList.add('open');
+    }, 1)
+};
+
+var popup = document.querySelector('.popup.subscription');
+var close = document.querySelector('.popup.subscription .close img');
+
+
+document.querySelector('.cancel').addEventListener('click', openModal);
+
+document.querySelector('.popup.subscription').addEventListener('click', (e) => {
+    if (e.target === popup || e.target === close) {
+        document.querySelector('.popup.subscription').classList.remove('open');
+        setTimeout(() => {
+            document.querySelector('.popup.subscription').style.display = 'none';
+        }, 500)
+    }
+});
+
+
+
+
+
+
 // new Swiper('.reviews__slider', {
 //     navigation: {
 //         nextEl: '.reviews__slider .swiper-button-next',
@@ -495,6 +551,33 @@ function calc() {
 
 };
 
+////second
+
+function inputBlur2() {
+    // $$('#sum')[0].value !== '' ?  $$('#sum')[0].value + " ₽" : 0 + " ₽";
+    $$('#sum')[0].value = inputValue($$('#sum')[0].value) + " ₽";
+    // inputSum.value === '' ? 0 + "1" : parseInt(inputSum.value);
+}
+
+inputBlur2();
+
+
+$$('#sum', el => {
+    el.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/gim, '', /\d/);
+    });
+
+    el.addEventListener('focus', function () {
+        this.value = this.value.replace(/[^0-9]/gim, '', /\d/);
+    });
+
+    el.addEventListener('blur', function () {
+        inputBlur2();
+    });
+
+})
+////////////////
+
 function inputBlur() {
     // $$('#sum')[0].value !== '' ?  $$('#sum')[0].value + " ₽" : 0 + " ₽";
     $$('#sum')[0].value = inputValue($$('#sum')[0].value) + " ₽";
@@ -521,4 +604,6 @@ $$('#sum', el => {
     });
 
 })
+
+
 // calc();

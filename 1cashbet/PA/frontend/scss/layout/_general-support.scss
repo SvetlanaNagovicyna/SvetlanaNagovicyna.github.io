@@ -1,0 +1,361 @@
+.general-support {
+
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: em(19);
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: em(36);
+		line-height: em(44, 36);
+		color: #F5FBFF;
+
+	}
+
+	&__information {
+		padding-top: em(17);
+		border-top: em(1) solid rgba(32, 46, 81, 0.6);
+
+		&-question {
+			font-size: em(18);
+			line-height: em(22, 18);
+			margin-bottom: em(25, 18);
+
+			.link {
+				text-decoration: underline;
+				color: #FAC600;
+				transition: all .3s ease-in-out;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+	}
+
+	.form {
+		width: 100%;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: em(30);
+			position: relative;
+
+			label {
+				font-size: em(17);
+				line-height: em(22, 17);
+				color: #FFFFFF;
+				font-weight: 400;
+			}
+
+			input {
+				font-weight: 400;
+				font-size: em(18);
+				line-height: em(22, 18);
+				color: #8DA5B5;
+				width: em(521, 18);
+				background: #1A2645;
+				border: em(1, 18) solid rgba(126, 175, 209, 0.23);
+				box-sizing: border-box;
+				box-shadow: inset 0 em(2, 18) em(5, 18) rgba(0, 0, 0, 0.51);
+				border-radius: em(10, 18);
+				height: em(60, 18);
+				padding: 0 em(27, 18);
+
+				&::placeholder {
+					color: #8DA5B5;
+					transition: all .2s ease-in-out;
+				}
+
+
+				&:focus {
+					outline: none;
+					border: em(1, 18) solid rgba(126, 175, 209, 0.23);
+					color: #8DA5B5;
+
+					&::placeholder {
+						color: transparent;
+					}
+				}
+
+				&:focus-visible {
+					outline: none;
+					border: em(1, 18) solid rgba(255, 249, 0, 0.47);
+				}
+			}
+
+			.select {
+				width: 100%;
+				position: relative;
+				z-index: 2;
+			}
+
+			.input {
+				border-radius: em(8);
+				background: #1A2645;
+				border: em(1, 18) solid rgba(126, 175, 209, 0.23);
+				box-sizing: border-box;
+				box-shadow: inset 0 em(2, 18) em(5, 18) rgba(0, 0, 0, 0.51);
+				border-radius: em(10, 18);
+				height: em(60, 18);
+				width: 100%;
+				cursor: pointer;
+				display: flex;
+				color: #8da5b5;
+				padding: 0 em(27, 18);
+				font-size: em(18);
+
+				.selected {
+					overflow: hidden;
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+					align-items: center;
+					z-index: 1;
+					position: relative;
+				}
+
+				&:after {
+					will-change: transform;
+					position: absolute;
+					content: "";
+					top: 50%;
+					right: em(18);
+					width: em(6);
+					height: em(6);
+					transform: translateY(-50%);
+					background: url(../img/arrow-3.svg) center / 100% 100% no-repeat;
+					z-index: 0;
+				}
+			}
+
+			.list {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+				z-index: 3;
+				background: #1A2645;
+				border: em(1, 18) solid rgba(126, 175, 209, 0.23);
+				box-sizing: border-box;
+				box-shadow: inset 0 em(2, 18) em(5, 18) rgba(0, 0, 0, 0.51);
+				border-radius: em(10, 18);
+
+				&__item {
+					overflow: hidden;
+					line-height: em(45);
+					cursor: pointer;
+					color: #1A2645;
+					border-radius: em(8);
+					height: em(58);
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					position: relative;
+					padding: 0 em(27);
+
+					.text {
+						font-size: em(18);
+						line-height: em(22, 18);
+						color: #8da5b5;
+					}
+
+					&:before {
+						content: "";
+						position: absolute;
+						width: 85%;
+						left: 50%;
+						bottom: 0;
+						transform: translateX(-50%);
+					}
+
+					&:hover {
+						background-color: #afc4d266;
+						border-radius: 0;
+
+						&:before {
+							border: em(1) solid transparent;
+						}
+					}
+
+					&:first-child {
+						border-radius: em(7) em(7) 0 0;
+
+					}
+
+					&:last-child {
+						border-radius: 0 0 em(7) em(7);
+
+						&:before {
+							border-bottom: em(1) solid transparent;
+						}
+					}
+				}
+
+				&.active {
+					display: block;
+				}
+			}
+
+			.textarea {
+				resize: none;
+				padding: 1.2em 1.5em;
+				height: em(354);
+
+				&::placeholder {
+					color: #8DA5B5;
+					transition: all .2s ease-in-out;
+				}
+
+
+				&:focus {
+					outline: none;
+					border: em(1, 18) solid rgba(126, 175, 209, 0.23);
+					color: #8DA5B5;
+
+					&::placeholder {
+						color: transparent;
+					}
+				}
+
+				&:focus-visible {
+					outline: none;
+					border: em(1, 18) solid rgba(255, 249, 0, 0.47);
+				}
+			}
+
+			.file {
+				position: relative;
+				display: inline-block;
+				margin-left: em(20);
+
+				&__input {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					font-size: 0;
+					opacity: 0;
+					cursor: pointer;
+				}
+
+				&__label {
+					font-size: em(18);
+					line-height: em(18, 22);
+					text-decoration: underline;
+					color: #FAC600;
+
+
+				}
+
+				&:hover {
+					.file__label {
+						text-decoration: none;
+					}
+
+				}
+			}
+
+			.button {
+				&.btn {
+					text-transform: initial;
+					padding: 0;
+					width: em(165);
+					height: em(60);
+
+					span {
+						font-size: 1.12em;
+					}
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+	}
+
+
+
+}
+
+@media (max-width: 551px) {
+	.general-support {
+		width: 100%;
+		z-index: 1;
+
+		.general {
+			width: 100%;
+		}
+
+		&__top {
+			padding-left: 1.2em;
+			padding-right: 1.2em;
+			margin-bottom: 1.55em;
+			display: block;
+			width: 100%;
+		}
+
+		&__title {
+			font-size: 2.62em;
+		}
+
+		&__information {
+			font-size: 1.6em;
+			padding-left: .75em;
+			padding-right: .75em;
+		}
+
+		.form {
+			&__item {
+				flex-direction: column;
+				align-items: flex-start;
+				margin-bottom: 1.27em;
+
+				label {
+					margin-bottom: 1em;
+					margin-left: 0.2em;
+				}
+
+				input {
+					width: 100%;
+				}
+
+				.textarea {
+					height: 14.725em;
+				}
+
+				.file {
+					margin: 0 auto;
+					margin-top: .5em;
+				}
+
+				.button {
+					&.btn {
+						width: 100%;
+						margin-top: 2.2em;
+
+						span {
+							font-size: 1.52em;
+						}
+					}
+				}
+
+
+			}
+		}
+
+
+
+	}
+}
