@@ -23,6 +23,21 @@
 			line-height: em(18.1, 13.2);
 			margin-bottom: em(16, 13.2);
 		}
+
+		ul {
+			font-size: em(13.2);
+			line-height: em(18.1, 13.2);
+			margin-bottom: em(16, 13.2);
+			margin-bottom: em(10, 13.2);
+		}
+
+		li {
+			margin-bottom: em(10);
+		}
+
+		.strong {
+			font-weight: 600;
+		}
 	}
 
 	@media (max-width: 551px) {
@@ -36,7 +51,7 @@
 		&__description {
 			font-size: 1.2em;
 
-			p {
+			p, ul  {
 				font-size: 1.025em;
 				line-height: 1.7em;
 

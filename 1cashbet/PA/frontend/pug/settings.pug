@@ -95,20 +95,20 @@ html
 									.general-settings__information 
 										.general-settings__information-title Личная информация
 										.general-settings__information-block
-											form#form-email.form(action='#')
+											form#form-emailSett.form(action='#')
 												.form__item
 													label Номер клиента:
 													input#numberClient.input-number(type='number' placeholder='6787655545' name='number' data-valid='false' data-name='number' autocomplete='off')
 												.form__item.form__item-email
 													label E-Mail:
-													input#emailClient.input-email(type='email' placeholder='misterdoodle12212@gmail.com' name='email' data-valid='false' data-name='email' autocomplete='off')
+													input#emailClient.input-email(type='email' placeholder='misterdoodle12212@gmail.com' name='emailClient' data-valid='false' data-name='emailClient' autocomplete='off')
 													a#btnEmail(href="#").input-submit.btn 
 														span Подтвердить
 													.pencil 
 														img(src="public/img/pencil.svg", alt="")
 												.form__item
 													label Имя на сайте:
-													input#nameClient.input-password(type='text' placeholder='Papasha1990000' name='name	' data-valid='false' data-name='name' autocomplete='off')
+													input#nameClient.input-password(type='text' placeholder='Papasha1990000' name='name' data-valid='false' data-name='name' autocomplete='off')
 													.pencil 
 														img(src="public/img/pencil.svg", alt="")
 												.form__item
@@ -160,9 +160,11 @@ html
 											span Привяжи свой номер телефона к аккаунту. Благодаря этому никто, кроме тебя, не сможет вывести твой кэшбек.
 									.form
 										.form__item.form__item-email
-											label Номер телефона:
-											input#phone.input-tel(type='tel' placeholder='+7 _ _ _ - _ _ - _ _ ' mask='+7 _ _ _ - _ _ - _ _ ' minlength='9' autocomplete='off' data-valid='false' name='phone')
-											a#btnEmail(href="#").input-submit.btn 
+											label#telNumber Номер телефона:
+											label#sms Код из смс:
+											input#phoneSettings.input-tel(type='tel' placeholder='+7 _ _ _ - _ _ - _ _ ' mask='+7 _ _ _ - _ _ - _ _ ' minlength='9' autocomplete='off' data-valid='false' name='phoneSettings')
+											input#phoneCode.input-number(type='number' placeholder='_ _ _ _' name='number' data-valid='false' data-name='number' autocomplete='off')
+											button#btnCode.input-submit.btn 
 												span Получить код
 									.general-settings__information-title Пароль
 									.general-settings__block
@@ -176,11 +178,11 @@ html
 									.form
 										.form__item.form__item-pass
 											label Сменить пароль:
-											input#pass.input-password(type='password' placeholder='* * * * * *' name='password' data-valid='false' data-name='password')
+											input#pass.input-password(type='password' placeholder='* * * * * *' name='passwordSettings' data-valid='false' data-name='passwordSettings')
 											.pencil 
 												img(src="public/img/pencil.svg", alt="")
 										.form__item.form__item-submit
-											button.input-submit.btn 
+											button#btnSave.input-submit.btn 
 												span Сохранить
 									.general-settings__information-title Привяжи соцсети для входа
 									.general-settings__socials.socials 
@@ -382,14 +384,7 @@ html
 
 
 					
-				.seo._container
-					.seo__title
-						span Заголовок для SEO
-					.seo__description
-						p Каждый день команда собирает и анализирует большое количество информации о командах, турнирах, а также новых игроках. Каждая деталь, даже самая мелкая, играет важную роль при составлении прогнозов, только при таких условиях гарантируется успешный исход.
-						p Полноценное знание игровой сферы плюс высококачественная аналитическая информация позволяют предоставлять только точные и надежные прогнозы. С профессиональной командой заработать сможет каждый.
-						p Киберспорт — это современный тренд, стремительно развивающийся. Сегодня самое время стать частью индустрии получить первый заработок на этом. Тебе не нужно трудиться, профессиональная команда даёт прогнозы, а ты ставишь ставки и выигрываешь.
-						p Начни сегодня и разбогатей уже завтра!
+				include sections/seo
 
 			include sections/footer
 			//- include sections/modal

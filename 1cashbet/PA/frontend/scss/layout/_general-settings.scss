@@ -428,6 +428,16 @@
 				&-submit {
 					justify-content: flex-end;
 				}
+
+				&-email {
+					#phoneCode {
+						display: none;
+					}
+
+					#sms {
+						display: none;
+					}
+				}
 			}
 		}
 
@@ -545,6 +555,8 @@
 				font-size: em(18);
 				line-height: em(22, 18);
 			}
+
+
 
 		}
 	}

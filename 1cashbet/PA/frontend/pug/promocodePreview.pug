@@ -5,7 +5,7 @@ html
 	body
 		.body-wrap.body-wrap_page
 			include sections/header-pa
-			main.cashback
+			main.stock-promocode
 				.wrapper
 					.menu.active
 						.menu-mob
@@ -36,7 +36,7 @@ html
 											path(d='M1.35135 2.36842C2.09768 2.36842 2.7027 1.83823 2.7027 1.18421C2.7027 0.530189 2.09768 0 1.35135 0C0.605021 0 0 0.530189 0 1.18421C0 1.83823 0.605021 2.36842 1.35135 2.36842Z' fill='white')
 									.text Список БК
 							li 
-								a(href="stock-promocode.html").menu__list-item
+								a(href="stock-promocode.html").menu__list-item.active
 									.icon 
 										svg(width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
 											path(d='M11.646 5.748L6.249 0.351C6.03 0.135 5.73 0 5.4 0H1.2C0.537 0 0 0.537 0 1.2V5.4C0 5.733 0.135 6.033 0.354 6.249L5.754 11.649C5.97 11.865 6.27 12 6.6 12C6.93 12 7.233 11.865 7.449 11.649L11.649 7.449C11.865 7.23 12 6.93 12 6.6C12 6.267 11.865 5.967 11.646 5.748ZM2.1 3C1.602 3 1.2 2.598 1.2 2.1C1.2 1.602 1.602 1.2 2.1 1.2C2.598 1.2 3 1.602 3 2.1C3 2.598 2.598 3 2.1 3Z' fill='white')
@@ -44,7 +44,7 @@ html
 							li
 								.line
 							li 
-								a(href="cashback.html").menu__list-item.active
+								a(href="cashback.html").menu__list-item
 									.icon 
 										svg(width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
 											path(d='M6 0C2.69153 0 0 2.69153 0 6C0 9.30847 2.69153 12 6 12C9.30847 12 12 9.30847 12 6C12 2.69153 9.30847 0 6 0ZM6 10.8387C3.3319 10.8387 1.16129 8.6681 1.16129 6C1.16129 3.3319 3.3319 1.16129 6 1.16129C8.6681 1.16129 10.8387 3.3319 10.8387 6C10.8387 8.6681 8.6681 10.8387 6 10.8387Z' fill='white')
@@ -88,176 +88,64 @@ html
 							.banner__img 
 								img(src="public/img/banners/banner.png", alt="")
 						.center
-							.general-cashback
-								.general
-									.general-cashback__top 
-										.general-cashback__title Мой кэшбек
-									.general-cashback__balance
-										.general-cashback__balance-now
+							.general-stock-promocode.general
+								.general-stock-promocode__top 
+									.general-stock-promocode__title Акции и промокоды
+									.general-stock-promocode__selection.bonus
+										.select
+											.input
+												.selected(onclick='page_plans_open_list(this);')
+													.text
+														span По типу бонуса
+											.list
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='15' data-plan_text='По типу бонуса')
+													.text
+														span По типу бонуса
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='16' data-plan_text='По типу бонуса1')
+													.text
+														span По типу бонуса1
+									.general-stock-promocode__selection.bookie
+										.select
+											.input
+												.selected(onclick='page_plans_open_list(this);')
+													.text
+														span По букмекеру
+											.list
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='15' data-plan_text='По букмекеру')
+													.text
+														span По букмекеру
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='16' data-plan_text='По букмекеру1')
+													.text
+														span По букмекеру1
+									.general-stock-promocode__selection.selection
+										.select
+											.input
+												.selected(onclick='page_plans_open_list(this);')
+													.text
+														span Подборки
+											.list
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='15' data-plan_text='Подборки')
+													.text
+														span Подборки
+												.list__item(onclick='page_plans_list_choose(this);' data-plan_id='16' data-plan_text='Подборки1')
+													.text
+														span Подборки1
+								.general-newsPreview__block 
+									.general-newsPreview__block-column
+										.general-newsPreview__block-item
 											.title 
-												.text
-													span
-														|Сейчас 
-														br
-														|на балансе
-												.icon 
-													img(src="public/img/icon.svg", alt="")
-											.price 
-												.text
-													span 66 500 ₽
-												.icon 
-													svg.icon-green(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
-														circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
-														path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
-														path(d='M7 3H8V11H7V3Z' fill='#25C16C')
-											.button
-												a(href="register.html").btn
-													span Вывести средства
-										.general-cashback__balance-other.other-balance
-											.other-balance__top
-												.other-balance__top--item
-													.title 
-														.text
-															span
-																|Ожидают
-																br
-																|зачисления
-														.icon 
-															img(src="public/img/icon.svg", alt="")
-													.price
-														.text
-															span 2 500 ₽
-														.icon 
-															svg.icon-gray(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
-																circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
-																path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
-																path(d='M7 3H8V11H7V3Z' fill='#25C16C')
-												.other-balance__top--item
-													.title 
-														.text
-															span
-																|Сэкономил
-																br
-																|за все время
-													.price
-														.text.yellow
-															span 2 566 500 ₽
-											.other-balance__text
-												.icon 
-													img(src="public/img/icon-4.svg", alt="")
-												.text
-													span Суммы возврата кэшбэка обновляются ежедневно и является оценочной до подтверждения букмекером. Могут происходить задержки при подтверждении возврата кэшбэка. Подтвержденные суммы указаны в разделе вывод средств.
-									.general-cashback__top 
-										.general-cashback__title Как получить кэшбек
-									.general-cashback__steps
-										.general-cashback__steps-column
-											.step
-												span Шаг 1
-											.title
-												span
-													|Ставь ставки 
-													br
-													|с кэшбэком
-											.desc 
-												span Сразу после регистрации ты поулчишь повышенный кешбек сроком на 30 дней Під Райфкартка мається на увазі тарифна модель Райфкартка+. 
-											.button
-												a(href="register.html").btn
-													span Конторы с кешбеком
-										.general-cashback__steps-column
-											.step
-												span Шаг 2
-											.title
-												span Подожди подтверждения
-											.status
-												.icon 
-													svg.icon-gray(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
-														circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
-														path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
-														path(d='M7 3H8V11H7V3Z' fill='#25C16C')
-												.text
-													span В ожидании
-											.desc 
-												span Сразу после регистрации ты поулчишь повышенный кешбек сроком на 30 дней Під Райфкартка мається на увазі тарифна модель Райфкартка+. 
-										
-										.general-cashback__steps-column
-											.step
-												span Шаг 3
-											.title
-												span Кэшбэк зачислен
-											.status
-												.icon 
-													svg.icon-green(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
-														circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
-														path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
-														path(d='M7 3H8V11H7V3Z' fill='#25C16C')
-												.text
-													span Зачислено
-											.desc 
-												span Сразу после регистрации ты поулчишь повышенный кешбек сроком на 30 дней Під Райфкартка мається на увазі тарифна модель Райфкартка+.
-								.general-cashback__top
-									.general-cashback__title.enrollment История зачислений
-								.general-cashback__enrollment
-									.general-cashback__enrollment-row 
-										.logo 
-											img(src="public/img/company/parimatch.svg", alt="")
-										.date 
-											span 29.10.21
-										.sum.sum-green
-											span 56 088 ₽
-										.status.status-green
-											.text
-												span Зачислено
-											.icon 
-												svg(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
-													circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
-													path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
-													path(d='M7 3H8V11H7V3Z' fill='#25C16C')
-									.general-cashback__enrollment-row 
-										.logo 
-											img(src="public/img/company/1xstavka.svg", alt="")
-										.date 
-											span 29.10.21
-										.sum.sum-gray 
-											span 56 088 ₽
-										.status.status-gray
-											.text
-												span В ожидании
-											.icon 
-												svg(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
-													circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
-													path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
-													path(d='M7 3H8V11H7V3Z' fill='#25C16C')
-									.general-cashback__enrollment-row 
-										.logo 
-											img(src="public/img/company/parimatch.svg", alt="")
-										.date 
-											span 29.10.21
-										.sum.sum-green
-											span 56 088 ₽
-										.status.status-green
-											.text
-												span Зачислено
-											.icon 
-												svg(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
-													circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
-													path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
-													path(d='M7 3H8V11H7V3Z' fill='#25C16C')
-									.general-cashback__enrollment-row 
-										.logo 
-											img(src="public/img/company/1xstavka.svg", alt="")
-										.date 
-											span 29.10.21
-										.sum.sum-red 
-											span 56 088 ₽
-										.status.status-red
-											.text
-												span Отклонено
-											.icon 
-												svg(viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg')
-													circle(cx='7.5' cy='7.5' r='7' stroke='#25C16C')
-													path(d='M10 9.57248L9.41041 9L7.5 10.855L5.58959 9L5 9.57248L7.5 12L10 9.57248Z' fill='#25C16C')
-													path(d='M7 3H8V11H7V3Z' fill='#25C16C')
-									
+												span Новые правила ставок в Pari Match
+											.image 
+												img(src="public/img/news/image-10.png", alt="")
+											.description 
+												p Современный спорт невозможно представить без беттинга, а точнее – без ставок на спорт, на футбольные матчи, события, отдельных спортсменов и целые команды. Ставки на спорт существуют уже не одно десятилетие, не только дополняя спортивную индустрию, но и ставь мощнейшей ее частью, объединив вокруг себя миллионы болельщиков по всему миру.
+												p Причина – простота и доступность, а также наименьшая зависимость от воли случая. Ведь здесь состязание происходит не между человеком и колесом рулетки или произвольного выбора карт, а между двумя людьми – игроком и букмекером. Сделать правильную ставку на матч или рассчитать прогноз на ряд спортивных событий помогут исключительно ваши знания и интуиция.
+												p Ставками на спорт увлекаются миллионы болельщиков, а букмекерские конторы – уже давно среди основных спонсоров футбольных клубов, спортивных лиг и мероприятий. Многие фанаты ставят на матчи, чтобы повысить свой интерес к событию. Кто-то делает ставку в надежде заработать: если твои знания вида спорта или состояния отдельных команд и спортсменов высоки, ты можешь обыграть букмекерскую контору. 
+											
+											a(href="stock-promocode.html").read
+												img(src="public/img/news/arrow-2.svg", alt="")
+												span Назад
+
 							.ad
 								.ad__banner 
 									img(src="public/img/banners/ad1.png", alt="")

@@ -61,24 +61,26 @@
               <div class="swich__link swich__active" data-tab-name="tab-1"><span class="swich__link-text">Email</span></div>
               <div class="swich__link" data-tab-name="tab-2"><span class="swich__link-text">Телефон</span></div>
             </div>
-            <form class="form phone-form tab tab-1 contentActive" id="form-email" action="#">
+            <form class="form phone-form tab tab-1 contentActive" id="formEmailLogin" action="news.html">
               <div class="form__item">
-                <input class="input-email" id="email" type="email" placeholder="Введите email" name="email" required="" data-valid="false" data-name="email" autocomplete="email">
+                <input class="input-email" id="emailLogin" type="email" placeholder="Введите email" name="email" required="" data-valid="false" data-name="email" autocomplete="email">
               </div>
               <div class="form__item">
                 <input class="input-password" id="passwordMail" type="password" placeholder="Введите пароль" name="password" data-valid="false" data-name="password" required="">
               </div>
-              <div class="form__item"><a class="input-submit btn" id="btn" href="news.html"> <span>Войти</span></a></div>
-            </form>
-            <form class="form phone-form tab tab-2" id="form-tel" action="#">
               <div class="form__item">
-                <input class="input-tel" id="phone" type="tel" placeholder="Введите номер телефона" minlength="9" autocomplete="off" data-valid="false" name="phone" required="">
+                <button class="input-submit btn" id="btnLogin"> <span>Войти</span></button>
+              </div>
+            </form>
+            <form class="form phone-form tab tab-2" id="form-telLogin" action="news.html">
+              <div class="form__item">
+                <input class="input-tel" id="phoneLogin" type="tel" placeholder="Введите номер телефона" minlength="9" autocomplete="off" data-valid="false" name="phone" required="">
               </div>
               <div class="form__item">
                 <input class="input-password" id="passwordPhone" type="password" placeholder="Введите пароль" name="password" data-valid="false" data-name="password" required="">
               </div>
               <div class="form__item">
-                <button class="input-submit btn"> <span>Войти</span></button>
+                <button class="input-submit btn" id="submitLogin"> <span>Войти</span></button>
               </div>
             </form><a class="passforget" href="reset.html">Забыли пароль?</a>
             <div class="footer_rorm"> 

@@ -63,15 +63,8 @@ function debugging() {
     })
 }
 
-///menu
 
-$('.menu-mob').click(function(){
-    // actual-pricing
-    const state = $(this).closest('.menu').hasClass('active');
-    $(this).closest('.body-wrap').find('.menu').removeClass('active');
-    if (!state) $(this).closest('.menu').addClass('active');
-    // $(this).closest('.actual-pricing__pricing_menu').toggleClass('active');
-})
+
 
 ///swipers
 
@@ -214,6 +207,43 @@ new Swiper('.reviews__slider', {
     }
 });
 
+//notification
+// let notice = document.querySelector('.notification')
+// document.querySelector('.header-pa__notice').addEventListener('click', (e) => {
+//     notice.classList.add('openNotice');
+//     if (e.target === notice) {
+//         notice.classList.remove('openNotice');
+//     }
+// });
+
+// document.querySelector('.header-pa__notice').addEventListener('click', (e) => {
+//     if (e.target === notice) {
+//         notice.classList.remove('openNotice');
+//     }
+// });
+
+$('.header-pa__notice').click(function(){
+    // actual-pricing
+    const state2 = $('.notification').hasClass('openNotice');
+    $('.header-pa').find('.notification').removeClass('openNotice');
+    if (!state2) $('.notification').addClass('openNotice');
+    $(document).mouseup(function (e) {
+        var container = $(".notification.openNotice");
+        if (container.has(e.target).length === 0){
+            container.removeClass("openNotice");
+        }
+    });
+})
+
+///menu
+
+$('.menu-mob').click(function(){
+    // actual-pricing
+    const state = $(this).closest('.menu').hasClass('active');
+    $(this).closest('.body-wrap').find('.menu').removeClass('active');
+    if (!state) $(this).closest('.menu').addClass('active');
+    // $(this).closest('.actual-pricing__pricing_menu').toggleClass('active');
+})
 
 
 
@@ -239,8 +269,6 @@ document.querySelector('.popup.logout').addEventListener('click', (e) => {
         }, 500)
     }
 });
-
-
 // // Open Modal
 function openModal() {
     document.querySelector('.popup.subscription').style.display = 'flex';
@@ -266,6 +294,45 @@ document.querySelector('.popup.subscription').addEventListener('click', (e) => {
 
 
 
+///security block get code on number
+
+document.querySelector('#btnCode').addEventListener('click', (e) => {
+    document.querySelector('#phoneSettings').style.display = 'none';
+    document.querySelector('#btnCode').style.display = 'none';
+    document.querySelector('#phoneCode').style.display = 'flex';
+    document.querySelector('#sms').style.display = 'flex';
+    document.querySelector('#telNumber').style.display = 'none';
+});
+
+
+
+///////Tabs
+
+const tab = function () {
+    let tabNav = document.querySelectorAll('.swich__link'),
+        tabContent = document.querySelectorAll('.tab'),
+        tabName;
+
+    tabNav.forEach(item => {
+        item.addEventListener('click', saveTabNav)
+    });
+
+    function saveTabNav() {
+        tabNav.forEach(item => {
+            item.classList.remove('swich__active');
+        });
+        this.classList.add('swich__active');
+        tabName = this.getAttribute('data-tab-name');
+        selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+        tabContent.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('contentActive') : item.classList.remove('contentActive');
+        })
+    }
+};
+tab();
 
 
 
@@ -407,37 +474,6 @@ document.querySelector('.popup.subscription').addEventListener('click', (e) => {
 
 
 
-
-
-
-///////Tabs
-
-const tab = function () {
-    let tabNav = document.querySelectorAll('.swich__link'),
-        tabContent = document.querySelectorAll('.tab'),
-        tabName;
-
-    tabNav.forEach(item => {
-        item.addEventListener('click', saveTabNav)
-    });
-
-    function saveTabNav() {
-        tabNav.forEach(item => {
-            item.classList.remove('swich__active');
-        });
-        this.classList.add('swich__active');
-        tabName = this.getAttribute('data-tab-name');
-        selectTabContent(tabName);
-    }
-
-    function selectTabContent(tabName) {
-        tabContent.forEach(item => {
-            item.classList.contains(tabName) ? item.classList.add('contentActive') : item.classList.remove('contentActive');
-        })
-    }
-};
-tab();
-
 /***********Video */
 $(document).ready(function () {
     $(".youtube-preview-cover").on("click", function () {
@@ -451,6 +487,12 @@ $(document).ready(function () {
 
 function page_plans_open_list(e) {
     $(e).parent().next().addClass("active");
+    $(document).mouseup(function (e) {
+        var container = $(".list.active");
+        if (container.has(e.target).length === 0){
+            container.removeClass("active");
+        }
+    });
 }
 
 function page_plans_list_choose(e) {
@@ -478,8 +520,11 @@ function page_plans_list_choose(e) {
 
     $(btn).data("plan_id", plan_id);
 
+
     $(e).parent().removeClass("active");
+
 }
+
 
 
 ///// radio on calculator
@@ -607,3 +652,4 @@ $$('#sum', el => {
 
 
 // calc();
+

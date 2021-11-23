@@ -391,6 +391,11 @@
 		}
 
 		&__block {
+			&-column {
+				.title {
+					align-items: flex-start;
+				}
+			}
 
 			&-title {
 				font-size: 0.95em;

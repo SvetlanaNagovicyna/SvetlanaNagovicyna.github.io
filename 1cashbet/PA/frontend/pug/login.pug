@@ -41,21 +41,21 @@ html
 								span.swich__link-text Email
 							.swich__link(data-tab-name='tab-2')
 								span.swich__link-text Телефон
-						form#form-email.form.phone-form.tab.tab-1.contentActive(action='#')
+						form#formEmailLogin.form.phone-form.tab.tab-1.contentActive(action='news.html')
 							.form__item
-								input#email.input-email(type='email' placeholder='Введите email' name='email' required='' data-valid='false' data-name='email' autocomplete='email')
+								input#emailLogin.input-email(type='email' placeholder='Введите email' name='email' required='' data-valid='false' data-name='email' autocomplete='email')
 							.form__item
 								input#passwordMail.input-password(type='password' placeholder='Введите пароль' name='password' data-valid='false' data-name='password' required='')
 							.form__item
-								a#btn(href="news.html").input-submit.btn 
+								button#btnLogin.input-submit.btn 
 									span Войти
-						form#form-tel.form.phone-form.tab.tab-2(action='#')
+						form#form-telLogin.form.phone-form.tab.tab-2(action='news.html')
 							.form__item
-								input#phone.input-tel(type='tel' placeholder='Введите номер телефона' minlength='9' autocomplete='off' data-valid='false' name='phone' required='')
+								input#phoneLogin.input-tel(type='tel' placeholder='Введите номер телефона' minlength='9' autocomplete='off' data-valid='false' name='phone' required='')
 							.form__item
 								input#passwordPhone.input-password(type='password' placeholder='Введите пароль' name='password' data-valid='false' data-name='password' required='')
 							.form__item
-								button.input-submit.btn 
+								button#submitLogin.input-submit.btn 
 									span Войти
 						a(href="reset.html").passforget Забыли пароль?
 						.footer_rorm 
