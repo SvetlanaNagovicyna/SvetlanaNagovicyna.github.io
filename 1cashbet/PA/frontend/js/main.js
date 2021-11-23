@@ -222,18 +222,76 @@ new Swiper('.reviews__slider', {
 //     }
 // });
 
-$('.header-pa__notice').click(function(){
-    // actual-pricing
-    const state2 = $('.notification').hasClass('openNotice');
-    $('.header-pa').find('.notification').removeClass('openNotice');
-    if (!state2) $('.notification').addClass('openNotice');
-    $(document).mouseup(function (e) {
-        var container = $(".notification.openNotice");
-        if (container.has(e.target).length === 0){
-            container.removeClass("openNotice");
-        }
-    });
-})
+// $('.header-pa__notice').click(function(){
+//     // actual-pricing
+//     const state2 = $('.notification').hasClass('openNotice');
+//     $('.header-pa').find('.notification').removeClass('openNotice');
+//     if (!state2) $('.notification').addClass('openNotice');
+//     $(document).mouseup(function (e) {
+//         var container = $(".notification.openNotice");
+//         if (container.has(e.target).length === 0){
+//             container.removeClass("openNotice");
+//         }
+//     });
+// })
+
+// $(document).mouseup(function (e) {
+//     var container = $(".header-pa__notice");
+//     var container2 = $(".notification");
+//     if (container2.has(e.target).length === 0) {
+//         container.removeClass("openNotice");
+//     }
+// });
+// $('.header-pa__notice').click(function () {
+
+//     // actual-pricing
+
+//     const state2 = $(this).hasClass('openNotice');
+    
+//     $(this).removeClass('openNotice');
+//     if (!state2) $(this).addClass('openNotice');
+
+
+// })
+
+// $(".notification").mouseup(function (e) {
+//     var container = $(".header-pa__notice");
+//     var container2 = $(".notification");
+//     if (container2.has(e.target).length === container) {
+//         container.removeClass("openNotice");
+//     }
+// });
+// let container12 = $(".header-pa__notice");
+// document.querySelector('.notification').addEventListener('click', (e) => {
+//     if (e.target === container12) {
+//         container12.removeClass("openNotice");
+//     }
+// });
+
+const menuBtn = $('.header-pa__notice img'),
+      menu= $('.notification');
+
+menuBtn.on('click', function() {
+    if ( $(this).hasClass('is-active') ) {
+        $(this).removeClass('is-active');
+        menu.fadeOut();
+    } else {
+        $(this).addClass('is-active');
+        menu.fadeIn();
+    }
+});
+
+$(document).click(function (e) {
+    if ( !menuBtn.is(e.target) && !menu.is(e.target) && menu.has(e.target).length === 0) {
+        menu.fadeOut();
+        menuBtn.removeClass('is-active');
+    };
+});
+
+
+
+
+
 
 ///menu
 

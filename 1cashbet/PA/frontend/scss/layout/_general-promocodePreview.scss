@@ -1,0 +1,164 @@
+.general-promocodePreview {
+	&__block {
+		display: flex;
+
+		&-column {
+			flex-direction: column;
+			flex: 0 1 100%;
+			margin: 0 em(5);
+		}
+
+		&-item {
+			will-change: transform;
+			background: #ffffff;
+			border-radius: em(12);
+			padding: em(19) em(18) em(24) em(25);
+			margin-bottom: em(10);
+
+			display: block;
+
+
+			.title {
+				font-weight: 700;
+				font-size: em(36);
+				line-height: em(44, 36);
+				color: #1A2645;
+				margin-bottom: em(31, 36);
+			}
+
+			.image {
+				width: 100%;
+				margin: 0 auto 0;
+				margin-bottom: em(35);
+				border-radius: em(10);
+			}
+
+			.description {
+				font-weight: 400;
+				font-size: em(14);
+				line-height: em(23, 14);
+				color: #1A2645;
+				// padding-bottom: em(10, 14);
+				margin-bottom: em(22, 14);
+				border-bottom: em(5) dotted #AFC4D2;
+				-webkit-border-bottom: em(5) dotted #AFC4D2;
+
+				p {
+					margin-bottom: em(25, 14);
+				}
+			}
+
+			// 		border-bottom: em(5) dotted #AFC4D2;
+			// 		-webkit-border-bottom: em(5) dotted #AFC4D2;
+			// 	}
+			// }
+
+			.button {
+				width: em(300);
+				margin: 0 auto;
+				margin-bottom: em(10);
+
+				.btn {
+					padding: em(15) em(35) em(16);
+					font-weight: 600;
+
+					span {
+						font-size: em(22);
+						line-height: em(26, 22);
+						text-transform: initial;
+					}
+				}
+			}
+
+			.read {
+				display: inline-flex;
+				align-items: center;
+				justify-content: flex-start;
+				cursor: pointer;
+				font-size: 1.3em;
+
+
+
+				span {
+					font-weight: 700;
+					font-size: em(14);
+					line-height: em(17, 14);
+					color: #1A2645;
+					position: relative;
+					padding-left: em(10);
+					transition: all .3s ease-in-out;
+
+					&:hover,
+					&:active {
+
+						color: #fac704;
+					}
+				}
+
+
+				img {
+					width: em(14);
+					transform: rotate(180deg);
+				}
+
+			}
+		}
+	}
+}
+
+
+
+
+@media (max-width: 551px) {
+	.general-promocodePreview {
+		font-size: 2.6em;
+		width: 100%;
+		padding-bottom: 0;
+
+		&__block {
+			margin: 0;
+			justify-content: center;
+			width: 100%;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+
+			&-column {
+				display: none;
+				margin: 0;
+
+				&:first-child,
+				&:nth-child(2) {
+					display: block;
+					width: 16.4em;
+					font-size: 0.48em;
+
+					.image {
+						width: 100%;
+					}
+				}
+
+			}
+
+			&-item {
+				.description {
+					font-size: 1.075em;
+				}
+
+				.read {
+					font-size: 1.5em;
+				}
+
+				.button {
+					width: 100%;
+					margin: 0 auto;
+					margin-bottom: em(10);
+					font-size: 1.2em;
+					margin-bottom: 2.1em;
+
+
+				}
+			}
+		}
+	}
+}
