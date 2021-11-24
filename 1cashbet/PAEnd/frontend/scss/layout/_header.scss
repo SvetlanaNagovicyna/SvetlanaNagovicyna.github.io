@@ -1,0 +1,143 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    min-height: em(50);
+    background: rgba(12, 8, 35, 0.6);
+    backdrop-filter: blur(em(4));
+
+    // padding: 0 em(99);
+    ._container {
+        align-items: center;
+    }
+
+    &__menu {
+        margin: 0 em(33) 0 0;
+        width: em(17);
+
+    }
+
+    &__logo {
+        width: em(111);
+        margin: 0 em(35) 0 0;
+    }
+
+    &__tg {
+        &-link {
+            display: flex;
+            align-items: center;
+            transition: all .3s ease-out;
+
+            &:hover {
+                path {
+                    fill: #26a2e1;
+                }
+
+                .header__tg-text {
+                    color: #26a2e1;
+                }
+            }
+        }
+
+        &-icon {
+            margin-right: em(10);
+            width: em(13);
+        }
+
+        &-text {
+            color: #AFC4D2;
+            font-size: em(13);
+            line-height: em(16, 13);
+        }
+    }
+
+    &__user {
+        margin: 0 em(37) 0 auto;
+
+        &-icon {
+            display: none;
+            margin-right: 0;
+            width: em(12);
+            margin-top: em(3);
+        }
+
+        &-text {
+            color: #0B142A;
+            background-color: #FFD84E;
+            border-radius: em(15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: em(6.5) em(16);
+            transition: all .3s ease-in-out;
+
+            span {
+                font-size: em(13);
+                line-height: em(16, 13);
+                font-weight: 600;
+                text-align: center;
+                transform: translateY(-.1em);
+            }
+
+            &:hover {
+                background-color: #ffffff;
+
+                span {
+                    color: #0B142A;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        padding: 0 em(50);
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 em(30);
+    }
+
+    @media (max-width: 551px) {
+        font-size: 2.15em;
+        padding: 0 em(15);
+
+        &__menu {
+            margin: 0 em(26) 0 0;
+            width: 1.4625em;
+        }
+
+        &__logo {
+            margin: 0 auto;
+        }
+
+        &__tg {
+            &-icon {
+                margin-right: 0;
+                width: 1.2125em;
+                margin-top: 0.3em;
+            }
+
+            &-text {
+                display: none;
+            }
+        }
+
+        &__user {
+            margin: 0 0 0 em(18);
+
+            &-icon {
+                display: block;
+                width: 1.05em;
+            }
+
+            &-text {
+                display: none;
+            }
+        }
+    }
+}

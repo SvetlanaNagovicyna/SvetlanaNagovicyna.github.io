@@ -1,0 +1,278 @@
+.general-news {
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: em(19);
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: em(36);
+		line-height: em(44, 36);
+		color: #F5FBFF;
+
+	}
+
+	&__filter {
+		position: relative;
+
+		.text {
+			font-size: em(12);
+			line-height: em(15, 12);
+			padding-left: em(17, 12);
+			color: #F5FBFF;
+		}
+
+		.input {
+			border-radius: em(8);
+			border: em(1) solid #F5FBFF;
+			height: em(36);
+			width: em(211);
+			cursor: pointer;
+			display: flex;
+
+			.selected {
+				overflow: hidden;
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				align-items: center;
+				z-index: 1;
+				position: relative;
+				height: em(35);
+			}
+
+			&:after {
+				will-change: transform;
+				position: absolute;
+				content: "";
+				top: 50%;
+				right: em(15);
+				width: em(6);
+				height: em(6);
+				transform: translateY(-50%);
+				background: url(../img/arrow-select.svg) center / 100% 100% no-repeat;
+				z-index: 0;
+			}
+		}
+
+		.list {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			border: em(1) solid #F5FBFF;
+			border-radius: em(8);
+			display: none;
+			z-index: 3;
+			background-color: #1A2645;
+
+			&__item {
+				overflow: hidden;
+				height: em(45);
+				line-height: em(45);
+				cursor: pointer;
+				color: #1A2645;
+				border-radius: em(8);
+				height: em(35);
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				position: relative;
+
+				&:before {
+					content: "";
+					// border-bottom: em(1) solid #afc4d266;
+					position: absolute;
+					width: 85%;
+					left: 50%;
+					bottom: 0;
+					transform: translateX(-50%);
+				}
+
+				&:hover {
+					background-color: #afc4d266;
+					border-radius: 0;
+
+					.list__item~.list__item:before {
+
+						border: em(1) solid transparent;
+
+					}
+
+					&:before {
+						border: em(1) solid transparent;
+					}
+				}
+
+				&:first-child {
+					border-radius: em(7) em(7) 0 0;
+
+				}
+
+				&:last-child {
+					border-radius: 0 0 em(7) em(7);
+
+					&:before {
+						border-bottom: em(1) solid transparent;
+					}
+				}
+			}
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+
+	&__block {
+		display: flex;
+		margin: 0 em(-5);
+
+		&-column {
+			flex-direction: column;
+			flex: 0 1 em(273);
+			margin: 0 em(5);
+		}
+
+		&-item {
+			will-change: transform;
+			background: #ffffff;
+			border-radius: em(12);
+			padding: em(19) em(18) em(24) em(25);
+			margin-bottom: em(10);
+			cursor: pointer;
+			display: block;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&:hover,
+			&:active {
+				background: #FAD44E;
+
+				.read {
+					transition: all .3s ease-in-out;
+
+					&.read1 {
+						display: none;
+
+					}
+
+					&.read2 {
+						display: flex;
+					}
+
+				}
+			}
+
+			.title {
+				font-weight: 700;
+				font-size: em(18);
+				line-height: em(22, 18);
+				color: #1A2645;
+				margin-bottom: em(15, 18);
+			}
+
+			.image {
+				width: em(230);
+				margin: 0 auto 0;
+				margin-bottom: em(15);
+				border-radius: em(10);
+			}
+
+			.description {
+				font-weight: 400;
+				font-size: em(12);
+				line-height: em(15, 12);
+				color: #1A2645;
+				margin-bottom: em(17, 12);
+			}
+
+			.read {
+				display: inline-flex;
+				align-items: center;
+				justify-content: flex-start;
+
+				&.read2 {
+					display: none;
+				}
+
+				span {
+					font-weight: 700;
+					font-size: em(14);
+					line-height: em(17, 14);
+					color: #1A2645;
+					position: relative;
+					padding-left: em(10);
+					transition: all .3s ease-in-out;
+				}
+
+				img {
+					width: em(14);
+				}
+
+			}
+		}
+	}
+}
+
+
+
+
+@media (max-width: 551px) {
+	.general-news {
+		font-size: 2.6em;
+		width: 100%;
+		padding-bottom: 0;
+
+		&__top {
+			flex-direction: column;
+		}
+
+		&__title {
+			font-size: 1.15em;
+			padding-left: 0.5em;
+			margin-bottom: .8em;
+			display: block;
+			width: 100%;
+		}
+
+		&__filter {
+			.input {
+				width: 16.4em;
+			}
+		}
+
+		&__block {
+			margin: 0;
+			justify-content: center;
+			width: 100%;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+			// flex-direction: column;
+			// align-items: center;
+
+			&-column {
+				display: none;
+				margin: 0;
+
+				&:first-child,
+				&:nth-child(2) {
+					display: block;
+					width: 16.4em;
+					font-size: 0.48em;
+
+					.image {
+						width: 100%;
+					}
+				}
+
+			}
+		}
+	}
+}
