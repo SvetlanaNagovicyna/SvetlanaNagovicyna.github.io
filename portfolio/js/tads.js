@@ -3,7 +3,6 @@ const tabDescriptions = document.querySelectorAll('.design__descr');
 const tabImages = document.querySelectorAll('.design-images');
 const tabFeatureImages = document.querySelectorAll('.feature__img');
 const tabTitle = document.querySelectorAll('.design__title');
-const textBrowserTab = document.querySelector('head title');
 
 
 // console.log(tabTitle)
@@ -35,7 +34,7 @@ tabButtons.forEach((tabButton) => {
 
 		tabTitle.forEach((title) => {
 			if (title.dataset.tabsField === dataValue) {
-				textBrowserTab.textContent = title.textContent;
+				document.title = title.textContent;
 			}
 		})
 
