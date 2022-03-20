@@ -31,8 +31,6 @@ const updateClock = () => {
 		timerBlock.textContent = `00:00:00:00`;
 	}
 
-	console.log(days);
-
 }
 updateClock();
 
