@@ -1,0 +1,13 @@
+.header {
+	position: absolute;
+	margin-top: em(40);
+	&__logo {
+		width: em(293);
+	}
+	@media (max-width: 768px) {
+		margin-top: em(30);
+		&__logo {
+			width: em(218);
+		}
+	}
+}

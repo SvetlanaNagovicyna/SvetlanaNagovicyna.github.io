@@ -1,0 +1,105 @@
+html {
+  height: 100%;
+  background-color: #000000;
+  font-size: calc(16 / 19.2 * 1vw);
+
+  @media (min-width: 768px) {
+    @media (min-aspect-ratio: 1920/1025) {
+      font-size: 0.8vw;
+    }
+    @media (min-aspect-ratio: 1920/990) {
+      font-size: 0.78vw;
+    }
+    @media (min-aspect-ratio: 1920/965) {
+      font-size: 0.75vw;
+    }
+    @media (min-aspect-ratio: 1920/930) {
+      font-size: 0.72vw;
+    }
+    @media (min-aspect-ratio: 1920/890) {
+      font-size: 0.69vw;
+    }
+    @media (min-aspect-ratio: 1920/850) {
+      font-size: 0.66vw;
+    }
+    @media (min-aspect-ratio: 1920/820) {
+      font-size: 0.63vw;
+    }
+    @media (min-aspect-ratio: 1920/780) {
+      font-size: 0.6vw;
+    }
+    @media (min-aspect-ratio: 1920/745) {
+      font-size: 0.57vw;
+    }
+    @media (min-aspect-ratio: 1920/710) {
+      font-size: 0.54vw;
+    }
+    @media (min-aspect-ratio: 1920/670) {
+      font-size: 0.51vw;
+    }
+    @media (min-aspect-ratio: 1920/630) {
+      font-size: 0.48vw;
+    }
+    @media (min-aspect-ratio: 1920/600) {
+      .body-wrap {
+        height: 65em;
+        min-height: 65em;
+        .main {
+          height: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    font-size: (16 / 6.4 * 1vw);
+
+    @media (min-aspect-ratio: 320/600) {
+      font-size: 2.4vw;
+    }
+    @media (min-aspect-ratio: 320/575) {
+      font-size: 2.3vw;
+    }
+    @media (min-aspect-ratio: 320/555) {
+      font-size: 2.2vw;
+    }
+  }
+}
+
+body {
+  font-family: "TT Squares Condensed";
+  font-weight: 900;
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background-color: #000000;
+}
+
+.body-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #fff;
+  box-sizing: border-box;
+  background: linear-gradient(163.02deg, transparent 37.06%, #3fd62b 70.26%), #000;
+
+  @media (max-width: 768px) {
+    background: linear-gradient(117.7deg, transparent 42.28%, #3fd62b 115.79%), #000;
+    background-size: 100% 22.6em;
+    background-repeat: no-repeat;
+  }
+}
+
+.container {
+  max-width: em(1760);
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  @media (max-width: 768px) {
+    max-width: em(560);
+  }
+}
