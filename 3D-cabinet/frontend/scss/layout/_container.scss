@@ -1,0 +1,19 @@
+.container {
+    max-width: em(1760);
+    width: 100%;
+    margin: 0 auto;
+
+    // .social &,
+    // .science & {
+    //     max-width: 100%;
+    // }
+
+    // &--rules {
+    //     max-width: em(1200);
+    // }
+
+    @media (max-width: 768px) {
+        // max-width: em(280);
+        max-width: calc(100% - #{em(40)});
+    }
+}

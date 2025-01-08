@@ -1,0 +1,230 @@
+.advantages {
+	padding-top: em(124);
+
+	&__title {
+		display: flex;
+		align-items: center;
+		margin-bottom: em(93);
+		overflow: hidden;
+
+
+
+		svg {
+			width: em(49);
+			margin-right: em(22);
+			transform: scale(0);
+		}
+
+		h2 {
+			font-family: "DIN Alternate";
+			font-size: em(64);
+			font-weight: bold;
+			transform: translateY(-150%);
+		}
+	}
+
+	&__slider {
+		overflow: visible;
+		padding-bottom: em(87);
+	}
+
+	&__slide {
+		display: flex;
+		max-width: em(827);
+		cursor: pointer;
+
+		&:nth-child(2) {
+			max-width: em(866);
+		}
+
+		&:nth-child(3) {
+			max-width: em(872);
+		}
+
+		&:nth-child(4) {
+			min-width: em(1070);
+			max-width: em(1070);
+
+			.advantages__slide_text {
+				p {
+					max-width: em(695, 20);
+				}
+			}
+		}
+
+
+		&_img {
+			position: relative;
+			width: em(185);
+			height: em(223);
+			min-height: em(223);
+			border-radius: em(20);
+			margin-right: em(44);
+			margin-top: em(12);
+
+			img {
+				border-radius: em(20);
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			span {
+				position: absolute;
+				color: #0472B6;
+				font-family: "DIN Alternate";
+				font-size: em(20);
+				font-weight: bold;
+				top: em(-27, 20);
+				right: em(-27, 20);
+			}
+		}
+
+		&_text {
+
+			h2 {
+				font-family: "DIN Alternate";
+				font-size: em(64);
+				line-height: em(68, 64);
+				font-weight: bold;
+				text-transform: uppercase;
+				margin-bottom: em(17, 64);
+				max-width: em(793, 64);
+				width: 100%;
+			}
+
+			p {
+				max-width: em(470, 20);
+				font-size: em(20);
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+		}
+
+		&_prev,
+		&_next {
+			left: 0;
+			position: absolute;
+			width: em(46);
+			bottom: 0;
+			cursor: pointer;
+
+			&.swiper-button-disabled {
+				svg {
+
+					circle {
+						fill: none;
+					}
+
+					path {
+						stroke: #0472B6;
+					}
+				}
+			}
+
+			svg {
+
+				circle {
+					fill: #0472B6;
+				}
+
+				path {
+					stroke: #fff;
+				}
+			}
+		}
+
+		&_next {
+			left: em(61);
+		}
+	}
+
+	@media (max-width: 768px) {
+
+		padding-top: em(61);
+
+		&__title {
+			margin-bottom: em(10);
+
+			svg {
+				width: em(24);
+				margin-right: em(12);
+			}
+
+			h2 {
+				font-size: em(24);
+			}
+		}
+
+		&__slider {
+			padding-bottom: em(49);
+		}
+
+		&__slide {
+			flex-direction: column;
+			max-width: em(280);
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				max-width: em(280);
+			}
+
+			&:nth-child(4) {
+				min-width: em(280);
+				max-width: em(280);
+
+				.advantages__slide_text {
+					p {
+						max-width: em(280, 16);
+					}
+				}
+			}
+
+			&_img {
+				width: em(183);
+				border-radius: em(10);
+				margin-bottom: em(16);
+
+				img {
+					border-radius: em(10);
+				}
+
+				span {
+					top: em(4, 20);
+					right: em(-29, 20);
+				}
+
+				&.swiper-slide {
+					height: em(223);
+				}
+
+			}
+
+			&_text {
+				h2 {
+					font-size: em(29);
+					line-height: em(31, 29);
+					margin-bottom: em(16, 29);
+					max-width: em(260, 29);
+				}
+
+				p {
+					font-size: em(16);
+					max-width: em(250, 16);
+				}
+			}
+
+
+			&_prev,
+			&_next {
+				width: em(28);
+			}
+
+			&_next {
+				left: em(36);
+			}
+		}
+
+	}
+}

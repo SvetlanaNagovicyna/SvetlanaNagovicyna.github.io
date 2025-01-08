@@ -1,0 +1,252 @@
+.socials {
+    display: flex;
+    align-items: center;
+    // padding: em(163) 0;
+
+    &__item {
+        font-size: em(16, 20);
+        width: em(42, 20);
+        margin-left: em(12, 20);
+        cursor: pointer;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        svg {
+            overflow: visible
+        }
+
+        path,
+        circle {
+            @include transition(300ms, all);
+        }
+
+
+        &:hover {
+
+            path,
+            circle {
+                @include transition(300ms, fill);
+            }
+
+            svg {
+                path {
+                    fill: #fff;
+                }
+
+                circle {
+                    fill: #0472B6;
+                }
+            }
+
+        }
+    }
+
+    // &__letter {
+    //     position: absolute;
+    //     top: em(332);
+    //     right: 50%;
+    //     margin-right: em(550);
+    //     width: em(274);
+
+    //     transform: scale(.5);
+    // }
+
+    // &__partners {
+    //     display: flex;
+    //     perspective: 1000px;
+    // }
+
+    // &__partners_group {
+    //     display: flex;
+    //     transform-style: preserve-3d;
+    //     backface-visibility: hidden;
+    //     animation: a 20s linear infinite;
+
+    //     @keyframes a {
+    //         100% {
+    //             transform: translate3d(-100%, 0, 0) rotate(0);
+    //         }
+    //     }
+    // }
+
+    // &__partners_item {
+    //     width: auto;
+    //     margin: 0 em(72);
+
+    //     img {
+    //         width: auto;
+    //         height: em(74);
+    //     }
+
+    // }
+
+    // &__box {
+    //     position: relative;
+    //     margin-top: em(248);
+    //     margin-left: auto;
+    //     margin-right: em(177);
+    //     padding: em(114) em(114) em(208);
+    //     width: em(1383);
+    //     overflow: hidden;
+    // }
+
+    // &__flow_1 {
+    //     pointer-events: none;
+    //     position: absolute;
+    //     width: em(506);
+    //     left: em(-250);
+    //     bottom: em(-300);
+    // }
+
+    // &__flow_2 {
+    //     position: absolute;
+    //     width: em(506);
+    //     left: em(300);
+    //     bottom: em(-100);
+    //     pointer-events: none;
+
+    // }
+
+    // &__box_bg {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: -1;
+
+    //     transform: translateY(20%);
+
+    //     img {
+    //         width: 100%;
+    //         height: 100%;
+    //         object-fit: cover;
+    //     }
+    // }
+
+    // &__content {
+    //     max-width: em(510);
+    // }
+
+    // &__title {
+    //     h2 {
+    //         color: #000;
+    //         font-size: em(49);
+    //     }
+    // }
+
+    // &__text {
+    //     margin-top: em(34);
+
+    //     p {
+    //         color: rgba(#000, .5);
+    //     }
+    // }
+
+    // &__btn {
+    //     margin-top: em(34);
+    // }
+
+    // &__pic {
+    //     display: none;
+    // }
+
+    @media (max-width: 768px) {
+        position: relative;
+        padding: em(50) 0;
+
+        &__letter {
+            position: absolute;
+            top: em(332);
+            right: 50%;
+            margin-right: em(550);
+            width: em(274);
+        }
+
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+
+        &__partners_item {
+            width: auto;
+            margin: 0 em(15);
+
+            img {
+                width: auto;
+                height: em(28);
+            }
+
+        }
+
+        &__box {
+            position: relative;
+            margin-top: em(50);
+            margin-left: 0;
+            margin-right: 0;
+            padding: em(0) em(20);
+            width: 100%;
+            overflow: hidden;
+        }
+
+        &__flow_1 {
+            display: none;
+        }
+
+        &__flow_2 {
+            display: none;
+
+        }
+
+        &__box_bg {
+            display: none;
+        }
+
+        &__content {
+            max-width: 100%;
+        }
+
+        &__title {
+            h2 {
+                color: #fff;
+            }
+        }
+
+        &__text {
+            margin-top: em(34);
+
+            p {
+                color: rgba(#fff, .5);
+            }
+        }
+
+        &__btn {
+            margin-top: em(34);
+
+            .btn {
+                border: em(1) solid rgba(#fff, .25);
+
+                span {
+                    color: #fff;
+                }
+
+                &:hover {
+                    background-color: #DEC9C0;
+                    border: em(1) solid rgba(#DEC9C0, 1);
+
+                    span {
+                        color: #141313;
+                    }
+                }
+            }
+        }
+
+        &__pic {
+            margin-right: em(20);
+            margin-top: em(50);
+            display: block;
+        }
+    }
+}

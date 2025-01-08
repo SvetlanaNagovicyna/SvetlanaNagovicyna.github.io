@@ -1,0 +1,270 @@
+.acc {
+	width: em(870);
+
+	&__item {
+		width: 100%;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		margin-bottom: em(30);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.opens {
+			transition: all 0.3s ease-in-out;
+		}
+
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 em(32) 0 em(40);
+		transition: all 0.3s ease-in-out;
+		height: em(125);
+		border-radius: em(20);
+		border: em(.5) solid rgba(4, 114, 182, 0.40);
+		@include transition(300ms, background);
+
+		&:hover {
+			background: #F3F6F8;
+		}
+
+
+		p {
+			font-family: "DIN Alternate";
+			font-size: em(36);
+			line-height: em(39, 36);
+			font-weight: 700;
+			text-transform: uppercase;
+			max-width: em(740, 36);
+			@include transition(300ms, color);
+		}
+
+		svg {
+			will-change: transform;
+			width: em(47);
+			height: em(47);
+
+			path {
+				transition: all 0.3s ease-in-out;
+				transform-origin: center;
+			}
+		}
+
+		.icon {
+			will-change: transform;
+			width: em(16);
+			height: em(16);
+
+			.line {
+				transition: all 0.3s ease-in-out;
+				transform-origin: center;
+			}
+
+		}
+
+		&.opens {
+			@include transition(300ms, all);
+
+			background: #F3F6F8;
+
+			p {
+				color: #0472B6;
+			}
+
+
+			svg {
+				will-change: transform;
+
+				path {
+					transform: scale(1, -1);
+				}
+			}
+
+		}
+
+	}
+
+	&__body {
+		width: 100%;
+		overflow: hidden;
+		transition: max-height 0.5s ease-in-out;
+		max-height: 0;
+		margin-top: em(-1);
+
+		.content {
+			border-radius: em(20);
+			border: em(.5) solid rgba(4, 114, 182, 0.40);
+			padding: em(47) em(50) em(43) em(43);
+		}
+
+		.contacts {
+			display: flex;
+			margin-bottom: em(25);
+
+			&__tels {
+				&_item {
+					margin-bottom: em(12);
+
+					span {
+						color: #000;
+						font-size: em(24);
+						font-weight: 400;
+						line-height: normal;
+
+						&.gray {
+							color: #B2B2B2;
+						}
+					}
+
+
+					a {
+						position: relative;
+						font-size: em(24);
+						color: #303030;
+						cursor: pointer;
+						@include transition(300ms, color, text-shadow);
+
+
+
+
+						&:hover {
+							color: #0472B6;
+							text-shadow: 0 0 em(.65, 20) #0472B6, 0 0 em(.65, 20) #0472B6, 0 0 em(.65, 20) #0472B6;
+						}
+					}
+
+					&:first-child {
+						a {
+							color: #0472B6;
+							text-shadow: 0 0 em(.65, 20) #0472B6, 0 0 em(.65, 20) #0472B6, 0 0 em(.65, 20) #0472B6;
+						}
+					}
+				}
+			}
+
+			&__socials {
+				font-size: em(24);
+				margin-left: em(30, 24);
+			}
+		}
+
+		p {
+			font-size: em(20);
+			font-weight: 400;
+			line-height: normal;
+			margin-bottom: em(22);
+			color: #000;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&.strong {
+				font-weight: bold;
+			}
+
+			span.blue {
+				color: #0472B6;
+				font-weight: 600;
+			}
+
+			a {
+				color: #0472B6;
+				text-decoration: underline;
+				font-weight: 600;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+		}
+
+
+		&.active {
+			display: block;
+		}
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+
+		&:nth-child(2) {
+			margin-top: em(10);
+		}
+
+		&__item {
+			margin-bottom: em(10);
+		}
+
+		&__head {
+			height: auto;
+			padding: em(13.6) em(9) em(13.6) em(12);
+			border-radius: em(10);
+
+			p {
+				font-size: em(16);
+				line-height: em(20, 16);
+				max-width: em(226, 16);
+
+				br {
+					display: none;
+				}
+			}
+
+			svg {
+				width: em(22);
+				height: em(22);
+			}
+		}
+
+		&__body {
+			.content {
+				border-radius: em(10);
+				padding: em(23) em(15) em(23) em(12);
+			}
+
+			.contacts {
+				position: relative;
+
+				&__tels {
+					&_item {
+						span {
+							font-size: em(14);
+						}
+
+						a {
+							font-size: em(14);
+						}
+
+						&:first-child {
+							margin-bottom: em(45);
+						}
+					}
+				}
+
+				&__socials {
+					position: absolute;
+					top: em(30);
+					right: em(15);
+					font-size: em(14);
+					margin-left: 0;
+
+					.socials {
+						padding: 0;
+					}
+				}
+			}
+
+			p {
+				font-size: em(16);
+			}
+
+		}
+	}
+
+}

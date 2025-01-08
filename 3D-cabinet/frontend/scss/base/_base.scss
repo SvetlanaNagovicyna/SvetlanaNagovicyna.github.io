@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body,
+html {
+  height: 100%
+}
+
+:root {
+  font-family: 'Inter';
+  font-weight: 400;
+  color: #fff;
+  height: 100%;
+  font-size: calc(16 / 19.2 * 1vw);
+
+  @media (max-width: 768px) {
+    font-size: calc(16 / 3.2 * 1vw);
+    // font-size: 16px;
+  }
+}
+
+html {
+  &::-webkit-scrollbar {
+    width: .5em;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #0472B6;
+  }
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+
+  background-color: #FEFEFE;
+}
+
+
+.body-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100%;
+  overflow: hidden;
+
+  color: #303030;
+
+  &::after {
+    transition: all .3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(#{em(5)});
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+  }
+
+
+  &.no-scroll {
+    // height: 100%;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+#favicon {
+  @media (prefers-color-scheme: dark) {
+    #favicon-link {
+      content: url('favicon-dark.svg');
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    #favicon-link {
+      content: url('favicon-light.svg');
+    }
+  }
+}

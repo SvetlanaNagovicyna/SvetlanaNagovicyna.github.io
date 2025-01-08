@@ -1,0 +1,162 @@
+section.popups
+
+    
+
+
+    .popups__popup
+
+        .popups__elem.popups__elem--1.parallax 
+            img(src="public/img/coin.png", alt=""  data-depth=".5")
+        .popups__elem.popups__elem--2.parallax
+            img(src="public/img/coin.png", alt=""  data-depth="-.5")
+        .popups__elem.popups__elem--3.parallax
+            img(src="public/img/elem_2.png", alt=""  data-depth=".5")
+        .popups__elem.popups__elem--4.parallax
+            img(src="public/img/elem_1.png", alt=""  data-depth="-.5")
+
+        .popups__head 
+            .top_section__lines
+                .top_section__lines--2 
+                    span Твої вітальні															
+                .top_section__lines--1(data-text="1000 ")
+                    span 1000 
+                .top_section__lines--4 фріспінів
+
+
+        .popups__content
+
+            .popups__close 
+                img(src="public/img/close.png", alt="")
+
+            
+            //- .popups__form_heading_block 
+            //-     .popups__form_heading 
+            //-         span Қазір тіркеліп алыңыз
+            //-     .popups__form_bonus 
+            //-         .popups__form_bonus_1 
+            //-             span 1000 FS + 100%
+            //-         .popups__form_bonus_2
+            //-             span 600 000 ₸ дейiн
+            .popups__logo 
+                img(src="./public/img/logo.png", alt="")
+
+            .swich
+                p.swich__link(data-tab-name='tab-1')
+                    span.swich__link-text За телефоном
+                p.swich__link(data-tab-name='tab-2').swich__active
+                    span.swich__link-text Через e-mail
+            .content
+                .phone-contaniner.tab.tab-1
+                    form#form-tel.form.phone-form(action='')
+                        .tel-wrap
+                            input#phone.input-tel.phone(type='tel' placeholder='Телефон' value='+380' size='13' minlength='9' autocomplete='off' data-valid='false' name='phone' required='')
+                            .phone_code
+                                span.phone_code__flag
+                                    img#flag_img.phone_code__flag_img(src='' alt='')
+                                select#phone_code.phone_code__select
+                        .submit-wrap
+                            button.input-submit(disabled='') надIслати код
+                        //- .enter-wrap
+                        //-     p.enter-question Аккаунт барма?
+                        //-     a.enter-link(href='') Кіру
+                    form#form-code.form.phone-form(action='')
+                        p.form-descr
+                            | Код нөмірге жіберілді
+                            span.form__mess_phoneNumber
+                        p.form-descr
+                            | SMS келмеді ме? 
+                            a(href='#') Қайтадан жіберу
+                        input#code.input(type='text' data-name="text" data-valid="false" placeholder='Код из СМС' autocomplete='off' name='code' required='')
+                        .password-wrap
+                            .password-eye(data-status='Показать пароль')
+                                img#password.password-img.password_hidden.active(src='./public/img/eye.svg' alt='')
+                                img#password.password-img.password_visible(src='./public/img/eye_open.svg' alt='')
+                            input.input-password(type='password' name='password' data-valid="false" data-name="password" placeholder='құпия сөз' required='')
+                        input#promo.input(type='text' data-valid="true" placeholder='Промокод (бар болса)' autocomplete='off' name='promo')
+                        .select
+                            input.input-select(type='hidden' name='currency' value='UAH')
+                            .select-current
+                                .select-current__inner.select-list__item--current
+                                    p.select-list__currency UAH
+                                    p.select-list__text Українська гривня 
+                                .select-current__drop-area
+                                    //- img.select-current__drop-icon(src='public/img/down-arrow.svg' alt='')
+                            .select-list
+                                .select-list__item(data-select='UAH')
+                                    p.select-list__currency UAH
+                                    p.select-list__text Українська 
+                                //- .select-list__item(data-select='RUB')
+                                //-     p.select-list__currency RUB
+                                //-     p.select-list__text Ресей рублі
+                                //- .select-list__item(data-select='USD')
+                                //-     p.select-list__currency USD
+                                //-     p.select-list__text АҚШ доллары
+                                //- .select-list__item(data-select='AZ')
+                                //-     p.select-list__currency AZ
+                                //-     p.select-list__text Әзірбайжан манаты
+                                //- .select-list__item(data-select='EUR')
+                                //-     p.select-list__currency EUR
+                                //-     p.select-list__text еуро
+                                //- .select-list__item(data-select='UZS')
+                                //-     p.select-list__currency UZS
+                                //-     p.select-list__text өзбек сомасы
+                        .submit-wrap
+                            input.input-submit(type='submit' value='Зарегистрироваться')
+                        .enter-wrap
+                            p.enter-question Аккаунт барма?
+                            a.enter-link(href='') Кіру
+                        .agreement
+                            .agreement__item
+                                input#agreement-phone.agreement__checkbox(type='checkbox' checked='' data-name="rule" data-valid="true")
+                                label.agreement__lable(for='agreement-phone')
+                                p.agreement__text
+                                    | Мен шарттармен 
+                                    a(href='') келісемін
+                            .agreement__item
+                                input#mailing-phone.agreement__checkbox(type='checkbox' checked='')
+                                label.agreement__lable(for='mailing-phone')
+                                p.agreement__text Акция туралы ақпараттық бюллетеньді электрондық пошта және SMS арқылы алыңыз
+                form#form-email.form.email-form.tab.tab-2(action='').contentActive
+                    input#email.input-email(type='email' name='email' placeholder='E-mail' required='' data-valid="false" data-name="email" autocomplete="email")
+                    .password-wrap
+                        .password-eye(data-status='Пароль')
+                            img#password.password-img.password_hidden.active(src='./public/img/eye.svg' alt='')
+                            img#password.password-img.password_visible(src='./public/img/eye_open.svg' alt='')
+                        input#password.input-password(type='password' name='password' data-valid="false" data-name="password" placeholder='Пароль' required='')
+                    .select
+                        input.input-select(type='hidden' name='currency' value='UAH')
+                        .select-current
+                            .select-current__inner.select-list__item--current
+                                p.select-list__currency UAH
+                                p.select-list__text Українська гривня 
+                            .select-current__drop-area
+                                //- img.select-current__drop-icon(src='public/img/down-arrow.svg' alt='')
+                        .select-list
+                                .select-list__item(data-select='UAH')
+                                    p.select-list__currency UAH
+                                    p.select-list__text Українська гривня 
+                    
+             
+                        .agreement__item
+                            input#agreement-email.agreement__checkbox(type='checkbox' checked='' data-name="rule" data-valid="true")
+                            label.agreement__lable(for='agreement-email')
+                                p.agreement__text
+                                    | Я згоден з 
+                                    a Правилами та Умовами 
+                                    br
+                                    |та 
+                                    a(href='') Захистом Інформації
+                                    
+                        .agreement__item
+                            input#mailing-email.agreement__checkbox(type='checkbox' checked='')
+                            label.agreement__lable(for='mailing-email')
+                                p.agreement__text Мені виповнився 21 рік
+
+                        .agreement__item
+                            input#mailing-email.agreement__checkbox(type='checkbox' checked='')
+                            label.agreement__lable(for='mailing-email')
+                                p.agreement__text Я хочу отримувати новини по e-mail та sms
+
+                    .submit-wrap
+                        input#submit-email.input-submit(type='submit' value='Реєстрація' disabled)
+                .error_message

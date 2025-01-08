@@ -1,0 +1,400 @@
+- var title = "";
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap
+			header.header 
+				.container 
+					-const menuList = ['Наші переваги', 'Пацієнтам', 'Лікарям та клінікам', 'Контакти']
+					-const menuListNavigation = ['advantages', 'patients', 'clinics', 'contacts']
+					.header__wrap 
+						.header__logo 
+							img(src="public/img/logo.svg", alt="")
+						.header__open
+							include ../../public/img/menu-mobile.svg
+							include ../../public/img/menu-mobile-close.svg
+ 
+						menu.header__menu
+							.elem.elem-1
+								include ../../public/img/el.svg
+
+							-for(let i = 0; i < menuList.length; i++){
+								li.header__menu_item
+									a.link(ref="#" + menuListNavigation[i]  onclick="lenis.scrollTo('#" + menuListNavigation[i] + "')")=menuList[i]
+							-}
+							li.header__menu_item
+								a.link.popup-btn(data-popup="sign-modal") Записатись
+							
+							li.header__menu_item.header__menu_item-tel
+								.tel
+									.tel__heading 
+										img(src="public/img/arrow.svg", alt="")
+										a(href="tel:+380689110505") +38 (068) 911-05-05
+									.tel__content 
+										a(href="tel:+380939110505") +38 (093) 911-05-05
+										a(href="tel:+380959110505") +38 (095) 911-05-05
+
+							li.header__menu_item.header__menu_item-socials
+								.socials
+									a.socials__item(href="https://t.me/+380689110505" target="_blank")
+										include ../../public/img/socials/tg.svg
+									a.socials__item(href="viber://chat?number=+380689110505" target="_blank")
+										include ../../public/img/socials/viber.svg
+									a.socials__item(href="https://wa.me/+380689110505" target="_blank")
+										include ../../public/img/socials/whatsapp.svg
+							a.btn.popup-btn(data-popup="sign-modal")
+								include ../../public/img/arrow-btn.svg
+								span Записатися на дослідження
+
+					
+			main.main 
+				section.top#top
+					.elem.elem-1
+						include ../../public/img/el.svg
+					.container 
+						.top__wrap 
+							.top__content
+								.top__title
+									h1 3D Кабінет — центр сучасної щелепно-лицевої діагностики 
+								.top__descr
+									p Максимально точне та інформативне обстеження стану зубів, щелеп, ЛОР-органів та лицевої частини черепа за декілька секунд.
+								.top__btn 
+									a.btn.popup-btn(data-popup="sign-modal")
+										include ../../public/img/arrow-btn.svg
+										span Записатися на дослідження
+							.top__image 
+								img(src="public/img/top/img.png", alt="people in the cabinet")
+				section.advantages#advantages
+					.container
+						.advantages__title.title__gsap-wrap
+							include ../../public/img/advantages/icon.svg
+							h2.title__gsap Наші переваги
+						.advantages__slider.swiper
+							.swiper-wrapper
+								.swiper-slide.advantages__slide 
+									.swiper-slide.advantages__slide_img 
+										img(src="public/img/advantages/item-1.png", alt="equipment")
+										span 01
+									.swiper-slide.advantages__slide_text 
+										h2 Найсучасніше обладнання
+										p Працюємо на апараті Planmeca Viso® G7, який є найкращим з флагманської лінійки всесвітньо відомих апаратів для 3D-візуалізації.
+								.swiper-slide.advantages__slide 
+									.swiper-slide.advantages__slide_img 
+										img(src="public/img/advantages/item-2.png", alt="skull")
+										span 02
+									.swiper-slide.advantages__slide_text 
+										h2 Широка область досліджень
+										p Наше обладнання дозволяє зробити найточніший знімок, починаючи від дрібних деталей зубів, закінчуючи повним дослідженням кісток черепа.
+								.swiper-slide.advantages__slide 
+									.swiper-slide.advantages__slide_img 
+										img(src="public/img/advantages/item-3.png", alt="woman")
+										span 03
+									.swiper-slide.advantages__slide_text 
+										h2 Найменша доза опромінення
+										p Унікальний та науково-апробований протокол зйомки дозволяє отримувати 3D-зображення за значно нижчих ефективних доз опромінення пацієнта без зниження при цьому якості зображення.
+								.swiper-slide.advantages__slide 
+									.swiper-slide.advantages__slide_img 
+										img(src="public/img/advantages/item-4.png", alt="results")
+										span 04
+									.swiper-slide.advantages__slide_text 
+										h2 Результати досліджень завжди під боком
+										p Ми записуємо Ваш знімок на цифровий носій, надсилаємо Вам та Вашому лікарю електронною поштою зберігаємо у нашому хмарному сховищі. Відтепер можна не турбуватися, якщо раптом втратите результати досліджень: на Ваш запит ми можемо видати дублікат знімку.
+								.swiper-slide.advantages__slide 
+									.swiper-slide.advantages__slide_img 
+										img(src="public/img/advantages/item-5.png", alt="gift")
+										span 05
+									.swiper-slide.advantages__slide_text 
+										h2 Знижки та акційні пропозиції
+										p На постійній основі у нас діє система знижок для певних категорій пацієнтів, а для усіх інших – акційні пропозиції. Підписуйтеся на наші соціальні мережі, щоб їх відслідковувати.
+							.advantages__slide_prev
+								include ../../public/img/advantages/arr-prev.svg
+							.advantages__slide_next
+								include ../../public/img/advantages/arr-next.svg
+				
+				section.patients#patients
+					.container
+						.patients__title.title__gsap-wrap 
+							include ../../public/img/patients/icon.svg
+							h2.title__gsap Пацієнтам
+						.patients__faq
+							.acc 
+								.acc__item
+									.acc__head
+										p Яка вартість досліджень?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p Актуальні ціни  завжди можна подивитись у прайс лісті: 
+												a(href="https://drive.google.com/drive/folders/1Zpju4O61g0aMA70M2bIGB7KHgkK0Orb1") Завантажити PDF
+								.acc__item
+									.acc__head
+										p Як відбувається дослідження?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p 
+												span.blue 1.  
+												| Лаборант заповнює Вашу персональну картку (ПІБ, дата народження, контактний номер телефону).
+											p 
+												span.blue 2.  
+												| У випадку, якщо у вас немає направлення або Ваш лікар зазначив у направленні не всі дані, будьте готові до того, що може виникнути необхідність зв’язатися з Вашим лікарем по телефону для отримання уточнень.
+											p 
+												span.blue 3.  
+												| Після реєстрації Лаборант налаштовує апарат для сканування та просить зняти усі металеві предмети з області голови, обличчя та шиї: сережки, ланцюжки, пірсинг, знімні зубні протези, пластинки, слуховий апарат, тощо. Елементи, які неможливо зняти - знімати не треба: коронки, імпланти, тощо. Будемо вдячні якщо Ви підготуєтесь до обстеження перед візитом до 3D Кабінету, це значно зекономить Ваш час.
+											p 
+												span.blue 4. 
+												| Лаборант проводить Вас у апаратну (кімнату для сканування) та допомагає Вам розміститися. Для отримання якісного зображення під час сканування бажано не ворушити головою, та не робити ковтальних/жувальних рухів, тощо.
+											p
+												span.blue 5. 
+												| Після підготовки Лаборант виходить з апаратної для запуску сканування. Момент сканування супроводжується характерним звуковим сигналом, який не гучний та триває від 10 до 30 секунд (в залежності від обраного виду дослідження).
+											p
+												span.blue 6. 
+												| Після сканування лаборант виводить Вас з апаратної. Комп’ютер обробляє отримані дані. Результат видається одразу після проведення дослідження, по мірі обробки результатів комп’ютером. Для 2D – роздруковується на фотопапері, а для 3D – записується на цифровий носій (флешку/диск) та додатково надсилається Вашому лікарю електронною поштою за реквізитами, зазначеними у направленні, та/або Вам (за потреби).
+								.acc__item
+									.acc__head
+										p Як записатися на дослідження?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p Ви можете здійснити попередній запис 
+												span.blue за телефоном або надіслати повідомлення у будь-який зручний для вас месенджер:
+											.contacts 
+												.contacts__tels
+													.contacts__tels_item 
+														span Kyivstar 
+														span.gray ..........
+														a(href="tel:+380689110505")  +38 (068) 911-05-05
+													.contacts__tels_item 
+														span Lifecell 
+														span.gray ...........
+														a(href="tel:+380939110505")  +38 (093) 911 05 05
+													.contacts__tels_item 
+														span Vodafone 
+														span.gray .......
+														a(href="tel:+380959110505")  +38 (095) 911 05 05
+												.contacts__socials 
+													.socials
+														a.socials__item(href="https://t.me/+380689110505" target="_blank")
+															include ../../public/img/socials/tg.svg
+														a.socials__item(href="viber://chat?number=+380689110505" target="_blank")
+															include ../../public/img/socials/viber.svg
+														a.socials__item(href="https://wa.me/+380689110505" target="_blank")
+															include ../../public/img/socials/whatsapp.svg
+											p.strong Не встигли записатися? Не проблема:
+											p Бажаючі отримати послугу без попереднього запису – 
+												span.blue приймаються у порядку живої черги. 
+												| Просто потрібно буде трішки почекати. 		
+													
+
+
+
+								.acc__item
+									.acc__head
+										p Чи потрібно мати направлення для того, щоб зробити дослідження?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p 
+												span.blue Направлення хоч і не є обов’язковим, але дуже бажано його мати: 
+												| так Ви можете бути впевненими у правильності обраного виду дослідження та не переробляти його в майбутньому на вимогу лікаря.
+								.acc__item
+									.acc__head
+										p Я не можу відкрити 3D знімок. <br> Як бути?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p Програмне забезпечення розраховано для лікарів, які вміють користуватися програмою та для запуску на комп’ютері, 
+												span.blue який відповідає рекомендованим технічним вимогам:
+											p Процесор: Intel Core і5 (9го покоління або потужніший).
+												br
+												| Оперативна пам’ять: від 32ГБ
+												br
+												| Відео карта: Nvidia GeForce GTX 1030, або вбудована.
+												br
+												| Операційна система: Windows 10 64bit ліцензійна та з останніми оновленнями.
+											
+							.acc
+								.acc__item
+									.acc__head
+										p З якого віку можна проводити дослідження?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p Дослідження проводяться дорослим та дітям з 
+												span.blue 6 років.
+								.acc__item
+									.acc__head
+										p Як часто можна проводити дослідження?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p Наше сучасне обладнання дозволяє робити високоякісні знімки при мінімальній дозі випромінювання, тому частота здійснення досліджень проводиться 
+												span.blue згідно рекомендацій вашого лікаря.
+								.acc__item
+									.acc__head
+										p Чи можна роздрукувати 3D дослідження на папері?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p Оскільки 3D знімок (на відміну від 2D знімку) це тривимірне зображення (яке не пласке, а об’ємне) - 
+												span.blue його неможливо надрукувати на папері. 
+												| Тому 3D знімок надається разом з програмою, яка дозволяє 
+												span.blue продивитися його на комп’ютері.
+								.acc__item
+									.acc__head
+										p Чи надаєте ви письмові <br> роз’яснення по знімкам?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p Для коректної інтерпретації результатів, усі знімки розшифровуються виключно Вашим лікарем, якому відомі Ваші індивідуальні особливості. Для коректної інтерпретації результатів, усі знімки розшифровуються виключно Вашим лікарем, якому відомі Ваші індивідуальні особливості. 
+												br
+												span.blue Проте, Ви можете замовити послугу опису окремо, звернувшись до наших фахівців. Терміни та обсяги надання цієї послуги визначаються індивідуально. За детальною інформацією просимо звертатися до працівників 3D Кабінету.
+								.acc__item
+									.acc__head
+										p Я загубив(-ла) 3D знімок. Чи можу <br> я отримати копію?
+										include ../../public/img/patients/arrow.svg
+									.acc__body
+										.content
+											p Так. Можете відправити нам запит на e-mail або у будь-який месенджер, вказавши свої прізвище, ім’я, по-батькові та дату народження і 
+												span.blue ми надішлемо Вам результати повторно.
+				section.clinics#clinics
+					.container
+						.clinics__wrap
+							.elem.elem-2
+								include ../../public/img/el-2.svg
+							.elem.elem-3
+								include ../../public/img/el-3.svg
+							.clinics__title.title__gsap-wrap 
+								include ../../public/img/clinics/icon.svg
+								h2.title__gsap Лікарям та клінікам
+							.clinics__content 
+								.clinics__content_title 
+									h3 ЧОМУ ВАРТО СПІВПРАЦЮВАТИ <br> З НАМИ?
+								.clinics__content_list
+									.clinics__content_item
+										h4 Ми займаємося виключно дослідженнями та не перетинаємо межі компетенції.
+										p Ми не даємо рекомендацій з лікування, тому Ваш пацієнт залишається Вашим пацієнтом, а результати досліджень надсилаються разом з програмою, яка дозволить Вам безперешкодно їх переглядати без нашого посередництва. Наша мета - допомогти Вам надати розширений сервіс своїм пацієнтам та отримати високоточні результати для подальшого використання в роботі.
+											br
+											| Проте, у нас Ви можете замовити послугу опису знімку окремо, звернувшись до наших фахівців. Терміни та обсяги надання цієї послуги визначаються індивідуально. За детальною інформацією просимо звертатися до працівників 3D Кабінету.
+									.clinics__content_item
+										h4 Для кожного лікаря ми розробляємо індивідуальні умови співпраці, залежно від його спеціалізації.
+										p Стоматологи, хірурги, пародонтологи, ортодонти та отоларингологи, і навіть терапевти – ми закриваємо потреби у щелепно-лицевій діагностиці для кожного спеціаліста.
+									.clinics__content_item
+										h4 Ми працюємо на обладнанні, яке є найкращим з флагманської лінійки всесвітньо відомих апаратів для 3D-візуалізації.
+										p Planmeca Viso® G7 надає широкий вибір можливостей для розв'язання будь-яких клінічних завдань – від знімку одного зуба до дослідження черепа (розміри об'єму можна регулювати в діапазоні від 3 x 3 см до 30 x 30 см). Режим ендодонтичної 3D-зйомки нашого апарату заснований на технології штучного інтелекту та вирішує проблему цифрового шуму, який є частою проблемою при ендодонтичній візуалізації.
+									.clinics__content_item
+										h4 Ми безстроково зберігаємо знімки Ваших пацієнтів
+										p Надаємо знімки на Ваш запит, що дозволить Вам аналізувати результати досліджень в динаміці.
+								.clinics__content_btns
+									a(href="https://drive.google.com/drive/folders/1RBZer4B1RAnTevkFjsY1hF6QL-3jNncK").btn.btn--light
+										include ../../public/img/arrow-btn-light.svg
+										span ЗАВАНТАЖИТИ НАПРАВЛЕННЯ ДЛЯ ПАЦІЄНТІВ
+									a(href="https://drive.google.com/drive/folders/1Zpju4O61g0aMA70M2bIGB7KHgkK0Orb1").btn.btn--light
+										include ../../public/img/arrow-btn-light.svg
+										span ПЕРЕЛІК ДОСЛІДЖЕНЬ ТА АКТУАЛЬНІ ЦІНИ
+									a(href="https://drive.google.com/drive/folders/10bafED1ODF6kGn58iENmKm3Zt04xcykN?usp=sharing").btn.btn--light
+										include ../../public/img/arrow-btn-light.svg
+										span ЗАВАНТАЖИТИ ПРОГРАМУ ДЛЯ ПЕРЕГЛЯДУ ЗНІМКІВ
+									a.popup-btn(data-popup="cooperation-modal").btn.btn--light
+										include ../../public/img/arrow-btn.svg
+										span СПІВПРАЦЯ
+			
+
+			footer.footer#contacts
+				.elem.elem-4
+					include ../../public/img/el.svg
+				.container 
+					.footer__title.title__gsap-wrap
+						include ../../public/img/footer/icon.svg
+						h2.title__gsap Контактна інформація
+					.footer__wrap
+						.footer__map 
+							iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.5215101879985!2d35.02280987597656!3d48.46570962826107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2fd1f93077d%3A0x8a43e9fedc6a2d7a!2z0L_RgNC-0YHQvy4g0JvQtdGB0ZYg0KPQutGA0LDRl9C90LrQuCwgNDEsINCU0L3RltC_0YDQviwg0JTQvdGW0L_RgNC-0L_QtdGC0YDQvtCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDQ5MDAw!5e0!3m2!1suk!2sua!4v1715856181125!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0")
+						.footer__content 
+							.telnumbers
+								.telnumbers__item
+									.text
+										span Kyivstar 
+										span.gray ..........
+										a(href="tel:+380689110505") +38 (068) 911 05 05
+									.socials
+										a.socials__item(href="https://t.me/+380689110505" target="_blank")
+											include ../../public/img/socials/tg.svg
+										a.socials__item(href="viber://chat?number=+380689110505" target="_blank")
+											include ../../public/img/socials/viber.svg
+										a.socials__item(href="https://wa.me/+380689110505" target="_blank")
+											include ../../public/img/socials/whatsapp.svg
+								.telnumbers__item
+									.text
+										span Lifecell 
+										span.gray ............
+										a(href="tel:+380939110505") +38 (093) 911 05 05
+								.telnumbers__item
+									.text
+										span Vodafone 
+										span.gray ........
+										a(href="tel:+380959110505") +38 (095) 911 05 05
+							.morinfo
+								.morinfo__adress 
+									p.strong м.Дніпро,
+									p пр.Лесі Українки, буд.41
+									a(href="mailto:dnipro@3dkabinet.com") dnipro@3dkabinet.com
+								.morinfo__workhours 
+									p.strong Графік роботи:
+									span ПН-ПТ 
+										span.blue 8:30-19:00
+										br
+										| СБ 
+										span.blue 9:00-14:00
+										br
+										| НД – ВИХІДНИЙ
+							.button 
+								a(href="https://www.instagram.com/_3dkabinet_?igsh=MTI2bnh0enp3eHFnbQ==").btn
+									include ../../public/img/footer/inst.svg
+									span наш Instagram
+			.modal-wrap.sign-modal
+				.modal
+					.close
+						include ../../public/img/popup/close.svg
+					.modal__container
+						.modal__title 
+							h2 Як записатися на дослідження?
+						.modal__content 
+							p Ви можете здійснити попередній запис 
+								span.blue за телефоном або надіслати повідомлення у будь-який зручний для вас месенджер:
+							.telnumbers
+								.telnumbers__item
+									.text
+										img(src="public/img/popup/kyivstar.png ", alt="")
+										a(href="tel:+380689110505") +38 (068) 911 05 05
+									.socials
+										a.socials__item(href="https://t.me/+380689110505" target="_blank")
+											include ../../public/img/socials/tg.svg
+										a.socials__item(href="viber://chat?number=+380689110505" target="_blank")
+											include ../../public/img/socials/viber.svg
+										a.socials__item(href="https://wa.me/+380689110505" target="_blank")
+											include ../../public/img/socials/whatsapp.svg
+								.telnumbers__item
+									.text
+										img(src="public/img/popup/lifecell.png", alt="")
+										a(href="tel:+380939110505") +38 (093) 911 05 05
+								.telnumbers__item
+									.text
+										img(src="public/img/popup/vodafone.png", alt="")
+										a(href="tel:+380959110505") +38 (095) 911 05 05
+							p Пацієнти які здіснили попередній запис – 
+								span.blue приймаються згідно часу свого запису.
+			.modal-wrap.cooperation-modal
+				.modal
+					.close
+						include ../../public/img/popup/close.svg
+					.modal__container
+						.modal__title 
+							h2 Спiвпраця
+						.modal__content 
+							p З приводу 
+								span співпраці 
+								| будь ласка пишіть на пошту: 
+							a(href="mailto:admin@3dkabinet.com") admin@3dkabinet.com
+		include includes/foot

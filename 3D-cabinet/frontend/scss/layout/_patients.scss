@@ -1,0 +1,54 @@
+.patients {
+	padding-top: em(130);
+
+
+	&__title {
+		display: flex;
+		align-items: center;
+		margin-bottom: em(93);
+		overflow: hidden;
+
+		svg {
+			width: em(49);
+			margin-right: em(22);
+			transform: scale(0);
+		}
+
+		h2 {
+			font-family: "DIN Alternate";
+			font-size: em(64);
+			font-weight: bold;
+			transform: translateY(-150%);
+		}
+	}
+
+	&__faq {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@media (max-width: 768px) {
+
+		padding-top: em(49);
+
+		&__title {
+			margin-bottom: em(10);
+
+			svg {
+				width: em(24);
+				margin-right: em(12);
+			}
+
+			h2 {
+				font-size: em(24);
+			}
+		}
+
+		&__faq {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+	}
+}

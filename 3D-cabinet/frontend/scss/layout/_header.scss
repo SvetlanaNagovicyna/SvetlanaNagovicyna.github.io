@@ -1,0 +1,297 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: em(72) 0 em(52);
+    background-color: transparent;
+    backdrop-filter: blur(#{em(0)});
+    will-change: backdrop-filter;
+    z-index: 10;
+
+    @include transition(500ms, padding, background-color, backdrop-filter);
+
+
+    &__logo {
+        width: em(265);
+    }
+
+
+    &.scroll {
+        padding: em(28) 0;
+        background-color: rgba(#FEFEFE, .9);
+        backdrop-filter: blur(#{em(14)});
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__open {
+        display: none;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+
+        .elem {
+            display: none;
+        }
+
+
+        .btn {
+            display: none;
+        }
+
+    }
+
+    &__menu_item {
+        a {
+            position: relative;
+            font-size: em(20);
+            color: #303030;
+            cursor: pointer;
+            @include transition(300ms, color, text-shadow);
+
+
+            &:hover {
+                color: #0472B6;
+                text-shadow: 0 0 em(.65, 20) #0472B6, 0 0 em(.65, 20) #0472B6, 0 0 em(.65, 20) #0472B6;
+            }
+        }
+
+
+        &-tel {
+            margin-left: em(52);
+        }
+
+        &:not(:last-child) {
+            margin-right: em(54);
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        padding: em(30) 0 em(20);
+
+        &__logo {
+            width: em(150);
+            z-index: 1;
+        }
+
+        &.scroll {
+            padding: em(20) 0;
+            backdrop-filter: blur(#{em(14)});
+        }
+
+        &__wrap {
+            flex-wrap: wrap;
+        }
+
+
+
+        &__menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: em(84) em(20) em(34);
+            flex-direction: column;
+            background-color: #FEFEFE;
+            transform: translateX(100%);
+            transition: transform .75s cubic-bezier(.85, .07, .17, .89) !important;
+            overflow: hidden;
+
+            .elem {
+                display: block;
+                z-index: 0;
+
+                svg {
+                    path {
+                        stroke-opacity: .6;
+                    }
+                }
+            }
+
+
+            &.active {
+                transform: translateX(0);
+            }
+
+            .btn {
+                display: flex;
+            }
+
+        }
+
+        &__menu_item {
+            width: 100%;
+            height: em(48);
+            background-color: #FEFEFE;
+            border-radius: em(10);
+            border: em(.5) solid #0472B6;
+            display: flex;
+            align-items: center;
+            padding-left: em(11);
+
+            flex-shrink: 0;
+            flex-grow: 0;
+            @include transition(300ms, background-color);
+            z-index: 2;
+
+            a.link {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                &:hover {
+                    font-weight: 600;
+                    color: #0472B6;
+                    text-shadow: none;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: em(8);
+                margin-right: 0;
+            }
+
+            &:nth-child(5) {
+                display: none;
+            }
+
+
+            &:hover {
+                background-color: #F3F6F8;
+            }
+
+            &-tel {
+                margin-left: 0;
+                border: none;
+                padding-left: 0;
+                margin-top: em(39);
+                // margin-top: em(123);
+                height: auto;
+                background: none;
+                margin-left: em(40);
+                // width: 100%;
+
+                &:hover {
+                    background: none;
+                }
+
+            }
+
+            &-socials {
+                border: none;
+                padding-left: 0;
+                height: auto;
+                background: none;
+
+
+                &:hover {
+                    background: none;
+                }
+
+                .socials {
+                    padding: 0;
+                    font-size: em(17.3);
+                    margin-top: em(10, 17.3);
+                    margin-bottom: em(28, 17.3);
+                }
+            }
+
+            &:last-child {
+                border: none;
+                padding-left: 0;
+                height: auto;
+
+            }
+
+        }
+
+        &__open {
+            display: block;
+            position: relative;
+            width: em(34);
+            height: em(34);
+            cursor: pointer;
+            z-index: 2;
+
+            svg {
+                overflow: visible;
+                width: em(34);
+                height: em(34);
+                transition: all .3s ease-in-out;
+
+                &:nth-child(2) {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &.active {
+
+
+                svg {
+                    &:nth-child(1) {
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+
+        &__menu {
+            width: 100%;
+            order: 1;
+        }
+
+        @media (min-aspect-ratio: 320/628) {
+
+            .header__menu_item-tel {
+                margin-top: em(25);
+            }
+
+        }
+
+        @media (min-aspect-ratio: 320/525) {
+
+            .header__menu_item-socials .socials {
+                margin-bottom: em(10);
+            }
+        }
+
+        @media (min-aspect-ratio: 320/505) {
+
+            .header__menu_item {
+                height: 2.8em;
+
+                &.header__menu_item-tel {
+                    margin-top: 0;
+                }
+            }
+
+        }
+
+        @media (min-aspect-ratio: 320/468) {
+
+            .header__menu {
+                font-size: 0.9em;
+            }
+
+        }
+    }
+}

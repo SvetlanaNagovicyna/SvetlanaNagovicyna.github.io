@@ -1,0 +1,163 @@
+.modal-window.form
+    .modal-window__fly 
+        //- .modal-window__fly--1 
+        //-     img(src="./public/img/modal_fly/coin-1.png", alt="").mouseMove(data-movespeed="90")
+    .modal__txt 
+        img(src="public/img/txt.png", alt="")
+    .modal
+        .modal-close 
+            img(src="public/img/close_popup.png", alt="" width="33" height="33")
+        .modal-logo
+            img(src="public/img/logo.svg", alt="")
+        //- .modal-slogan
+        //-     img(src="public/img/popup_text.svg", alt="")
+
+        .swich
+            p.swich__link.swich__active(data-tab-name='tab-1')
+                span.swich__link-text За телефоном
+            p.swich__link(data-tab-name='tab-2')
+                span.swich__link-text Через e-mail
+
+        .content
+            .phone-contaniner.tab.tab-1.contentActive
+                form#form-tel.form.phone-form(action='')
+                    .tel-wrap
+                        input#phone.input-tel.phone(type='tel' placeholder='Телефон' value='+380' size='13'  minlength='8' autocomplete='off' data-valid='false' name='phone' required='')
+                        .phone_code
+                            span.phone_code__flag
+                                img#flag_img.phone_code__flag_img(src='' alt='')
+                            select#phone_code.phone_code__select
+                    .submit-wrap
+                        button.input-submit(disabled='') 
+                            span надIслати код
+
+                    //- .enter-wrap
+                    //-     p.enter-question Есть аккаунт?
+                    //-     a.enter-link(href='') Войти
+
+                form#form-code.form.phone-form(action='')
+                    p.form-descr
+                        | Вам надійде дзвінок на номер  
+                        span.form__mess_phoneNumber
+                    p.form-descr
+                        | Не надійшов дзвінок?
+                        a(href='#')  Передзвонити
+                    .input__wrap
+                        img(src="public/img/form/phone.png", alt=""  width="20" height="29").input__icon
+                        input#code.input(type='text' placeholder='Останні 4 цифри номера' autocomplete='off' data-valid='false' name='code'  maxlength="4" minlength="4" required='')
+                    
+                    .password-wrap
+                        img(src="public/img/form/password.png", alt=""  width="20" height="23").input__icon
+                        .password-eye(data-status='Показати пароль')
+                            img.password-img.password_hidden.active(src='./public/img/eye.svg' alt=''  width="" height="")
+                            img.password-img.password_visible(src='./public/img/eye_open.svg' alt='' width="" height="")
+                        input.input-password(type='password' name='password' placeholder='Пароль' required='')
+                    
+                    .input__wrap
+                        img(src="public/img/form/promo.png", alt="" width="18" height="23").input__icon
+                        input.input(type='text' placeholder='Промокод (якщо є)' autocomplete='off' name='promo')
+                    
+                    input.input-select(type='hidden' name='currency' value='UAH')
+        
+                    .agreement
+                        .agreement__item
+                            input#agreement-phone.agreement__checkbox(type='checkbox' checked='')
+                            label.agreement__lable(for='agreement-phone')
+                            p.agreement__text
+                                | Я згоден з 
+                                a(href='') Правилами та Умовами 
+                                | та 
+                                a(href='') Захистом Інформації
+                        .agreement__item
+                            input#agreement-age.agreement__checkbox(type='checkbox' checked='')
+                            label.agreement__lable(for='agreement-age')
+                            p.agreement__text
+                                | Мені виповнилося 18 років
+                        .agreement__item
+                            input#mailing-phone.agreement__checkbox(type='checkbox' checked='')
+                            label.agreement__lable(for='mailing-phone')
+                            p.agreement__text Я хочу отримувати новини по e-mail та sms
+                    .submit-wrap
+                        button#submit-phone.input-submit(type='submit' disabled='')
+                            span Реєстрація
+                    //- .enter-wrap
+                    //-     p.enter-question Уже есть аккаунт?
+                    //-     a.enter-link(href='') Войти
+                    
+
+
+            form#form-email.form.email-form.tab.tab-2(action='')
+                .input__wrap
+                    img(src="public/img/form/email.png", alt="" width="27" height="19").input__icon
+                    input#email.input-email(type='email' name='email' placeholder='E-mail' required='', autocomplete='off')
+                .password-wrap
+                    img(src="public/img/form/password.png", alt="" width="20" height="23").input__icon
+                    .password-eye(data-status='Показать пароль')
+                        img.password-img.password_hidden.active(src='./public/img/eye.svg' alt='' width="" height="")
+                        img.password-img.password_visible(src='./public/img/eye_open.svg' alt='' width="" height="")
+                    input.input-password(type='password' name='password' placeholder='Пароль' required='')
+
+                input.input-select(type='hidden' name='currency' value='UAH')
+                .input__wrap
+                    img(src="public/img/form/promo.png", alt="" width="18" height="23").input__icon
+                    input.input(type='text' placeholder='Промокод (якщо є)' autocomplete='off' name='promo')
+
+                .agreement
+                    .agreement__item
+                        input#agreement-email.agreement__checkbox(type='checkbox' checked='')
+                        label.agreement__lable(for='agreement-email')
+                        p.agreement__text
+                            | Я згоден з 
+                            a(href='') Правилами та Умовами 
+                            | та 
+                            a(href='') Захистом Інформації
+
+                    .agreement__item
+                            input#agreement-email-age.agreement__checkbox(type='checkbox' checked='')
+                            label.agreement__lable(for='agreement-email-age')
+                            p.agreement__text
+                                | Мені виповнилося 18 років
+
+                    .agreement__item
+                        input#mailing-email.agreement__checkbox(type='checkbox' checked='')
+                        label.agreement__lable(for='mailing-email')
+                        p.agreement__text Я хочу отримувати новини по e-mail та sms
+                .submit-wrap
+                    button#submit-email.input-submit(type='submit' disabled='')
+                        span Реєстрація
+                        //- img(src="public/img/register_text.svg", alt="")
+                //- .enter-wrap
+                //-     p.enter-question Уже есть аккаунт?
+                //-     a.enter-link(href='') Войти
+                
+            .error_message
+
+    .modal__elements
+        //- .modal__element
+        //-     img(src="public/img/l_flash.png", alt="")
+        //- .modal__element
+        //-     img(src="public/img/r_flash.png", alt="")
+        .modal__element.modal__element-1.active
+            img(src="public/img/popup-el/el-1.png", alt="")
+        .modal__element.modal__element-2.active
+            img(src="public/img/popup-el/el-2.png", alt="")
+        .modal__element.modal__element-3.active
+            img(src="public/img/popup-el/el-3.png", alt="")
+        .modal__element.modal__element-4.active
+            img(src="public/img/popup-el/el-4.png", alt="")
+        .modal__element.modal__element-5.active
+            img(src="public/img/popup-el/el-5.png", alt="")
+        .modal__element.modal__element-6.active
+            img(src="public/img/popup-el/el-6.png", alt="")
+        .modal__element.modal__element-7.active
+            img(src="public/img/popup-el/el-7.png", alt="")
+        .modal__element.modal__element-8.active
+            img(src="public/img/popup-el/el-8.png", alt="")
+        .modal__element.modal__element-9.active
+            img(src="public/img/popup-el/el-9.png", alt="")
+        .modal__element.modal__element-10.active
+            img(src="public/img/popup-el/el-10.png", alt="")
+        .modal__element.modal__element-11.active
+            img(src="public/img/popup-el/el-11.png", alt="")
+        .modal__element.modal__element-12.active
+            img(src="public/img/popup-el/el-12.png", alt="")
