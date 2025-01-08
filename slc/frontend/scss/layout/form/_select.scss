@@ -1,0 +1,141 @@
+.select {
+  font-family: 'Spartan';
+  font-size: 1em;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+
+  &__current {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0 0;
+    height: 100%;
+    // padding-left: em(25);
+    // padding-bottom: 0.5em;
+
+    & img {
+      width: 1.4em;
+      // padding-left: em(25);
+      display: none;
+
+      &.visible {
+        display: block;
+        margin-left: em(25);
+      }
+    }
+
+    & span {
+      font-size: em(16);
+      position: static;
+      transform: none;
+      font-weight: 400;
+      padding-left: 0.6em;
+      display: none;
+
+      &.visible {
+        display: block;
+      }
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: em(10);
+    right: em(5);
+    width: em(11);
+    height: em(11);
+  }
+
+  &__options {
+    padding: em(15) 0 em(15) 0;
+    position: absolute;
+    top: 101%;
+    left: 0;
+    width: max-content;
+    max-height: 26vh;
+    min-width: 100%;
+    white-space: nowrap;
+    overflow-y: auto;
+    font-size: 1em;
+    background: #58514A;
+
+    box-sizing: border-box;
+    border-radius: em(5);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    @include transition(300ms, opacity, visibility);
+    z-index: 4;
+
+    &.vis {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: visible;
+    }
+
+    .select__search {}
+  }
+
+  & .option {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0.8em .2em 0.8em .8em;
+
+    &.hide {
+      display: none;
+    }
+
+    & img {
+      width: 1.4em;
+    }
+
+    & span {
+      font-family: 'Spartan';
+      font-size: em(16) !important;
+      padding-left: 0.6em;
+      position: static;
+      transform: none !important;
+      font-weight: 400;
+    }
+
+    &:hover {
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__search {
+    font-family: 'Spartan';
+    font-size: em(16) !important;
+    width: 100% !important;
+    // padding: 0.4em 0;
+    margin: 0 !important;
+    background: #fff;
+    display: none;
+
+    &.visible {
+      display: block;
+      padding-bottom: 0;
+    }
+  }
+
+  @media (orientation: portrait) {
+    &__options {
+      font-size: 0.9em;
+    }
+
+    &__search {
+      // padding: 0.1em 0.4em;
+    }
+  }
+}

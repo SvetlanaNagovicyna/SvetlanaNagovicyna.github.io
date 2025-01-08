@@ -1,0 +1,76 @@
+.tax-banner {
+  padding-top: em(161);
+  position: relative;
+  padding-bottom: em(50);
+
+  .container {
+    position: relative;
+    max-width: em(1037);
+    z-index: 2;
+  }
+  &__title {
+    text-align: right;
+    margin-bottom: em(49.7);
+    span {
+      font-size: em(72);
+      font-weight: 500;
+      line-height: 1.15;
+    }
+  }
+  &__block {
+    border-radius: em(30);
+    background: #fff;
+    padding: em(50) em(107);
+
+    .label {
+      margin-bottom: em(35);
+      span {
+        font-size: em(40);
+        font-weight: 500;
+        line-height: 1.02;
+      }
+    }
+    .descr {
+      span {
+        font-size: em(20);
+        font-weight: 400;
+        line-height: em(30, 20);
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    padding-top: em(116);
+    padding-bottom: em(32);
+    .container {
+      max-width: em(374);
+    }
+
+    &__title {
+      width: 71%;
+      margin-left: auto;
+      margin-right: em(3);
+      margin-bottom: em(36);
+      span {
+        font-size: em(36);
+        line-height: 1.15;
+      }
+    }
+    &__block {
+      padding: em(39) em(15);
+      border-radius: em(24);
+
+      .label {
+        margin-bottom: em(24);
+        span {
+          font-size: em(30);
+          line-height: 1.15;
+        }
+      }
+      .descr {
+        span {
+          font-size: em(16);
+        }
+      }
+    }
+  }
+}

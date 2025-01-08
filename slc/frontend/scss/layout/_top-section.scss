@@ -1,0 +1,9 @@
+.top-section {
+	background: url(../img/top-bg.jpg) top center / 100% 100% no-repeat;
+	background-attachment: fixed;
+
+	@media (max-width: 550px) {
+		background: url(../img/top-bg.jpg) 23.1% -7.9em /235% auto no-repeat;
+
+	}
+}

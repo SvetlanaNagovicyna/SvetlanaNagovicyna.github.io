@@ -1,0 +1,91 @@
+.audit-bet {
+  background-color: #ddecff;
+  position: relative;
+  z-index: 3;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: em(758);
+    height: 100%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../img/tax/bg-el.png) center / 100% 100% no-repeat;
+    z-index: -1;
+  }
+  .container {
+    max-width: em(1036);
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: em(50);
+    padding-bottom: em(36);
+  }
+  &__left {
+    width: em(611);
+    &_title {
+      margin-bottom: em(24);
+      span {
+        font-size: em(40);
+        font-weight: 500;
+        line-height: 1.15;
+      }
+    }
+    &_descr {
+      span {
+        font-size: em(20);
+        line-height: em(30, 20);
+      }
+    }
+  }
+
+  &__right {
+    width: em(400);
+    margin-top: em(18);
+  }
+
+  @media (max-width: 550px) {
+    overflow: hidden;
+    &::after {
+      transform: translate(-50%, 0) rotate(90deg);
+      background-position: bottom center;
+      left: 50%;
+      top: unset;
+      bottom: -12em;
+      height: em(390);
+    }
+    .container {
+      max-width: em(342);
+    }
+
+    &__wrap {
+      flex-direction: column;
+      align-items: center;
+      padding-top: em(39);
+      padding-bottom: em(50);
+    }
+
+    &__left {
+      width: 100%;
+      &_title {
+        span {
+          font-size: em(30);
+        }
+      }
+      &_descr {
+        span {
+          font-size: em(16);
+          line-height: 1.5;
+        }
+      }
+    }
+
+    &__right {
+      width: em(282);
+      margin-top: em(39);
+    }
+  }
+}

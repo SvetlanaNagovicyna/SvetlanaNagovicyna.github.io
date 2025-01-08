@@ -1,0 +1,119 @@
+.clients {
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding-bottom: em(58);
+	padding-top: em(41);
+
+	&__title {
+		position: relative;
+		margin-bottom: em(41);
+
+
+		span {
+			color: #1F1844;
+			font-size: em(40);
+			font-weight: 100;
+			text-transform: uppercase;
+		}
+	}
+
+	.clients-slider {
+		max-width: em(1230);
+		margin-right: em(-71);
+		padding-bottom: em(83);
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			text-align: left;
+
+			.icon {
+				width: em(63);
+				height: em(79);
+
+				margin-bottom: em(33);
+
+				img {
+					border-radius: em(79);
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+
+			.name {
+				margin-bottom: em(7);
+
+				span {
+					color: #1F1844;
+					font-family: "Stolzl";
+					font-size: em(14);
+					font-weight: 500;
+					line-height: 149.5%;
+				}
+			}
+
+			.descr {
+				span {
+					color: #1F1844;
+					font-family: "Stolzl";
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 149.5%;
+
+				}
+			}
+		}
+
+		.button-next,
+		.button-prev {
+			bottom: 0;
+
+			&:hover,
+			&:active {
+				svg {
+					.elips {
+						fill: #1F1844;
+					}
+
+					.line {
+						fill: #fff;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 550px) {
+		padding-top: em(36);
+		padding-bottom: em(68);
+
+		&__title {
+			margin-bottom: em(34);
+
+			span {
+				font-size: em(20);
+			}
+		}
+
+		.clients-slider {
+			margin-right: 0;
+			padding: 0 0 0 em(30);
+
+			.descr {
+				span {
+					font-size: em(11);
+				}
+			}
+
+			.button-next,
+			.button-prev {
+				bottom: em(-25);
+			}
+		}
+	}
+}

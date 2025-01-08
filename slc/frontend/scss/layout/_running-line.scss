@@ -1,0 +1,53 @@
+.running-line {
+	position: absolute;
+	bottom: em(90);
+	z-index: 0;
+
+	&__wrap {
+		display: flex;
+		-webkit-box-align: center;
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		white-space: nowrap;
+	}
+
+	&__item {
+
+		flex-shrink: 0;
+		animation-duration: 38s;
+		animation: runningLine 25s linear infinite;
+		transform: translate3d(0);
+		transform-style: preserve-3d;
+		backface-visibility: hidden;
+		display: flex;
+		padding-left: em(80);
+
+
+		img {
+			width: em(1857);
+		}
+
+
+	}
+
+	@keyframes runningLine {
+		0% {
+			transform: translate3d(0);
+		}
+
+		100% {
+			transform: translate3d(-100%, 0, 0);
+		}
+	}
+
+	@media (max-width: 550px) {
+		bottom: 0;
+
+		&__item {
+			img {
+				width: em(795);
+			}
+		}
+	}
+}

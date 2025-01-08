@@ -1,0 +1,26 @@
+.map-image {
+	width: em(1440);
+
+
+	max-width: 100%;
+	flex-shrink: 0;
+	overflow: hidden;
+	display: block;
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		transform: scale(1.05) translateY(var(--y));
+	}
+
+	@media (max-width: 550px) {
+		width: em(608);
+		height: em(241);
+		margin-top: em(-10);
+
+		img {
+			transform: scale(1) translateY(var(--y));
+		}
+	}
+}

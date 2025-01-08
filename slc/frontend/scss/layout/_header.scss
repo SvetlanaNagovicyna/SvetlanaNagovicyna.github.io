@@ -1,0 +1,146 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: em(53) 0 0;
+  background-color: none;
+  transition: all 0.5s linear;
+
+  &.scroll {
+    background-color: rgba(#ffffff, 0.6);
+    backdrop-filter: blur(em(5));
+    padding: em(6) 0;
+    transition: all 0.5s cubic-bezier(0.85, 0.07, 0.17, 0.89);
+
+    .header__logo {
+      width: em(50);
+      transition: all 0.5s cubic-bezier(0.85, 0.07, 0.17, 0.89);
+    }
+
+    .menu {
+      padding-top: em(25);
+      transition: all 0.5s cubic-bezier(0.85, 0.07, 0.17, 0.89);
+
+      &__item {
+
+        a {
+          color: #28231E;
+          font-weight: 700;
+
+          &::after {
+            background-color: #28231E;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  &__logo {
+    width: em(121);
+    transition: all 0.5s cubic-bezier(0.85, 0.07, 0.17, 0.89);
+  }
+
+  .nav {
+    width: 100%;
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      transition: all 0.5s cubic-bezier(0.85, 0.07, 0.17, 0.89);
+    }
+  }
+
+  @media (max-width: 550px) {
+    padding: em(22) 0 em(30);
+    position: fixed;
+    z-index: 100;
+
+
+
+    &__logo {
+      width: em(50);
+    }
+
+    &.scroll {
+      .header__logo {
+        width: em(30);
+      }
+
+      .menu {
+        padding-top: 0;
+      }
+
+      .open {
+        &__item {
+          background-color: #28231E;
+        }
+
+        &__title {
+          span {
+            color: #28231E;
+          }
+        }
+      }
+    }
+
+    .nav {
+      &__wrap {
+        max-width: em(323);
+        margin: 0 auto;
+        align-items: center;
+        padding-left: em(14);
+      }
+    }
+
+
+    &.active {
+      height: 100%;
+      align-items: flex-start;
+      overflow: hidden;
+      background: rgba(40, 35, 30, 0.95);
+      backdrop-filter: blur(em(2));
+
+      .open {
+        &__item {
+          background-color: #ffffff;
+        }
+
+        &__title {
+          span {
+            color: #ffffff;
+          }
+        }
+      }
+
+      .menu {
+
+        &__item {
+          a {
+            color: #ffffff;
+            font-weight: 400;
+
+            &::after {
+              background-color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

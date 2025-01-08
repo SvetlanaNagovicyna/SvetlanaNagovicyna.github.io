@@ -1,0 +1,69 @@
+.luxury {
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	&__title {
+		position: relative;
+		padding-bottom: em(22);
+		margin-bottom: em(17);
+		margin-top: em(74);
+
+		span {
+			color: #1F1844;
+			font-size: em(40);
+			font-weight: 100;
+			text-transform: uppercase;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			border-radius: em(100);
+			background: #28231E;
+			width: em(15);
+			height: em(1);
+		}
+	}
+
+	&__descr {
+		margin-bottom: em(69);
+
+		span {
+			color: #1F1844;
+			font-family: 'Spartan';
+			font-size: em(16);
+			font-weight: 400;
+			line-height: 149.5%;
+		}
+	}
+
+	@media (max-width: 550px) {
+		&__title {
+			margin-top: em(35);
+			padding-bottom: em(16);
+			margin-bottom: em(14);
+
+			span {
+				font-size: em(20);
+			}
+		}
+
+		&__descr {
+			max-width: em(316);
+			margin-bottom: em(39);
+
+			span {
+				font-size: em(12);
+				line-height: 129.5%;
+			}
+		}
+	}
+
+
+}

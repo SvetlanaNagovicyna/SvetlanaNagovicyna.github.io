@@ -1,0 +1,166 @@
+.content {
+  position: relative;
+  padding-top: em(127);
+  // margin-top: em(-70);
+  padding-bottom: em(505);
+
+  &__wrap {
+    display: flex;
+
+  }
+
+  &__left {
+
+    &_title {
+      margin-left: em(-6);
+
+      span {
+        font-size: em(64);
+        text-transform: uppercase;
+        line-height: 1.2;
+
+        &.lg {
+          font-size: em(96);
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  &__right {
+    position: absolute;
+    right: em(-60);
+    bottom: 0;
+    width: em(665);
+    background: rgba(255, 255, 255, 0.90);
+    padding: em(53.5) em(50);
+
+    &_title {
+      margin-bottom: em(36);
+
+      span {
+        color: #000;
+        font-size: em(20);
+        font-weight: 700;
+        line-height: 136.5%;
+        text-transform: uppercase;
+      }
+    }
+
+    &_list {}
+
+    &_item {
+      position: relative;
+      margin-bottom: em(23);
+
+      &:last-child {
+        margin-bottom: em(36);
+      }
+
+      span {
+
+        font-family: "Stolzl";
+        font-weight: 400;
+        color: #28231E;
+        font-size: em(13);
+        line-height: 136.5%;
+        display: inline-block;
+        padding-left: em(39, 13);
+
+
+
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        margin-right: em(24);
+        border-radius: em(100);
+        width: em(15);
+        height: em(1);
+        background: #28231E;
+      }
+    }
+  }
+
+  &__button {
+    width: em(266);
+
+    a {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 550px) {
+    padding-bottom: 0;
+    padding-top: em(97);
+
+    &__wrap {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__left {
+      width: 100%;
+      margin-bottom: em(15);
+
+      &_title {
+        // text-align: center;
+        padding-left: em(46);
+
+        span {
+          font-size: em(24);
+
+          &.lg {
+            font-size: em(36);
+          }
+
+        }
+      }
+    }
+
+    &__right {
+      width: 100%;
+      position: relative;
+      right: unset;
+      font-size: .75em;
+      padding: 1.7em 4.6em 1.5em;
+
+      &_title {
+        margin-bottom: 1.75em;
+
+      }
+
+      &_item {
+        margin-bottom: 1.095em;
+
+        &::before {
+          width: 1.25em;
+        }
+
+        span {
+          font-size: .84em;
+          padding-left: 3.8em;
+        }
+      }
+    }
+
+    &__button {
+      width: em(288);
+      height: em(57);
+      position: fixed;
+      z-index: 50;
+      bottom: em(10);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+
+    }
+  }
+
+}

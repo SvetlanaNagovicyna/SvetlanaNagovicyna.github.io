@@ -1,0 +1,47 @@
+.button {
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: em(57);
+  border-radius: em(4);
+  background-color: #28231E;
+  padding: 0 em(30);
+  transition: background .3s ease-in-out;
+
+  span {
+    font-size: em(20);
+    line-height: 1;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: color .3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: #D8A70D;
+
+    span {
+      color: #28231E;
+    }
+  }
+
+  &.white {
+    background-color: #ffffff;
+
+    span {
+      color: #28231E;
+    }
+  }
+
+  @media (max-width: 550px) {
+
+    background-color: #D8A70D;
+
+    span {
+      color: #28231E;
+    }
+  }
+}
