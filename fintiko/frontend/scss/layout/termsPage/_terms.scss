@@ -1,0 +1,159 @@
+.terms {
+	color: #DCDBDB;
+	padding-top: em(90);
+	padding-bottom: em(195);
+
+	.container {
+		max-width: em(1312);
+	}
+
+	h1 {
+		font-size: em(70);
+		font-weight: 500;
+		line-height: 99.6%;
+		letter-spacing: em(-4.2, 70);
+	}
+
+	h2 {
+		font-size: em(50);
+		font-weight: 500;
+		line-height: 99.6%;
+		letter-spacing: em(-3, 50);
+		margin-top: em(120, 50);
+	}
+
+	h3 {
+		font-size: em(30);
+		font-weight: 500;
+		line-height: 99.6%;
+		letter-spacing: em(-1.8, 30);
+		margin-top: em(81, 30);
+		margin-bottom: em(56, 30);
+	}
+
+	p {
+		font-family: 'Inter';
+		font-size: em(14);
+		font-weight: 400;
+		line-height: 130%;
+		letter-spacing: em(-0.49, 14);
+		margin-bottom: em(17, 14);
+
+	}
+
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	ul {
+		margin: em(56) 0 em(55);
+	}
+
+
+	li {
+		position: relative;
+		font-family: 'Inter';
+		font-size: em(14);
+		font-weight: 400;
+		line-height: 130%;
+		letter-spacing: em(-0.49, 14);
+		margin-bottom: em(8, 14);
+		padding: em(6, 14) 0 em(8, 14);
+		display: flex;
+		align-items: center;
+
+		&::before {
+			content: "";
+			position: relative;
+			display: inline-block;
+			width: em(6, 14);
+			min-width: em(6, 14);
+			height: em(6, 14);
+			background-color: #1A59FA;
+			border-radius: 50%;
+			margin: 0 em(13, 14);
+		}
+	}
+
+	strong {
+		font-family: 'Inter';
+		font-size: em(14);
+		font-weight: 700;
+		line-height: 130%;
+		letter-spacing: em(-0.3, 14);
+		text-transform: uppercase;
+		display: block;
+	}
+
+	table {
+		background-color: #1c2021;
+		width: em(900);
+
+		td {
+			padding: em(10) em(30);
+			line-height: 1.2;
+		}
+	}
+
+	@media (max-width: 768px) and (orientation: portrait) {
+		padding-top: em(46);
+		padding-bottom: em(92);
+
+		.container {
+			max-width: em(400);
+		}
+
+		h1 {
+			font-size: em(40);
+			letter-spacing: em(-2.4, 40);
+		}
+
+		h2 {
+			font-size: em(30);
+			letter-spacing: em(-1.8, 30);
+			margin-top: em(80, 30);
+		}
+
+		h3 {
+			font-size: em(24);
+			letter-spacing: em(-1.44, 24);
+			margin-top: em(80, 24);
+			margin-bottom: em(33, 24);
+
+		}
+
+		ul {
+			margin-top: em(31);
+			margin-bottom: em(20);
+		}
+
+		li {
+			align-items: flex-start;
+			width: 100%;
+			margin-bottom: 0;
+
+			&::before {
+				min-width: em(6, 14);
+				margin-top: em(6, 14);
+			}
+		}
+
+		strong {
+			margin-bottom: em(17, 14);
+		}
+
+		table {
+			width: 100%;
+
+			td {
+				font-size: em(12);
+				padding: em(10, 12) em(10, 12);
+				// padding: em(10) em(30)
+			}
+		}
+	}
+}

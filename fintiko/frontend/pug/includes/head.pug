@@ -1,0 +1,10 @@
+head
+	meta(charset='utf-8')
+	meta(name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1')
+	title= title
+	meta(name="description" content=description)
+	style= styles
+	//- link(rel='stylesheet' href='./public/css/swiper-bundle.min.css')
+	link(rel="preload" href='./public/css/swiper-bundle.min.css' as="style" onload="this.onload=null;this.rel='stylesheet'")
+	link(rel="preload" href="./public/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
+	link(type="image/x-icon" rel="shortcut icon" href="./public/img/favicon.ico")

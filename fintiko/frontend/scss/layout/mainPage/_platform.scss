@@ -1,0 +1,116 @@
+.paltform {
+	width: 100%;
+	overflow: hidden;
+	height: em(708);
+	position: relative;
+
+	&:hover {
+		.paltform__bg {
+			transform: translate(-50%, -50%) scale(1.05);
+		}
+
+	}
+
+	&__bg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: all .3s ease-in-out;
+
+		// img {
+
+		// }
+
+
+	}
+
+	.container {
+		max-width: em(1319);
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: inline-block;
+			width: 103%;
+			height: 100%;
+			background: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) em(1), transparent em(1), transparent em(224));
+			top: 0;
+			left: 0;
+		}
+	}
+
+
+
+	&__title {
+		width: em(516, 50);
+		margin-bottom: em(141, 50);
+		padding-top: em(243, 50);
+
+
+		font-size: em(50);
+		font-weight: 500;
+		line-height: 98.6%;
+		letter-spacing: em(-2, 50);
+
+	}
+
+	&__descr {
+		width: em(400, 16);
+		padding-bottom: em(114, 16);
+
+
+		font-family: 'Inter';
+		font-size: em(16);
+		font-weight: 400;
+		line-height: 130%;
+		letter-spacing: em(-0.56, 16);
+
+	}
+
+	@media (max-width: 768px) and (orientation: portrait) {
+		height: em(656);
+
+
+		.container {
+			max-width: em(432);
+
+			&::after {
+				background: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) em(1), transparent em(1), transparent em(104));
+				left: em(8);
+			}
+		}
+
+		&__title {
+			padding-top: em(104, 32);
+			max-width: em(336, 32);
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: em(48, 32);
+
+			font-size: em(32);
+			line-height: 1.01;
+			letter-spacing: em(-1.92, 32);
+
+		}
+
+		&__descr {
+			width: em(336, 14);
+			margin: 0 auto;
+			text-align: center;
+			padding-bottom: em(371, 14);
+
+			font-size: em(14);
+			line-height: 130%;
+			font-weight: 700;
+			letter-spacing: em(-0.29, 14);
+		}
+	}
+}

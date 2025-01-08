@@ -1,0 +1,261 @@
+.loginaway {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: em(161);
+	padding-bottom: em(167);
+	text-align: center;
+
+	&__title {
+		font-size: em(50);
+		font-style: normal;
+		font-weight: 500;
+		line-height: 98.6%;
+		letter-spacing: em(-2, 50);
+		margin-bottom: em(38, 50);
+	}
+
+	&__descr {
+
+		color: #E5EAEB;
+		text-align: center;
+		font-family: 'Inter';
+		font-size: em(16);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%;
+		letter-spacing: em(-0.56, 16);
+		margin-bottom: em(68, 16);
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		margin-bottom: em(58);
+
+		ul {
+			display: flex;
+			align-items: center;
+		}
+
+		.button-blue {
+			margin-right: em(13);
+		}
+	}
+
+	&__scene {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			background: linear-gradient(0deg, #0A0F11 8%, hsla(0, 0%, 100%, 0) 65%);
+			display: inline-block;
+			width: 100%;
+			height: em(250);
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 10;
+
+		}
+
+		&_image {
+			position: relative;
+			width: em(938);
+			margin-left: em(-7);
+			z-index: 2;
+
+
+		}
+
+		&_back {
+			width: em(623);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(0);
+			z-index: 1;
+
+			// img {
+
+
+			opacity: 1;
+			// .path {
+			animation: paths 15s linear infinite;
+			transform-origin: 50% 50%;
+
+			transition: all .3s ease-in-out;
+
+
+
+			// }
+
+			@keyframes paths {
+				0% {
+					transform: translate(-50%, -50%) rotate(0);
+					-webkit-transform: translate(-50%, -50%) rotate(0);
+				}
+
+				100% {
+					transform: translate(-50%, -50%) rotate(1turn);
+					-webkit-transform: translate(-50%, -50%) rotate(1turn);
+				}
+			}
+
+			// }
+
+		}
+	}
+
+	.loginaway-slider {
+		width: 100%;
+		padding-left: em(32);
+		z-index: 10;
+		margin-top: em(-186);
+
+		.swiper-wrapper {
+			justify-content: center;
+		}
+
+
+
+		&__slide {
+			width: em(304);
+			max-width: em(304);
+			height: em(246);
+			margin-right: em(32);
+			padding: em(32) em(29) em(26) em(26);
+			background: url(../img/mainPage/loginawaySection/bg_slide.png) center top / 100% 100% no-repeat;
+			border-radius: em(40);
+			backdrop-filter: blur(em(10));
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			.title {
+				text-align: left;
+				font-size: em(30);
+				font-style: normal;
+				font-weight: 800;
+				line-height: 98.6%;
+				letter-spacing: em(-1.2, 30);
+
+
+			}
+
+			.number {
+				align-self: flex-end;
+
+				font-size: em(12);
+				font-style: normal;
+				font-weight: 300;
+				line-height: 98.6%;
+				letter-spacing: em(-0.48, 12);
+				opacity: .4;
+
+			}
+		}
+
+		.swiper-pagination {
+			display: none;
+		}
+	}
+
+	@media (max-width: 1440px) {
+		.loginaway-slider {
+			padding-left: em(60);
+
+			.swiper-wrapper {
+				justify-content: flex-start;
+			}
+		}
+
+	}
+
+	@media (max-width: 768px) and (orientation: portrait) {
+		padding-top: em(104);
+		padding-bottom: em(103);
+
+		&__title {
+
+
+			font-size: em(32);
+			line-height: 99.6%;
+			letter-spacing: em(-1.92, 32);
+			margin-bottom: em(40, 32);
+
+		}
+
+		&__descr {
+			text-align: center;
+			max-width: em(298, 14);
+			margin-bottom: em(79, 14);
+
+			font-size: em(14);
+			letter-spacing: em(-0.49, 14);
+
+		}
+
+		&__buttons {
+			display: none;
+		}
+
+		&__scene {
+			&_image {
+				margin-left: 0;
+				min-width: em(938);
+			}
+
+			&_back {
+				min-width: em(621);
+				margin-top: em(-50);
+			}
+		}
+
+		.loginaway-slider {
+			width: em(304);
+			padding-left: 0;
+			margin-top: em(-69);
+			margin-top: 0;
+			overflow: visible;
+
+
+			&__slide {
+				height: em(170);
+				margin-right: 0;
+				background: url(../img/mainPage/loginawaySection/bg_slide-mob.png) center top / 100% 100% no-repeat;
+
+				.title {
+					font-size: em(24);
+					letter-spacing: em(-0.96, 24);
+				}
+			}
+
+
+
+			.swiper-pagination {
+				bottom: em(-41);
+				height: em(6);
+				display: block;
+
+				.swiper-pagination-bullet {
+					width: em(4);
+					height: em(4);
+					background: #80A3FA;
+					opacity: 0.5;
+					margin: 0 em(6.5);
+					vertical-align: middle;
+
+				}
+
+				.swiper-pagination-bullet-active {
+					width: em(6);
+					height: em(6);
+					background: #1A59FA;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+.form-block {
+	.container {
+		max-width: em(1313);
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		padding-top: em(79);
+	}
+
+	&__left {
+		width: em(580);
+
+		&_title {
+			font-weight: 500;
+			font-size: em(70);
+			line-height: 100%;
+			letter-spacing: -0.06em;
+			margin-bottom: em(165, 70);
+		}
+
+		&_question {
+			font-family: 'Inter';
+			font-weight: 500;
+			font-size: em(24);
+			line-height: 130%;
+			letter-spacing: -0.047em;
+			margin-bottom: em(46, 24);
+			position: relative;
+			padding-top: em(117, 24);
+
+			&:before {
+				content: '';
+				display: inline-block;
+				width: em(161, 24);
+				height: em(16, 24);
+				background: url(../img/contactsPage/elem.svg) 50% / 100% 100% no-repeat;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		&_text {
+			font-family: 'Inter';
+			font-weight: 400;
+			font-size: em(16);
+			line-height: 130%;
+			letter-spacing: -0.04em;
+			max-width: em(308, 16);
+		}
+	}
+
+	&__right {
+		width: em(528);
+	}
+
+	@media (max-width: 768px) and (orientation: portrait) {
+		.container {
+			max-width: em(391);
+		}
+
+		&__wrap {
+			width: 100%;
+			flex-direction: column;
+			padding-top: em(43);
+		}
+
+		&__left {
+			width: 100%;
+			margin-bottom: em(64);
+
+			&_title {
+				font-size: em(40);
+				max-width: em(328, 40);
+				margin-bottom: em(53, 40);
+			}
+
+			&_question {
+				font-size: em(20);
+				max-width: em(308, 20);
+				margin-bottom: em(23, 20);
+				letter-spacing: -0.072em;
+				line-height: 100%;
+				padding-top: em(65, 20);
+
+				&:before {
+					width: em(161, 20);
+					height: em(16, 20);
+				}
+			}
+
+			&_text {
+				max-width: 100%;
+			}
+		}
+
+		&__right {
+			width: 100%;
+		}
+	}
+}

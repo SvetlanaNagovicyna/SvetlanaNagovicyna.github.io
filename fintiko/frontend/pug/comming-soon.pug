@@ -1,0 +1,24 @@
+- var title = "Fintiko";
+- var styles = `@font-face{font-family:Manrope;src:url('https://fintiko.com/public/fonts/Manrope-Medium.woff2') format("woff2"),url('https://fintiko.com/public/fonts/Manrope-Medium.woff') format("woff");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:Manrope;src:url('https://fintiko.com/public/fonts/Manrope-SemiBold.woff2') format("woff2"),url('https://fintiko.com/public/fonts/Manrope-SemiBold.woff') format("woff");font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:Manrope;src:url('https://fintiko.com/public/fonts/Manrope-ExtraLight.woff2') format("woff2"),url('https://fintiko.com/public/fonts/Manrope-ExtraLight.woff') format("woff");font-weight:200;font-style:normal;font-display:swap}@font-face{font-family:Manrope;src:url('https://fintiko.com/public/fonts/Manrope-Light.woff2') format("woff2"),url('https://fintiko.com/public/fonts/Manrope-Light.woff') format("woff");font-weight:300;font-style:normal;font-display:swap}@font-face{font-family:Manrope;src:url('https://fintiko.com/public/fonts/Manrope-Regular.woff2') format("woff2"),url('https://fintiko.com/public/fonts/Manrope-Regular.woff') format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Manrope;src:url('https://fintiko.com/public/fonts/Manrope-ExtraBold.woff2') format("woff2"),url('https://fintiko.com/public/fonts/Manrope-ExtraBold.woff') format("woff");font-weight:700;font-style:normal;font-display:swap}:root{--swiper-theme-color:#007aff}:host{position:relative;display:block;margin-left:auto;margin-right:auto;z-index:1}:root{--swiper-navigation-size:44px}body,div,h1,h2,html,img,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}body{line-height:1}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:focus{outline:0}img,video{max-width:100%;height:auto}img{width:100%;display:block}html{scroll-behavior:smooth;font-size:.8333333333vw;background-color:#0a0f11}@media (max-width:1440px){html{font-size:1.1111111111vw}}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:relative;width:100%;font-family:Manrope;font-weight:500;background-color:#0a0f11;color:#fff}.main{overflow:hidden}.comming-soon{width:100%;height:100%;min-height:100vh;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.comming-soon video{position:absolute;left:0;top:0;right:0;bottom:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;z-index:0}.comming-soon__img{overflow:hidden;display:inline-block;margin-bottom:4.875em}.comming-soon__img img{will-change:transform;width:18.75em;display:inline-block;-webkit-animation:1s ease-in-out .75s forwards a;-moz-animation:1s ease-in-out .75s forwards a;animation:1s ease-in-out .75s forwards a;visibility:hidden}.comming-soon__title{overflow:hidden;display:inline-block;margin-bottom:5.8125em}.comming-soon__title h1{will-change:transform;font-size:1.25em;letter-spacing:.37em;font-weight:600;text-transform:uppercase;-webkit-animation:1s ease-in-out .75s forwards a;-moz-animation:1s ease-in-out .75s forwards a;animation:1s ease-in-out .75s forwards a;visibility:hidden}.comming-soon h2{position:absolute;bottom:3.9375em;left:50%;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);z-index:1;font-size:1em;font-weight:700;letter-spacing:-.0375em}@-webkit-keyframes a{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-webkit-transform:translateZ(0);transform:translateZ(0);visibility:visible}}@-moz-keyframes a{0%{-moz-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-moz-transform:translateZ(0);transform:translateZ(0);visibility:visible}}@keyframes a{0%{-webkit-transform:translate3d(0,100%,0);-moz-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-webkit-transform:translateZ(0);-moz-transform:translateZ(0);transform:translateZ(0);visibility:visible}}`;
+doctype html
+html(lang="en")
+	include includes/head
+	body
+		main.main.comming-soon
+			video(poster="./public/img/videoMoments/soon_moment.webp" muted loop playsinline autoplay)
+				source(src="./public/video/comming-soon.webm" type='video/webm')
+				source(src="./public/video/comming-soon.mp4" type='video/mp4')
+			.comming-soon__img
+				img(src="public/img/logo-1.svg", sizes="(max-width: 768px) 533px" width="300" height="52" alt="logo")
+			.comming-soon__title
+				h1 coming soon
+			h2 Superior money management
+			
+	
+
+
+
+
+
+
+

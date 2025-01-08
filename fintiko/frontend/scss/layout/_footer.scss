@@ -1,0 +1,418 @@
+.footer {
+  overflow: hidden;
+
+  &__top {
+    background: #1a59fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: em(51) em(64);
+    margin: 0 auto;
+
+    .logo {
+      width: em(180);
+    }
+
+    .slogan {
+      margin-left: em(35);
+      margin-right: auto;
+
+      span {
+        font-size: em(16);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: em(-0.56, 16);
+      }
+    }
+
+    .buttons {
+
+      ul {
+        display: flex;
+        align-items: center;
+      }
+
+      li {
+        margin: 0 em(20);
+      }
+
+      &__btn {
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: em(16);
+        padding: em(4, 16) em(12, 16) em(6, 16);
+        margin-right: em(36, 16);
+        border: em(1, 16) solid transparent;
+        transition: all 0.3s ease-in-out;
+        border-radius: em(24, 16);
+        color: inherit;
+        display: inline-block;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: em(-0.4, 16);
+        cursor: pointer;
+        outline: none;
+        background: none;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+
+
+
+
+        &:hover {
+          border: em(1) solid #fff;
+        }
+      }
+    }
+  }
+
+  &__mapsite {
+    max-width: em(1793);
+    margin: 0 auto;
+    padding-top: em(72);
+    padding-bottom: em(151);
+
+    .mapsite {
+      display: flex;
+      justify-content: flex-start;
+
+      .item {
+        width: em(191);
+        margin-right: em(33);
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &__head {
+          margin-bottom: em(34);
+          display: block;
+
+          h2 {
+            font-size: em(20);
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: em(-0.5, 20);
+          }
+
+          img {
+            display: none;
+          }
+        }
+
+        &__body {
+          ul {
+            li {
+              margin-bottom: em(17);
+
+              a {
+                transition: all 0.3s ease-in-out;
+                font-size: em(16);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1;
+                letter-spacing: em(-0.56, 16);
+                background: linear-gradient(147deg,
+                    #d8e3e8 4.29%,
+                    #a8b5bb 92.2%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+                // color: transparent;
+
+
+                &:hover {
+
+                  background: none;
+                  -webkit-text-fill-color: unset;
+                  color: #fff;
+
+                }
+              }
+
+              &:last-child {
+                margin-bottom: em(0);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: em(1) solid rgba(255, 255, 255, 0.3);
+    padding-top: em(70);
+    padding-bottom: em(70);
+
+    &_wrap {
+      max-width: em(1793);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &_left {
+      width: em(1051);
+
+      .links {
+        display: flex;
+        align-items: center;
+
+        ul {
+          display: flex;
+          align-items: center;
+        }
+
+        &__item {
+          margin-right: em(125, 13);
+          position: relative;
+          padding-bottom: em(5, 13);
+
+          font-size: em(13);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1;
+          letter-spacing: em(-0.455, 13);
+
+
+          background: linear-gradient(147deg,
+              #d8e3e8 4.29%,
+              #a8b5bb 92.2%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s ease-in-out;
+
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: em(1);
+            width: 0;
+            display: inline-block;
+            background: #fff;
+            transition: all 0.3s ease-in-out;
+          }
+
+
+          &:hover {
+            background: none;
+            -webkit-text-fill-color: unset;
+            color: #fff;
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    &_right {
+      width: em(300);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .copyright {
+        small {
+          font-size: em(13);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          letter-spacing: em(-0.455, 13);
+        }
+      }
+
+      .agency {
+
+        small {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: em(13);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          letter-spacing: em(-0.455, 13);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &__mapsite {
+      max-width: em(1314);
+    }
+
+    &__bottom {
+      &_wrap {
+        max-width: em(1314);
+      }
+    }
+  }
+
+  @media (max-width: 768px) and (orientation: portrait) {
+    padding-bottom: 0;
+
+    &__top {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: em(23) em(16) em(38);
+
+      .logo {
+        width: em(152);
+        margin-bottom: em(17);
+      }
+
+      .slogan {
+        margin-left: 0;
+        margin-bottom: em(112);
+
+        span {
+          font-size: em(12);
+          letter-spacing: em(-0.42, 12);
+        }
+      }
+
+      .buttons {
+        margin-right: 0;
+        margin-left: em(-13);
+
+        &__btn {
+          margin-right: em(20);
+          padding-top: em(6);
+
+          span {
+            font-size: em(20);
+            letter-spacing: em(-0.5, 20);
+          }
+        }
+      }
+    }
+
+    &__mapsite {
+      padding-top: em(36);
+      padding-bottom: em(49);
+      max-width: em(400);
+
+      .mapsite {
+        flex-direction: column;
+
+        .item {
+          width: 100%;
+          margin-right: 0;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &.opens {
+            transition: all 0.3s ease-in-out;
+          }
+
+          &__head {
+            transition: all 0.3s ease-in-out;
+            margin-bottom: em(44);
+            margin-bottom: 0;
+            height: em(72);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+              will-change: transform;
+              display: block;
+              width: em(9);
+              transition: all .3s ease-in-out;
+              transform-origin: center;
+            }
+
+            &.opens {
+
+              img {
+                transform: rotate(180deg);
+              }
+            }
+          }
+
+          &__body {
+            // display: none;
+
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            max-height: 0;
+
+            ul {
+              padding: 0 em(43) em(25) 0;
+            }
+
+            &.active {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      padding-top: em(60);
+      padding-bottom: em(42);
+
+
+
+      &_wrap {
+        max-width: em(400);
+        flex-direction: column;
+        height: 100%;
+      }
+
+      &_left {
+        width: 100%;
+        margin-bottom: em(26);
+
+        .links {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: em(45);
+
+          ul {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          li {
+            margin-bottom: em(18);
+          }
+
+          &__item {
+            margin-right: 0;
+
+          }
+        }
+      }
+
+      &_right {
+        flex-direction: row;
+        width: 100%;
+
+        .agency {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+}

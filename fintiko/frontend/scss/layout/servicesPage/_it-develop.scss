@@ -1,0 +1,436 @@
+.it-develop {
+	padding-bottom: em(200);
+
+	.container {
+		max-width: em(1313);
+	}
+
+	h1 {
+		font-weight: 500;
+		font-size: em(50);
+		line-height: 99%;
+		letter-spacing: em(-0.04, 50);
+		text-align: center;
+		margin-bottom: em(160, 50);
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+	&__item {
+		position: relative;
+		width: em(1313);
+		height: em(592);
+		margin-bottom: em(160);
+		border-radius: em(40);
+		padding: em(65) em(55) em(40);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		overflow: hidden;
+		background: linear-gradient(257deg, #12181B 10.99%, #191F22 95.34%);
+
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			.bg {
+				transform: scale(1.05);
+			}
+		}
+
+		.bg {
+			position: absolute;
+			width: 100%;
+			height: auto;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+
+			transition: all .3s ease-in-out;
+		}
+
+		.title {
+			position: relative;
+			max-width: 100%;
+
+
+			color: #DCDBDB;
+			font-size: em(30);
+			font-weight: 500;
+			line-height: 99.6%;
+			letter-spacing: -0.06em;
+
+		}
+
+		.descr {
+			position: relative;
+			max-width: em(495, 14);
+			padding-top: em(135, 14);
+			color: #DCDBDB;
+			font-family: 'Inter';
+			font-size: em(14);
+			font-weight: 400;
+			line-height: 130%;
+			letter-spacing: em(-0.49, 14);
+
+		}
+
+		.btn {
+			position: absolute;
+			bottom: em(59);
+			right: em(57);
+		}
+
+
+		&-1 {
+
+			padding-bottom: em(59);
+
+			.bg {
+				width: em(776);
+				left: unset;
+				right: em(167);
+			}
+
+			.title {
+				max-width: em(460, 30);
+			}
+
+			.descr {
+				padding-top: 0;
+				max-width: em(473, 14);
+				padding-top: em(135, 14);
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: inline-block;
+					width: em(160, 14);
+					height: em(16, 14);
+					background: url(../img/accountPage/benefitsSection/line.svg) 50% / 100% 100% no-repeat;
+				}
+			}
+
+			.btn {
+				bottom: em(59, 20);
+				right: em(145, 20);
+			}
+		}
+
+		&-2 {
+			width: em(616);
+			height: em(680);
+			margin-right: em(80);
+			padding-top: em(60);
+
+
+			.title {
+				max-width: em(369, 40);
+				font-size: em(40);
+				letter-spacing: em(-2.4, 40);
+
+			}
+
+			.btn {
+				bottom: unset;
+				right: unset;
+				top: em(190);
+			}
+
+			.descr {
+				padding-top: 0;
+				max-width: em(417, 14);
+			}
+		}
+
+		&-3 {
+			width: em(616);
+			height: em(680);
+			background: none;
+			background-color: #bfbfbf;
+			position: relative;
+
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+				bottom: 0;
+				left: 0;
+				background: rgba(62, 212, 67, 0.2);
+				z-index: 1;
+
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				// width: em(116);
+				width: 100%;
+				min-width: 100%;
+				height: em(464);
+				display: inline-block;
+				bottom: 0;
+				left: 0;
+				background: linear-gradient(180deg, transparent, #171d1f 100%);
+				z-index: 2;
+			}
+
+			.bg {
+				width: 100%;
+				height: em(640);
+				object-fit: cover;
+				right: em(-265);
+				left: unset;
+				top: 0;
+				bottom: unset;
+				mix-blend-mode: darken;
+
+
+
+
+				&::after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: em(264);
+					display: inline-block;
+					bottom: 0;
+					left: 0;
+					z-index: 1000;
+					background: linear-gradient(180deg, transparent, #171d1f 100%);
+
+				}
+			}
+
+
+			.title {
+				max-width: em(348, 40);
+				font-size: em(40);
+				letter-spacing: em(-2.4, 40);
+				z-index: 2;
+				color: #0A0F11;
+
+			}
+
+			.descr {
+				z-index: 2;
+				max-width: em(417, 14);
+			}
+
+			.btn {
+				bottom: unset;
+				right: unset;
+				top: em(190, 20);
+				z-index: 2;
+			}
+
+		}
+
+		&-4 {
+
+			padding-bottom: em(59);
+			background: #010001;
+
+			.bg {
+				object-fit: cover;
+				left: unset;
+				bottom: unset;
+				top: em(-305);
+				right: em(-151);
+				mix-blend-mode: lighten;
+				width: em(1053);
+				height: em(1053);
+			}
+
+			.title {
+				max-width: em(460, 30);
+			}
+
+			.descr {
+				padding-top: 0;
+				max-width: em(389, 14);
+			}
+
+			.btn {
+				right: em(117);
+				bottom: em(47);
+			}
+		}
+
+
+
+
+	}
+
+	@media (max-width: 768px) and (orientation: portrait) {
+		padding-top: em(64);
+		padding-bottom: em(64);
+
+		.container {
+			max-width: em(400);
+		}
+
+		h1 {
+			font-size: em(32);
+			margin-bottom: em(64, 32);
+		}
+
+		&__list {
+			flex-direction: column;
+		}
+
+		&__item {
+			width: em(400);
+			height: em(768);
+			align-items: center;
+			justify-content: flex-start;
+			padding: em(64) em(40);
+			margin-bottom: em(80);
+
+			.bg {
+				width: 100%;
+			}
+
+			.title {
+				max-width: 100%;
+				text-align: center;
+				margin-bottom: em(48, 32);
+
+
+				font-size: em(32);
+				letter-spacing: em(-1.92, 32);
+
+			}
+
+			.descr {
+				padding-top: 0;
+				text-align: center;
+				margin-bottom: em(47, 14);
+
+				&::before {
+					display: none;
+				}
+			}
+
+			.btn {
+				position: relative;
+				margin: 0 auto;
+				right: unset;
+				bottom: 0;
+			}
+
+			&-1 {
+				justify-content: flex-start;
+				height: em(768);
+
+				.bg {
+					max-width: unset;
+					width: em(530);
+					right: em(-58);
+					left: unset;
+					top: unset;
+					bottom: 0;
+				}
+
+				.title {
+					max-width: em(300, 32);
+				}
+
+				.descr {
+					margin-top: 0;
+					margin-bottom: em(40, 14);
+
+					&::before {
+						display: none;
+					}
+				}
+			}
+
+
+
+			&-2 {
+				height: em(560);
+
+				.bg {
+					&::after {
+						display: none;
+					}
+				}
+
+
+
+				.title {
+					max-width: em(279, 32);
+				}
+
+				.descr {
+					margin-bottom: em(39, 14);
+				}
+
+				.btn {
+					top: unset;
+					left: unset;
+				}
+			}
+
+			&-3 {
+				height: em(560);
+
+				&::before {
+					display: none;
+				}
+
+				.bg {
+					right: 0;
+					left: 0;
+					height: em(460);
+					top: unset;
+					bottom: em(-147);
+				}
+
+				.title {
+					// padding-top: em(142, 32);
+					margin-bottom: em(38, 32);
+				}
+
+				.descr {
+					max-width: em(300, 14);
+					margin-bottom: em(35, 14);
+					color: #0A0F11;
+				}
+
+				.btn {
+					top: unset;
+					left: unset;
+				}
+			}
+
+			&-4 {
+				height: em(768);
+
+				.bg {
+					left: unset;
+					bottom: em(-83);
+					top: unset;
+					right: 0;
+					width: em(600);
+					height: em(696);
+				}
+			}
+
+
+		}
+	}
+}

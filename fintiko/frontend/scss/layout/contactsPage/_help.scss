@@ -1,0 +1,103 @@
+.help {
+	padding-top: em(133);
+	padding-bottom: em(120);
+
+	.container {
+		max-width: em(1313);
+	}
+
+	&__block {
+		padding: em(65) em(55);
+		height: em(472);
+		overflow: hidden;
+		position: relative;
+		border-radius: em(40);
+
+		.bg {
+			position: absolute;
+			width: 100%;
+			height: auto;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			object-fit: cover;
+
+			transition: all .3s ease-in-out;
+		}
+
+		&:hover {
+			.bg {
+				transform: scale(1.05);
+
+			}
+		}
+
+		.title {
+			position: relative;
+			max-width: em(395, 50);
+
+
+			color: #DCDBDB;
+			font-size: em(50);
+			font-weight: 500;
+			line-height: 100%;
+			letter-spacing: -0.06em;
+			padding-bottom: em(87, 50);
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: inline-block;
+				width: em(160, 50);
+				height: em(16, 50);
+				background: url(../img/accountPage/benefitsSection/line.svg) 50% / 100% 100% no-repeat;
+			}
+
+		}
+
+		.btn {
+			position: absolute;
+			bottom: em(50, 20);
+			left: em(56, 20);
+		}
+	}
+
+	@media (max-width: 768px) and (orientation: portrait) {
+		padding-top: em(80);
+		padding-bottom: em(80);
+
+		.container {
+			max-width: em(391);
+		}
+
+		&__block {
+			padding: em(64) 0;
+			height: em(472);
+			text-align: center;
+		}
+
+		.title {
+			font-size: em(40);
+			line-height: 100%;
+			text-align: center;
+			max-width: 100%;
+			padding-bottom: em(49, 40);
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.btn {
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			bottom: unset;
+			left: unset;
+			font-size: 1.3em;
+		}
+	}
+}

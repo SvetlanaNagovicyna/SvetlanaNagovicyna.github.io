@@ -1,0 +1,201 @@
+.services {
+	padding-top: em(159);
+	padding-bottom: em(144);
+	background: #0A0F11;
+
+	.container {
+		max-width: em(864);
+		text-align: center;
+	}
+
+	h1 {
+		text-align: center;
+		font-weight: 500;
+		font-size: em(40);
+		line-height: 99%;
+		letter-spacing: -0.06em;
+		margin-bottom: em(47, 40);
+	}
+
+	&__descr {
+		font-family: 'Inter';
+		text-align: center;
+		max-width: em(648, 16);
+		font-size: em(16);
+		line-height: 130%;
+		letter-spacing: -0.04em;
+		margin: 0 auto;
+		color: #e5eaeb;
+		font-weight: 400;
+		display: inline-block;
+		margin-bottom: em(84, 16);
+
+	}
+
+	&__list {
+		&_item {
+			background: linear-gradient(49deg, #12181b 0%, #191f22 100%);
+			border-radius: em(40);
+			margin-bottom: em(40);
+			padding: em(48) em(59) em(48) em(48);
+			height: em(336);
+			display: flex;
+			justify-content: space-between;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.text {
+				width: em(520);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: flex-start;
+
+				&__title {
+					display: flex;
+					align-items: center;
+
+					.icon {
+						width: em(40);
+						margin-right: em(8);
+					}
+
+					h2 {
+						color: #DCDBDB;
+						font-weight: 500;
+						font-size: em(30);
+						line-height: 100%;
+						letter-spacing: -0.06em;
+					}
+				}
+
+				&__list {
+					text-align: left;
+					padding-left: em(14);
+
+					&_item {
+						display: flex;
+						align-items: center;
+						margin-bottom: em(10);
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+
+						span {
+							color: #1A59FA;
+							font-weight: 700;
+							font-size: em(10);
+							line-height: 99%;
+							letter-spacing: -0.04em;
+							margin-right: em(15, 10);
+							display: inline-block;
+							text-align: center;
+						}
+
+						p {
+							font-family: 'Inter';
+							font-weight: 400;
+							font-size: em(14);
+							line-height: 130%;
+							letter-spacing: -0.04em;
+						}
+					}
+				}
+			}
+
+			.price {
+				align-self: flex-end;
+
+
+				p {
+					font-family: 'Inter';
+					font-weight: 400;
+					font-size: em(16);
+					line-height: 130%;
+					letter-spacing: -0.04em;
+
+					border-radius: em(8, 16);
+					background: #121719;
+					padding: em(4, 16) em(8, 16);
+					height: em(29, 16);
+
+					span {
+						color: rgba(255, 255, 255, 0.4);
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) and (orientation: portrait) {
+		padding-top: em(72);
+		padding-bottom: em(120);
+
+		.container {
+			max-width: em(400);
+		}
+
+		h1 {
+			font-size: em(32);
+			margin-bottom: em(32, 32);
+		}
+
+		&__descr {
+			font-size: em(16);
+			margin-bottom: em(74, 16);
+		}
+
+		&__list {
+			&_item {
+				height: em(436);
+				border-radius: em(20);
+				flex-direction: column;
+				align-items: center;
+				padding: em(36) em(24) em(48) em(22);
+				margin-bottom: em(25);
+
+				.text {
+					width: 100%;
+
+					&__title {
+						flex-direction: row-reverse;
+						justify-content: space-between;
+						width: 100%;
+						margin-bottom: em(59);
+
+						.icon {
+							margin-right: 0;
+						}
+
+						h2 {
+							font-size: em(24);
+							letter-spacing: -0.03em;
+						}
+
+					}
+
+					&__list {
+						padding-left: 0;
+
+						&_item {
+							margin-bottom: em(20);
+							align-items: flex-start;
+
+							span {
+								margin-right: em(18, 10);
+								margin-top: em(5, 10);
+							}
+						}
+					}
+				}
+
+				.price {
+					align-self: center;
+				}
+			}
+		}
+	}
+}

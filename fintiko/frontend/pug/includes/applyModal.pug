@@ -1,0 +1,120 @@
+.modal-wrap.apply-form
+	.modal
+		.close
+			img(src="public/img/close.svg" width="20" height="20" alt="close icon")
+		.modal__container
+			hgroup
+				h1.title Application info 
+				p.descr Please make sure that all fields are completed, all information is provided fully and correctly.
+			form#formApply.form(action="apply_form.php")
+				label.form__item 
+					input(type="text" name="full_name" data-name="name" data-valid="false")
+					p.placeholder Full Name:
+					.error-text Information Required
+				label.form__item 
+					input(type="text" name="email"  data-name="email" data-valid="false")
+					p.placeholder Email Address:
+					.error-text Information Required
+				label.form__item 
+					input(type="number" name="tel" data-name="tel" data-valid="false")
+					p.placeholder Phone Number:
+					.error-text Information Required
+				label.form__item 
+					input(type="text" name="company_name" data-name="name" data-valid="false")
+					p.placeholder Company Name:
+					.error-text Information Required
+				label.form__item 
+					input(type="text" name="address" data-name="name" data-valid="false")
+					p.placeholder Business Address:
+					.error-text Information Required
+
+				label.form__item 
+					input(type="text" name="country" data-name="country" data-valid="false" list="countryList")
+					datalist#countryList
+
+					p.placeholder Country/Region:
+					.error-text Information Required
+
+				//- .form__item.select
+				//- 	p.placeholder Country/Region:
+				//- 	//- .select-box
+				//- 		//- .options-container(list="countryList")
+				//- 			//- .option
+				//- 			//- 	input#belgium.radio(type='radio' name='country' value='Belgium')
+				//- 			//- 	label(for='belgium') Belgium
+				//- 			//- .option
+				//- 			//- 	input#china.radio(type='radio' name='country' value='China')
+				//- 			//- 	label(for='china') China
+				//- 			//- .option
+				//- 			//- 	input#uae.radio(type='radio' name='country' value='UAE')
+				//- 			//- 	label(for='uae') United Arab Emirates
+				//- 		.selector-wrapper
+				//- 			p.selected
+				//- 			svg#drp-arrow2.arrow.rotated(viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg')
+				//- 				path(d='M1 1L4.5 4L8 1' stroke='#DCDBDB' stroke-width='2' stroke-linecap='round')
+						
+				//- 	.error-text Information Required
+	
+				label.form__item 
+					input(type="text" name="website" data-name="name" data-valid="false")
+					p.placeholder Business Website (if applicable):
+					.error-text Information Required
+				label.form__item.mr-0 
+					input(type="text" name="nature_of_business" data-name="name" data-valid="false")
+					p.placeholder Nature of Business (brief description):
+					.error-text Information Required
+
+				.form__item.select.mr-0 
+					p.placeholder Estimated Monthly Transaction Volume:
+					.select-box
+						.options-container
+							.option
+								input#first.radio(type='radio' name='estimated' value='0 - 100 000')
+								label(for='first') 0 - 100 000
+							.option
+								input#second.radio(type='radio' name='estimated' value='100 000 - 250 000')
+								label(for='second') 100 000 - 250 000
+							.option
+								input#third.radio(type='radio' name='estimated' value='250 000 - 500 000')
+								label(for='third') 250 000 - 500 000
+							.option
+								input#forth.radio(type='radio' name='estimated' value='500 000 - 1 000 000')
+								label(for='forth') 500 000 - 1 000 000
+							.option
+								input#fifth.radio(type='radio' name='estimated' value='1 000 000 +')
+								label(for='fifth') 1 000 000 +
+						.selector-wrapper
+							p.selected
+							svg#drp-arrow2.arrow.rotated(width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M1 1L4.5 4L8 1' stroke='#DCDBDB' stroke-width='2' stroke-linecap='round')
+					.error-text Information Required
+
+			
+				label.form__item.mr-0
+					textarea(type="text" data-valid="true" name="notes")
+					p.placeholder Notes and aditional information:
+
+				
+				.g-recaptcha#g-recaptcha(data-sitekey="6LdkpX4qAAAAABDQx5OuUltaT6g5elYSBlxKDujq" data-valid="false")
+					
+				.form__submit
+					button.btn.button.button-blue(type="submit") Submit Application
+			
+				label.form__checkbox
+					input(type="checkbox" data-valid="false" data-name="rule")
+					.checkbox__box
+						svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15' fill='none')
+							rect(x='0.5' y='0.5' width='14' height='14' stroke='url(#paint0_linear_1522_2630)')
+							path(d='M12 4.90446L11.06 4L6.66667 8.19745L4.94667 6.56051L4 7.4586L6.66667 10L12 4.90446Z' fill='white' opacity='0.4')
+							defs
+								lineargradient#paint0_linear_1522_2630(x1='7.5' y1='0' x2='7.5' y2='15' gradientUnits='userSpaceOnUse')
+									stop(stop-color='white' stop-opacity='0.6')
+									stop(offset='1' stop-color='white' stop-opacity='0')
+
+
+					p.text  I agree to the 
+						a(href="terms.html") Business <br> Terms of Service 
+						| and our  
+						a(href="privacy.html") privacy policy
+					
+					.error-text Information Required

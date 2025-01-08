@@ -1,0 +1,94 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: em(62, 20);
+	padding: 0 em(24, 20);
+	border: em(1, 20) solid transparent;
+	border-radius: em(64, 20);
+	cursor: pointer;
+	outline: none;
+	transition: all .3s ease-in-out;
+	color: inherit;
+
+	font-size: em(20);
+	font-weight: 500;
+	line-height: 105.6%;
+	letter-spacing: em(-0.8, 20);
+	transition: all .3s ease-in-out;
+
+
+	p {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		border: 0;
+	}
+
+
+	svg {
+		width: em(20, 20);
+		margin-left: em(14, 20);
+	}
+
+	&-blue {
+		background-color: #1A59FA;
+	}
+
+	&-black {
+		background-color: #000000;
+	}
+
+	&-transparent-blue {
+		background-color: transparent;
+		border-color: #1A59FA;
+	}
+
+	&-transparent-white {
+		background-color: transparent;
+		border-color: #FFFFFF;
+	}
+
+
+	&-arrow {
+		background-color: transparent;
+		border-color: transparent;
+
+	}
+
+	&:hover {
+		background-color: #fff;
+		border-color: transparent;
+		transition: all .3s ease-in-out;
+		color: #000;
+
+	}
+
+	&.button-arrow {
+		background: none;
+		transition: all .3s ease-in-out;
+
+		&:hover {
+			background-color: transparent;
+			background: url(../img/mainPage/readSection/btn-bg.png) top center / 100% 100% no-repeat;
+			backdrop-filter: blur(em(10));
+			transition: all .3s ease-in-out;
+			color: #fff;
+		}
+	}
+
+	@media (max-width: 768px) and (orientation: portrait) {
+
+		height: em(48, 16);
+		padding: 0 em(16, 16);
+
+
+		font-size: em(16);
+		letter-spacing: em(-0.64, 16);
+
+	}
+}

@@ -1,0 +1,267 @@
+.welcome {
+	position: relative;
+	padding-top: em(120);
+	padding-bottom: em(78);
+
+	.container {
+		&::after {
+			content: "";
+			position: absolute;
+			top: em(-9);
+			left: 50%;
+			transform: translateX(-50%);
+			background: url(../img/mainPage/line-header.svg) 50% / 100% 100% no-repeat;
+			display: inline-block;
+			width: em(1794);
+			height: em(18);
+			transition: all .3s ease-in-out;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: em(900);
+		top: 0;
+		left: 0;
+		right: 0;
+
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			// background-color: rgba(0, 0, 0, .3);
+			background: linear-gradient(0deg, rgba(1, 34, 156, 0.50) 0%, rgba(1, 34, 156, 0.50) 100%), linear-gradient(0deg, rgba(26, 89, 250, 0.10) 0%, rgba(26, 89, 250, 0.10) 100%);
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		width: em(1314);
+		margin: 0 auto;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: em(1455);
+			right: em(-240);
+			background-color: rgba(255, 255, 255, .3);
+			height: em(1);
+			display: inline-block;
+		}
+
+	}
+
+	&__left {
+		width: em(674);
+		padding-left: em(40);
+		padding-top: em(198);
+
+		&_title {
+
+
+			width: em(497, 70);
+			font-size: em(70);
+			font-style: normal;
+			font-weight: 500;
+			line-height: 99.6%;
+			letter-spacing: em(-4.2, 70);
+
+		}
+
+	}
+
+	&__right {
+		width: em(640);
+		align-self: flex-start;
+		border-left: em(1) solid rgba(255, 255, 255, .3);
+		position: relative;
+		padding-top: em(79);
+		padding-bottom: em(392);
+
+		.swiper-wrapper {
+			height: 100%;
+		}
+
+
+		.welcome-slider {
+			height: em(200);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-left: em(58);
+			width: 100%;
+			overflow: initial;
+			pointer-events: none;
+			touch-action: none;
+
+
+			.swiper-scrollbar-drag {
+				background: rgba(255, 255, 255, .3);
+				border-radius: 0;
+				max-height: em(90);
+				width: em(2);
+				top: em(142);
+
+			}
+
+			.swiper-scrollbar {
+				background: transparent;
+				left: 0;
+				top: em(-73);
+			}
+
+			.swiper-slide-next {
+				opacity: .4;
+			}
+
+			.swiper-slide-prev {
+				opacity: .4;
+			}
+
+			.swiper-slide-active {
+				opacity: 1;
+			}
+
+			.swiper-slide-next+.welcome-slider_item {
+				opacity: .2;
+			}
+
+			&_item {
+				text-align: left;
+				display: flex;
+				align-items: center;
+				transition: all .4s ease-in-out;
+				opacity: 0;
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+
+
+
+				p {
+					padding: em(9, 20) 0;
+					font-size: em(20);
+					font-weight: 800;
+					line-height: 105.6%;
+					letter-spacing: em(-0.8, 20);
+				}
+
+			}
+
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		margin-top: em(-31);
+		position: relative;
+		z-index: 2;
+
+		ul {
+			display: flex;
+			align-items: center;
+		}
+
+		.button-blue {
+			margin-right: em(13);
+		}
+	}
+
+	@media (max-width: 1440px) {
+
+		.container {
+
+			&::after {
+				width: em(1312);
+			}
+		}
+
+		&__wrap {
+			&::after {
+				width: em(975);
+				right: 0;
+			}
+		}
+	}
+
+	@media (max-width: 768px) and (orientation: portrait) {
+		padding-bottom: em(64);
+		padding-top: em(89);
+
+		.container {
+
+			&::after {
+				background: url(../img/mainPage/line-header-mob.svg) 50% / 100% 100% no-repeat;
+				width: em(400);
+				height: em(18);
+
+			}
+		}
+
+		&__bg {
+			width: em(736);
+			height: em(432);
+			transform: rotate(270deg);
+			top: em(151);
+			left: em(-152);
+
+			&::after {
+				width: 100.1%;
+				height: 100.2%;
+				background: linear-gradient(270deg, rgba(0, 56, 255, 0.00) 58.66%, #001C8A 100%), rgba(1, 34, 156, 0.50);
+			}
+		}
+
+		&__wrap {
+			width: 100%;
+			flex-direction: column;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&__left {
+			width: 100%;
+			padding-left: 0;
+			padding-top: em(54);
+
+			&_title {
+				width: em(278, 40);
+				font-size: em(40);
+				line-height: 99.6%;
+				letter-spacing: em(-2.4, 40);
+
+			}
+		}
+
+		&__right {
+			width: 100%;
+			border: none;
+			padding-top: em(16);
+			padding-bottom: em(177);
+
+			.welcome-slider {
+				padding-left: em(2);
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+header.header
+	nav 
+		a(href="index.html").header__logo 
+			img(src="public/img/logo.svg", width="135" height="24" alt="logo" srcset="public/img/logo.svg" sizes="(max-width: 768px) 206px")
+		.open
+			.open__item
+			.open__item
+			.open__item
+		ul.menu
+			li.menu__item 
+				p.link-menu Products
+				ul.menu__sublist
+					li.menu__subitem
+						a.link-menu(href="account.html") Accounts
+					li.menu__subitem
+						a.link-menu(href="payments.html") Payments
+					li.menu__subitem
+						a.link-menu(href="comming-soon-page.html") Pricing
+					li.menu__subitem
+						a.link-menu(href="services.html") Services
+			li.menu__item
+				p.link-menu Company
+				ul.menu__sublist
+					li.menu__subitem
+						a.link-menu(href="about-us.html") About us
+					//- li.menu__subitem
+					//- 	a.link-menu(href="#") Careers
+			li.menu__item
+				p.link-menu Extras
+				ul.menu__sublist
+					li.menu__subitem
+						a.link-menu(href="https://fintiko.readme.io" target="_blank") API Documentation
+					li.menu__subitem
+						a.link-menu(href="feautures.html") Feautures 
+			
+			li.menu__item
+				.header__btns
+					ul
+						li
+							button.header__btn.header__btn_apply.popup-btn(data-popup="apply-form")  Apply
+						li
+							a.header__btn.header__btn_signin(href="https://dashboard.fintiko.com/" target="_blank") Sign In
