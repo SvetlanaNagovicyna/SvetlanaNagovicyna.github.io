@@ -1,0 +1,468 @@
+- var title = "";
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap
+			nav.nav 	
+				.nav__wrap
+					.logo
+						img(src="public/img/logo.svg" alt="")
+					.open
+						.open__items 
+							.open__item
+							.open__item
+							.open__item
+						.open__text 
+							span Menu
+
+					menu.menu 
+						li.menu__item.active
+							a.menu__link(href="index.html") 
+								span Home
+						//- li.menu__item.active
+						//- 	a.menu__link(href="#security") 
+						//- 		span Security Suite
+
+						li.menu__item
+							a.menu__link(href="#benefits")
+								span Benefits
+
+						li.menu__item
+							a.menu__link(href="#howitworks") 
+								span Our pricing
+
+						li.menu__item
+							a.menu__link(href="#develops") 
+								span How it works
+
+						li.menu__item 
+							a.menu__link(href="#footer") 
+								span Join us
+						li.menu__item
+							a.btn(href="#footer") 
+								span Contact Us
+						a(href="mailto:info@verifiedx.me").contact info@verifiedx.me 
+
+					a(href="mailto:info@verifiedx.me").contact info@verifiedx.me 
+					
+
+
+			section#home.home.was-visible
+				.bg 
+					svg.line(viewBox='0 0 711 896' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M110.191 1L226.504 30.989L289 1M1 30.2565L226.181 107.078L373.624 30.2565H455.962L536.385 59.8032L685 1M7.59291 98.5261L260.515 202.189L365.862 98.5261L450.14 89.6407L521.01 128.144L718.296 60.0227M4.95543 181.164L299.048 313.319L366.051 181.164L442.626 160.14L524.944 205.193L718.296 142.119M4.95543 253.249L299.391 395.362L364.488 552.659L391.293 718.859L371.5 895M4.95543 310.393L253.73 463.092L316.899 576.011L339.869 727.56L316.899 895M6.27417 383.247L226.874 537.878L271.059 616.963L287.127 723.102L255.5 895M6.27417 460.055L192.541 592.337L230.165 672.518L237.022 773.615L183 895M6.27417 571.314L151.858 648.547L188.235 713.922L176.747 785.24L6.27417 895M6.27417 674.742L110.191 689.741L148.678 725.737L142.905 752.734L6.27417 780.866M422.5 895L442.567 718.614L415.69 552.177L350.418 394.657L383.054 249.024L432.968 228.22L503.999 272.801L720.933 228.22M478.5 895L489.431 722.09L472.202 553.183L407.116 396.13L418.602 325.012L489.431 345.755L585.145 354.644L724.889 301.306M531.5 895L538.855 728.387L521.625 555.824L475.681 439.789V401.111L546.512 418.963L615.429 413.012L734.118 368.384M590.5 895L602.122 814.761L584.827 696.076L552.157 509.149L569.453 476.51L623.261 497.28L772 439.467L751.945 525.568L607.887 559.589L623.261 681.241L666 895M704 895L659.774 618.932L732.8 601.129' stroke='#323232'
+						 stroke-dasharray='1400')
+							
+				.container
+					.home__wrap 
+						.home__left 
+							.home__left_text 
+								span Empowering 
+								span.green safer 
+								span.green societies
+							.home__left_explore 
+								.home__left_explore-icon 
+									img(src="public/img/home/icon.svg" alt="")
+								.home__left_explore-text 
+									span World-leading cybersecurity <br> for gamers
+							//- .home__btn 
+							//- 	.button 
+							//- 		span Security Suite
+							//- 	a.button.transparent(href="ai-powered.html") 
+							//- 		span AI Engines	
+							
+							a.btn(href="mailto:info@verifiedx.me") 
+								span Get in Touch
+						.home__right 
+							.images 
+								.images__item.images__item-1
+									img(src="public/img/home/1.png" alt="")
+								.images__item.images__item-2
+									img(src="public/img/home/2.png" alt="")
+								.images__item.images__item-3
+									img(src="public/img/home/3.png" alt="")
+								.images__item.images__item-4
+									img(src="public/img/home/4.png" alt="")
+								.images__item.images__item-5
+									img(src="public/img/home/5.png" alt="")
+								.images__item.images__item-6
+									img(src="public/img/home/6.png" alt="")
+			section.partners
+				.partners__slider.swiper-horizontal
+					.swiper-wrapper
+						.swiper-slide.partners__item.partners__item_1
+							include ./../../public/img/partners/1.svg
+						//- .swiper-slide.partners__item.partners__item_2 
+						//- 	include ./../../public/img/partners/2.svg
+						.swiper-slide.partners__item.partners__item_3 
+							include ./../../public/img/partners/3.svg
+						.swiper-slide.partners__item.partners__item_4 
+							include ./../../public/img/partners/4.svg
+						.swiper-slide.partners__item.partners__item_5 
+							include ./../../public/img/partners/5.svg
+				.partners__text 
+					span trusted by 
+					span.green 7000+ 
+					span games & 
+					span.green 200+ 
+					span countries & governments
+			section#security.heading 
+				.container 
+					//- .heading__text
+					//- 	span Our 
+					//- 	span.green Security
+					//- 	br
+					//- 	span.green  Suite
+					.subtitle 
+						span THE BEST DIGITAL SECURITY FOR GAMERS <br> AND VIRTUAL WORLDS USERS.
+			section#benefits.benefits 
+				.bg
+					svg(viewBox='0 0 282 534' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M171.809 28.1631L55.496 45.0978L-92.1519 1M281 44.6841L55.8195 88.0648L-91.6236 44.6841H-173.962L-254.385 61.369L-403 28.1631M274.407 83.2356L21.485 141.774L-83.8621 83.2356L-168.14 78.2181L-239.01 99.9607L-436.296 61.493M277.045 129.901L-17.0476 204.528L-84.0507 129.901L-160.626 118.028L-242.944 143.47L-436.296 107.852M277.045 170.607L-17.3911 250.857L-82.4883 339.682L-109.293 433.534L-89.5 533M277.045 202.876L28.2698 289.104L-34.8988 352.869L-57.8693 438.448L-34.8988 533M275.726 244.016L55.1263 331.335L10.9406 375.994L-5.12692 435.93L26.5 533M275.726 287.389L89.4585 362.088L51.8347 407.366L44.9781 464.455L99 533M275.726 350.216L130.142 393.829L93.765 430.746L105.253 471.019L275.726 533M275.726 408.622L171.809 417.091L133.322 437.418L139.095 452.663L275.726 468.549M-140.5 533L-160.567 433.396L-133.69 339.41L-68.4182 250.459L-101.054 168.221L-150.968 156.473L-221.999 181.648L-438.933 156.473M-196.5 533L-207.431 435.358L-190.202 339.978L-125.116 251.291L-136.602 211.131L-207.431 222.844L-303.145 227.864L-442.889 197.744M-249.5 533L-256.855 438.915L-239.625 341.469L-193.681 275.945V254.104L-264.512 264.184L-333.429 260.824L-452.118 235.623M-308.5 533L-320.122 487.689L-302.827 420.669L-270.157 315.112L-287.453 296.681L-341.261 308.41L-490 275.763L-469.945 324.384L-325.887 343.595L-341.261 412.291L-384 533M-422 533L-377.774 377.106L-450.8 367.053' stroke='#323232' 
+						stroke-dasharray='1400')
+					
+				.container 
+					.benefits__title.title
+						span.green Bene
+						span fits
+					.benefits__block
+						.benefits__left
+							.title 
+								span.green For Gamers:
+							ul.list
+								li.list__item
+									.number 
+										span 01
+									.text
+										span 24/7 Protection against cyberattacks, scammers & abusers.
+								li.list__item
+									.number 
+										span 02
+									.text
+										span Enjoy Peace of Mind, Protect Your Hard-Earned Digital Assets & Your Money.
+								li.list__item
+									.number 
+										span 03
+									.text
+										span 1 subscription = top-quality protection in all your favourite games
+						.benefits__right
+							.title 
+								span.green for Developers:
+							ul.list
+								li.list__item
+									.number 
+										span 01
+									.text
+										span Boosted platform reputation & credibility.
+								li.list__item
+									.number 
+										span 02
+									.text
+										span Increased user retention and acquisition.
+								li.list__item
+									.number 
+										span 03
+									.text
+										span Increased revenue through engaged users and our profit-sharing model.
+
+					//- .benefits__slider
+					//- 	.swiper-wrapper
+					//- 		.swiper-slide.benefits__item
+					//- 			.benefits__item-title 
+					//- 				span Level Up Your Gaming Safety
+					//- 			.benefits__item-text 
+					//- 				span Stay safe from scammers & imposters with verified avatars in all your favourite games. Make your friends trust you more.
+					//- 		.swiper-slide.benefits__item
+					//- 			.benefits__item-title 
+					//- 				span Earn Your Friends' Trust!
+					//- 			.benefits__item-text 
+					//- 				span Showcase your verified avatar and build trust among your friends as a reliable and authentic gamer.
+					//- 		.swiper-slide.benefits__item
+					//- 			.benefits__item-title 
+					//- 				span Game On with Verified Avatars
+					//- 			.benefits__item-text  
+					//- 				span Get your avatars verified in over 7,000 games with just one subscription.
+					//- 		.swiper-slide.benefits__item
+					//- 			.benefits__item-title 
+					//- 				span Epic cross-game benefits
+					//- 			.benefits__item-text  
+					//- 				span Unlock exclusive in-game rewards and perks in and across your favourite games.
+					//- 		//- .swiper-slide.benefits__item
+					//- 		//- 	.benefits__item-title 
+					//- 		//- 		span Join the Elite, Rule the Games
+					//- 		//- 	.benefits__item-text  
+					//- 		//- 		span Boost your reputation and become a (gaming) legend with verified avatars that command respect in the web3 gaming community.
+					//- 	.swiper-pagination
+					//- 	.swiper-scrollbar
+					//- 	.arrows
+					//- 		.arrow_prev
+					//- 			include ./../../public/img/arrow-prev.svg
+					//- 		.arrow_next
+					//- 			include ./../../public/img/arrow-next.svg
+
+				
+			section#howitworks.howitworks
+				.bg
+					svg(viewBox='0 0 711 1190' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M725 46.863L546.496 99.474L398.848 1M772 98.5502L546.819 195.423L399.376 98.5502H317.038L236.615 135.809L1 46.863M765.407 184.639L512.485 315.359L407.138 184.639L322.86 173.434L251.99 221.987L1 123.795M768.045 288.847L473.952 455.495L406.949 288.847L330.374 262.334L248.056 319.146L1 206.644M768.045 379.746L473.609 558.952L408.512 757.304L381.707 966.885L401.5 1189M768.045 451.805L519.27 644.36L456.101 786.752L433.131 977.857L456.101 1189M766.726 543.675L546.126 738.666L501.941 838.392L485.873 972.236L517.5 1189M766.726 640.53L580.459 807.339L542.835 908.448L535.978 1035.93L590 1189M766.726 780.828L621.142 878.22L584.765 960.658L596.253 1050.59L766.726 1189M766.726 911.253L662.809 930.166L624.322 975.557L630.095 1009.6L766.726 1045.08M350.5 1189L330.433 966.576L357.31 756.697L422.582 558.062L389.946 374.418L340.032 348.184L269.001 404.401L1 279.137M294.5 1189L283.569 970.958L300.798 757.966L365.884 559.92L354.398 470.239L283.569 496.396L187.855 507.606L1 374.418M241.5 1189L234.145 978.899L251.375 761.295L297.319 614.975V566.202L226.488 588.713L157.571 581.209L1 455.495M170.878 1189V1087.82L188.173 938.155L220.843 702.438L203.547 661.281L1 596.479M1 725.931L165.113 766.044L149.739 919.448L91 1189M1 1189L113.226 840.875L1 820.616' stroke='#323232' 
+						stroke-dasharray='1400')
+
+				.container 
+					//- .howitworks__title.title
+					//- 	span.green HOW IT 
+					//- 	span WORKS
+					.howitworks__block 
+						.howitworks__left
+							.title
+								span.green Verify Your Avatars
+								br
+								span - Play with Confidence! 
+							.subtitle 
+								span Get your avatars in Roblox, VR Chat, and more verified in 6 simple steps.
+							.image
+								picture 
+									source(srcset="public/img/howitworks/image-mob.png" media="(max-width: 768px)")
+									img(src="public/img/howitworks/image.png" alt="")
+						.howitworks__right
+							.howitworks__right_title
+								span our  
+								span.green pricing 
+							.title 
+								span.green Standard 
+								span (£8.99/month):
+							ul.list
+								li.list__item
+									.number 
+										span 01
+									.text
+										span Enjoy peace of mind with the best cybersecurity services. Protect your money, digital assets and yourself 24/7 against scams, frauds, and abuse. Safely enjoy your gaming experience.
+								li.list__item
+									.number 
+										span 02
+									.text
+										span Enjoy these protections in thousands of virtual worlds with a single subscription.
+								li.list__item
+									.number 
+										span 03
+									.text
+										span Trade your digital assets with other gamers from different games and virtual worlds for free.
+								li.list__item
+									.number 
+										span 04
+									.text
+										span Enjoy more trust from others as a reliable and authentic user with your VerifiedX Badge
+
+							.title 
+								span.green Premium 
+								span (£11.99/month):
+							ul.list
+								li.list__item
+									.number 
+										span 01
+									.text
+										span All the benefits of the Standard tier.
+								li.list__item
+									.number 
+										span 02
+									.text
+										span Exclusive access to select games and virtual worlds.
+								li.list__item
+									.number 
+										span 03
+									.text
+										span Enjoy exclusive in-game items.
+								li.list__item
+									.number 
+										span 04
+									.text
+										span Sport a premium badge for more credibility and higher social status.
+								
+
+							.title 
+								span Join the Waitlist 
+								span.green Now!
+							a.btn.popup-btn(data-popup="popup")
+								span Join Waitlist
+			section#develops.develops 
+				.develops__title.title 
+					span HOW IT WORKS
+					br
+					span For 
+					span.green Developers
+				.container
+					.develops__text
+						ul.list 
+							li.list__item
+								.number 
+									span 01
+								.text
+									span Integrate VerifiedX's powerful AI-backed real-time cyberthreat detection and prevention engine into your game or virtual world.
+							li.list__item
+								.number 
+									span 02
+								.text
+									span We share the profits from every subscription made by users on your platform.
+							li.list__item
+								.number 
+									span 03
+								.text
+									span Increased user engagement, acquisition, and retention through enhanced user trust by adding a robust layer of protection thanks to VerifiedX's top-tier cybersecurity.
+												
+			section#unite.unite
+				.container
+					.unite__title.title
+						span Game-Changers 
+						span.green Unite!
+			
+				.unite__slider
+					.swiper-wrapper
+						//- .swiper-slide.unite__item.unite__item_1
+						//- 	include ./../../public/img/partners/2.svg
+						.swiper-slide.unite__item.unite__item_2 
+							include ./../../public/img/partners/1.svg
+						.swiper-slide.unite__item.unite__item_3 
+							include ./../../public/img/partners/4.svg
+						.swiper-slide.unite__item.unite__item_4 
+							include ./../../public/img/partners/3.svg
+						.swiper-slide.unite__item.unite__item_5 
+							include ./../../public/img/partners/5.svg
+					.arrows
+						.arrow_prev
+							include ./../../public/img/arrow-prev.svg
+						.arrow_next
+							include ./../../public/img/arrow-next.svg
+				.unite__text 
+					span trusted by 
+					span.green 7000+ 
+					span games & 
+					span.green 200+ 
+					span countries & governments
+			
+				.container
+					.unite__slider2
+						.swiper-wrapper
+							.swiper-slide.unite2__item
+								.unite2__item-text 
+									span VerifiedX provides great cross-game avatar verification services. Something unique in the gaming sector.
+								.unite2__item-title 
+									span – Mihai M.,
+										br
+										| SuperAwesome
+							.swiper-slide.unite2__item
+								.unite2__item-text 
+									span VerifiedX adds value for gamers and game developers by enhancing safety, convenience, and credibility in a compliant manner.
+								.unite2__item-title 
+									span  – Tuanui T., 
+										br
+										| DataGuard.
+							.swiper-slide.unite2__item
+								.unite2__item-text 
+									span VerifiedX provides great cross-game avatar verification services. Something unique in the gaming sector.
+								.unite2__item-title 
+									span – Mihai M.,
+										br
+										| SuperAwesome
+							.swiper-slide.unite2__item
+								.unite2__item-text 
+									span VerifiedX adds value for gamers and game developers by enhancing safety, convenience, and credibility in a compliant manner.
+								.unite2__item-title 
+									span  – Tuanui T., 
+										br
+										| DataGuard.
+							
+						.swiper-scrollbar
+				
+			//- section.future
+			//- 	.bg
+			//- 		svg(viewBox='0 0 746 801' fill='none' xmlns='http://www.w3.org/2000/svg')
+			//- 			path(d='M698 57.0008L519.496 121.241L371.848 1M745 120.113L519.819 238.399L372.376 120.113H290.038L209.615 165.608L-26 57.0008M738.407 225.231L485.485 384.846L380.138 225.231L295.86 211.55L224.99 270.836L-26 150.938M741.045 352.473L446.952 555.958L379.949 352.473L303.374 320.101L221.056 389.471L-26 252.1M741.045 463.465L446.609 682.284L395.582 799.765M741.045 551.453L492.27 786.571L446.952 799.765M739.726 663.63L559 799.765M348 799.765L395.582 681.198L362.946 456.961L313.032 424.927L242.001 493.571L-26 340.618M290.038 799.765L338.884 683.467L327.398 573.962L256.569 605.901L160.855 619.589L-26 456.961M242.001 799.765L270.319 750.691V691.137L199.488 718.623L130.571 709.461L-26 555.958M182 799.765L160.855 770.379L-26 728.107' stroke='#323232' 
+			//- 			stroke-dasharray='1400')
+
+			//- 	.container
+			//- 		.future__title
+			//- 			span Empowering 
+			//- 			span.green the Future 
+			//- 			br
+			//- 			span of Web3 Gaming
+			//- 		.future__label
+			//- 			span Join Us in Creating a Safer 
+			//- 				br 
+			//- 				| Gaming Landscape
+			//- 		.future__descr 
+			//- 			span We are actively seeking pre-seed funding to fuel our expansion and enhance our cutting-edge technology. If you share our vision and are interested in becoming and investor, we invite you to get in touch with us so you can 
+			//- 				a(href="mailto:info@verifiedx.me").green try out our prototype
+			//- 		a.btn(href="mailto:info@verifiedx.me") 
+			//- 			span Get in Touch
+			
+			footer#footer.footer
+				.footer__title
+					span.green our 
+					span links
+				.footer__links
+					//- a(href="https://discord.gg/ps8f58kP3Z").footer__links_item
+					//- 	.icon
+					//- 		img(src="public/img/footer/discord.svg" alt="")
+					//- 	.text 
+					//- 		span Discord
+					a(href="https://www.linkedin.com/company/verifiedx/").footer__links_item
+						.icon
+							img(src="public/img/footer/linkedin.svg" alt="")
+						.text 
+							span LinkedIn
+					a(href="mailto:info@verifiedx.me").footer__links_item
+						.icon
+							img(src="public/img/footer/email.svg" alt="")
+						.text 
+							span Email
+					//- a(href="www.tiktok.com/@verifiedx").footer__links_item
+					//- 	.icon
+					//- 		img(src="public/img/footer/tiktok.svg" alt="")
+					//- 	.text 
+					//- 		span TikTok
+					
+					//- a(href="#").footer__links_item
+					//- 	.icon
+					//- 		img(src="public/img/footer/twitter.svg" alt="")
+					//- 	.text 
+					//- 		span Twitter
+				.container
+					.footer__wrap 
+						.logo 
+							img(src="public/img/logo.svg" alt="")
+						.navigation
+							a(href="#home").navigation__item  Home
+							a(href="#benefits").navigation__item  Benefits
+							a(href="#howitworks").navigation__item  Our pricing
+							a(href="#develops").navigation__item  How it works
+							a(href="#footer").navigation__item  Join us
+						.copyright 
+							.copyright__text 
+								span © 2023 All right reserved
+							a(href="mailto:info@verifiedx.me").copyright__link  Send us a message
+
+			.modal-wrap.popup
+				.modal
+					//- .close
+					//- 	img(src="./public/img/close.svg")
+					.modal__title
+						span enter your 
+						span.green email
+					.modal__content
+						form(action="action.php").form#form
+							.form__item 
+								input(type="text" placeholder="E-mail" name="email"  data-name="email" data-valid="false" required)
+							//- .form__item 
+							//- 	input(type="text" placeholder="Имя" name="name" data-name="name" data-valid="false" required)
+							//- .form__item 
+							//- 	input(type="number" placeholder="Телефон" name="tel" data-name="tel" data-valid="false" required)
+							//- .form__item 
+							//- 	input(type="checkbox" checked="checked")
+							.form__submit
+								button.btn(type="submit") 
+									span Send
+			.modal-wrap.answer
+				.modal.answer-modal
+					.modal__title
+						span Data sent successfully!
+		include includes/foot

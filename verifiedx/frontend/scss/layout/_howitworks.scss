@@ -1,0 +1,269 @@
+.howitworks {
+	margin-top: em(-6);
+	padding-top: em(127);
+	position: relative;
+	border-top: em(1) solid #323232;
+	padding-bottom: em(77);
+	border-bottom: em(1) solid #323232;
+
+	.bg {
+		width: em(711);
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 0;
+
+		.line {
+			stroke-dashoffset: 1400;
+			animation: first-bg 1s linear both;
+		}
+	}
+
+	&__title {
+		transform: translateX(-100%);
+
+		span {
+			font-family: "BEXAGO";
+			font-style: normal;
+			font-size: em(40);
+			line-height: em(49, 40);
+
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+
+	&__block {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__left {
+		transform: translateX(-100%);
+		width: em(559);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		// padding-top: em(60);
+
+		.title {
+			margin-bottom: em(35);
+
+			span {
+				font-size: em(36);
+				line-height: em(40, 36);
+				letter-spacing: 0.165em;
+				text-transform: uppercase;
+
+				&.green {
+					color: #bbff4b;
+				}
+			}
+		}
+
+		.subtitle {
+			width: em(431);
+			margin-bottom: em(78);
+
+			span {
+				font-size: em(24);
+				line-height: em(27, 24);
+				letter-spacing: 0.165em;
+				text-transform: uppercase;
+			}
+		}
+
+		.image {
+			width: em(555);
+		}
+	}
+
+	&__right {
+		transform: translateX(100%);
+		width: em(572);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		// padding-top: em(13);
+
+		&_title {
+			margin-bottom: em(40);
+
+			span {
+				font-family: "BEXAGO";
+				font-style: normal;
+				font-size: em(40);
+				line-height: em(49, 40);
+
+				&.green {
+					color: #bbff4b;
+				}
+			}
+		}
+
+
+		.list {
+			width: em(468);
+			margin-bottom: em(61);
+			margin-top: em(45);
+
+			&__item {
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: em(45);
+
+				&:nth-child(2),
+				&:nth-child(3) {
+					margin-bottom: em(77);
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				.number {
+					margin-right: em(6);
+					margin-top: em(-13);
+
+					span {
+						color: #bbff4b;
+						font-size: em(16);
+						line-height: em(21, 16);
+					}
+				}
+
+				.text {
+					span {
+						font-size: em(24);
+						line-height: em(32, 24);
+					}
+				}
+			}
+		}
+
+		.title {
+			span {
+				font-size: em(36);
+				line-height: em(40, 36);
+				letter-spacing: 0.165em;
+				text-transform: uppercase;
+
+				&.green {
+					color: #bbff4b;
+				}
+			}
+		}
+
+		.btn {
+			width: em(215);
+			height: em(60);
+			margin-top: em(60);
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding-top: em(19);
+		padding-bottom: em(43);
+
+		.bg {
+			width: 23em;
+			right: -9em;
+			top: unset;
+			bottom: -1em;
+		}
+
+		&__title {
+			span {
+				font-size: em(32);
+				line-height: em(34, 32);
+			}
+		}
+
+		&__block {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__left {
+			width: 100%;
+			padding-top: em(20);
+
+			.title {
+				margin-bottom: em(13);
+
+				span {
+					font-size: em(18);
+					line-height: em(20, 18);
+				}
+			}
+
+			.subtitle {
+				margin-bottom: em(13);
+				width: 100%;
+
+				span {
+					font-size: em(14);
+					line-height: em(16, 14);
+				}
+			}
+
+			.image {
+				width: em(350);
+			}
+		}
+
+		&__right {
+			width: 100%;
+			padding-top: em(17);
+
+			&_title {
+
+				span {
+					font-size: em(32);
+					line-height: em(34, 32);
+
+				}
+			}
+
+			.list {
+				width: 100%;
+				margin-bottom: em(42);
+
+				&__item {
+					margin-bottom: em(38);
+
+					&:nth-child(2),
+					&:nth-child(3) {
+						margin-bottom: em(38);
+					}
+
+					.number {
+						margin-right: em(12);
+						margin-top: em(-15);
+					}
+
+					.text {
+						span {
+							font-size: em(15);
+							line-height: em(17, 15);
+						}
+					}
+				}
+			}
+
+			.title {
+				span {
+					font-size: em(18);
+					line-height: em(20, 18);
+				}
+			}
+
+			.btn {
+				width: em(222);
+				height: em(60);
+				margin-top: em(24);
+			}
+		}
+	}
+}

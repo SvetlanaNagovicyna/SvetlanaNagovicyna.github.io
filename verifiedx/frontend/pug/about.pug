@@ -1,0 +1,324 @@
+- var title = "Verifiedx";
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap
+			nav.nav 	
+				.nav__wrap
+					.logo
+						img(src="public/img/logo.svg" alt="")
+					.open
+						.open__items 
+							.open__item
+							.open__item
+							.open__item
+						.open__text 
+							span Menu
+
+					menu.menu 
+						li.menu__item.active
+							a.menu__link(href="index.html") 
+								span Home
+
+						li.menu__item
+							a.menu__link(href="#benefits")
+								span Benefits
+
+						li.menu__item 
+							a.menu__link(href="#howitworks") 
+								span How it works
+
+						li.menu__item 
+							a.menu__link(href="#footer") 
+								span Join us
+
+						li.menu__item 
+							a.menu__link(href="about.html") 
+								span About us
+						li.menu__item
+							a.btn(href="#footer") 
+								span Contact Us
+						a(href="mailto:info@verifiedx.me").contact info@verifiedx.me 
+					a(href="mailto:info@verifiedx.me").contact info@verifiedx.me 
+					
+
+
+			section#about.about.was-visible
+				.bg
+					svg.line(viewBox='0 0 549 684' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M110.191 35.8219L226.504 57.5313L374.152 1M1 57.001L226.181 112.613L373.624 57.001H455.962L536.385 78.3903L685 35.8219M7.59291 106.422L260.515 181.465L365.862 106.422L450.14 99.9901L521.01 127.863L718.296 78.5492M4.95543 166.245L299.048 261.914L366.051 166.245L442.626 151.025L524.944 183.64L718.296 137.98M4.95543 218.428L299.391 321.306L364.488 435.175L391.293 555.489L371.5 683M4.95543 259.795L253.73 370.336L316.899 452.08L339.869 561.788L316.899 683M6.27417 312.536L226.874 424.475L271.059 481.725L287.127 558.561L255.5 683M6.27417 368.138L192.541 463.898L230.165 521.942L237.022 595.128L183 683M6.27417 448.679L151.858 504.589L188.235 551.915L176.747 603.543L6.27417 683M6.27417 523.552L110.191 534.41L148.678 560.468L142.905 580.012L6.27417 600.377M422.5 683L442.567 555.312L415.69 434.826L350.418 320.795L383.054 215.37L432.968 200.309L503.999 232.582L720.933 200.309M478.5 683L489.431 557.828L472.202 435.554L407.116 321.862L418.602 270.378L489.431 285.394L585.145 291.83L724.889 253.217M531.5 683L538.855 562.387L521.625 437.466L475.681 353.467V325.468L546.512 338.391L615.429 334.083L734.118 301.776M590.5 683L602.122 624.914L584.827 538.997L552.157 403.677L569.453 380.05L623.261 395.085L772 353.234L751.945 415.563L607.887 440.192L623.261 528.257L666 683M704 683L659.774 483.151L732.8 470.263' stroke='#323232' stroke-dasharray='1400')
+				
+				.container
+					.crumbs
+						a(href="index.html") Home
+						span  - About us
+					.about__wrap 
+						.about__left 
+							.about__left_text 
+								span.green About 
+								span Us
+							.about__left_label 
+								span Empower a safer
+									br
+									|  & more convenient virtual world 
+
+		
+						.about__right 
+							.images 
+								.images__item.images__item-1
+									img(src="public/img/about/1.png" alt="")
+								.images__item.images__item-2
+									img(src="public/img/home/2.png" alt="")
+								.images__item.images__item-3
+									img(src="public/img/home/3.png" alt="")
+								.images__item.images__item-4
+									img(src="public/img/home/5.png" alt="")
+								.images__item.images__item-5
+									img(src="public/img/about/2.png" alt="")
+					.about__block 
+						.about__block_text
+							span In the booming web3 and metaverse, millions of people engage in virtual worlds for gaming, socializing, and collaboration. However, most of these worlds lack a secure avatar verification system, leaving users vulnerable to scams, frauds, and impersonation.
+						.about__block_text 
+							span Additionally, these worlds often operate in isolation. VerifiedX is a cross-game avatar verification platform for web3 gamers, developers, and metaverse residents. 
+							span.green Our mission is to enhance safety, credibility,
+								br
+								| and convenience in and across these virtual realms.		
+		
+			
+			section.partners
+				.partners__title 
+					span We're proud to be a partner of:
+				.partners__slider.swiper-horizontal
+					.swiper-wrapper
+						.swiper-slide.partners__item.partners__item_1
+							include ./../../public/img/partners/1.svg
+						.swiper-slide.partners__item.partners__item_2 
+							include ./../../public/img/partners/2.svg
+						//- .swiper-slide.partners__item.partners__item_3 
+						//- 	include ./../../public/img/partners/3.svg
+						.swiper-slide.partners__item.partners__item_4 
+							include ./../../public/img/partners/4.svg
+						.swiper-slide.partners__item.partners__item_5 
+							include ./../../public/img/partners/5.svg
+				.partners__title.partners__title-2
+					span Integrating their APIs and solutions into our product to provide a seamless experience for our users.
+				.partners__text 
+					span trusted by 
+					span.green 7000+ 
+					span games & 
+					span.green 200+ 
+					span countries & governments
+
+			section.going 
+				.bg
+					svg(viewBox='0 0 705 435' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M594.809 23.1083L478.496 36.8916L330.848 1M704 36.5549L478.819 71.8629L331.376 36.5549H249.038L168.615 50.1349L20 23.1083M697.407 67.9324L444.485 115.577L339.138 67.9324L254.86 63.8485L183.99 81.5451L-13.2958 50.2358M700.045 105.914L405.952 166.653L338.949 105.914L262.374 96.2506L180.056 116.957L-13.2957 87.968M700.045 139.044L405.609 204.361L340.512 276.656L313.707 353.044L333.5 434M700.045 165.309L451.27 235.491L388.101 287.389L365.131 357.043L388.101 434M698.726 198.793L478.126 269.863L433.941 306.211L417.873 354.994L449.5 434M698.726 234.095L512.459 294.893L474.835 331.745L467.978 378.21L522 434M698.726 285.23L553.142 320.727L516.765 350.775L528.253 383.553L698.726 434M698.726 332.767L594.809 339.661L556.322 356.205L562.095 368.613L698.726 381.543M282.5 434L262.433 352.931L289.31 276.435L354.582 204.037L321.946 137.103L272.032 127.541L201.001 148.031L-15.933 127.541M226.5 434L215.569 354.529L232.798 276.897L297.884 204.714L286.398 172.028L215.569 181.561L119.855 185.647L-19.8885 161.132M173.5 434L166.145 357.423L183.375 278.111L229.319 224.78V207.004L158.488 215.208L89.5713 212.473L-29.1185 191.962M114.5 434L102.878 397.121L120.173 342.573L152.843 256.659L135.547 241.658L81.7388 251.204L-67 224.632L-46.9451 264.205L97.1126 279.842L81.7388 335.754L39 434M1 434L45.226 307.116L-27.7997 298.934' stroke='#323232'
+						stroke-dasharray='1400')
+
+				.container 
+					.going__title.title
+						span How we got here 
+							br
+							| and  
+						span.green  where we’re 
+							br
+							| going
+					.going__label.title
+						span Meet Our 
+						span.green Super Team 
+						//- & Advisor
+				.going__list 
+					.going__item 
+						.image 
+							img(src="public/img/going/1.png" alt="")
+						.text 
+							span Kan Kouadio 
+								br
+								| The Mastermind (CEO)
+					.going__item 
+						.image 
+							img(src="public/img/going/2.png" alt="")
+						.text 
+							span Andrew Mikhailov - The Wizard 
+								br
+								| of Product (Lead Engineer)
+					//- .going__item 
+					//- 	.image 
+					//- 		img(src="public/img/going/3.png" alt="")
+					//- 	.text 
+					//- 		span Sheila Khan - The Wise Owl (Advisor). Ex EA, Hasbro, Meta Reality Labs.
+				.container
+					.going__block 
+						.going__block_item 
+							span We form an unbeatable alliance, driven by a shared passion and vision for creating safer and more convenient online experiences for gamers.
+						.going__block_item 
+							span Together, we have extensive experience in gaming, web3, cybersecurity and entrepreneurship.
+				
+				.going__block-2
+					.bg2
+						svg(viewBox='0 0 406 287' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(d='M68.5539 15.5517L140.514 24.6238L231.861 1M1 24.4022L140.314 47.6419L231.534 24.4022H282.475L332.231 33.3405L424.175 15.5517M5.07888 45.0548L161.556 76.4144L226.732 45.0548L278.872 42.3668L322.718 54.0147L444.774 33.4069M3.44713 70.0541L185.395 110.033L226.848 70.0541L274.224 63.6938L325.152 77.323L444.774 58.2422M3.44713 91.8607L185.608 134.852L225.882 182.437L242.465 232.715L230.22 286M3.44713 109.148L157.358 155.341L196.439 189.501L210.651 235.347L196.439 286M4.26301 131.187L140.743 177.965L168.08 201.89L178.02 233.998L158.453 286M4.26301 154.423L119.502 194.44L142.779 218.696L147.021 249.279L113.599 286M4.26301 188.08L94.3321 211.444L116.838 231.221L109.731 252.796L4.26301 286M4.26301 219.369L68.5539 223.906L92.3653 234.795L88.7936 242.962L4.26301 251.473M261.772 286L274.187 232.641L257.559 182.291L217.177 134.639L237.368 90.5827L268.249 84.289L312.194 97.7755L446.406 84.289M296.418 286L303.181 233.692L292.522 182.595L252.255 135.084L259.361 113.57L303.181 119.845L362.397 122.534L448.853 106.399M329.208 286L333.758 235.597L323.099 183.394L294.674 148.292V136.591L338.496 141.992L381.133 140.192L454.564 126.691M365.71 286L372.901 261.726L362.2 225.823L341.988 169.274L352.689 159.401L385.979 165.684L478 148.194L465.592 174.241L376.467 184.533L385.979 221.335L412.42 286M435.93 286L408.568 202.485L453.748 197.1' stroke='#323232'
+							stroke-dasharray='1400')
+
+						
+					.container
+						.going__label.going__label-2.title
+							span The company was started in January 2023 (registered in April 2023). Since then, 
+							span.green we’ve achieved great things:
+
+			section.unite.unite__about
+				.container
+					.unite__block 
+						.unite__block_item 
+							span.green 1. 
+							span We completed our 
+								br
+								| prototype development
+						.unite__block_item 
+							span.green 2. 
+							span Agreed strong strategic partnerships 
+								br
+								| to accelerate the company’s growth
+
+			
+				.unite__slider
+					.swiper-wrapper
+						.swiper-slide.unite__item.unite__item_1
+							include ./../../public/img/partners/2.svg
+						.swiper-slide.unite__item.unite__item_2 
+							include ./../../public/img/partners/1.svg
+						.swiper-slide.unite__item.unite__item_3 
+							include ./../../public/img/partners/4.svg
+						//- .swiper-slide.unite__item.unite__item_4 
+						//- 	include ./../../public/img/partners/3.svg
+						.swiper-slide.unite__item.unite__item_5 
+							include ./../../public/img/partners/5.svg
+					.arrows
+						.arrow_prev
+							include ./../../public/img/arrow-prev.svg
+						.arrow_next
+							include ./../../public/img/arrow-next.svg
+				.unite__text 
+					span trusted by 
+					span.green 7000+ 
+					span games & 
+					span.green 200+ 
+					span countries & governments
+			
+
+			section.next
+				.bg
+					svg(viewBox='0 0 257 298' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M204.166 16.3686L148.951 25.9501L78.8617 1M256 25.716L149.105 50.2604L79.1125 25.716H40.0258L1.84813 35.1561L-68.7004 16.3686M252.87 47.528L132.806 80.6482L82.797 47.528L42.7897 44.6892L9.14723 56.9909L-84.5062 35.2263M254.122 73.9308L114.514 116.154L82.7074 73.9308L46.3567 67.2135L7.2796 81.6078L-84.5061 61.4558M254.122 96.9617L114.351 142.367L83.4491 192.623L70.7247 245.723L80.1206 302M254.122 115.219L136.027 164.006L106.04 200.084L95.136 248.503L106.04 302M253.496 138.496L148.776 187.9L127.801 213.168L120.173 247.079L135.187 302M253.496 163.036L165.074 205.3L147.213 230.917L143.958 263.218L169.603 302M253.496 198.583L184.387 223.259L167.118 244.146L172.571 266.932L253.496 302M253.496 231.628L204.166 236.42L185.896 247.921L188.636 256.546L253.496 265.534M55.9105 302L46.3846 245.645L59.1432 192.469L90.1283 142.141L74.6358 95.6119L50.9412 88.9649L17.2221 103.209L-85.7581 88.9649M29.3268 302L24.138 246.755L32.3165 192.79L63.2134 142.612L57.761 119.89L24.138 126.517L-21.2985 129.357L-87.6358 112.316M4.16732 302L0.675992 248.767L8.85486 193.634L30.665 156.561V144.203L-2.95904 149.907L-35.6743 148.006L-92.0173 133.747M-23.8405 302L-29.3576 276.364L-21.1473 238.444L-5.63887 178.721L-13.8492 168.293L-39.3925 174.929L-110 156.458L-100.48 183.967L-32.0944 194.837L-39.3925 233.704L-59.6809 302M-77.7198 302L-56.7254 213.797L-91.3913 208.109' stroke='#323232'
+						stroke-dasharray='1400')
+
+				.container 
+					.next__label.title 
+						span What’s 
+						span.green next?
+					.next__block 
+						.next__block_item 
+							span.green 1. 
+							span We’re now raising our pre-seed to develop our MVP, level up the team and operations, and acquire new customers.
+						.next__block_item 
+							span.green 2. 
+							span Launch in November 2023 and keep the fun on!
+
+			section.values
+				.container
+					.values__title.title 
+						span Our 
+						span.green Values
+					.values__wrap 
+						.values__left
+							ul.list
+								li.list__item 
+									.label 
+										span We’re about 
+										span.green real-life impact
+									.text 
+										span We’re obsessed with making the gaming community safer & more convenient. Helping our customers to play with more confidence & peace of mind.
+								li.list__item 
+									.label 
+										span We value 
+										span.green trust
+									.text 
+										span We are trusted & we trust. This is the essence of what we do.
+								li.list__item 
+									.label 
+										span We’re about 
+										span.green the people
+									.text 
+										span We genuinely care for each other and for every single of our customers. We love what we do and are very approachable.
+								li.list__item 
+									.label 
+										span We’re hungry 
+										span.green for improvement 
+									.text 
+										span We do our best to create the best experience possible for our customers and always seek feedback to improve.
+								li.list__item 
+									.label 
+										span We’re 
+										span.green fun & playful
+									.text 
+										span We’re gamers at heart and serve gamers, so being fun & playful is a second nature for us.
+						.values__right 
+							.image 
+								img(src="public/img/about/image.png" alt="")
+			section.contact-about 
+				.contact-about__title
+					span.green mailto: 
+					span info@verifiedx.me
+
+				a.btn(href="mailto:info@verifiedx.me") 
+					span Contact Us
+			
+			
+			footer#footer.footer
+				.footer__title
+					span.green our 
+					span links
+				.footer__links
+					a(href="https://discord.gg/ps8f58kP3Z").footer__links_item
+						.icon
+							img(src="public/img/footer/discord.svg" alt="")
+						.text 
+							span Discord
+					a(href="mailto:info@verifiedx.me").footer__links_item
+						.icon
+							img(src="public/img/footer/email.svg" alt="")
+						.text 
+							span Email
+					a(href="https://www.tiktok.com/@verifiedx").footer__links_item
+						.icon
+							img(src="public/img/footer/tiktok.svg" alt="")
+						.text 
+							span TikTok
+					a(href="https://www.linkedin.com/company/verifiedx/").footer__links_item
+						.icon
+							img(src="public/img/footer/linkedin.svg" alt="")
+						.text 
+							span LinkedIn
+					a(href="#").footer__links_item
+						.icon
+							img(src="public/img/footer/twitter.svg" alt="")
+						.text 
+							span Twitter
+				.container
+					.footer__wrap 
+						.logo 
+							img(src="public/img/logo.svg" alt="")
+						.navigation
+							a(href="#about").navigation__item  Home
+							a(href="#benefits").navigation__item  Benefits
+							a(href="#howitworks").navigation__item  How it works
+							a(href="#footer").navigation__item  Join us
+							a(href="about.html").navigation__item  About us 
+						.copyright 
+							.copyright__text 
+								span © 2023 All right reserved
+							a(href="mailto:info@verifiedx.me").copyright__link  Send us a message
+
+
+		include includes/foot

@@ -1,0 +1,35 @@
+.contact-about {
+	padding-top: em(101);
+	padding-bottom: em(102);
+	text-align: center;
+	border-bottom: em(1) solid #323232;
+
+	&__title {
+		margin-bottom: em(23);
+		span {
+			font-size: em(36);
+			line-height: em(40, 36);
+			letter-spacing: 0.165em;
+			text-transform: uppercase;
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding-top: em(48);
+		padding-bottom: em(59);
+		&__title {
+			margin-bottom: 0;
+			span {
+				font-size: em(18);
+				line-height: em(20, 18);
+			}
+		}
+		.btn {
+			width: em(222);
+			margin-top: em(31);
+		}
+	}
+}

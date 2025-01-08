@@ -1,0 +1,269 @@
+.unite {
+	position: relative;
+	padding-top: em(24);
+	background-color: #000000;
+
+	&__title {
+		margin-bottom: em(28);
+		span {
+			font-family: "BEXAGO";
+			font-style: normal;
+			font-size: em(40);
+			line-height: em(49, 40);
+
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+	.swiper-wrapper {
+		will-change: transform;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		transition: transform 1.2s linear;
+		touch-action: none;
+		user-select: none;
+		pointer-events: none;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: em(272);
+		padding: 0 em(80);
+		border: em(1) solid #323232;
+		border-right: none;
+		transition-property: transform;
+		svg {
+			path {
+				fill: #bbff4b;
+			}
+		}
+		&_1 svg {
+			width: em(240);
+		}
+		&_2 svg {
+			width: em(240);
+		}
+		&_3 svg {
+			width: em(289);
+		}
+		&_4 svg {
+			width: em(289);
+		}
+		&_5 {
+			border-right: em(1) solid #323232;
+
+			svg {
+				width: em(180);
+			}
+		}
+	}
+
+	.arrow_next,
+	.arrow_prev {
+		position: absolute;
+		top: 2.4em;
+		width: em(20);
+		z-index: 20;
+		cursor: pointer;
+
+		&:hover {
+			path {
+				stroke: #ffffff;
+			}
+		}
+	}
+	.arrow_prev {
+		right: 6.7em;
+		&.swiper-button-disabled {
+			// opacity: 0.4;
+
+			path {
+				stroke: #323232;
+			}
+		}
+	}
+	.arrow_next {
+		right: 5.2em;
+
+		&.swiper-button-disabled {
+			// opacity: 0.4;
+			path {
+				stroke: #323232;
+			}
+		}
+	}
+	&__text {
+		text-align: center;
+		padding: em(32) 0;
+		border-bottom: em(1) solid #323232;
+		span {
+			font-family: "SK Concretica";
+			font-style: 400;
+			font-weight: 400;
+			font-size: em(35);
+			letter-spacing: 0.165em;
+			text-transform: uppercase;
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+
+	.unite__slider2 {
+		padding-top: em(75);
+		.swiper-wrapper {
+			display: flex;
+			align-items: flex-start;
+		}
+		.swiper-scrollbar-drag {
+			background: #bbff4b;
+			margin-right: auto;
+			height: em(3);
+		}
+	}
+	.unite2 {
+		&__item {
+			min-height: em(315);
+			&-text {
+				margin-bottom: em(33);
+				span {
+					font-size: em(24);
+					line-height: em(32, 24);
+				}
+			}
+			&-title {
+				span {
+					font-size: em(24);
+					line-height: em(32, 24);
+					color: #bbff4b;
+				}
+			}
+		}
+	}
+
+	//// about
+
+	&__block {
+		display: flex;
+		align-items: center;
+		padding-top: em(8);
+		padding-bottom: em(20);
+		&_item {
+			min-width: em(399);
+			margin-right: em(28);
+
+			&:last-child {
+				margin-right: 0;
+			}
+			span {
+				font-size: em(24);
+				line-height: em(27, 24);
+				letter-spacing: 0.165em;
+				text-transform: uppercase;
+				&.green {
+					color: #bbff4b;
+				}
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		padding-top: em(40);
+		&__title {
+			margin-bottom: em(30);
+			span {
+				font-size: em(32);
+				line-height: em(34, 32);
+			}
+		}
+		&__item {
+			min-height: em(98);
+			padding: 0 em(35);
+			&_1 svg {
+				width: em(86);
+			}
+			&_2 svg {
+				width: em(87);
+			}
+			&_3 svg {
+				width: em(105);
+			}
+		}
+
+		.arrow_next,
+		.arrow_prev {
+			top: 7.4em;
+		}
+		.arrow_prev {
+			right: 2.1em;
+		}
+		.arrow_next {
+			right: 0.6em;
+		}
+
+		&__text {
+			text-align: left;
+			padding: em(15) em(12);
+			span {
+				font-size: em(18);
+				line-height: em(20, 18);
+			}
+		}
+
+		.unite__slider2 {
+			padding-top: em(31);
+		}
+		.unite2 {
+			&__item {
+				min-height: em(191);
+				&-text {
+					margin-bottom: em(20);
+					span {
+						font-size: em(15);
+						line-height: em(20, 15);
+					}
+				}
+				&-title {
+					span {
+						font-size: em(15);
+						line-height: em(20, 15);
+					}
+				}
+			}
+		}
+
+		//// about
+		&__about {
+			border-top: em(1) solid #323232;
+			padding-top: em(35);
+
+			.arrow_next,
+			.arrow_prev {
+				top: 10.7em;
+			}
+		}
+		&__block {
+			flex-direction: column;
+			padding-top: 0;
+			padding-bottom: em(35);
+
+			&_item {
+				min-width: 100%;
+				margin-right: 0;
+				margin-bottom: em(29);
+
+				span {
+					font-size: em(14);
+					line-height: em(16, 14);
+				}
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+}

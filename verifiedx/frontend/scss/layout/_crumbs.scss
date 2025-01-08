@@ -1,0 +1,23 @@
+.crumbs {
+	padding-top: em(18);
+	span {
+		font-size: em(11);
+		// line-height: em(18, 14);
+	}
+	a {
+		font-size: em(11);
+		// line-height: em(18, 14);
+		color: #bbff4b;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	@media (max-width: 768px) {
+		padding-top: em(15);
+		span,
+		a {
+			font-size: em(10);
+		}
+	}
+}

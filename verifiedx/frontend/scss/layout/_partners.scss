@@ -1,0 +1,89 @@
+.partners {
+	.swiper-wrapper {
+		will-change: transform;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		transition: transform 1.2s linear;
+		touch-action: none;
+		user-select: none;
+		pointer-events: none;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: em(110);
+		padding: 0 em(77);
+		border: em(1) solid #323232;
+		background-color: #000000;
+		border-right: none;
+		transition-property: transform;
+		&_1 svg {
+			width: em(90);
+		}
+		&_2 svg {
+			width: em(111);
+		}
+		&_3 svg {
+			width: em(184);
+		}
+		&_4 svg {
+			width: em(167);
+		}
+		&_5 svg {
+			width: em(100);
+		}
+	}
+
+	&__text {
+		text-align: center;
+		padding: em(32) 0;
+		border-bottom: em(1) solid #323232;
+		background-color: #000000;
+
+		span {
+			font-family: "SK Concretica";
+			font-style: 400;
+			font-weight: 400;
+			font-size: em(35);
+			letter-spacing: 0.165em;
+			text-transform: uppercase;
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		&__item {
+			height: em(72);
+			padding: 0 em(50);
+
+			&_3 {
+				padding: 0 em(30);
+				svg {
+					width: em(250);
+				}
+			}
+			&_4 {
+				padding: 0 em(30);
+				svg {
+					width: em(167);
+				}
+			}
+			&_5 svg {
+				width: em(100);
+			}
+		}
+		&__text {
+			text-align: left;
+			padding: em(17) em(12);
+			span {
+				font-size: em(18);
+				line-height: em(20, 18);
+			}
+		}
+	}
+}

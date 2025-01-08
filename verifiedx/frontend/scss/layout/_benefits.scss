@@ -1,0 +1,332 @@
+.benefits {
+	position: relative;
+	padding-top: em(83);
+
+	.bg {
+		width: em(342);
+		position: absolute;
+		left: em(-50);
+		top: em(-20);
+		z-index: 0;
+
+		.line {
+			stroke-dashoffset: -1400;
+			animation: first-bg 1s linear both;
+		}
+	}
+
+	&__title {
+		margin-bottom: em(51);
+
+		span {
+			font-family: "BEXAGO";
+			font-style: normal;
+			font-size: em(40);
+			line-height: em(49, 40);
+
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+
+	.container {
+		position: relative;
+	}
+
+	.swiper-wrapper {
+		will-change: transform;
+		width: 100%;
+		height: 100%;
+		transition: transform 1.2s linear;
+	}
+
+	.swiper-pagination {
+		left: em(-103);
+		bottom: em(10);
+		color: #bbff4b;
+		letter-spacing: -0.1em;
+
+		span {
+			font-size: em(16);
+		}
+	}
+
+	.swiper-scrollbar-drag {
+		background: #bbff4b;
+		margin-right: auto;
+		height: em(3);
+	}
+
+	.arrow_next,
+	.arrow_prev {
+		position: absolute;
+		top: 0.9em;
+		width: em(20);
+
+		&:hover {
+			path {
+				stroke: #ffffff;
+			}
+		}
+	}
+
+	.arrow_prev {
+		right: 2.4em;
+
+		&.swiper-button-disabled {
+			path {
+				stroke: #323232;
+			}
+		}
+	}
+
+	.arrow_next {
+		right: 0.9em;
+
+		&.swiper-button-disabled {
+			path {
+				stroke: #323232;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		min-height: em(327);
+
+		&-title {
+			margin-bottom: em(28);
+
+			span {
+				font-size: em(36);
+				line-height: em(40, 36);
+				letter-spacing: 0.165em;
+				text-transform: uppercase;
+				color: #bbff4b;
+			}
+		}
+
+		&-text {
+			span {
+				font-size: em(24);
+				line-height: em(32, 24);
+			}
+		}
+	}
+
+
+
+	//////////////////// NEW BLOCK START
+
+	&__block {
+		display: flex;
+		justify-content: space-between
+	}
+
+	&__left {
+		width: em(583);
+	}
+
+	&__right {
+		width: em(583);
+	}
+
+	.list {
+		width: em(468);
+		margin-bottom: em(61);
+		margin-top: em(45);
+
+		&__item {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: em(45);
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				margin-bottom: em(77);
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.number {
+				margin-right: em(6);
+				margin-top: em(-13);
+
+				span {
+					color: #bbff4b;
+					font-size: em(16);
+					line-height: em(21, 16);
+				}
+			}
+
+			.text {
+				span {
+					font-size: em(24);
+					line-height: em(32, 24);
+				}
+			}
+		}
+	}
+
+	.title {
+		span {
+			font-size: em(36);
+			line-height: em(40, 36);
+			letter-spacing: 0.165em;
+			text-transform: uppercase;
+
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+
+
+	//////////////////// NEW BLOCK END
+	@media (max-width: 768px) {
+		padding-top: em(37);
+
+		.bg {
+			width: 9.09em;
+			top: -0.85em;
+		}
+
+		&__title {
+			margin-bottom: em(38);
+
+			span {
+				font-size: em(32);
+			}
+		}
+
+		&__item {
+			min-height: em(177);
+
+			&-title {
+				margin-bottom: em(19);
+
+				span {
+					font-size: em(18);
+					line-height: em(20, 18);
+				}
+			}
+
+			&-text {
+				span {
+					font-size: em(15);
+					line-height: em(17, 15);
+				}
+			}
+		}
+
+
+
+		//////////////////// NEW BLOCK START
+
+		&__block {
+			display: flex;
+			flex-direction: column;
+
+			.title {
+				span {
+					font-size: em(18);
+					line-height: em(30, 18);
+					letter-spacing: 0.165em;
+					text-transform: uppercase;
+
+				}
+			}
+		}
+
+		&__left {
+			width: 100%;
+
+
+		}
+
+		&__right {
+			width: 100%;
+
+
+		}
+
+
+
+		.list {
+			width: 100%;
+			margin-bottom: em(42);
+
+			&__item {
+				margin-bottom: em(38);
+
+				&:nth-child(2),
+				&:nth-child(3) {
+					margin-bottom: em(38);
+				}
+
+				.number {
+					margin-right: em(12);
+					margin-top: em(-15);
+				}
+
+				.text {
+					span {
+						font-size: em(15);
+						line-height: em(17, 15);
+					}
+				}
+			}
+		}
+
+
+
+
+		//////////////////// NEW BLOCK END
+
+
+
+
+
+	}
+
+	.swiper-pagination {
+		left: em(-158);
+
+		span {
+			font-size: em(13);
+		}
+	}
+
+	.arrow_next,
+	.arrow_prev {
+		top: 0.6em;
+	}
+
+	.arrow_prev {
+		right: 1.3em;
+	}
+
+	.arrow_next {
+		right: -0.1em;
+	}
+}
+
+// .swiper {
+// 	width: 100%;
+// 	height: 100%;
+// }
+
+// .swiper-slide {
+// 	text-align: center;
+// 	font-size: 18px;
+// 	background: red;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	color: #fff;
+// 	width: em(375);
+// }

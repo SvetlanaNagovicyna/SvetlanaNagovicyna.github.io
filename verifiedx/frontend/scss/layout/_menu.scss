@@ -1,0 +1,127 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.5s cubic-bezier(0.85, 0.07, 0.17, 0.89);
+    height: 0;
+    overflow: hidden;
+    padding-left: em(570);
+    padding-right: em(400);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    background-color: #000000;
+
+    margin-top: em(81);
+
+    .contact {
+        display: none;
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: em(40);
+
+        &:nth-child(1) {
+            padding-top: em(50);
+        }
+
+        // &:nth-child(3),
+        // &:nth-child(4) {
+        //     margin-bottom: em(20);
+        // }
+
+    }
+
+    &__link {
+        color: #ffffff;
+
+
+
+        span {
+            position: relative;
+            z-index: 2;
+            font-size: em(44);
+            @include transition(500ms, color);
+        }
+
+        &:hover,
+        &:active {
+            color: #bbff4b;
+        }
+
+        &.sub {
+            margin-top: -2em;
+
+            span {
+                font-size: em(42);
+                display: inline-block;
+                padding-left: em(29, 42);
+
+            }
+
+            &:before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #BBFF4B;
+                width: em(16);
+                height: em(1);
+
+            }
+        }
+    }
+
+    &.active {}
+
+    @media (max-width: 768px) {
+        padding: 0;
+        margin-top: em(77.2);
+        align-items: center;
+
+        .contact {
+            display: block;
+            margin-bottom: em(30);
+        }
+
+        &__item {
+            margin-bottom: em(35);
+
+            &:first-child {
+                padding-top: em(57);
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-bottom: em(10);
+                align-self: flex-start;
+                margin-left: em(100);
+                padding-left: em(10);
+            }
+
+            &:nth-child(5) {
+                align-self: flex-start;
+                margin-left: em(100);
+                padding-left: em(10);
+            }
+        }
+
+        &__link {
+            span {
+                font-size: em(32);
+                line-height: em(42, 32);
+            }
+
+            &.sub {
+                span {
+                    font-size: em(28);
+                }
+            }
+        }
+    }
+}

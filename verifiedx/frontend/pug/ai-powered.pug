@@ -1,0 +1,165 @@
+- var title = "";
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap
+			nav.nav 	
+				.nav__wrap
+					.logo
+						img(src="public/img/logo.svg" alt="")
+					.open
+						.open__items 
+							.open__item
+							.open__item
+							.open__item
+						.open__text 
+							span Menu
+
+					menu.menu 
+						li.menu__item.active
+							a.menu__link(href="index.html") 
+								span Home
+						li.menu__item.active
+							a.menu__link(href="index.html#security") 
+								span Security Suite
+
+						li.menu__item
+							a.menu__link.sub(href="index.html#benefits")
+								span Benefits
+
+						li.menu__item
+							a.menu__link.sub(href="index.html#howitworks") 
+								span How it works
+
+						li.menu__item
+							a.menu__link.sub(href="index.html#unite") 
+								span Game changers unite
+
+						li.menu__item 
+							a.menu__link(href="ai-powered.html") 
+								span AI-Powered products
+						li.menu__item
+							a.btn(href="#footer") 
+								span Contact Us
+						a(href="mailto:info@verifiedx.me").contact info@verifiedx.me 
+
+					a(href="mailto:info@verifiedx.me").contact info@verifiedx.me  
+					
+
+
+			section#about.about.was-visible
+				.bg
+					svg.line(viewBox='0 0 549 684' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M110.191 35.8219L226.504 57.5313L374.152 1M1 57.001L226.181 112.613L373.624 57.001H455.962L536.385 78.3903L685 35.8219M7.59291 106.422L260.515 181.465L365.862 106.422L450.14 99.9901L521.01 127.863L718.296 78.5492M4.95543 166.245L299.048 261.914L366.051 166.245L442.626 151.025L524.944 183.64L718.296 137.98M4.95543 218.428L299.391 321.306L364.488 435.175L391.293 555.489L371.5 683M4.95543 259.795L253.73 370.336L316.899 452.08L339.869 561.788L316.899 683M6.27417 312.536L226.874 424.475L271.059 481.725L287.127 558.561L255.5 683M6.27417 368.138L192.541 463.898L230.165 521.942L237.022 595.128L183 683M6.27417 448.679L151.858 504.589L188.235 551.915L176.747 603.543L6.27417 683M6.27417 523.552L110.191 534.41L148.678 560.468L142.905 580.012L6.27417 600.377M422.5 683L442.567 555.312L415.69 434.826L350.418 320.795L383.054 215.37L432.968 200.309L503.999 232.582L720.933 200.309M478.5 683L489.431 557.828L472.202 435.554L407.116 321.862L418.602 270.378L489.431 285.394L585.145 291.83L724.889 253.217M531.5 683L538.855 562.387L521.625 437.466L475.681 353.467V325.468L546.512 338.391L615.429 334.083L734.118 301.776M590.5 683L602.122 624.914L584.827 538.997L552.157 403.677L569.453 380.05L623.261 395.085L772 353.234L751.945 415.563L607.887 440.192L623.261 528.257L666 683M704 683L659.774 483.151L732.8 470.263' stroke='#323232' stroke-dasharray='1400')
+				
+				.container
+					.crumbs
+						a(href="index.html") Home
+						span  - AI-Powered Products
+					.about__wrap 
+						.about__left 
+							.about__left_text 
+								span.green AI-Powered 
+								span Products
+							.about__left_label 
+								span UNPARALLELED AI ENGINES FOR CUSTOMER RETENTION, 
+									br
+									|  ACQUISITION AND MONETIZATION
+
+							.home__btn 
+								a.button.transparent(href="index.html")  
+									span Security Suite
+								a.button
+									span AI Engines	
+						.about__right 
+							.images 
+								.images__item.images__item-1
+									img(src="public/img/about/1.png" alt="")
+								.images__item.images__item-2
+									img(src="public/img/home/2.png" alt="")
+								.images__item.images__item-3
+									img(src="public/img/home/3.png" alt="")
+								.images__item.images__item-4
+									img(src="public/img/home/5.png" alt="")
+								.images__item.images__item-5
+									img(src="public/img/about/2.png" alt="")
+					.about__block 
+						.about__block_text
+							span AI advancements have intensified competition across all industries, necessitating world-class and highly effective customer acquisition and retention tools more than ever before. Furthermore, customer retention, acquisition, and revenue generation have always been inherently challenging for businesses of all sizes and creators.
+						.about__block_text 
+							
+							span.green Our mission is to exclusively focus on these 3 main pain points and solve them by leveraging our extremely powerful AI engines to provide highly customized, flexible, and best-quality solutions to all businesses and creators.	
+		
+			
+			section.partners
+				.partners__slider.swiper-horizontal
+					.swiper-wrapper
+						.swiper-slide.partners__item.partners__item_1
+							include ./../../public/img/partners/1.svg
+						//- .swiper-slide.partners__item.partners__item_2 
+						//- 	include ./../../public/img/partners/2.svg
+						.swiper-slide.partners__item.partners__item_3 
+							include ./../../public/img/partners/3.svg
+						.swiper-slide.partners__item.partners__item_4 
+							include ./../../public/img/partners/4.svg
+						.swiper-slide.partners__item.partners__item_5 
+							include ./../../public/img/partners/5.svg
+				.partners__text 
+					span trusted by 
+					span.green 7000+ 
+					span games & 
+					span.green 200+ 
+					span countries & governments
+
+			
+			
+			footer#footer.footer
+				.footer__title
+					span.green our 
+					span links
+				.footer__links
+					//- a(href="https://discord.gg/ps8f58kP3Z").footer__links_item
+					//- 	.icon
+					//- 		img(src="public/img/footer/discord.svg" alt="")
+					//- 	.text 
+					//- 		span Discord
+					
+					a(href="https://www.linkedin.com/company/verifiedx/").footer__links_item
+						.icon
+							img(src="public/img/footer/linkedin.svg" alt="")
+						.text 
+							span LinkedIn
+					a(href="mailto:info@verifiedx.me").footer__links_item
+						.icon
+							img(src="public/img/footer/email.svg" alt="")
+						.text 
+							span Email
+					//- a(href="www.tiktok.com/@verifiedx").footer__links_item
+					//- 	.icon
+					//- 		img(src="public/img/footer/tiktok.svg" alt="")
+					//- 	.text 
+					//- 		span TikTok
+					
+					//- a(href="#").footer__links_item
+					//- 	.icon
+					//- 		img(src="public/img/footer/twitter.svg" alt="")
+					//- 	.text 
+					//- 		span Twitter
+				.container
+					.footer__wrap 
+						.logo 
+							img(src="public/img/logo.svg" alt="")
+						.navigation
+							a(href="index.html").navigation__item  Home
+							a(href="#benefits").navigation__item  Benefits
+							a(href="#howitworks").navigation__item  How it works
+							a(href="#footer").navigation__item  Join us
+							a(href="ai-powered.html").navigation__item  AI-Powered products
+						.copyright 
+							.copyright__text 
+								span © 2023 All right reserved
+							a(href="mailto:info@verifiedx.me").copyright__link  Send us a message
+
+
+		include includes/foot

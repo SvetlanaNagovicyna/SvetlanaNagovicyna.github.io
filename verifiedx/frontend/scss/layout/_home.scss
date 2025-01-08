@@ -1,0 +1,300 @@
+.home {
+    position: relative;
+    padding-top: em(81);
+    padding-bottom: em(117);
+    // background: url(../img/home/bg.svg) no-repeat;
+    // background-position: 100% em(83);
+    // background-size: em(711) em(764);
+
+    .bg {
+        width: em(711);
+        position: absolute;
+        right: 0;
+        top: em(80);
+        z-index: 0;
+
+        .line {
+            stroke-dashoffset: -1400;
+            animation: first-bg 1s linear both;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        padding-top: em(170);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 1;
+    }
+
+    &__left {
+        max-width: 55%;
+        margin-top: em(-52);
+
+        &_text {
+            margin-bottom: em(73);
+            transform: translateX(-150%);
+
+            span {
+                font-family: "BEXAGO";
+                font-size: em(54);
+                font-weight: 400;
+                line-height: 1.23;
+                text-transform: uppercase;
+
+                &.green {
+                    color: #bbff4b;
+                }
+            }
+        }
+
+        &_explore {
+            display: flex;
+            align-items: center;
+            transform: translateX(-150%);
+
+            &-icon {
+                width: em(101);
+                margin-right: em(24);
+            }
+
+            &-text {
+                max-width: em(431);
+
+                span {
+                    font-family: "SK Concretica";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: em(24);
+                    line-height: em(26, 24);
+                }
+            }
+        }
+
+
+
+        .btn {
+            margin-top: em(73);
+            width: em(214);
+            transform: translateX(-150%);
+        }
+
+    }
+
+
+    &__right {
+        width: 44.8%;
+        height: em(576);
+
+        position: relative;
+
+        .images {
+            height: 100%;
+            width: 100%;
+
+            &__item {
+                position: absolute;
+
+                &-1 {
+                    width: em(357);
+                    top: 14.8em;
+                    left: 0;
+                    transform: scale(0);
+
+                    animation: elem 9s infinite ease-in-out;
+                }
+
+                &-2 {
+                    width: em(92);
+                    top: -5.9em;
+                    left: 13.3em;
+                    transform: scale(0);
+
+                    animation: elem 9s infinite ease-in-out 1.5s;
+                }
+
+                &-3 {
+                    width: em(232);
+                    top: -4.1em;
+                    left: 4.7em;
+                    transform: scale(0);
+                }
+
+                &-4 {
+                    width: em(194);
+                    top: -6em;
+                    left: 22.3em;
+                    transform: scale(0);
+                    animation: elem 9s infinite ease-in-out 1s;
+                }
+
+                &-5 {
+                    width: em(103);
+                    top: 9.8em;
+                    left: 28.8em;
+                    transform: scale(0);
+                    animation: elem 9s infinite ease-in-out 0.7s;
+                }
+
+                &-6 {
+                    width: em(156);
+                    top: 19.6em;
+                    left: 22.3em;
+                    transform: scale(0);
+                    animation: elem 9s infinite ease-in-out 2s;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        border: em(2) solid #BBFF4B;
+        background: url(../img/home/bg-btns.png) 50% / 100% 100% no-repeat;
+        border-radius: em(60);
+        padding: em(10);
+        margin-top: em(78);
+        max-width: em(562);
+        transform: translateX(-150%);
+
+        .button {
+            border-radius: em(50);
+            background: #FFF;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            width: em(271);
+            height: em(54);
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease-in-out;
+
+            &.transparent {
+                background: none;
+
+                span {
+                    color: #fff;
+                }
+
+                &:hover {
+                    background: #fff;
+
+
+                    span {
+                        color: #000;
+                    }
+                }
+            }
+
+            span {
+                color: #000;
+                font-size: em(24);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding-top: em(77.2);
+        padding-bottom: em(39);
+
+        .bg {
+            width: em(375);
+        }
+
+        &__wrap {
+            padding-top: 0;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        &__left {
+            max-width: 100%;
+            padding-top: em(80);
+
+            &_text {
+                margin-bottom: em(19);
+
+                span {
+                    font-size: em(25);
+                    line-height: em(28, 25);
+                }
+            }
+
+            &_explore {
+                &-icon {
+                    width: em(61);
+                    margin-right: em(15.5);
+                    margin-top: em(-5);
+                }
+
+                &-text {
+                    max-width: em(284);
+
+                    span {
+                        font-size: em(15);
+                        line-height: em(17, 15);
+                    }
+                }
+            }
+
+            .btn {
+                width: em(222);
+                margin-top: em(30);
+            }
+        }
+
+        &__right {
+            width: 100%;
+            height: em(344);
+
+            .images {
+                &__item {
+                    &-1 {
+                        width: em(191);
+                        top: 9.4em;
+                        left: 0;
+                    }
+
+                    &-2 {
+                        width: em(49);
+                        top: 0em;
+                        left: 10em;
+                    }
+
+                    &-3 {
+                        width: em(125);
+                        top: 0.9em;
+                        left: 1.8em;
+                    }
+
+                    &-4 {
+                        width: em(105);
+                        top: 3em;
+                        left: 12em;
+                    }
+
+                    &-5 {
+                        width: em(55);
+                        top: 9.7em;
+                        left: 18.5em;
+                    }
+
+                    &-6 {
+                        width: em(84);
+                        top: 13.1em;
+                        left: 13.3em;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            font-size: 0.8em;
+            margin-top: 2.6em;
+        }
+    }
+}

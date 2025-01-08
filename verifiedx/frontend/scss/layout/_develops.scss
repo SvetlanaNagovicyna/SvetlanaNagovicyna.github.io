@@ -1,0 +1,119 @@
+.develops {
+	padding-top: em(20);
+	padding-bottom: em(50);
+
+	&__title {
+		transform: translateX(-100%);
+		padding-left: em(79);
+		padding-right: em(79);
+		padding-bottom: em(24);
+		border-bottom: em(1) solid #323232;
+
+		span {
+			font-family: "BEXAGO";
+			font-style: normal;
+			font-size: em(40);
+			line-height: em(49, 40);
+
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+
+	&__text {
+		margin-top: em(80);
+
+		.list {
+			width: 100%;
+			height: em(241);
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+
+			&__item {
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: em(65);
+				width: em(621);
+
+				&:nth-child(2) {
+					margin-bottom: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				.number {
+					margin-right: em(60);
+					margin-top: em(-13);
+
+					span {
+						color: #bbff4b;
+						font-size: em(24);
+						line-height: 1;
+					}
+				}
+
+				.text {
+					span {
+						font-size: em(24);
+						line-height: em(32, 24);
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+
+
+		&__title {
+			padding-left: em(12);
+			padding-right: em(12);
+
+			span {
+				font-size: em(32);
+				line-height: em(34, 32);
+			}
+		}
+
+		&__text {
+			margin-top: em(50);
+
+			.list {
+				flex-direction: column;
+				height: 100%;
+
+				&__item {
+					width: 100%;
+
+					&:nth-child(2) {
+						margin-bottom: em(65);
+					}
+
+					.text {
+
+
+						span {
+							font-size: em(15);
+							line-height: em(17, 15);
+						}
+					}
+
+					.number {
+						margin-right: em(6);
+						margin-top: em(-13);
+
+						span {
+							font-size: em(16);
+							line-height: em(21, 16);
+						}
+					}
+				}
+
+			}
+		}
+	}
+}

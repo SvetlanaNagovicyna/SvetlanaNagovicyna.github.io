@@ -1,0 +1,33 @@
+.btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 0 em(33);
+    width: em(201);
+    height: em(60);
+    background-color: #bbff4b;
+    -webkit-clip-path: polygon(100% 0%, 100% 71%, 93% 100%, 0 100%, 0 0%);
+    clip-path: polygon(100% 0%, 100% 71%, 93% 100%, 0 100%, 0 0%);
+    overflow: hidden;
+    cursor: pointer;
+    font-size: inherit;
+    z-index: 1;
+    margin-top: em(21);
+    @include transition(500ms, background-color);
+
+    span {
+        position: relative;
+        color: #000000;
+        z-index: 2;
+        font-size: em(24);
+    }
+
+    &:hover,
+    &:active {
+        background-color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+    }
+}

@@ -1,0 +1,11 @@
+.logo {
+    position: relative;
+    display: block;
+    width: em(185);
+
+    transition: all 0.5s cubic-bezier(0.85, 0.07, 0.17, 0.89);
+
+    @media (max-width: 768px) {
+        width: em(138);
+    }
+}

@@ -1,0 +1,55 @@
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+  @include scrollbars(0.2em, #bbff4b, transparent);
+
+  font-size: (16 / 14.4 * 1vw);
+
+  &.open_popup {
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    font-size: (16 / 3.75 * 1vw);
+  }
+}
+
+body {
+  font-family: "SK Concretica";
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.body-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: em(1282);
+  width: 100%;
+  z-index: 2;
+  position: relative;
+
+  @media (max-width: 768px) {
+    max-width: em(351);
+  }
+}
+
+// .anim {
+//   animation: anim 0.8s ease-in-out forwards;
+// }
+
+// @keyframes anim {
+//   to {
+//     transform: translate(0, 0);
+//   }
+// }

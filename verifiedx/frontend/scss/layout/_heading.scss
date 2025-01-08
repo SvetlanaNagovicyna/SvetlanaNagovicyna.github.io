@@ -1,0 +1,116 @@
+.heading {
+	padding-top: em(30);
+	padding-bottom: em(50);
+
+
+
+
+	.container {
+		// display: flex;
+		// justify-content: flex-start;
+		position: relative;
+
+
+
+
+	}
+
+	&__text {
+		margin-right: em(112);
+		// position: relative;
+
+		// &::before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	width: em(706);
+		// 	height: em(112);
+		// 	background: url(../img/home/el-1.png) 50% / 100% 100% no-repeat;
+		// 	display: inline-block;
+		// 	right: -12.1em;
+		// 	top: 50%;
+		// 	transform: translateY(-50%);
+		// }
+
+		span {
+			font-family: "BEXAGO";
+			font-style: normal;
+			font-size: em(54);
+			line-height: em(66, 54);
+
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+
+	.subtitle {
+		// width: em(431);
+		margin-top: em(40);
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: em(706);
+			height: em(112);
+			background: url(../img/home/el-1.png) 50% / 100% 100% no-repeat;
+			display: inline-block;
+			right: -17.1em;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		span {
+			font-size: em(32);
+			line-height: 112%;
+			letter-spacing: 0.165em;
+			text-transform: uppercase;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding-top: 1.7em;
+
+		.container {}
+
+		&__text {
+			margin-right: 0;
+			// margin-left: em(137);
+			width: 80%;
+
+			// &::before {
+			// 	right: -26.1em;
+			// 	width: em(477);
+			// 	height: em(102);
+			// }
+
+
+			span {
+				font-size: em(25);
+				line-height: em(31, 25);
+			}
+		}
+
+		.subtitle {
+			// margin-bottom: em(13);
+			width: 66%;
+
+			br {
+				display: none;
+			}
+
+			span {
+				font-size: em(18);
+				line-height: em(20, 18);
+			}
+
+			&::before {
+				right: -32.1em;
+				width: em(477);
+				height: em(102);
+			}
+
+		}
+	}
+
+}

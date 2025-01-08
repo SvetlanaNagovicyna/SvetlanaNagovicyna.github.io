@@ -1,0 +1,99 @@
+.future {
+	position: relative;
+	text-align: center;
+	padding-top: em(158);
+	padding-bottom: em(171);
+	border-top: em(1) solid #323232;
+	border-bottom: em(1) solid #323232;
+	margin-top: em(-6);
+
+	.bg {
+		width: em(746);
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 0;
+
+		.line {
+			stroke-dashoffset: -1400;
+			animation: first-bg 1s linear both;
+		}
+	}
+	.container {
+		max-width: em(864);
+	}
+	&__title {
+		margin-bottom: em(18);
+		span {
+			font-family: "BEXAGO";
+			font-weight: 400;
+			font-size: em(40);
+			line-height: em(49, 40);
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+	&__label {
+		margin-bottom: em(30);
+		span {
+			font-size: em(36);
+			line-height: em(40, 36);
+			letter-spacing: 0.165em;
+			text-transform: uppercase;
+		}
+	}
+	&__descr {
+		width: em(741);
+		margin: 0 auto;
+		span {
+			font-size: em(24);
+			line-height: em(31, 24);
+		}
+		a {
+			color: #bbff4b;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.btn {
+		width: em(216);
+		height: em(60);
+		margin-top: em(60);
+	}
+
+	@media (max-width: 768px) {
+		padding-top: em(51);
+		padding-bottom: em(42);
+		.bg {
+			display: none;
+		}
+		&__title {
+			margin-bottom: em(29);
+			span {
+				font-size: em(32);
+				line-height: em(34, 32);
+			}
+		}
+		&__label {
+			span {
+				font-size: em(18);
+				line-height: em(20, 18);
+			}
+		}
+		&__descr {
+			width: 80%;
+			span {
+				font-size: em(15);
+				line-height: em(20, 15);
+			}
+		}
+		.btn {
+			width: em(222);
+			height: em(60);
+			margin-top: em(46);
+		}
+	}
+}

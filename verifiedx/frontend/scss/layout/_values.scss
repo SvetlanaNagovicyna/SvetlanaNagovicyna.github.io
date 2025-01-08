@@ -1,0 +1,107 @@
+.values {
+	padding-top: em(114);
+	padding-bottom: em(63);
+	border-bottom: em(1) solid #323232;
+	&__title {
+		margin-bottom: em(69);
+		span {
+			font-family: "BEXAGO";
+			font-style: normal;
+			font-weight: 400;
+			font-size: em(64);
+			line-height: em(79, 64);
+			&.green {
+				color: #bbff4b;
+			}
+		}
+	}
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__left {
+		width: em(581);
+		.list {
+			&__item {
+				margin-bottom: em(50);
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+				.label {
+					margin-bottom: em(23);
+					span {
+						font-size: em(24);
+						line-height: em(27, 24);
+						letter-spacing: 0.165em;
+						text-transform: uppercase;
+						&.green {
+							color: #bbff4b;
+						}
+					}
+				}
+				.text {
+					span {
+						font-size: em(24);
+						line-height: em(32, 24);
+					}
+				}
+			}
+		}
+	}
+	&__right {
+		width: em(569);
+		.image {
+			margin-top: em(-70);
+			width: em(569);
+		}
+	}
+	@media (max-width: 768px) {
+		padding-top: em(30);
+		padding-bottom: em(35);
+		&__title {
+			margin-bottom: em(26);
+			span {
+				font-size: em(32);
+				line-height: em(34, 32);
+			}
+		}
+		&__wrap {
+			flex-direction: column-reverse;
+		}
+
+		&__left {
+			width: 100%;
+
+			.list {
+				width: 90%;
+				margin-top: em(32);
+				&__item {
+					margin-bottom: em(33);
+					.label {
+						margin-bottom: em(6);
+						span {
+							font-size: em(18);
+							line-height: em(20, 18);
+						}
+					}
+					.text {
+						span {
+							font-size: em(15);
+							line-height: em(20, 15);
+						}
+					}
+				}
+			}
+		}
+		&__right {
+			width: 100%;
+
+			.image {
+				width: em(350);
+				margin: 0 auto;
+				margin-left: 0.2em;
+			}
+		}
+	}
+}

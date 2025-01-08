@@ -1,0 +1,50 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    transition: all 0.5s cubic-bezier(0.85, 0.07, 0.17, 0.89);
+    background-color: #000000;
+    // border-bottom: em(1) solid #323232;
+
+    &__wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: em(30) em(80) em(28);
+        transition: all 0.5s cubic-bezier(0.85, 0.07, 0.17, 0.89);
+        // max-width: em(1282);
+        margin: 0 auto;
+        border-bottom: em(1) solid #323232;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+    .contact {
+        color: #bbff4b;
+        font-size: em(14);
+    }
+    &.active {
+        height: 100%;
+        // overflow: auto;
+    }
+
+    @media (max-width: 768px) {
+        &__wrap {
+            // max-width: em(351);
+
+            padding: em(44) em(12) em(16);
+        }
+        .contact {
+            display: none;
+        }
+        &.active {
+            height: 100%;
+            overflow: auto;
+        }
+    }
+}
