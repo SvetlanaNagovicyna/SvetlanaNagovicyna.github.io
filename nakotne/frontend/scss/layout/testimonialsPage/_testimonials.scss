@@ -1,0 +1,225 @@
+.testimonials {
+  padding-top: em(160);
+  padding-bottom: em(190);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: em(32);
+    &-item {
+      height: em(432);
+      border-radius: em(32);
+      background: #F5EFE7;
+      padding: em(32);
+      &_information {
+        display: flex;
+        margin-bottom: em(30);
+
+        &-image {
+          min-width: em(100);
+          width: em(100);
+          height: em(100);
+          margin-right: em(21);
+
+
+          img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+        &-name {
+          .name {
+            margin-bottom: em(7);
+
+            span {
+              color: #1E222B;
+              font-family: "Open Sans", 'sans-serif';
+              font-size: em(20);
+              font-style: normal;
+              font-weight: 700;
+              line-height: 130.3%;
+              letter-spacing: em(-0.4, 20);
+            }
+          }
+          .age {
+            margin-bottom: em(18);
+            text-align: left;
+            span {
+              color: #727272;
+              font-family: "Open Sans", 'sans-serif';
+              font-size: em(16);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 130.3%;
+              letter-spacing: em(-0.32, 16);
+            }
+          }
+          .grade {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: em(148);
+            img {
+              width: em(28);
+            }
+          }
+        }
+      }
+      &:nth-child(4n-3) {
+        .testimonials__list-item_information {
+          .testimonials__list-item_information-image {
+            mask-image: url("../img/mainPage/babies/mask-1.svg");
+            mask-size: 100%;
+            mask-repeat: no-repeat;
+            min-width: em(102);
+            width: em(102);
+            img {
+              border-radius: unset;
+            }
+          }
+        }
+      }
+      &:nth-child(2n) {
+        .testimonials__list-item_information {
+          .testimonials__list-item_information-image {
+            mask-image: url("../img/mainPage/babies/mask-2.svg");
+            mask-size: 100%;
+            mask-repeat: no-repeat;
+            min-width: em(102);
+            width: em(102);
+
+            img {
+              border-radius: unset;
+            }
+          }
+        }
+      }
+      &_description {
+        border-radius: em(16);
+        background: #FFF;
+        height: em(172);
+        padding: em(20);
+        user-select: none;
+        pointer-events: none;
+        margin-bottom: em(33);
+        text-align: left;
+
+        span {
+          color: #1E222B;
+          font-family: "Open Sans", 'sans-serif';
+          font-size: em(16);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          letter-spacing: em(-0.8, 16);
+          height: em(132);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 6;
+          flex-direction: column;
+
+        }
+      }
+      &_moreread {
+
+        &.disable{
+          pointer-events: none;
+          opacity: .25;
+        }
+
+        span {
+          position: relative;
+          color: #1E222B;
+          font-family: "Open Sans", 'sans-serif';
+          font-size: em(16);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130.3%;
+          letter-spacing: em(-0.32, 16);
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+
+          &:before {
+            content: '';
+            position: relative;
+            display: inline-block;
+            //left: 0;
+            //top: 50%;
+            //transform: translateY(-50%);
+            width: em(32);
+            height: em(32);
+            margin-right: em(11);
+            border-radius: 50%;
+            background: url("../img/testimonialsPage/moreread.svg") 50%/ 100% 100% no-repeat;
+            transition: all .3s ease-in-out;
+          }
+
+          &:hover {
+            &:before {
+              background-color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: em(80);
+    padding-bottom: em(127);
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: em(24);
+      &-item {
+        height: auto;
+        max-height: em(356);
+        border-radius: em(24);
+        padding: em(20);
+
+        &_information {
+          margin-bottom: em(20);
+          &-image {
+            min-width: em(80);
+            width: em(80);
+            height: em(80);
+          }
+          &-name {
+            .name {
+              margin-bottom: em(4);
+              span {
+                font-size: em(18);
+              }
+            }
+            .age {
+              margin-bottom: em(7);
+
+              span {
+                font-size: em(14);
+              }
+            }
+          }
+        }
+        &:nth-child(4n-3), &:nth-child(2n) {
+          .testimonials__list-item_information {
+            .testimonials__list-item_information-image {
+              min-width: em(80);
+              width: em(80);
+            }
+          }
+        }
+        &_description {
+          height: auto;
+          max-height: em(164);
+          padding: em(16);
+          margin-bottom: em(20);
+          span {
+            height: auto;
+            max-height: em(164);
+          }
+        }
+      }
+    }
+  }
+}

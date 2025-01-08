@@ -1,0 +1,53 @@
+.top_section {
+	background: #1D6148 url("../img/mainPage/top-section_bg.jpg") center bottom /  100% auto no-repeat;
+	padding-top: em(124);
+	padding-bottom: em(285);
+
+
+
+	&__wrap {
+		margin-top: em(100);
+		//position: relative;
+
+	}
+
+	&__title {
+		margin-bottom: em(50);
+		span {
+			font-size: em(64);
+			line-height: 94%;
+			letter-spacing: em(-3.2, 64);
+			color: #ffffff;
+			&.green {
+				color: #A4C988;
+			}
+		}
+	}
+	&__btn {
+		//max-width: max-content;
+	}
+	@media (max-width: 768px) {
+		padding-top: em(80);
+		background: #1d6148 url(../img/mainPage/top-section_bg.jpg) bottom/266% 84% no-repeat;
+		padding-bottom: em(208);
+		background-position-x: 7.7%;
+
+		&__wrap {
+			margin-top: em(120);
+		}
+
+		&__title {
+			text-align: center;
+			margin-bottom: em(63);
+
+			span {
+				font-size: em(40);
+				letter-spacing: em(-2, 40);
+			}
+		}
+		&__btn {
+			margin: 0 auto;
+		}
+	}
+
+}

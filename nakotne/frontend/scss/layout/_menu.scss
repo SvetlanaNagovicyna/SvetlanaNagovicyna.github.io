@@ -1,0 +1,117 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  width: em(803);
+  margin-right: em(25);
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+
+    .wrapper-dropdown {
+
+      border-radius: em(24);
+      height: em(40);
+      padding: 0 em(11);
+
+
+      .dropdown {
+        width: em(210);
+        border-radius: em(24);
+        background-color: #589353;
+
+
+        .item {
+          height:em(46);
+          width: 98%;
+          border-radius: em(24);
+          color: var(--mainColor);
+          margin: em(2.5);
+
+          &:hover {
+            background-color: #8DB475;
+          }
+
+        }
+      }
+
+      &.active {
+        &:after {
+          transform-origin: center;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+  }
+  &__item {
+    margin-right: em(32);
+    position: relative;
+    border-radius: em(20);
+    height: em(40);
+    padding: 0 em(11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .3s ease-in;
+    cursor: pointer;
+
+    &:first-child {
+      padding: 0 em(13);
+      &:hover {
+        background-color: #E18531;
+      }
+    }
+
+
+    &:nth-child(2) {
+      &::after {
+        content: "";
+        position: relative;
+        background: url("../img/header/el-menu.svg") 50% / 100% 100% no-repeat;
+        height: em(5);
+        width: em(9);
+        margin-left: em(6);
+        display: block;
+        transition: all .3s ease-in-out;
+      }
+
+      &:hover {
+        background-color: #589353;
+      }
+
+    }
+
+    &:nth-child(3) {
+      &:hover {
+        background-color: #896CA6;
+      }
+    }
+
+    &:nth-child(4) {
+      &:hover {
+        background-color: #4C8794;
+      }
+    }
+
+
+    &:last-child {
+      margin-right: 0;
+      &:hover {
+        background-color: #373D49;
+      }
+    }
+
+
+    span {
+      font-size: em(18);
+      letter-spacing: em(-0.36, 18);
+      color: var(--mainColor);
+    }
+
+
+  }
+
+}

@@ -1,0 +1,199 @@
+.top_section {
+	padding-top: em(124);
+	padding-bottom: em(285);
+	overflow: hidden;
+	position: relative;
+
+	.container {
+		user-select: none;
+		pointer-events: none;
+		touch-action: none;
+	}
+	&--home-page {
+		background: #1D6148 url("../img/mainPage/top-section_bg.png") center bottom no-repeat;
+		background-size: auto 140%;
+		padding-top: em(124);
+		padding-bottom: em(285);
+
+		.container {
+			user-select: auto;
+			pointer-events: auto;
+			touch-action: auto;
+		}
+	}
+	&--first-day {
+		background: url("../img/firstDayPage/top-section_bg.jpg") center top /  cover no-repeat;
+		padding-top: em(124);
+		padding-bottom: em(29);
+
+		.top_section__wrap {
+			margin-top: em(84);
+
+		}
+	}
+
+	&--locker {
+		background: url("../img/lockerPage/top-section_bg.jpg") center top /  cover no-repeat;
+		padding-top: em(116);
+		padding-bottom: em(29);
+		.top_section__emoji {
+			margin-bottom: em(57);
+
+		}
+	}
+	&--testimonials {
+		background: url("../img/testimonialsPage/top-section_bg.jpg") center top /  cover no-repeat;
+		padding-top: em(116);
+		padding-bottom: em(29);
+		.top_section__wrap {
+			margin-top: em(94);
+
+		}
+		.top_section__emoji {
+			width: em(134);
+			margin-bottom: em(59);
+
+		}
+	}
+
+	&--schedule {
+		background: url("../img/schedulePage/top-section_bg.jpg") center top /  cover no-repeat;
+		padding-top: em(116);
+		padding-bottom: em(29);
+		.top_section__wrap {
+			margin-top: em(94);
+
+		}
+		.top_section__emoji {
+			width: em(134);
+			margin-bottom: em(59);
+
+		}
+	}
+
+	&__wrap {
+		margin-top: em(100);
+	}
+	&__emoji {
+		width: em(126);
+		margin-bottom: em(51);
+	}
+
+
+	&__title {
+		margin-bottom: em(50);
+		span {
+			font-size: em(64);
+			line-height: 94%;
+			letter-spacing: em(-3.2, 64);
+			color: #ffffff;
+			&.lightgreen {
+				color: #A4C988;
+			}
+			&.violet {
+				color: #593E7C;
+			}
+			&.green {
+				color: #2A7651;
+			}
+			&.blue {
+				color: #295278;
+			}
+		}
+	}
+	&__btn {
+	}
+	@media (min-width: 1440px) {
+
+		&--home-page {
+			background: #1D6148 url("../img/mainPage/top-section_bg.png") center bottom  no-repeat;
+			//background-size: contain;
+			background-size: auto 140%;
+		}
+	}
+	@media (max-width: 768px) {
+		padding-top: em(80);
+		//background: #1d6148 url("../img/mainPage/top-section_bg.png") bottom/266% 84% no-repeat;
+		padding-bottom: em(208);
+		//background-position-x: 7.7%;
+		background: #1d6148 url("../img/mainPage/top-section_bg.png") bottom/453% 127% no-repeat;
+		background-position-x: 30.1%;
+		&--first-day {
+			padding-top: em(80);
+			background: url("../img/firstDayPage/top-section_bg--mob.jpg") center top /  cover no-repeat;
+			padding-bottom: em(281);
+
+			.top_section__wrap {
+				margin-top: em(20);
+			}
+		}
+		&--locker {
+			padding-top: em(80);
+			background: url("../img/lockerPage/top-section_bg--mob.jpg") center top /  cover no-repeat;
+			padding-bottom: em(281);
+
+			.top_section__wrap {
+				margin-top: em(20);
+			}
+			.top_section__emoji {
+				width: em(93);
+				margin-bottom: em(21);
+			}
+		}
+		&--testimonials {
+			background: url("../img/testimonialsPage/top-section_bg--mob.jpg") center top / cover  no-repeat;
+			padding-top: em(80);
+			padding-bottom: em(281);
+			.top_section__wrap {
+				margin-top: em(20);
+
+			}
+			.top_section__emoji {
+				width: em(96);
+				margin-bottom: em(21);
+
+			}
+		}
+		&--schedule {
+			 background: url("../img/schedulePage/top-section_bg--mob.jpg") center top /  100% auto no-repeat;
+			 padding-top: em(80);
+			 padding-bottom: em(281);
+			 .top_section__wrap {
+				 margin-top: em(20);
+
+			 }
+			 .top_section__emoji {
+				 width: em(96);
+				 margin-bottom: em(21);
+			 }
+		 }
+
+		&__wrap {
+			margin-top: em(120);
+		}
+
+		&__emoji {
+			width: em(84);
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: em(21);
+		}
+
+
+		&__title {
+			text-align: center;
+			margin-bottom: em(63);
+
+			span {
+				font-size: em(40);
+				letter-spacing: em(-2, 40);
+			}
+		}
+		&__btn {
+			margin: 0 auto;
+		}
+	}
+
+
+
+}

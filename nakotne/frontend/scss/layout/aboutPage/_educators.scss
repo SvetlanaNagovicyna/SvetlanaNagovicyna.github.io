@@ -1,0 +1,155 @@
+.educators {
+  padding-top: em(120);
+  padding-bottom: em(120);
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: em(60);
+    span {
+      color: #1E222B;
+      text-align: center;
+      font-size: em(40);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130.3%;
+      letter-spacing: em(-0.8, 40);
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: em(32);
+    grid-row-gap: em(32);
+    &-item {
+      border-radius: em(32);
+      background: #F5EFE7;
+      min-height: em(342);
+      padding: em(24);
+
+
+      &_information {
+        display: flex;
+        align-items: center;
+        margin-bottom: em(26);
+        &-image {
+          min-width: em(100);
+          width: em(100);
+          height: em(100);
+          margin-right: em(24);
+
+
+          &.figure-1 {
+              mask-image: url("../img/mainPage/babies/mask-1.svg");
+              mask-size: 100%;
+              mask-repeat: no-repeat;
+              min-width: em(102);
+              width: em(102);
+
+            img {
+              border-radius: unset;
+            }
+          }
+
+          img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+        &-name {
+          .name {
+            margin-bottom: em(8);
+            span {
+              color: #1E222B;
+              font-family: "Open Sans", 'sans-serif';
+              font-size: em(20);
+              font-style: normal;
+              font-weight: 700;
+              line-height: 130.3%;
+              letter-spacing: em(-0.4, 20);
+            }
+          }
+          .post {
+            span {
+              color:  #725193;
+              font-family: "Open Sans", 'sans-serif';
+              font-size: em(16);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 130%;
+              letter-spacing: em(-0.8,16);
+            }
+          }
+        }
+      }
+      &_description {
+        span {
+          display: inline-block;
+          color: #1E222B;
+          font-family: "Open Sans", 'sans-serif';
+          font-size: em(16);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 135%;
+          letter-spacing: em(-0.8,16);
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: em(81);
+    padding-bottom: em(78);
+    &__title {
+      text-align: center;
+      span {
+        font-size: em(32);
+        line-height: 110%;
+        letter-spacing: em(-1.6, 32);
+      }
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: em(24);
+      grid-row-gap: em(24);
+      &-item {
+        border-radius: em(24);
+        min-height: auto;
+        &_information {
+          margin-bottom: em(23);
+          &-image {
+            min-width: em(80);
+            width: em(80);
+            height: em(80);
+
+            &.figure-1 {
+              min-width: em(82);
+              width: em(80);
+
+            }
+          }
+          &-name {
+            .name {
+              span {
+                font-size: em(18);
+              }
+            }
+            .post {
+              span {
+                font-size: em(14);
+              }
+            }
+          }
+        }
+        &_description {
+          span {
+            line-height: 137%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+html {
+  scroll-behavior: smooth;
+  font-size: calc(16 / 14.4) * 1vw;
+  background-color: #88B9B6;
+  @media (min-width: 1440px) {
+    font-size: 16px;
+  }
+
+
+  @media (max-width: 768px) {
+    font-size: calc(16 / 3.92) * 1vw;
+  }
+
+  &.open_popup {
+    overflow: hidden;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FDF8F1;
+
+}
+
+.body-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Rubik One', 'sans-serif';
+  font-weight: 400;
+  background-color: #FDF8F1;
+
+  &.homePage {
+    background-color: #1D6148;
+  }
+  &.aboutPage, &.contactsPage, &.gallaryPage, &.testimonialsPage, &.regulationsPage, &.selfEsteemPage, &.policyPage {
+    .header--black.scroll {
+      --mainColor: #fff;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  width: em(1312);
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: em(360);
+  }
+}
+
+.indent {
+  padding-top: em(47);
+}
+
+#headerEffectCanvas {
+  position: absolute;
+  margin-top:-7.1625em;
+  width:  50%;
+  height: em(608);
+  overflow: hidden;
+
+
+  @media (max-width: 768px) {
+    width:  100%;
+    //background-color: #A188BB;
+    height: em(340);
+    margin-top: -4.9625em;
+  }
+}

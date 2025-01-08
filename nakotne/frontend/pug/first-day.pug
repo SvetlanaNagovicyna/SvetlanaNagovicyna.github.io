@@ -1,0 +1,97 @@
+- var title = "";
+- var headerColor = "header--white";
+doctype html
+html
+    include includes/head
+    body
+        .body-wrap.firstDayPage
+
+            include includes/header
+
+            section.top_section.top_section--first-day
+                #headerEffectCanvas
+                .container
+                    .top_section__wrap
+                        .top_section__emoji
+                            img(src="public/img/firstDayPage/emoji.svg" alt="")
+                        .top_section__title
+                            span.violet первый день
+                            br
+                            span в саду
+            section.content
+                .container
+                    .content__title
+                        .text
+                            span У каждого свой первый день в детском саду.
+                        .image
+                            include ./../../public/img/firstDayPage/hedgehog.svg
+                    .content__text
+                        p Это тревожный момент. Период адаптации может быть разным для каждого малыша. Процесс адаптации зависит от многих факторов, среди которых не только темперамент ребенка, его готовность или предыдущий опыт общения
+                        p с иностранным взрослым, но и доверие и отношение родителей. Ход процесса адаптации в нашем Саду ведут квалифицированные педагоги, которые будут информировать родителей о ходе и результатах адаптации.
+                    .content__image.paralax_y
+                        img(src="public/img/firstDayPage/content-image.jpg" alt="")
+                    .content__list
+                        .content__list_item
+                            .number
+                                span 1
+                            .text
+                                span Неторопливое утро, чтобы ребенок не тревожился;
+                        .content__list_item
+                            .number
+                                span 2
+                            .text
+                                span Обязательно сообщите ребенку, что вы вернетесь;
+                        .content__list_item
+                            .number
+                                span 3
+                            .text
+                                span Напомните ему, что он будет интересоваться, пока вы не вернетесь;
+                        .content__list_item
+                            .number
+                                span 4
+                            .text
+                                span В первый день адаптации ребенок находится в учреждении ок. 9-11, если ребенок раньше почувствует усталость, воспитатель сообщит об этом родителям;
+                        .content__list_item
+                            .number
+                                span 5
+                            .text
+                                span Терпение – вы в руках профессионалов;
+                        .content__list_item
+                            .number
+                                span 6
+                            .text
+                                span Не преувеличивайте с прощанием, оно должно быть уверенным, вы должны верить, что с ребенком все будет хорошо и что учреждение является безопасным местом для того, чтобы оставить ребенка;
+                        .content__list_item
+                            .number
+                                span 7
+                            .text
+                                span Дома, в праздники старайтесь соблюдать ход дня, что позволит ребенку чувствовать себя безопаснее;
+                        .content__list_item
+                            .number
+                                span 8
+                            .text
+                                span Разрешите ребенку взять с собой одну вещь, с которым его пустят в школу;
+                        .content__list_item
+                            .number
+                                span 9
+                            .text
+                                span Эмоциональное расставание ребенка – нормальная реакция, поскольку он провел больше времени с родителями и уже завоевал доверие.
+
+
+
+
+            include includes/footer
+            .modal-wrap.modal-request
+                .modal
+                    .close
+                        include ./../../public/img/close.svg
+                    .modal__container
+                        .modal__form_title
+                            span заявка <br> на обучение
+                        .modal__form_descr
+                            span Чтобы записаться к нам в группу заполните форму <br> связи и мы с вами обязательно свяжемся
+
+                        include includes/form_application
+
+        include includes/foot
+

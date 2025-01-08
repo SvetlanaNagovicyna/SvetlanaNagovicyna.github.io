@@ -1,0 +1,132 @@
+- var title = "";
+- var headerColor = "header--white";
+doctype html
+html
+    include includes/head
+    body
+        .body-wrap.testimonialsPage
+
+            include includes/header
+
+
+            section.top_section.top_section--schedule
+                #headerEffectCanvas
+                .container
+                    .top_section__wrap
+                        .top_section__emoji
+                            img(src="public/img/schedulePage/emoji.svg" alt="")
+                        .top_section__title
+                            span.violet расписание
+                            br
+                            span.violet дня
+            section.schedule
+                .container
+                    .schedule__title
+                        span Каждый день в нашем детском саду - это увлекательное приключение! Продуманный режим дня обеспечивает детей интересными и разнообразными занятиями, играми и важными моментами, чтобы сделать их дни заполненными радостью и образованием.
+                    .schedule__list
+                        .schedule__list-item
+                            .time
+                                span 7:00 – 8:00
+                            .descr
+                                span Прием детей
+                        .schedule__list-item
+                            .time
+                                span 8:00 – 8:10
+                            .descr
+                                span Утренняя зарядка
+                        .schedule__list-item
+                            .time
+                                span 8:10 – 8:30
+                            .descr
+                                span Подготовка к завтраку
+                        .schedule__list-item
+                            .time
+                                span 8:30 – 9:00
+                            .descr
+                                span Завтрак
+                        .schedule__list-item
+                            .time
+                                span 9:00 – 9:45
+                            .descr
+                                span Занятия
+                        .schedule__list-item
+                            .time
+                                span 9:45 – 10:15
+                            .descr
+                                span Дневной досуг
+                        .schedule__list-item
+                            .time
+                                span 10:15 – 10:30
+                            .descr
+                                span Подготовка к прогулке
+                        .schedule__list-item
+                            .time
+                                span 10:30 – 11:30
+                            .descr
+                                span Прогулка
+                        .schedule__list-item
+                            .time
+                                span 11:30 – 12:00
+                            .descr
+                                span Подготовка к обеду
+                        .schedule__list-item
+                            .time
+                                span 12:00 - 12:30
+                            .descr
+                                span Обед
+                        .schedule__list-item
+                            .time
+                                span 12:30 – 13:00
+                            .descr
+                                span Подготовка ко сну
+                        .schedule__list-item
+                            .time
+                                span 13:00 – 15:00
+                            .descr
+                                span Сон
+                        .schedule__list-item
+                            .time
+                                span 15:20 - 15:30
+                            .descr
+                                span Подготовка к полднику
+                        .schedule__list-item
+                            .time
+                                span 15:30 – 16:30
+                            .descr
+                                span Полдник
+                        .schedule__list-item
+                            .time
+                                span 16:30 – 17:00
+                            .descr
+                                span Занятия и игры
+                        .schedule__list-item
+                            .time
+                                span 17:00 – 17:15
+                            .descr
+                                span Подготовка к прогулке
+                        .schedule__list-item
+                            .time
+                                span 17:15 – 17:50*
+                            .descr
+                                span Прогулка
+                        .schedule__list-item
+                            .time
+                                span 17:50 – 18:00
+                            .descr
+                                span Вечерний досуг
+
+            include includes/footer
+            .modal-wrap.modal-request
+                .modal
+                    .close
+                        include ./../../public/img/close.svg
+                    .modal__container
+                        .modal__form_title
+                            span заявка <br> на обучение
+                        .modal__form_descr
+                            span Чтобы записаться к нам в группу заполните форму <br> связи и мы с вами обязательно свяжемся
+
+                        include includes/form_application
+
+        include includes/foot
+

@@ -1,0 +1,54 @@
+.open {
+  position: relative;
+  width: em(40);
+  height: em(40);
+  background-color: #FFF;
+  border-radius: 50%;
+  border: em(2) solid transparent;
+  cursor: pointer;
+  z-index: 100;
+  display: none;
+  @include transition(300ms, all);
+
+  &__item {
+    position: absolute;
+    height: em(3);
+    border-radius: em(30);
+    width: em(18);
+    background-color: #725193;
+    @include transition(300ms, background-color, transform, opacity, width);
+
+    &:nth-child(1) {
+      top: em(13);
+      left: 50%;
+      transform: translate(-50%, 0) rotate(0.01deg);
+    }
+
+
+    &:nth-child(2) {
+      bottom: em(13);
+      left: 50%;
+      transform: translate(-50%, 0) rotate(0.01deg);
+
+      @include transition(300ms, background-color, transform, opacity, width);
+    }
+  }
+
+  &.active {
+    background-color: #725193;
+    .open__item {
+      background-color: #FFFFFF;
+      &:nth-child(1) {
+        transform: translate(-50%, 0.23em) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translate(-50%, -0.26em) rotate(-45deg);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

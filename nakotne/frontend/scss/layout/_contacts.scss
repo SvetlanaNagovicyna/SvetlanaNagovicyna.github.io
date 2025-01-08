@@ -1,0 +1,212 @@
+.contacts {
+  padding-top: em(244);
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form {
+    &__checkbox {
+      .text {
+        color: #1e222b;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: em(80);
+    span {
+      color:  #725193;
+      font-size: em(64);
+      line-height: 94%;
+      letter-spacing: em(-3.2, 64);
+    }
+  }
+  &__block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: em(66);
+    padding-bottom: em(188);
+
+    .title {
+      margin-bottom: em(63);
+      span {
+        color: #1E222B;
+        font-size: em(40);
+        line-height: 110%;
+        letter-spacing: em(-1.2, 40);
+      }
+    }
+    .list {
+      &__item {
+        margin-bottom: em(36);
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .icon {
+          margin-right: em(12);
+          width: em(42);
+          min-width: em(42);
+        }
+        .text {
+          span {
+            color: #1E222B;
+            font-family: "Open Sans", 'sans-serif';
+            font-size: em(20);
+            line-height: normal;
+          }
+        }
+      }
+    }
+    &-left {
+      padding: em(40);
+      width: em(640);
+      border-radius: em(32);
+      background: #F1DC8F;
+    }
+    &-right {
+      padding: em(40);
+      width: em(640);
+      border-radius: em(32);
+      background: #C1DAA9;
+      .list {
+        &__item {
+          align-items: flex-start;
+          .text {
+            span {
+              line-height: 179%;
+            }
+            a {
+              color: #295278;
+              text-decoration: underline;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .contacts-request {
+    position: relative;
+    background: #F5EFE7;
+    padding-top: em(126);
+    padding-bottom: em(142);
+    &:before {
+      content: "";
+      background: url("../img/elem.svg") 50% / cover no-repeat;
+      display: inline-block;
+      width: em(1440);
+      height: em(34);
+      top: em(-30);
+      position: absolute;
+    }
+    &:after {
+      content: "";
+      background: url("../img/elem.svg") 50% / cover no-repeat;
+      transform: scale(-1, -1);
+      display: inline-block;
+      width: em(1440);
+      height: em(34);
+      bottom: em(-30);
+      position: absolute;
+    }
+    .request__title {
+      margin-bottom: em(38);
+    }
+    .request__descr {
+      margin-bottom: em(81);
+    }
+    .form__item input {
+      border: em(1) solid #E18531;
+    }
+    .form__item textarea {
+      border: em(1) solid #E18531;
+    }
+
+  }
+  @media (max-width: 768px) {
+    padding-top: em(121);
+    &__title {
+      margin-bottom: em(60);
+      span {
+        font-size: em(40);
+        line-height: 94%;
+        letter-spacing: em(-2, 40);
+      }
+    }
+    &__block {
+      padding-top: 0;
+      flex-direction: column;
+      align-items: center;
+      margin-top: em(-36);
+      padding-bottom: em(126);
+
+      .title {
+        text-align: center;
+        margin-bottom: em(36);
+        span {
+          font-size: em(32);
+          letter-spacing: em(-0.96, 32);
+        }
+      }
+      .list {
+        &__item {
+          flex-direction: column;
+          align-items: center;
+          .icon {
+            margin-right: 0;
+            margin-bottom: em(10);
+          }
+          .text {
+            text-align: center;
+            span {
+              font-size:  em(18);
+              line-height: 129%;
+            }
+          }
+        }
+      }
+
+
+      &-left {
+        width: 100%;
+        border-radius: em(24);
+        padding: em(40) em(20);
+        margin-bottom: em(24);
+      }
+      &-right {
+        width: 100%;
+        border-radius: em(24);
+        padding: em(40) em(20);
+        .list {
+          &__item {
+            .text {
+              span {
+                line-height: 179%;
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .contacts-request {
+      padding-top: em(84);
+      padding-bottom: em(79);
+      &:after {
+        background-color: #F5EFE7;
+      }
+      .request__title {
+        margin-bottom: em(59);
+      }
+      .request__descr {
+        margin-bottom: em(61);
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.map
+    .container
+        .map__block
+            .map__block-left
+                .image
+                    img(src="public/img/mainPage/emoji-5.svg" alt="")
+                .title
+                    span Как нас найти
+                .descr
+                    span Imanta, Latvijas Universitāte Ēka, <br> 1. Stāvs. Jūrmalas gatve 76, <br> Kurzemes rajons, Rīga, LV-1083
+
+                a(href="#").map__btn.button.switch-text
+                    span(title="открыть в картах") открыть в картах
+
+
+                .tel
+                    .tel__item
+                        .img
+                            img(src="public/img/mainPage/director.png" alt="")
+                        a(href='tel:29505929').number
+                            span 29505929
+                        .text
+                            span Elīna
+                    .tel__item
+                        .img
+                            img(src="public/img/mainPage/icon.png" alt="")
+                        a(href='tel:29607783').number
+                            span 29607783
+                        .text
+                            span Irēna
+            .map__block-right
+                iframe#gmap_canvas(height='100%' width='100%' allowfullscreen='' loading='lazy' src='https://maps.google.com/maps?q=J%C5%ABrmalas%20gatve%2076&t=&z=13&ie=UTF8&iwloc=&output=embed&zoom=17')

@@ -1,0 +1,116 @@
+.step-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: em(32);
+  grid-row-gap: em(32);
+
+   &__item {
+     position: relative;
+     width: em(340);
+     height: em(340);
+     border-radius:em(32);
+     border: em(2) solid  #1D6148;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-bottom: em(28);
+     cursor: pointer;
+
+     input {
+       padding: 0;
+       height: initial;
+       width: initial;
+       margin-bottom: 0;
+       display: none;
+       cursor: pointer;
+     }
+
+     input:checked + .step-items__content .check{
+       opacity: 1;
+       transition: opacity .2s ease-in-out;
+     }
+
+   }
+  &__content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .image {
+      width: em(340);
+      height: em(340);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin-bottom: 0;
+
+    }
+    .text {
+      text-align: center;
+      span {
+        color: #1E222B;
+        text-align: center;
+        font-family: "Open Sans", 'sans-serif';
+        font-size: em(20);
+        font-weight: 700;
+        line-height: 130.3%;
+        letter-spacing: em(-0.4, 20);
+      }
+    }
+    .nocheck {
+      position: absolute;
+      top: em(14);
+      right: em(14);
+      width: em(48);
+    }
+    .check {
+      position: absolute;
+      top: em(13);
+      right: em(3);
+      width: em(58);
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
+    }
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: em(16);
+    grid-row-gap: em(16);
+    &__item {
+      width: em(172);
+      height: em(200);
+      border-radius: em(16);
+      padding-bottom: em(13);
+    }
+    &__content {
+      .image {
+        width: em(172);
+        height: em(172);
+        transform: translate(-50%,-56%);
+      }
+      .text {
+        padding: 0 em(25);
+        span {
+          font-size: em(16);
+
+        }
+      }
+      .nocheck {
+        width: em(24);
+        right: em(7);
+        top: em(7);
+      }
+      .check {
+        width: em(30);
+        top: em(6);
+        right: em(1);
+      }
+    }
+  }
+}

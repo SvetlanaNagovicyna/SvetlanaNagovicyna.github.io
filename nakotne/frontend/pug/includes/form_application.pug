@@ -1,0 +1,30 @@
+form.form.form__application(action="#")
+    label.form__item
+        input.name(type="text", data-valid='false', name="name" data-name="name")
+        span.form__item_placeholder Ваше имя
+    label.form__item
+        input.age(type="num", data-valid='false', name="num" data-name="num")
+        span.form__item_placeholder Возраст ребенка
+    label.form__item
+        input.email(type="email", data-valid='false', name="email" data-name="email")
+        span.form__item_placeholder Электропочта
+    label.form__item
+        input.tel(type="number", data-valid='false', name="tel" data-name="tel")
+        span.form__item_placeholder Номер телефона
+    label.form__item
+        textarea(type="text" rows="3" name="txt" data-name="txt" data-valid="true")
+        span.form__item_placeholder Комментарий
+
+
+    label.form__checkbox
+
+        input(type='checkbox' data-valid="false")
+        span.check
+        span.text Соглашаюсь с &nbsp;
+            |
+            a(href="#") правилами
+            | &nbsp; обработки личных данных
+
+
+    button(type="submit").form__button.button.switch-text
+        span(title="отправить заявку на обучение") отправить заявку на обучение

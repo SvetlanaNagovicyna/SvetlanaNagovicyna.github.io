@@ -1,0 +1,28 @@
+.burgermenu
+    .burgermenu__wrap
+        .burgermenu__logo
+            include ./../../../public/img/logo.svg
+        menu.menu
+            .menu__wrap
+                //.active
+                a(href="#").menu__item
+                    span о нас
+                .menu__item.wrapper-dropdown
+                    span.selected-display полезное
+                    .dropdown
+                        a(href="#").item шкафчик ребенка
+                        a(href="first-day.html").item первый день
+                        a(href="#").item расписание дня
+                a(href="#").menu__item
+                    span отзывы
+                a(href="#").menu__item
+                    span галерея
+                a(href="#").menu__item
+                    span контакты
+
+            .header__lang
+                .wrapper-dropdown
+                    span.selected-display РУ
+                    .dropdown
+                        a(href="#").item РУ
+                        a(href="#").item LV

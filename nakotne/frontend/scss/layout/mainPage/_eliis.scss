@@ -1,0 +1,139 @@
+.eliis {
+  position: relative;
+  background-color: #FDF8F1;
+  height: em(878);
+  width: 100%;
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: em(868);
+    z-index: 1;
+    overflow: hidden;
+
+    mask-size: 100% calc(100% - 27px), 100% calc(100% - 27px);
+    -webkit-mask-position: center;
+    max-width: 100%;
+    -webkit-mask:linear-gradient(#fff,#fff) center,  url('../img/mainPage/Slice2.png') top/contain repeat,
+    url('../img/mainPage/Slice.png') bottom/contain repeat;
+    -webkit-mask-size: 100% calc(95%), auto em(30), auto em(30);
+    -webkit-mask-repeat: repeat-x;
+
+    .image {
+      transform: scale(1.2) translateY(var(--y));
+      height: 100%;
+      overflow: hidden;
+      svg {
+        position: absolute;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+
+  }
+
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+    height: em(878);
+    padding-top: em(269);
+    padding-left: em(177);
+    padding-bottom: em(223);
+    z-index: 2;
+  }
+
+  &__title {
+    margin-bottom: em(43);
+    span {
+      color: #ffffff;
+      font-size: em(56);
+      font-weight: 400;
+      line-height: 94%;
+      letter-spacing: em(-1.68, 56);
+
+      &.purple {
+        color: #E9D7F3;
+        padding-top: em(5);
+        line-height: 100%;
+      }
+    }
+  }
+  &__descr {
+    width: em(360);
+    margin-bottom: em(50);
+
+    span {
+      color: #ffffff;
+      font-family: "Open Sans", "sans-serif";
+      font-size: em(16);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130.3%;
+      letter-spacing: em(-0.32, 16);
+    }
+  }
+  &__apps {
+    display: flex;
+    align-items: center;
+
+    &_item {
+      width: em(174);
+      margin-right: em(16);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: em(876);
+    &__bg {
+      display: none;
+      .image {
+        //transform: none;
+      }
+    }
+    &__wrap {
+      padding-left: 0;
+      padding-top: em(94);
+      padding-bottom: em(98);
+      height: em(876);
+      background: url("../img/mainPage/bg-eliis--mob.png") center center / cover no-repeat;
+
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: em(400);
+      span {
+        font-size: em(32);
+      }
+    }
+    &__descr {
+      text-align: center;
+      margin: 0 auto em(70);
+      width: em(294);
+
+      span {
+        font-size: em(16);
+      }
+    }
+    &__apps {
+      justify-content: center;
+
+      &_item {
+        width: em(140);
+        margin: 0 em(7);
+        &:last-child {
+          margin-right: em(7);
+        }
+      }
+    }
+  }
+}

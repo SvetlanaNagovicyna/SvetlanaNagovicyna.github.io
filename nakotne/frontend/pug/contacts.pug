@@ -1,0 +1,73 @@
+- var title = "";
+- var headerColor = "header--black";
+doctype html
+html
+    include includes/head
+    body
+        .body-wrap.contactsPage
+
+            include includes/header
+
+            section.contacts
+                .container
+                    .contacts__title
+                        span контакты
+                    include includes/map
+
+                    .contacts__block
+                        .contacts__block-left
+                            .title
+                                span частный детский сад "Nākotne"
+                            .list
+                                .list__item
+                                    .icon
+                                        img(src="public/img/contacts/icon-1.svg" alt="")
+                                    .text
+                                        span Imanta, Latvijas Universitāte Ēka, 1. Stāvs. Jūrmalas gatve 76, Kurzemes rajons, Rīga, LV-1083
+                                .list__item
+                                    .icon
+                                        img(src="public/img/contacts/icon-2.svg" alt="")
+                                    a(href='tel:+37129505929').text
+                                        span +37129505929 – Elīna
+                                .list__item
+                                    .icon
+                                        img(src="public/img/contacts/icon-2.svg" alt="")
+                                    a(href='tel:+37129607783').text
+                                        span +37129607783 – Irēna
+                        .contacts__block-right
+                            .title
+                                span реквизиты
+                            .list
+                                .list__item
+                                    .icon
+                                        img(src="public/img/contacts/icon-3.svg" alt="")
+                                    .text
+                                        span Reģ.Nr. 40203166489 <br> Juridiskā adrese: Rīga,Jūrmalas gatve 76,LV-1083 <br> Tālrunis: 29505929 <br>
+                                            |E-pasta:&nbsp;
+                                            a(href="mailto:info@nakotne.eu ") info@nakotne.eu
+                                            <br> Banka: Swedbank <br> SWIFT kods: HABALV22 <br> Konta Nr. LV60HABA0551045635109
+
+                .request.contacts-request
+                    .request__title
+                        span.violet заявка на обучение
+                    .request__descr
+                        span.black Чтобы записаться к нам в группу заполните форму <br> связи и мы с вами обязательно свяжемся
+
+                    include includes/form_application
+
+
+            include includes/footer
+
+            .modal-wrap.modal-request
+                .modal
+                    .close
+                        include ./../../public/img/close.svg
+                    .modal__container
+                        .modal__form_title
+                            span заявка <br> на обучение
+                        .modal__form_descr
+                            span Чтобы записаться к нам в группу заполните форму <br> связи и мы с вами обязательно свяжемся
+
+                        include includes/form_application
+        include includes/foot
+

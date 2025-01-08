@@ -1,0 +1,159 @@
+.button {
+	position: relative;
+	font-size: 1em;
+	height: em(64);
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	padding: 0 em(36);
+	background-color: #E18531;
+	border-radius: em(57);
+	max-width: max-content;
+	transition: background-color .3s ease-in-out;
+	text-align: center;
+
+
+	&.switch-text {
+		overflow: hidden;
+		line-height: em(62);
+		display: block;
+		span {
+			transition: .4s all ease;
+			position: relative;
+			bottom: em(20);
+			transition-timing-function: cubic-bezier(0.82,1.64,0.57,0.96);
+			&:before {
+				content: attr(title);
+				display: block;
+				transition: .4s all ease;
+				color: #FFFFFF;
+			}
+
+		}
+		&:hover {
+			span {
+				bottom: em(-19);
+			}
+		}
+
+	}
+
+
+	&.sm {
+		height: em(48);
+		padding: 0 em(40);
+		&.switch-text {
+			line-height: em(48);
+			&:hover {
+				span {
+					bottom: em(-11);
+				}
+			}
+
+		}
+	}
+	&.md {
+		padding: 0 em(56);
+	}
+
+	span {
+		font-family: 'Rubik One', 'sans-serif';
+		font-size: em(18);
+		color: #fff;
+		letter-spacing: em(-0.36, 18);
+		font-weight: 400;
+		line-height:  130.3%;
+
+	}
+
+	&:hover {
+		background-color: #EB9344;
+		cursor: pointer;
+	}
+
+	@media (max-width: 768px) {
+
+		height: em(64);
+
+		padding: 0 em(32);
+
+
+
+		span {
+			font-size: em(18);
+		}
+
+		&.switch-text {
+			line-height: em(64);
+			span {
+				bottom: em(19);
+			}
+			&:hover {
+				span {
+					bottom: em(-19);
+				}
+			}
+		}
+
+
+		&.sm {
+			padding: 0 em(22, 16);
+			height: em(40, 16);
+
+			span {
+				font-size: em(16);
+			}
+			&.switch-text {
+				span {
+					bottom: em(25);
+				}
+			}
+
+			&.header-btn-lv {
+				padding: 0 em(12);
+
+				span {
+					font-size: em(14);
+				}
+			}
+
+		}
+		&.md {
+			height: em(56);
+			padding: 0 em(24);
+
+			&.switch-text {
+				span {
+					bottom: em(22);
+				}
+				&:hover {
+					span {
+						bottom: em(-16);
+					}
+				}
+			}
+
+		}
+		&.bg {
+			height: em(56);
+			padding: 0 em(41);
+
+			&.switch-text {
+				span {
+					bottom: em(22);
+				}
+				&:hover {
+					span {
+						bottom: em(-16);
+					}
+				}
+			}
+		}
+
+
+	}
+
+}

@@ -1,0 +1,361 @@
+.modal {
+
+   
+    &-wrap {
+        position: fixed;
+        z-index: 190;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        margin: auto;
+        transition: 0.5s;
+        color: #fff;
+        line-height: 1.3;
+        font-weight: 700;
+        text-align: center;
+
+
+        opacity: 0;
+        visibility: hidden;
+
+
+        &.modal-success, &.modal-review{
+            justify-content: center;
+            align-items: center;
+
+            .modal{
+                height: auto;
+            }
+        }
+
+        &.open-popup {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+
+        &__close {
+            position: absolute;
+            right: em(20);
+            top: em(20);
+            width: em(27);
+            z-index: 2;
+            cursor: pointer;
+        }
+        &.modal-request {
+            .form {
+                .wpcf7-not-valid-tip {
+                    bottom: -1.5em;
+                }
+
+                &__checkbox {
+                    .text {
+                        color: #1E222B;
+                            a {
+                                color: #295278;
+                            }
+
+
+                    }
+                }
+            }
+
+
+        }
+        &.modal-calculator {
+            z-index: 180;
+            .modal {
+                height: em(714);
+            }
+        }
+        &.modal-testimonial {
+            background: rgba(89, 62, 124, .9);
+
+            .modal {
+                width: em(800);
+                height: auto;
+                
+               
+                &__container {
+                    padding: em(32);
+
+                    .testimonials__list-item_description {
+                        margin-bottom: 0;
+                        height: 100%;
+                        span {
+                            height: 100%;
+                            -webkit-line-clamp: unset;
+                            line-height: 280% !important;
+                        }
+                    }
+                    .read-more-btn {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    text-transform: none;
+    font-size: 1em;
+    width: em(720);
+    height: em(887);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: auto;
+
+
+
+    .close {
+        position: absolute;
+        right: em(-49);
+        top: em(-49);
+        width: em(48);
+        z-index: 2;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color .3s ease-in-out;
+
+        &:hover {
+            background-color: #E18531;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        background-color: #FDF8F1;
+        border-radius: em(32);
+        padding: em(60) em(40);
+    }
+
+    &__form_img {
+        width: em(128);
+        margin: 0 auto;
+    }
+
+    &__form_btn{
+        .button{
+            margin: auto;
+        }
+    }
+
+    &__form_title {
+        margin-top: em(40);
+        margin-bottom: em(39);
+        span {
+            font-weight: 400;
+            color: #725193;
+            font-size: em(56);
+            line-height: 94%;
+            letter-spacing: em(-1.68, 56);
+            br {
+                display: none;
+            }
+        }
+    }
+    &__form_descr {
+        margin-bottom: em(59);
+        span {
+            color: #1E222B;
+            font-size: em(16);
+            font-family: "Open Sans", 'sans-serif';
+            font-weight: 400;
+            line-height: 128%;
+            letter-spacing: em(-0.32, 16);
+        }
+    }
+
+    .form {
+        &__item {
+            input {
+                border: em(1) solid #E18531;
+            }
+            textarea {
+                border: em(1) solid #E18531;
+            }
+        }
+    }
+
+
+
+
+
+    @media (max-width: 1024px) {
+        font-size: 1.4vw;
+    }
+
+    @media (max-width: 768px) {
+
+        &-wrap {
+            overflow: auto;
+            padding: em(20) 0;
+
+            &.modal-success, &.modal-review{
+                background: rgba(#593E7C, .9);
+
+                .modal__form_title{
+                    max-width: 100%;
+                    br{
+                        display: none !important;
+                    }
+                }
+
+        
+            }
+            &.modal-request {
+                .form {
+                    .wpcf7-not-valid-tip {
+                        bottom: -1.1em;
+                    }
+                    &__checkbox {
+                        .text {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+
+            &.modal-testimonial {
+                padding: em(80) 0;
+                .modal {
+                    width: em(360);
+                    height: auto;
+
+                    @media (min-aspect-ratio: 392/1000) {
+                        font-size: 3.8vw !important;
+                    }
+                    &__container {
+                        padding: em(20);
+                        .testimonials__list-item_description {
+                            max-height: unset;
+                            span {
+                                max-height: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        font-size: 1em;
+        width: em(360);
+        height: em(759);
+
+
+
+        .close {
+            width: em(40);
+            right: em(0);
+            top: em(-60);
+
+            // svg {
+            //     fill: #725193;
+            //     rect {
+            //     stroke: #725193;
+            //     }
+            // }
+        }
+
+        &__container {
+            padding: em(40) em(12) em(24);
+        }
+
+        &__form_img{
+            width: em(128);
+        }
+
+        &__form_btn{
+            .button{
+                display: flex;
+                text-align: center;
+                max-width: 100%;
+                width: 100%;
+
+                span{
+                    margin: auto;
+                }
+            }
+        }
+
+        &__form_title {
+            margin-bottom: em(22);
+            max-width: em(260);
+            margin-left: auto;
+            margin-right: auto;
+            span {
+                font-size: em(32);
+                line-height: 94%;
+                br {
+                    display: inline-block;
+
+                }
+            }
+        }
+        &__form_descr {
+            margin-bottom: em(39);
+            max-width: em(320);
+            margin-left: auto;
+            margin-right: auto;
+            span {
+                font-size: em(16);
+                br {
+                    display: none;
+                }
+            }
+        }
+        .form {
+            width: em(336);
+            &__item {
+                width: 100%;
+                margin-bottom: em(12);
+            }
+            &__button {
+                padding: 0 em(5);
+                margin-top: em(20);
+            }
+        }
+     
+        @media (min-aspect-ratio: 392/800) {
+            font-size: 3.8vw;
+        }
+        @media (min-aspect-ratio: 392/750) {
+            font-size: 3.6vw;
+        }
+        @media (min-aspect-ratio: 392/710) {
+            font-size: 3.4vw;
+        }
+        @media (min-aspect-ratio: 392/675) {
+            font-size: 3.2vw;
+        }
+
+    }
+    @media (min-aspect-ratio: 1440/1010) {
+        font-size: 1.05vw;
+    }
+    @media (min-aspect-ratio: 1440/950) {
+        font-size: .95vw;
+    }
+    @media (min-aspect-ratio: 1440/860) {
+        font-size: .85vw;
+    }
+    @media (min-aspect-ratio: 1440/780) {
+        font-size: .75vw;
+    }
+    @media (min-aspect-ratio: 1440/680) {
+        font-size: .65vw;
+    }
+    @media (min-aspect-ratio: 1440/590) {
+        font-size: .55vw;
+    }
+
+}

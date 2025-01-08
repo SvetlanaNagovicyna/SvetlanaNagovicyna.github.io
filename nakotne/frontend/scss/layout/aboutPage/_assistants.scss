@@ -1,0 +1,107 @@
+.assistants {
+  padding-bottom: em(160);
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: em(60);
+    span {
+      color: #1E222B;
+      text-align: center;
+      font-size: em(40);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130.3%;
+      letter-spacing: em(-0.8, 40);
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: em(24);
+    grid-row-gap: em(24);
+    &-item {
+      border-radius: em(32);
+      background: #F5EFE7;
+      min-height: em(350);
+      padding: em(24);
+
+      &_name {
+        margin-bottom: em(24);
+        span {
+          color: #1E222B;
+          font-family: "Open Sans", 'sans-serif';
+          font-size: em(20);
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130.3%;
+          letter-spacing: em(-0.4, 20);
+        }
+      }
+      &_post {
+        margin-bottom: em(24);
+        span {
+          color:  #725193;
+          font-family: "Open Sans", 'sans-serif';
+          font-size: em(16);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          letter-spacing: em(-0.8,16);
+        }
+      }
+      &_descr {
+        span {
+          display: inline-block;
+          color: #1E222B;
+          font-family: "Open Sans", 'sans-serif';
+          font-size: em(16);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 138%;
+          letter-spacing: em(-0.8,16);
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding-bottom: em(96);
+    &__title {
+      text-align: center;
+      margin-bottom: em(56);
+      span {
+        font-size: em(32);
+        letter-spacing: em(-1.6, 32);
+      }
+    }
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      &-item {
+        min-height: auto;
+        padding-right: em(27);
+
+        &_name {
+          margin-bottom: em(23);
+          span {
+            font-size: em(18);
+            letter-spacing: em(-0.36, 18);
+          }
+        }
+        &_post {
+          span {
+            font-size: em(14);
+            letter-spacing: em(-0.7, 14);
+          }
+        }
+
+        &:last-child {
+          .assistants__list-item_name {
+            margin-bottom: em(8);
+          }
+        }
+      }
+    }
+  }
+}

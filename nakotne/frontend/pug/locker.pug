@@ -1,0 +1,277 @@
+- var title = "";
+- var headerColor = "header--white";
+doctype html
+html
+    include includes/head
+    body
+        .body-wrap.lockerPage
+
+            include includes/header
+            section.top_section.top_section--locker
+                #headerEffectCanvas
+                .container
+                    .top_section__wrap
+                        .top_section__emoji
+                            img(src="public/img/lockerPage/emoji.svg" alt="")
+                        .top_section__title
+                            span.green шкафчик
+                            br
+                            span ребенка
+            section.preface
+                .preface__title
+                    .container
+                        .image.paralax_y
+                            img(src="public/img/lockerPage/image.jpg" alt="")
+                        .text
+                            span Как лучше всего <br> собрать ребенка в садик? <br> Мы подготовили небольшой список, чтобы облегчить беспокойство родителей о том, что необходимо.
+                .preface__subtitle
+                    .emoji
+                        img(src="public/img/lockerPage/emoji-1.svg" alt="")
+                    .text
+                        span Собираемся правильно
+                .preface__steps
+                    .preface__steps_bg
+                        .image.paralax_y
+                            img(src="public/img/lockerPage/bg-steps-1.jpg" alt="")
+                    .preface__steps_wrap
+                        .preface__steps_item
+                            .number
+                                span 1
+                            .text
+                                span личные вещи ребенка
+                        .preface__steps_item
+                            .number
+                                span 2
+                            .text
+                                span предметы гигиены
+                        .preface__steps_item
+                            .number
+                                span 3
+                            .text
+                                span предметы творчества
+                .preface__step.preface__step-first
+                    .container
+                        .number
+                            span 1
+                        .title
+                            span детские <br> личные вещи
+                        .descr
+                            span Мы продумали список за вас. Собрали нужную часть комплекта? <br> Пометьте галочкой.
+                        .step-items
+                            label.step-items__item
+                                input(type="checkbox" checked)
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/1.svg" alt="")
+                                    .text
+                                        span Сменная одежда
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/2.svg" alt="")
+                                    .text
+                                        span Верхняя одежда
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/3.svg" alt="")
+                                    .text
+                                        span Головной убор
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/4.svg" alt="")
+                                    .text
+                                        span Сменная обувь
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/5.svg" alt="")
+                                    .text
+                                        span Пижамы
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/6.svg" alt="")
+                                    .text
+                                        span Бутылка с водой
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/7.svg" alt="")
+                                    .text
+                                        span Резиновые сапоги
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/8.svg" alt="")
+                                    .text
+                                        span Спортивная одежда
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+
+
+                .preface__step.preface__step-second
+                    .container
+                        .number
+                            span 2
+                        .title
+                            span предметы <br> гигиены
+                        .descr
+                            span Какие предметы гигиены нужны ребенку в детском саду? <br> Вот основной список. Уже подготовили? Пометьте галочкой.
+                        .step-items
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/9.svg" alt="")
+                                    .text
+                                        span Пеленка <br> 60х40 см
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox" checked)
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/10.svg" alt="")
+                                    .text
+                                        span Памперсы <br> (при необходимости)
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/11.svg" alt="")
+                                    .text
+                                        span Зубная паста и щетка, <br> стаканчик (3+ лет)
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/12.svg" alt="")
+                                    .text
+                                        span Сухие салфетки <br> (1 раз в месяц)
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/13.svg" alt="")
+                                    .text
+                                        span Влажные салфетки <br> (1 раз в месяц)
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+                            label.step-items__item
+                                input(type="checkbox")
+                                .step-items__content
+                                    .image
+                                        img(src="public/img/lockerPage/items/14.svg" alt="")
+                                    .text
+                                        span Расческа для волос <br> (плюс резинки)
+                                    .nocheck
+                                        img(src="public/img/lockerPage/items/no-check.svg" alt="")
+                                    .check
+                                        img(src="public/img/lockerPage/items/check.svg" alt="")
+
+
+                .preface__step.preface__step-third
+                    .container
+                        .number
+                            span 3
+                        .title
+                            span предметы для <br> творчества
+                        .descr
+                            span Какие материалы для творчества могут понадобиться маленьким художникам?
+                        .image.paralax_y
+                            img(src="public/img/lockerPage/step-third-image.jpg" alt="")
+                        .list
+                            .list__item
+                                span Альбом для рисования А4 и A3
+                            .list__item
+                                span Цветная бумага A4 и A3 и картон А4
+                            .list__item
+                                span Пальчиковые краски и гуашь
+                            .list__item
+                                span Цветные и обычные карандаши, ручка
+                            .list__item
+                                span Пластилин и фломастеры
+                            .list__item
+                                span Клей-карандаш, клей ПВА
+                            .list__item
+                                span Папка с карманами (для детских работ)
+                            .list__item
+                                span Фартук (под покраску)
+                            .list__item
+                                span Линейка
+                            .list__item
+                                span Тетради – 1 линия
+                            .list__item
+                                span 1 коробочка
+                            .list__item
+                                span 1 Ножницы (с 3 лет)
+            include includes/footer
+            .modal-wrap.modal-request
+                .modal
+                    .close
+                        include ./../../public/img/close.svg
+                    .modal__container
+                        .modal__form_title
+                            span заявка <br> на обучение
+                        .modal__form_descr
+                            span Чтобы записаться к нам в группу заполните форму <br> связи и мы с вами обязательно свяжемся
+
+                        include includes/form_application
+
+        include includes/foot
+

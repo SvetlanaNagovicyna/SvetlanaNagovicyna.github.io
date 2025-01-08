@@ -1,0 +1,403 @@
+.information{
+  padding-top: em(120);
+  padding-bottom: em(200);
+  background-color: #FDF8F1;
+
+  &__block{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.56fr 1fr;
+    gap: em(32);
+    grid-template-areas:
+    "about-us about-us information__gallary information__gallary"
+    "about-us about-us information__gallary information__gallary"
+    "daily-regime locker information__gallary information__gallary"
+    "daily-regime locker information__gallary information__gallary";
+
+    margin-bottom: em(156);
+
+
+    .about-us {
+      will-change: transform;
+      grid-area: about-us;
+
+      position: relative;
+      border-radius: em(32);
+      background: #E9D7F3;
+      padding: em(37) em(53) em(39) em(46);
+      transition: transform .3s ease-in-out;
+
+      &__title {
+        margin-bottom: em(209);
+        span {
+          color: #1E222B;
+          font-size: em(40);
+          line-height: 110%;
+          letter-spacing: em(-1.2, 40);
+        }
+      }
+      &__descr {
+        padding-right: em(190);
+        span {
+          font-family: "Open Sans", 'sans-serif';
+          color: #1E222B;
+          font-size: em(20);
+          line-height: 130.3%;
+          letter-spacing: em(-.4, 20);
+        }
+      }
+
+      &__emoji {
+        position: absolute;
+        right: em(53);
+        top: em(50);
+        width: em(111);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: em(44);
+        right: em(32);
+        width: em(34);
+        height: em(24);
+        background: url("../img/mainPage/arrow.png") 50% / 100% 100% no-repeat;
+        transition: transform .3s ease-in-out;
+      }
+
+      &:hover {
+        transform: scale(1.03);
+        &:after {
+          transform: rotate(45deg);
+        }
+      }
+
+    }
+    .daily-regime {
+      will-change: transform;
+      grid-area: daily-regime;
+
+      border-radius: em(32);
+      background: #C1DAA9;
+      padding: em(44) em(46) em(35);
+      transition: transform .3s ease-in-out;
+
+
+      &__image {
+        width: em(201);
+        margin: 0 auto em(78);
+
+
+      }
+      &__title {
+        span {
+          color: #1E222B;
+          font-size: em(30);
+          line-height: 100%;
+          letter-spacing: em(-0.9, 30);
+        }
+      }
+      &:hover {
+        transform: scale(1.03);
+
+        .ear-1, .ear-2 {
+          animation: shake 1.5s cubic-bezier(.36,.07,.19,.97) both;
+          transform: translate3d(0, 0, 0);
+          backface-visibility: hidden;
+          perspective: 1000px;
+        }
+      }
+
+    }
+    .locker {
+      will-change: transform;
+      grid-area: locker;
+
+      border-radius: em(32);
+      background: #F1DC8F;
+      padding: em(16) em(30) em(34);
+      transition: transform .3s ease-in-out;
+
+      .leaf, .acorn,  .cone {
+        transition: all .3s ease-in-out;
+      }
+
+      &__image {
+        width: em(244);
+        margin: 0 auto em(50);
+      }
+      &__title {
+        padding-left: em(12);
+        span {
+          color: #1E222B;
+          font-size: em(30);
+          line-height: 100%;
+          letter-spacing: em(-0.9, 30);
+        }
+      }
+      &:hover {
+        transform: scale(1.03);
+
+        .leaf, .acorn,  .cone {
+          transform: translate3d(0, 0, 0);
+          backface-visibility: hidden;
+          perspective: 1000px;
+        }
+        .leaf {
+          animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        .acorn {
+          animation: shake 2.4s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        .cone{
+          animation: shake 2.2s cubic-bezier(.36,.07,.19,.97) both;
+        }
+      }
+
+    }
+    .information__gallary {
+      width: em(640);
+      grid-area: information__gallary;
+
+
+      .lightgallery {
+        width: em(640);
+        display: flex;
+        flex-wrap: wrap;
+
+
+        &__item {
+          will-change: transform;
+          position: relative;
+          width: em(640);
+          display: inline-block;
+          cursor: pointer;
+          transition: all .3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.03);
+          }
+
+          &:first-child {
+            margin-bottom: em(25);
+          }
+
+          span {
+            position: absolute;
+            left: em(46, 40);
+            top: em(37, 40);
+            color: #1E222B;
+            font-size: em(40);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%;
+            letter-spacing: em(-1.2, 40);
+
+          }
+          img {
+            border-radius: em(32);
+          }
+
+          &.sm {
+            width: em(128);
+            height: em(128);
+            &.ignore-lightgallery {
+              &:hover {
+                filter: brightness(1.2);
+              }
+            }
+
+
+
+
+            img {
+              height: 100%;
+              object-fit: cover;
+              border-radius: em(128);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__director {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: em(820);
+    margin: 0 auto;
+
+    &_text {
+      text-align: center;
+      margin-bottom: em(81);
+      span {
+        color: #1E222B;
+        font-family: "Open Sans", "sans-serif";
+        font-size: em(36);
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: em(-1.8, 36);
+      }
+    }
+    &_icon {
+      width: em(192);
+      border-radius: 50%;
+      margin-bottom: em(24);
+    }
+    &_name {
+      margin-bottom: em(9);
+      span {
+        font-family: "Open Sans", "sans-serif";
+        font-weight: 700;
+        font-size: em(20);
+        line-height: 130.3%;
+        letter-spacing: em(-0.4, 20);
+      }
+    }
+    &_position {
+      span {
+        font-family: "Open Sans", "sans-serif";
+        font-weight: 400;
+        font-size: em(16);
+        line-height: 130.3%;
+        letter-spacing: em(-0.32, 16);
+        color: #727272;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: em(64);
+    padding-bottom: em(96);
+
+    &__block {
+
+      display: grid;
+      grid-template-columns: em(172) em(172);
+      grid-template-rows: em(368) em(192) auto auto;
+      gap: em(16);
+      grid-template-areas:
+      "about-us about-us"
+      "daily-regime locker"
+      "information__gallary information__gallary"
+      "information__gallary information__gallary";
+
+
+      margin-bottom: em(119);
+      .about-us {
+        width: 100%;
+        padding: em(155) em(22) em(42);
+        &__title {
+          text-align: center;
+          margin-bottom: em(42);
+          span {
+            font-size: em(32);
+            letter-spacing: em(-1.2, 32);
+          }
+        }
+        &__descr {
+          text-align: center;
+          padding-right: 0;
+
+          span {
+
+            font-size: em(18);
+          }
+        }
+        &__emoji {
+          width: em(91);
+          right: unset;
+          top: em(41);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &:after {
+          display: none;
+        }
+
+      }
+      .daily-regime {
+        padding: em(25) em(29);
+        &__image {
+          width: em(114);
+          margin: 0 auto em(27);
+
+        }
+        &__title {
+          text-align: center;
+          span {
+            font-size: em(22);
+          }
+        }
+      }
+      .locker {
+        padding: em(9) em(17) em(24);
+        &__image {
+          width: em(138);
+          margin: 0 auto em(12);
+        }
+        &__title {
+          text-align: center;
+          padding-left: 0;
+          span {
+            font-size: em(22);
+          }
+        }
+      }
+      .information__gallary {
+        width: em(360);
+        .lightgallery {
+          width: em(360);
+          &__item {
+            width: em(360);
+            height: em(320);
+
+            &:first-child {
+              margin-bottom: em(16);
+            }
+
+            span {
+              font-size: em(32);
+              left: 50%;
+              transform: translateX(-50%);
+              top: em(27, 32);
+            }
+
+            &.sm {
+              width: em(72);
+              height: em(72);
+            }
+
+            img {
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+        }
+      }
+    }
+
+    &__director {
+      width: 100%;
+      &_text {
+        padding: 0 em(17);
+        margin-bottom: em(34);
+        span {
+          font-size: em(22);
+
+          br {
+            display: none;
+          }
+        }
+      }
+      &_icon {
+        width: em(104);
+        margin-bottom: em(14);
+      }
+    }
+  }
+
+}
+

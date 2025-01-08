@@ -1,0 +1,441 @@
+- var title = "";
+- var headerColor = "header--white";
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap.homePage
+
+			include includes/header
+
+			section.top_section.top_section--home-page
+				//.was-visible
+				.container
+					.top_section__wrap
+						.top_section__title
+							span детский сад для
+							br
+							span.lightgreen счастливых детей
+						a(data-popup="modal-request").top_section__btn.button.md.switch-text.popup-btn
+							span(title="записаться в группу") записаться в группу
+			section.information
+				.container
+					.information__block
+						a(href='about_us.html').about-us
+							.about-us__title
+								span немного о нас
+							.about-us__descr
+								span Nākotne - детский сад для счастливых детей, которых мы любим так же сильно как и дело, которое делаем уже более 5 лет
+							.about-us__emoji
+								img(src="public/img/mainPage/emoji.svg" alt="")
+						a(href='gallery.html').daily-regime
+							.daily-regime__image
+								include ./../../public/img/mainPage/snail.svg
+							.daily-regime__title
+								span режим <br> дня
+						a(href='locker.html').locker
+							.locker__image
+								include ./../../public/img/mainPage/oak.svg
+
+							.locker__title
+								span шкафчик <br> ребенка
+						.information__gallary
+							#informationGallary.lightgallery
+								.lightgallery__item(data-src='public/img/mainPage/gallary/image-1.jpg')
+									span галерея
+									img(src="public/img/mainPage/gallary/image-1.jpg" alt="")
+								.lightgallery__item.sm(data-src="public/img/mainPage/gallary/image-2.jpg")
+									img(src="public/img/mainPage/gallary/image-2.jpg" alt="")
+								.lightgallery__item.sm(data-src="public/img/mainPage/gallary/image-3.jpg")
+									img(src="public/img/mainPage/gallary/image-3.jpg" alt="")
+								.lightgallery__item.sm(data-src="public/img/mainPage/gallary/image-4.jpg")
+									img(src="public/img/mainPage/gallary/image-4.jpg" alt="")
+								.lightgallery__item.sm(data-src="public/img/mainPage/gallary/image-5.jpg")
+									img(src="public/img/mainPage/gallary/image-5.jpg" alt="")
+								a.lightgallery__item.sm.ignore-lightgallery(href="#")
+									img(src="public/img/mainPage/gallary/img.svg" alt="")
+
+					.information__director
+						.information__director_text
+							span В жизни каждого человека есть короткий, <br> но очень важный период. Время, когда вокруг множество чудес и открытий. В Nākotne мы верим в то, что лучший и самый главный период в жизни человека — это детство.
+						.information__director_icon
+							img(src="public/img/mainPage/director.png" alt="")
+						.information__director_name
+							span Элина Малышева
+						.information__director_position
+							span Директор Nākotne
+			section.eliis
+				.eliis__bg
+					.image.paralax_y
+						img(src="public/img/mainPage/bg-eliis-2.png" alt="")
+				.eliis__wrap
+					.eliis__title
+						span родительский <br> контроль
+						br
+						span.purple ELIIS
+					.eliis__descr
+						span Программа для родителького контроля позволяет родителям вести контроль за детьми и следить за развитием ребенка онлайн
+					.eliis__apps
+						a(href="#").eliis__apps_item
+							img(src="public/img/mainPage/app-store.svg" alt="")
+						a(href="#").eliis__apps_item
+							img(src="public/img/mainPage/google-play.svg" alt="")
+			section.reviews
+				.reviews__image
+					img(src="public/img/mainPage/emoji-2.svg" alt="")
+				.reviews__title
+					span отзывы <br> наших клиентов
+				.reviews__slider.swiperReviews
+					.reviews__slider_list.swiper-wrapper
+						.reviews__slider_item.swiper-slide.figure-1
+							.image
+								img(src="public/img/mainPage/babies/1.png" alt="")
+							.rating-stars
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-no.svg" alt="")
+							.name
+								span Тамби
+							.age
+								span 4 года
+						.reviews__slider_item.swiper-slide.figure-2
+							.image
+								img(src="public/img/mainPage/babies/2.png" alt="")
+							.rating-stars
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+							.name
+								span Леонард
+							.age
+								span 4 года
+
+						.reviews__slider_item.swiper-slide.figure-3
+							.image
+								img(src="public/img/mainPage/babies/3.png" alt="")
+							.rating-stars
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+							.name
+								span Егор
+							.age
+								span 4 года
+						.reviews__slider_item.swiper-slide.figure-1
+							.image
+								img(src="public/img/mainPage/babies/4.png" alt="")
+							.rating-stars
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes-no.svg" alt="")
+								img(src="public/img/mainPage/babies/star-no.svg" alt="")
+							.name
+								span Анабель
+							.age
+								span 4 года
+						.reviews__slider_item.swiper-slide.figure-2
+							.image
+								img(src="public/img/mainPage/babies/5.png" alt="")
+							.rating-stars
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes-no.svg" alt="")
+							.name
+								span Алиса
+							.age
+								span 4 года
+						.reviews__slider_item.swiper-slide.figure-3
+							.image
+								img(src="public/img/mainPage/babies/6.png" alt="")
+							.rating-stars
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+								img(src="public/img/mainPage/babies/star-yes.svg" alt="")
+							.name
+								span Даша
+							.age
+								span 4 года
+			section.prices
+				.prices__image
+					img(src="public/img/mainPage/emoji-3.svg" alt="")
+				.prices__title
+					span цены
+				.prices__label
+					span Как формируется цена?
+				.prices__descr.prices__descr-top
+					span Цена состоит из стоимости за место с учетом софинансирования <br> и цены на питание с учетом софинансирования
+				.prices__block
+					.prices__block_title
+						include ./../../public/img/mainPage/bird.svg
+						.text
+							span пример:
+					.prices__block_wrap
+						.prices__block_items
+							.item
+								.item__title
+									span плата <br> за место
+								.item__price
+									span#seat-fee 550
+									span.sm EUR/мес.
+							.item
+								.item__title
+									span софинансирование <br> муниципалитета
+								.item__label
+									span скидка
+								.item__price
+									span -220
+									span.sm EUR/мес.
+						.prices__block_items
+							.item
+								.item__title
+									span стоимость  <br> питания
+								.item__price
+									span 5
+									span.sm EUR/день
+							.item
+								.item__title
+									span софинансирование <br> питания
+								.item__label
+									span скидка
+								.item__price
+									span -1.42
+									span.sm EUR/день
+				.prices__descr.prices__descr-bottom
+					span В приведенном примере общая сумма на одного ребенка, с учетом всех муниципальных <br> льгот и посещением садика 20 дней в месяц составила:
+				.prices__price
+					.prices__price_text
+						span 381.60
+					.prices__price_label
+						span EUR/месяц
+						img(src="public/img/mainPage/star.svg" alt="")
+				.prices__price-descr
+					img(src="public/img/mainPage/star.svg" alt="")
+					span Узнать сумму для вашего ребенка можно в калькуляторе
+
+				.prices__btn.button.bg.switch-text.popup-btn(data-popup="modal-calculator")
+					span(title="открыть калькулятор") открыть калькулятор
+
+			section.scene
+				include ./../../public/img/mainPage/scene.svg
+			section.questions
+				.questions__image
+					img(src="public/img/mainPage/emoji-4.svg" alt="")
+				.questions__title
+					span частые вопросы
+				.questions__acc.acc
+					.acc__item
+						.acc__head
+							.text
+								span Сколько детей в группе?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span В каждой группе по 15 детей.
+					.acc__item
+						.acc__head
+							.text
+								span Какая компания поставляет питание в ваш детский сад?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span Питание в нашем детском саду обеспечивает компания LUCRUM.
+					.acc__item
+						.acc__head
+							.text
+								span Что должен уметь ребенок при поступлении в детский сад?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span В нашем детском саду есть только одно требование - ребенок должен уметь ходить.
+					.acc__item
+						.acc__head
+							.text
+								span Есть ли у детского сада своя игровая площадка?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span Да, у детского сада есть своя просторная, огороженная игровая площадка.
+					.acc__item
+						.acc__head
+							.text
+								span С какого возраста вы принимаете детей?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span Мы принимаем детей с 1 года.
+					.acc__item
+						.acc__head
+							.text
+								span У моего ребенка аллергия на молоко. Будет ли у него специальное питание?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span Да, "Лукрум" готовит меню для детей-аллергиков.
+					.acc__item
+						.acc__head
+							.text
+								span Сколько воспитателей работает в группе?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span В каждой группе работают два воспитателя и один помощник воспитателя.
+					.acc__item
+						.acc__head
+							.text
+								span Взимается ли у вас вступительный взнос?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span Нет, вступительного взноса нет.
+					.acc__item
+						.acc__head
+							.text
+								span Как проходит процесс адаптации?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span Адаптация проходит по индивидуальному плану, без присутствия родителей. В первый день адаптации ребенок проводит в саду 2 часа.
+					.acc__item
+						.acc__head
+							.text
+								span Как осуществляется связь с преподавателем группы?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span У каждой группы есть свой чат в Whatsapp, где размещается информация. Вы также можете следить за повседневной жизнью своего ребенка в системе Eliis.
+
+					.acc__item
+						.acc__head
+							.text
+								span Организуются ли мероприятия в вашем учебном заведении?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span Да, мероприятия проводятся каждый месяц.
+					.acc__item
+						.acc__head
+							.text
+								span Приглашаете ли вы кукольные театры?
+							.icon
+								svg(xmlns='http://www.w3.org/2000/svg' width='28' height='29' viewBox='0 0 28 29' fill='none')
+									path.line(d='M14 1.55676V27.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+									path(d='M27 14.5568L1 14.5568' stroke='#1E222B' stroke-width='2' stroke-linecap='round')
+						.acc__body
+							.text
+								span Да, кукольные театры приглашаются четыре раза в год с годовой программой.
+
+
+				a(href="about_us.html").prices__btn.button.switch-text
+					span(title="узнать больше о Nākotne") узнать больше о Nākotne
+
+			section.scene-2
+				include ./../../public/img/mainPage/scene-2.svg
+
+			.request
+				.request__title
+					span заявка на обучение
+				.request__descr
+					span Чтобы записаться к нам в группу заполните форму <br> связи и мы с вами обязательно свяжемся
+				include includes/form_application
+
+			include includes/map
+			include includes/footer
+
+			include includes/modalSuccess
+
+
+
+
+			//.modal-wrap.modal-review
+			//	.modal
+			//		.close
+			//			include ./../../public/img/close.svg
+			//		.modal__container
+			//			.modal__form_img
+			//				include ./../../public/img/review.svg
+			//			.modal__form_title
+			//				span отзыв отправлен!
+			//			.modal__form_descr
+			//				span Спасибо, за ваш отзыв. Ваше мнение очень ценно для нас.
+			//
+			//			.modal__form_btn
+			//				.button
+			//					span вернуться
+			//
+			//			//- include includes/form_application
+
+			.modal-wrap.modal-request
+				.modal
+					.close
+						include ./../../public/img/close.svg
+					.modal__container
+						.modal__form_title
+							span заявка <br> на обучение
+						.modal__form_descr
+							span Чтобы записаться к нам в группу заполните форму <br> связи и мы с вами обязательно свяжемся
+
+						include includes/form_application
+
+			.modal-wrap.modal-calculator
+				.modal
+					.close
+						include ./../../public/img/close.svg
+					.modal__container
+						.modal__form_title
+							span Калькулятор
+						.modal__form_descr
+							span Расчет доплаты родителей в дошкольном <br> учреждении Nākotne
+
+						include includes/form_calculator
+		include includes/foot
+
+
+
+
+
+
+

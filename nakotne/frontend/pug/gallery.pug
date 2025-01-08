@@ -1,0 +1,71 @@
+- var title = "";
+- var headerColor = "header--black";
+doctype html
+html
+    include includes/head
+    body
+        .body-wrap.gallaryPage
+
+            include includes/header
+
+            section.gallary
+                .container
+                    .gallary__title
+                        span галерея
+
+                    .gallary__general
+                        #generalGallary.lightgallery
+                            .lightgallery__item(data-src='public/img/gallery/image-1.jpeg')
+                                img(src="public/img/gallery/image-1.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-2.jpeg")
+                                img(src="public/img/gallery/image-2.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-3.jpeg")
+                                img(src="public/img/gallery/image-3.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-4.jpeg")
+                                img(src="public/img/gallery/image-4.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-5.jpeg")
+                                img(src="public/img/gallery/image-5.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-6.jpeg")
+                                img(src="public/img/gallery/image-6.jpeg" alt="")
+                            .lightgallery__item(data-src='public/img/gallery/image-7.jpeg')
+                                img(src="public/img/gallery/image-7.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-8.jpeg")
+                                img(src="public/img/gallery/image-8.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-9.jpeg")
+                                img(src="public/img/gallery/image-9.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-10.jpeg")
+                                img(src="public/img/gallery/image-10.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-11.jpeg")
+                                img(src="public/img/gallery/image-11.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-12.jpeg")
+                                img(src="public/img/gallery/image-12.jpeg" alt="")
+                            .lightgallery__item(data-src='public/img/gallery/image-13.jpeg')
+                                img(src="public/img/gallery/image-13.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-14.jpeg")
+                                img(src="public/img/gallery/image-14.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-15.jpeg")
+                                img(src="public/img/gallery/image-15.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-16.jpeg")
+                                img(src="public/img/gallery/image-16.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-17.jpeg")
+                                img(src="public/img/gallery/image-17.jpeg" alt="")
+                            .lightgallery__item(data-src="public/img/gallery/image-18.jpeg")
+                                img(src="public/img/gallery/image-18.jpeg" alt="")
+
+
+
+            include includes/footer
+            .modal-wrap.modal-request
+                .modal
+                    .close
+                        include ./../../public/img/close.svg
+                    .modal__container
+                        .modal__form_title
+                            span заявка <br> на обучение
+                        .modal__form_descr
+                            span Чтобы записаться к нам в группу заполните форму <br> связи и мы с вами обязательно свяжемся
+
+                        include includes/form_application
+
+        include includes/foot
+

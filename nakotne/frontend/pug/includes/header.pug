@@ -1,0 +1,41 @@
+header.header.nav(class=headerColor)
+    .container
+        .header__wrap.nav__wrap
+
+            a.header__logo
+                include ./../../../public/img/logo.svg
+
+            menu.menu
+                .menu__wrap
+                    //.active
+                    a(href="about_us.html").menu__item
+                        span о нас
+                    .menu__item.wrapper-dropdown
+                        span.selected-display полезное
+                        .dropdown
+                            a(href="locker.html").item шкафчик ребенка
+                            a(href="first-day.html").item первый день
+                            a(href="schedule.html").item расписание дня
+                    a(href="testimonials.html").menu__item
+                        span отзывы
+                    a(href="gallery.html").menu__item
+                        span галерея
+                    a(href="contacts.html").menu__item
+                        span контакты
+
+                .header__lang
+                    .wrapper-dropdown
+                        span.selected-display РУ
+                        .dropdown
+                            a(href="#").item РУ
+                            a(href="#").item LV
+
+
+            .header__button.button.sm.switch-text.popup-btn(data-popup="modal-request")
+                span(title="хотим к вам") хотим к вам
+
+            .open
+                .open__item
+                .open__item
+
+            include burgermenu

@@ -1,0 +1,178 @@
+.scene {
+  background-color: #A4C988;
+  svg {
+    width: 100%;
+    g, path {
+      transform-box: fill-box;
+    }
+  }
+  &-2 {
+    svg {
+      width: 100%;
+    }
+  }
+
+  .flower {
+    will-change: transform;
+    transform-origin: center;
+    transform: rotate(0deg);
+    animation: rot 8s linear infinite;
+  }
+  .incline {
+    will-change: transform;
+    transform-origin: bottom center;
+    animation: incline 10s ease-in-out infinite;
+  }
+  .horn-1, .horn-2 {
+    will-change: transform;
+    transform-origin: bottom left;
+  }
+  .horn-1 {
+    animation: incline-2 2s ease-in-out infinite alternate;
+  }
+  .horn-2 {
+    animation: incline-1 2s ease-in-out infinite alternate;
+  }
+
+  .tail {
+    transform-origin: center left;
+    animation: incline 4s ease-in-out infinite alternate;
+  }
+
+  .tail-bird {
+    transform-origin: center left;
+    animation: incline-2 4s ease-in-out infinite alternate;
+  }
+  .wing {
+    transform-origin: center left;
+    animation: incline-3 5s ease-in-out infinite alternate;
+    &-1 {
+      animation: incline-3 4s ease-in-out infinite alternate;
+    }
+  }
+  //.butterfly {
+  //  transform-origin: center center;
+  //  animation: butterflyPath 10s ease-in-out  infinite alternate;
+  //  &-flip {
+  //    transform-origin: center center;
+  //    transform: rotate(0);
+  //    animation: butterfly .5s ease-in-out infinite alternate;
+  //  }
+  //}
+}
+
+//
+//@keyframes butterfly {
+//  0% {
+//    transform: rotate(0);
+//  }
+//  50% {
+//    transform: rotatey(160deg);
+//  }
+//  100% {
+//    transform: rotate(0);
+//  }
+//}
+//
+//@keyframes butterflyPath {
+//  0% {
+//    transform: translate(6em, -1em);
+//  }
+//  25% {
+//    transform: translate(11em, -5em) rotate(39deg);
+//  }
+//  50% {
+//    transform: translate(14em, -13em) rotate(0deg);
+//  }
+//
+//   75% {
+//    transform: translate(-5em, -8em) rotate(-50deg)
+//  }
+//
+//  100% {
+//    transform: translate(-3em, 0em) rotate(0);
+//  }
+//}
+
+@keyframes rot  {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes incline  {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes incline-1  {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes incline-4  {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(1.5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes incline-2  {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes incline-3  {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform:  translate(em(0), em(-.8)) rotate(4deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
