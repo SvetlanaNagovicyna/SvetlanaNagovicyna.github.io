@@ -1,0 +1,106 @@
+.menu {
+    display: flex;
+
+    &__item {
+        position: relative;
+        margin-right: em(32);
+
+        &:last-child {
+            margin-right: em(0);
+        }
+
+        &.active {
+            .menu__link {
+                background-color: var(--orangeColor);
+                color: var(--whiteColor);
+            }
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 em(33);
+        border: em(1) solid var(--blackColor);
+        border-radius: em(100);
+        height: em(50);
+        overflow: hidden;
+        position: relative;
+
+        span {
+            position: relative;
+            z-index: 2;
+            font-weight: bold;
+            font-size: em(14);
+            @include transition(500ms, color);
+        }
+
+        &::after {
+            @include pseudo;
+            background-color: var(--orangeColor);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            border-radius: unset;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 0%;
+            transition: all 0.4s ease;
+        }
+
+        &:hover,
+        &:active {
+            span {
+                color: var(--whiteColor);
+            }
+
+            &:after {
+                height: 300%;
+            }
+        }
+    }
+
+    @media(max-width: 768px) {
+        transition: height .5s cubic-bezier(.85, .07, .17, .89);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        order: 1;
+
+
+        &__item {
+            margin: 0 0 em(18);
+
+            &:first-child {
+                padding-top: em(121);
+            }
+
+            &.active {
+                .menu__link {
+                    background-color: transparent;
+                    color: var(--whiteColor);
+                }
+            }
+        }
+
+        &__link {
+            border: em(1) solid var(--whiteColor);
+            color: var(--whiteColor);
+
+            &:hover,
+            &:active {
+                border: em(1) solid var(--blackColor);
+
+                span {
+                    color: var(--whiteColor);
+                }
+
+
+            }
+        }
+
+
+    }
+}

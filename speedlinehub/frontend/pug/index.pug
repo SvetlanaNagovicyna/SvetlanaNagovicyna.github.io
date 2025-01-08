@@ -1,0 +1,394 @@
+- var title = "";
+doctype html
+html
+	include includes/head
+	body
+		.wrapper 
+			nav.nav 	
+				.container
+					.nav__wrap
+						a.logo(href="#")
+							include ./../../public/img/logo.svg
+
+						.open 
+							.open__item
+							.open__item
+							.open__item
+
+						menu.menu 
+							li.menu__item.active
+								a.menu__link(href="#header") 
+									span About
+
+							li.menu__item
+								a.menu__link(href="#candidate")
+									span For candidate
+
+							li.menu__item 
+								a.menu__link(href="#company") 
+									span For company
+
+							li.menu__item 
+								a.menu__link(href="#works") 
+									span How It Works
+
+							li.menu__item 
+								a.menu__link(href="#contacts") 
+									span Contacts
+
+						a.btn(href="#") 
+							span Vacancies
+
+
+
+			header#header.header.was-visible
+
+				.header__scene
+					.header__scene_line.header__scene_line-desc
+						include ./../../public/img/line-header.svg
+					.header__scene_line.header__scene_line-mob
+						include ./../../public/img/line-header-mob.svg
+					.header__scene_girl
+						include ./../../public/img/Illustration.svg
+
+					//- .header__scene_text 
+					//- 	p.type(data-text="up to 70% APY, get and stake me") up to 70% APY, get and stake me
+
+					//- .header__scene_dog 
+					//- 	img(src="public/img/dog.png" alt="")
+					//- .header__scene_badge
+					//- 	img(src="public/img/badge.png" alt="")
+					//- .header__scene_woof.header__scene_woof--1
+					//- 	img(src="public/img/woof.png" alt="")
+					//- .header__scene_woof.header__scene_woof--2
+					//- 	img(src="public/img/woof.png" alt="")
+
+				//- .header__panorama.parallax
+				//- 	img(src="public/img/london_1.svg" alt="" data-depth=".2")
+
+				.container
+
+					.header__wrap
+						.header__left
+							span Speedline Hub is a reliable partner
+						.header__right
+							span in personnel search selection 
+								br
+								| & adaptation
+					.header__table 
+						.header__table_td.header__table_td-1
+							span The company has been on the international market since 2020 and helps professionals find their dream job and companies find highly qualified specialists. We accompany candidates and companies at every stage of recruitment! The probationary period for specialists is structured and planned. We take care of each specialist who joins the company.
+						.header__table_td.header__table_td-2
+							span If you have a small company and, at this stage, you are not considering deploying an HR function, we are ready to take on the implementation and debugging of basic processes with which the life of the company will become more attractive for employees and more efficient in terms of management for owners.
+
+						//- .title 
+
+						//- 	.title__item 
+						//- 		p Get the 
+						//- 			span.title__item--accent UNIQUE 
+						//- 	.title__item 
+						//- 		p NFT  Badge on Ice
+						//- 	.title__item 
+						//- 		p London 2023
+						//- 	.title__item 
+						//- 		p  Conference
+
+
+						//- .subtitle.header__subtitle 
+						//- 	p Let’s make noise in the entire 
+						//- 		br
+						//- 		img.subtitle__gam(src="public/img/gambling_2.svg" alt="")  
+						//- 		|industry!
+
+
+						//- .header__btns 
+
+						//- 	a.btn.btn--nft(href="#nft") 
+						//- 		p About collection
+
+						//- 		img(src="public/img/arr.svg" alt="")
+
+						//- 	a.btn.btn--lg.btn--orange(href="#form_sec") 
+						//- 		p Get NFT
+
+
+
+
+
+
+
+
+			main.main 
+				section#candidate.candidate
+					.container
+						.candidate__wrap
+							.title__wrap
+								.title
+									span Advantages of cooperation with
+										br
+										| Speedline Hub for a 
+										span.underline candidate: 
+											include ./../../public/img/underline-1.svg
+
+
+									
+							.candidate__table 
+								.item.item_1
+									span Are you looking for a job in a progressive IT company? Do you want to continue your career growth in a team of professionals and work on international projects?
+									br
+									br
+									span 
+										span.bold Speedline Hub 
+										| - we will help you find a suitable vacancy.	
+								.item.item_2
+									span We will analyze your experience and expectations and help you determine the most appropriate position.
+								.item.item_3
+									span We will offer suitable vacancies from our partners.	
+								.item.item_4
+									span We will accompany you at all interview stages and make the process as fast and efficient as possible.
+								.item.item_5
+									span We will help with the formation of the offer.
+								.item.item_6
+									span We act as guarantors of compliance with the terms of the offer by partner companies.
+								.item.item_7
+									span We accompany at the adaptation stage, help to quickly learn the tasks and the team, and feel like a part of a team from the first working days.
+								.item.item_8
+									span We control the process of completing the probationary period and help to make it successful.
+								.item.item_9
+									span We keep in touch with you at all stages of work in the company and even after.
+								.item.item_10
+									include ./../../public/img/Illustration-2.svg
+
+							.title.title-sv
+								span.orange Send your CV
+								span  or  
+								span.orange text to our manager
+								span , and we will contact you and provide further cooperation.
+							.candidate__button 
+								a.btn.btn_orange(href="#form_sec") 
+									span Send cv
+								include ./../../public/img/arrow.svg
+				
+				
+				section#company.company
+					.container
+						.title__wrap
+							.title
+								span Advantages of cooperation with  
+									br
+									| Speedline Hub for a 
+									span.underline company:
+										include ./../../public/img/underline-2.svg
+						.company__table
+							.item.item_1
+								span We save your time and financial resources when we take on some of the team management tasks and complete them as efficiently as possible:	
+							.item.item_2
+								span Hiring the right employee saves money, preventing mistakes
+							.item.item_3
+								span We save your managers' time by taking over the initial selection of candidates and introducing the most suitable ones	
+							.item.item_4
+								span We give a detailed description of candidates, an analysis of their experience, and recommendations.
+							.item.item_5
+								span A high-quality adaptation plan helps an employee to quickly integrate into the team, work tasks, and, accordingly, show the result of work faster.
+							.item.item_6
+								span If you do not plan to scale the HR function, we can implement team management elements and transfer ready-made tools to your managers or corresponding departments.
+							.item.item_7
+								.company__button 
+									a.btn.btn_orange(href="#contacts") 
+										span Contact us
+									include ./../../public/img/arrow.svg
+							.item.item_8
+								include ./../../public/img/Illustration-3.svg
+						.company__button.company__button-mob
+							a.btn.btn_orange(href="#contacts") 
+								span Contact us
+				
+				section#works.works
+					.container
+						.title__wrap
+							.title
+								span How it 
+									span.underline works?
+										include ./../../public/img/underline-3.svg
+						.works__table
+							.item.item_1
+								include ./../../public/img/icon-1.svg
+								span Text us, and our manager will contact you. We will arrange an initial audio or video call to get to know you, clarify your request and determine the next steps.
+							.item.item_2
+								include ./../../public/img/icon-2.svg
+								span After the call, we will send you a document with a draft of our interaction, taking into account the timing, cost, and description of the predicted result.
+							.item.item_3
+								include ./../../public/img/icon-3.svg
+								span And then our common journey
+									br
+									| to the designated goal will 
+									br
+									| be waiting for us.
+				
+				section#form_sec.form
+					.container
+						.form__wrap
+							.form__wrap-candidates
+								.title__wrap
+									.title
+										span Contacts for 
+											span.underline candidates
+												include ./../../public/img/underline-4.svg
+
+
+
+								form#formCandidate.form__body(action="candidate.php")
+
+									.form__item 
+										input(type="text" placeholder="Name" name="name" data-name="name" data-valid="false" required)
+									.form__item 
+										input(type="text" placeholder="Email" name="email"  data-name="email" data-valid="false" required)
+									.form__item 
+										input(type="number" placeholder="Phone" name="tel" data-name="tel" data-valid="false" required)
+									.form__item.form__item_file
+										.input-title CV/portfolio
+										label(class="input-file")
+											input(type="file" name="file" data-name="file" )
+											span.input-file-text
+											span.input-file-btn add file +
+									.form__submit
+										button.btn.btn_orange(type="submit") 
+											span Send
+										include ./../../public/img/arrow.svg
+
+
+							
+							.form__wrap-companies
+								.title__wrap
+									.title
+										span Contacts for 
+											span.underline Companies
+												include ./../../public/img/underline-5.svg
+
+
+
+								form#formCompanies.form__body(action="companies.php")
+
+									.form__item 
+										input(type="text" placeholder="Name" name="name" data-name="name" data-valid="false" required)
+									.form__item 
+										input(type="text" placeholder="Email" name="email"  data-name="email" data-valid="false" required)
+									.form__item 
+										input(type="number" placeholder="Phone" name="tel" data-name="tel" data-valid="false" required)
+									.form__item 
+										input(type="text" placeholder="Info about a project or a company" name="about" data-name="about")
+									
+									.form__submit.form__submit-2
+										button.btn.btn_orange(type="submit") 
+											span Send
+										include ./../../public/img/arrow.svg
+
+
+
+
+
+			
+				//- section#form_sec.form.section 
+
+				//- 	.container 
+
+				//- 		.form__wrap 
+
+				//- 			.title 
+
+				//- 				.title__item 
+				//- 					p Enter your 
+				//- 						span.title__item--accent Details 
+
+
+				//- 				.title__item 
+				//- 					p to claim NFT
+
+				//- 			.form__subtitle.subtitle
+
+				//- 				p The next step is to receive a physical badge.
+				//- 					br
+				//- 					| Check the event invitation in your Google calendar.
+
+
+				//- 			form#form.form__body(action="action.php")
+
+				//- 				.form__item 
+				//- 					input(type="text" placeholder="Your name" required name="name"  )
+
+				//- 				.form__item 
+				//- 					input(type="text" placeholder="Company name" required name="company"  )
+
+				//- 					span 
+
+				//- 				.form__item.form__item--submit 
+				//- 					input(type="text" placeholder="Email" required name="email"  )
+
+				//- 					button.btn.btn--lg.btn--orange.form__submit.form__submit--1(type="submit") 
+				//- 						p Claim NFT
+
+				//- 				button.btn.btn--lg.btn--orange.form__submit.form__submit--2(type="submit" ) 
+				//- 					p Claim NFT
+
+
+
+				//- 				label.form__check 
+
+				//- 					input(type="checkbox" checked  ) 
+
+				//- 					.form__check_box 
+
+
+				//- 					.form__check_text 
+				//- 						p By sending your email, You agree to the processing of personal data in accordance with 
+				//- 							a(href="https://trueplay.io/policy/") privacy policy.
+
+
+			footer.footer#contacts
+				.container
+					.title__wrap
+						.title
+							span Batumi, Valeriia,
+								br
+								|+995558203624
+								br
+								span.underline hr@speedlinehub.com
+									include ./../../public/img/underline-6.svg
+				
+			section.popups 
+
+				.popups__popup.success
+					.popups__popup_close.popups__close
+						img(src="public/img/close.svg" alt="")
+					.popups__popup_wrap
+						.popups__popup_title
+							span Thank you, 
+						.popups__popup_text
+							span the information has been 
+								br
+								|sent.
+						.popups__popup_btn
+							.btn.btn_orange.popups__close 
+								span Okay
+
+
+				.popups__popup.fail
+					.popups__popup_close.popups__close
+						img(src="public/img/close.svg" alt="")
+					.popups__popup_wrap 	
+						.popups__popup_title 
+							span OOOOPSS!
+						.popups__popup_text 
+							span Something went
+								br
+								|wrong!
+						.popups__popup_btn
+							.btn.btn_orange.popups__close 
+								span Okay
+
+
+
+
+
+
+		include includes/foot

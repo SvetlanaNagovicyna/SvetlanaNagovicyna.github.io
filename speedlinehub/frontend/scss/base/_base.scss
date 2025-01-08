@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+:root {
+  --bgBody: #F5F5F5;
+  --blackColor: #000;
+  --whiteColor: #FFFFFF;
+  --orangeColor: #FF7050;
+  --blueColor: #3873E0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  // @include scrollbars(0.5em, #FC9401, #fff);
+
+  font-size: (16 / 19.2 * 1vw);
+
+  &.open_popup {
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    font-size: (16 / 3.75 * 1vw);
+  }
+}
+
+body {
+  font-family: 'Equinox';
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--bgBody);
+  color: var(--blackColor);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}

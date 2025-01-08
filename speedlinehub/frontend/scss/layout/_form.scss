@@ -1,0 +1,295 @@
+.form {
+    // padding-top: em(120);
+    position: relative;
+
+    form {
+        .item-error {
+
+            input {
+                border-color: #ff0000;
+            }
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+
+        &-candidates {
+            width: em(829);
+
+            .title.line {
+                svg {
+
+                    animation: underline-1 1.5s linear both .5s;
+                    stroke-dasharray: 1000;
+                    stroke-dashoffset: -500;
+
+                }
+            }
+
+        }
+
+        &-companies {
+            width: em(829);
+        }
+    }
+
+
+    &__body {
+        border: em(1) solid var(--blackColor);
+
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-bottom: em(1) solid var(--blackColor);
+        padding: 0 em(70);
+        height: em(116);
+        overflow: hidden;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &.item-error {
+            border: em(2) solid #f00;
+        }
+
+        input {
+
+            font-family: 'Inter';
+            border: none;
+            font-size: em(24);
+            font-weight: 400;
+            font-style: normal;
+            color: var(--blackColor);
+            background-color: var(--bgBody);
+
+            // caret-color: var(--orangeColor);
+
+
+            width: 100%;
+
+
+            &::placeholder {
+                color: var(--greyLightColor);
+            }
+        }
+
+
+        &:nth-child(4) {
+            &::after {
+                display: none;
+            }
+
+            padding: em(32) em(70);
+        }
+
+        &::after {
+            content: "*";
+            font-family: 'Inter';
+            position: absolute;
+            display: inline-block;
+            font-size: em(24);
+            line-height: 0.8;
+            font-weight: 400;
+            color: #ff7050;
+            right: em(68, 24);
+            top: 50%;
+            transform: translateY(-28%);
+
+        }
+
+
+
+        &_file {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            .input-file {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+
+            .input-file-btn {
+                right: 0;
+
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                outline: none;
+                font-family: 'Equinox';
+                font-weight: bold;
+                font-size: em(14);
+                background-color: var(--whiteColor);
+                border: em(1, 14) solid var(--blackColor);
+                border-radius: em(100, 14);
+                width: em(136, 14);
+                height: em(50, 14);
+                transition: all .3s ease-in-out;
+
+                &.active {
+                    background-color: var(--orangeColor);
+                    color: var(--whiteColor);
+                }
+            }
+
+            .input-file-text,
+            .input-title {
+                font-family: 'Inter';
+                border: none;
+                font-size: em(24);
+                font-weight: 400;
+                font-style: normal;
+                color: var(--blackColor);
+            }
+
+            .input-file-text {
+                display: inline-block;
+                margin-right: em(10);
+            }
+
+            .input-file input[type=file] {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+                display: block;
+                width: 0;
+                height: 0;
+            }
+
+            /* Focus */
+            .input-file input[type=file]:focus+.input-file-btn {
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+            }
+
+            /* Hover/active */
+            .input-file:hover .input-file-btn {
+                background-color: var(--orangeColor);
+                color: var(--whiteColor);
+            }
+
+            .input-file:active .input-file-btn {
+                background-color: var(--orangeColor);
+                color: var(--whiteColor);
+            }
+
+            /* Disabled */
+            .input-file input[type=file]:disabled+.input-file-btn {
+                background-color: #eee;
+            }
+        }
+
+    }
+
+    &__submit {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: em(21) em(70);
+
+        svg {
+            position: absolute;
+            width: em(101);
+            top: em(22);
+            left: em(460);
+            transform: scale(-1, -1);
+
+            &.anim {
+
+                path {
+                    animation: first-line 5s linear both 1s;
+                    stroke-dasharray: 1000;
+                    stroke-dashoffset: 1000;
+                }
+
+            }
+        }
+
+        &-2 {
+            svg {
+                transform: scale(-1, -1) rotate(-11deg);
+
+
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__wrap {
+            flex-direction: column;
+            justify-content: flex-start;
+
+            &-candidates {
+                width: 100%;
+            }
+
+            &-companies {
+                width: 100%;
+            }
+
+            .title__wrap {
+                padding-bottom: em(41);
+            }
+        }
+
+        &__body {
+            border: none;
+        }
+
+        &__item {
+            height: em(65);
+            padding: 0 em(19);
+            border: em(1) solid var(--blackColor);
+            border-bottom: none;
+
+            input {
+                font-size: em(12);
+            }
+
+            &::after {
+                font-size: em(24);
+                right: em(17, 24);
+            }
+
+            &:nth-child(4) {
+                border-bottom: em(1) solid var(--blackColor);
+                padding: 0 em(19);
+            }
+
+            &_file {
+
+                .input-file-text,
+                .input-title {
+                    font-size: em(12);
+                }
+
+                .input-file-btn {
+                    font-size: em(12);
+                    height: em(34, 12);
+                    width: em(100, 12);
+                }
+            }
+        }
+
+        &__submit {
+            border: none;
+            padding: em(27) 0 em(42) 0;
+            justify-content: flex-start;
+        }
+
+    }
+
+}

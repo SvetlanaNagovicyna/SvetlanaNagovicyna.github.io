@@ -1,0 +1,117 @@
+.title {
+
+    transform: translateY(100%);
+
+    &__wrap {
+        padding-bottom: em(63);
+        overflow: hidden;
+    }
+
+
+    &-sv {
+        padding-right: em(60);
+        margin-bottom: em(32);
+
+        .orange {
+            color: var(--orangeColor);
+            border-bottom: em(1) solid var(--orangeColor);
+        }
+    }
+
+
+    span {
+        font-size: em(80);
+        line-height: 125.54%;
+
+    }
+
+    .underline {
+        position: relative;
+        font-size: em(80, 80);
+
+        svg {
+            position: absolute;
+            left: 0;
+            bottom: em(-23, 80);
+            width: 100%;
+        }
+
+    }
+
+    &.line {
+        svg {
+            animation: underline 1.5s linear both .5s;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+    }
+
+    @media(max-width: 1024px) {
+        transform: translateY(0);
+    }
+
+    @media(max-width: 768px) {
+        span {
+            font-size: em(28);
+        }
+
+        &__wrap {
+            padding-bottom: em(32);
+        }
+
+        &-sv {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+
+    // &__item_gam {
+    //     display: inline-block;
+    //     margin-bottom: em(-24, 96);
+    //     margin-right: em(24, 96);
+    //     width: em(462, 96);
+
+    //     pointer-events: none;
+    // }
+
+    // &__item {
+    //     overflow: hidden;
+
+    //    span {
+    //         color: var(--greyDarkColor);
+    //         font-weight: 400;
+    //         font-style: normal;
+    //         font-size: em(96);
+    //         line-height: 1.2;
+
+    //         transform: translateY(100%);
+    //     }
+
+    //     &--accent {
+    //         text-transform: uppercase;
+    //         display: inline-block;
+    //         font-family: "Smart Kidz";
+    //         font-size: em(128, 96);
+    //         color: var(--orangeColor);
+    //         transform: rotate(5deg);
+
+    //         transform: scale(0);
+    //     }
+    // }
+
+    // @media(max-width: 768px){
+    //     &__item{
+    //         p{
+    //             font-size: em(36);
+    //             letter-spacing: em(-1);
+    //             transform: translateY(0);
+    //         }
+
+    //         &--accent{
+    //             font-size: em(48, 36);
+    //             transform: scale(1);
+    //         }
+    //     }
+    // }
+}

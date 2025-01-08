@@ -1,0 +1,29 @@
+.footer {
+    position: relative;
+    padding: em(99) 0 em(19);
+
+    .title {
+        &__wrap {
+            margin-bottom: 0;
+            padding-bottom: em(99);
+        }
+
+        &.line {
+            svg {
+                animation: underline-1 1.5s linear both .5s;
+                stroke-dasharray: 2000;
+                stroke-dashoffset: -1000;
+
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        padding: em(44) 0 0;
+
+        .title__wrap {
+            padding-bottom: em(53);
+        }
+    }
+}

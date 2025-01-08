@@ -1,0 +1,129 @@
+.works {
+    padding-bottom: em(88);
+
+    .title {
+
+        &.line {
+            svg {
+
+                animation: underline-1 1.5s linear both .5s;
+                stroke-dasharray: 1000;
+                stroke-dashoffset: -500;
+
+            }
+        }
+    }
+
+    &__table {
+        display: flex;
+        border-top: em(1) solid var(--blackColor);
+        border-left: em(1) solid var(--blackColor);
+    }
+
+    .item {
+        border-right: em(1) solid var(--blackColor);
+        border-bottom: em(1) solid var(--blackColor);
+        width: em(560);
+        min-height: em(468);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: em(70) em(65) 0;
+        // justify-content: center;
+
+        span {
+            font-family: 'Inter';
+            font-size: em(20);
+            line-height: 143.02%;
+            text-align: center;
+        }
+
+        svg {
+            margin-bottom: em(53);
+        }
+    }
+
+    .item_1 {
+        svg {
+            width: em(114);
+
+            .mail {
+                will-change: auto;
+                animation: mail 1s ease-in-out infinite alternate;
+
+            }
+        }
+    }
+
+    .item_2 {
+        svg {
+            width: em(151);
+
+            .done {
+                will-change: auto;
+                animation: blick .5s ease-in-out infinite alternate;
+
+            }
+        }
+    }
+
+    .item_3 {
+        padding-top: em(53);
+
+        svg {
+            width: em(156);
+
+            .blick {
+                will-change: auto;
+                animation: blick 1s ease-in-out infinite alternate;
+
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding-bottom: em(34);
+
+        .title__wrap {
+            padding-bottom: em(46);
+        }
+
+        &__table {
+            flex-direction: column;
+        }
+
+        .item {
+            width: 100%;
+            padding: em(39) em(22) 0;
+            min-height: em(241);
+
+            span {
+                font-size: em(12);
+            }
+
+            svg {
+                margin-bottom: em(28);
+            }
+        }
+
+        .item_1 {
+            svg {
+                width: em(60);
+            }
+        }
+
+        .item_2 {
+            svg {
+                width: em(69);
+            }
+        }
+
+        .item_3 {
+            padding-top: em(49);
+
+            svg {
+                width: em(76);
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.success{
+   
+
+    &__close{
+        position: absolute;
+        top: em(66);
+        right: em(77);
+        width: em(55);
+
+        cursor: pointer;
+
+        transform: rotate(0);
+
+        @include transition(500ms, transform);
+
+        &:hover{
+            transform: rotate(360deg);
+        }
+    }
+
+    &__wrap{
+        // max-width: em(587);   
+        margin: auto;
+    }
+
+    &__title{
+        text-align: center;
+        transform: rotate(-9deg);
+        p{
+            font-size: em(128);
+            font-family: "Smart Kidz";
+            color: var(--orangeColor);
+        }
+    }
+
+    &__text{
+        text-align: center;
+        margin-top: em(24);
+        p{
+            line-height: 1.2;
+            font-size: em(72);
+            color: #fff;
+        }
+    }
+
+    &__btn{
+        text-align: center;
+        margin-top: em(60);
+    }
+
+    @media (max-width: 768px) {
+        font-size: .5rem;
+
+        &__btn{
+            flex-direction: column;
+        }
+
+        &__close{
+            top: em(30);
+            right: em(30);
+        }
+
+        .btn{
+            margin-bottom: em(20);
+            font-size: 1rem;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

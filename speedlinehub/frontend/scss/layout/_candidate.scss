@@ -1,0 +1,223 @@
+.candidate {
+    padding-bottom: em(75);
+
+    &__table {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) 2fr;
+        grid-template-rows: em(260) repeat(4, em(170));
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        border-top: em(1) solid var(--blackColor);
+        border-left: em(1) solid var(--blackColor);
+        margin-bottom: em(69);
+
+    }
+
+    .item {
+        border-right: em(1) solid var(--blackColor);
+        border-bottom: em(1) solid var(--blackColor);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 em(49);
+
+        span {
+            font-family: 'Inter';
+            text-transform: none;
+            font-size: em(16);
+            line-height: 132.02%;
+
+        }
+    }
+
+    .item_1 {
+        grid-area: 1 / 1 / 2 / 3;
+        padding: 0 em(85);
+
+        span {
+            font-weight: 400;
+            font-size: em(20);
+            line-height: 143.02%;
+
+
+        }
+
+        .bold {
+            font-size: inherit;
+            margin-top: em(20, 20);
+            font-weight: 700;
+        }
+    }
+
+    .item_2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .item_3 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .item_4 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .item_5 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    .item_6 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .item_7 {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+
+    .item_8 {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    .item_9 {
+        grid-area: 5 / 2 / 6 / 3;
+    }
+
+    .item_10 {
+        grid-area: 1 / 3 / 6 / 4;
+        align-items: center;
+
+        svg {
+            width: em(665);
+
+
+
+            &.anim {
+
+                .horn {
+                    animation: blick .5s linear infinite;
+                }
+
+                .mess-1 {
+                    will-change: opacity;
+                    animation: blick .2s linear both 1.5s;
+                }
+
+                .mess-2 {
+                    will-change: opacity;
+                    animation: blick .2s linear both 1.7s;
+                }
+
+                .mess-3 {
+                    will-change: opacity;
+                    animation: blick .2s linear both 1.9s;
+                }
+
+            }
+        }
+    }
+
+    &__button {
+        position: relative;
+        padding-bottom: em(61);
+        border-bottom: em(1) solid var(--blackColor);
+
+        svg {
+            position: absolute;
+            width: em(101);
+            top: em(23);
+            left: em(236);
+
+            &.anim {
+
+                path {
+                    animation: first-line 5s linear both 1s;
+                    stroke-dasharray: 1000;
+                    stroke-dashoffset: 1000;
+                }
+
+            }
+        }
+
+    }
+
+    @media(max-width: 768px) {
+        padding-bottom: em(27);
+
+        &__table {
+            display: grid;
+            grid-template-columns: em(345);
+            grid-template-rows: em(322) em(171) repeat(8, em(95));
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin-bottom: em(22);
+
+
+            .item {
+                padding: 0 em(30) 0 em(22);
+
+                span {
+                    font-size: em(12);
+                    line-height: 143.02%;
+                }
+            }
+
+
+            .item_1 {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            .item_2 {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+
+            .item_3 {
+                grid-area: 4 / 1 / 5 / 2;
+            }
+
+            .item_4 {
+                grid-area: 5 / 1 / 6 / 2;
+            }
+
+            .item_5 {
+                grid-area: 6 / 1 / 7 / 2;
+            }
+
+            .item_6 {
+                grid-area: 7 / 1 / 8 / 2;
+            }
+
+            .item_7 {
+                grid-area: 8 / 1 / 9 / 2;
+            }
+
+            .item_8 {
+                grid-area: 9 / 1 / 10 / 2;
+            }
+
+            .item_9 {
+                grid-area: 10 / 1 / 11 / 2;
+            }
+
+            .item_10 {
+                grid-area: 1 / 1 / 2 / 2;
+
+                svg {
+                    width: em(288);
+
+                    .horn {
+                        animation: blick .5s linear infinite;
+                    }
+                }
+            }
+        }
+
+        &__button {
+            padding: em(30) 0 em(38);
+
+            svg {
+                display: none;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+.logo {
+    position: relative;
+    display: block;
+    width: em(138);
+
+    transition: all .5s cubic-bezier(.85, .07, .17, .89);
+
+    @media(max-width: 768px) {
+        width: em(90);
+
+        &.active {
+
+            .white {
+                fill: var(--whiteColor)
+            }
+
+        }
+
+    }
+}

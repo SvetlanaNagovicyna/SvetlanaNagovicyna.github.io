@@ -1,0 +1,81 @@
+@keyframes blick {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes lamp {
+	to {
+		fill: #f9ed43;
+	}
+}
+
+
+
+@keyframes first-line {
+	to {
+		stroke-dasharray: 1700;
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes secong-line {
+	to {
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes secong-line-mob {
+	to {
+		stroke-dasharray: 1500;
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes fillCircle {
+	0% {
+		fill: #fff;
+	}
+
+	5% {
+		fill: #FF7050;
+	}
+
+	15% {
+		fill: #FF7050;
+	}
+
+	20%,
+	100% {
+		fill: #fff;
+	}
+}
+
+@keyframes underline {
+	to {
+		// stroke-dasharray: 1000;
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes underline-1 {
+	to {
+
+		stroke-dashoffset: 400;
+	}
+}
+
+@keyframes mail {
+	from {
+		transform: translate(0);
+	}
+
+	to {
+		transform: translateY(14%);
+	}
+}
