@@ -1,1 +1,597 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1"><title>Fintiko</title><meta name="description"><style>input{font-family:inherit;font-size:inherit;color:inherit}input:-webkit-autofill{-webkit-text-fill-color:#000}img{width:100%;display:block}:root{--swiper-theme-color:#007aff}:host{position:relative;display:block;margin-left:auto;margin-right:auto;z-index:1}:root{--swiper-navigation-size:44px}a,article,body,div,form,h1,h2,h3,h4,header,hgroup,html,img,label,li,nav,p,section,ul{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,header,hgroup,nav,section{display:block}body{line-height:1}ul{list-style:none}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:focus{outline:0}input,textarea{font-family:inherit;font-size:inherit;color:inherit}input:-webkit-autofill,textarea:-webkit-autofill{-webkit-text-fill-color:#000}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}a{text-decoration:none;color:inherit;outline:0}img{max-width:100%;height:auto}svg{height:auto}img,svg{width:100%;display:block}html{scroll-behavior:smooth;font-size:.8333333333vw;background-color:#0a0f11}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:relative;width:100%;font-family:Manrope;font-weight:500;background-color:#0a0f11;color:#fff}.container{position:relative;max-width:112.125em;margin:0 auto}.header{padding:2.0625em 4em 2.5em;position:fixed;z-index:100;top:0;left:0;right:0;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;border-bottom:none}.header nav{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;width:100%}.header__logo{width:8.4375em}.header .menu{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;padding-top:.375em;margin-left:auto}.header .menu__item{margin:0 1.21875em;position:relative}.header .menu__item:last-child{margin-right:0;margin-left:0}.header .menu__item a.link-menu{position:relative;font-size:1em;padding:.3125em 1.375em .3125em .75em;letter-spacing:-.025em;-moz-border-radius:1.5em;border-radius:1.5em;border:.0625em solid transparent;line-height:1;height:2em;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;background:0 0}.header .menu__item a.link-menu:after{content:&quot;&quot;;background:url('https://fintiko.com/public/img/arrow.svg') 50%/100% 100% no-repeat;display:inline-block;width:.375em;height:.3125em;position:relative;top:50%;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);right:.625em;position:absolute;-webkit-transform-origin:center;-moz-transform-origin:center;-ms-transform-origin:center;transform-origin:center}.header .menu__item a.link-menu:before{content:&quot;&quot;;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-moz-border-radius:1.5em;border-radius:1.5em;display:inline-block;width:100%;height:100%;background:-moz-linear-gradient(8deg,hsla(0,0%,100%,.06) 6.84%,hsla(0,0%,100%,.15) 91.05%);background:linear-gradient(82deg,hsla(0,0%,100%,.06) 6.84%,hsla(0,0%,100%,.15) 91.05%);-webkit-backdrop-filter:blur(.5em);backdrop-filter:blur(.5em);opacity:0;z-index:-1}.header .menu .header__btns a{padding:.3125em .75em}.header .menu .header__btns a:after{display:none}.header .menu__sublist{position:absolute;top:110%;padding:.625em 1.25em;opacity:0;visibility:hidden}.header .menu__sublist a{white-space:nowrap;display:block}.header .menu__sublist:before{content:&quot;&quot;;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-moz-border-radius:.875em;border-radius:.875em;display:inline-block;width:100%;height:100%;background:-moz-linear-gradient(8deg,hsla(0,0%,100%,.06) 6.84%,hsla(0,0%,100%,.15) 91.05%);background:linear-gradient(82deg,hsla(0,0%,100%,.06) 6.84%,hsla(0,0%,100%,.15) 91.05%);-webkit-backdrop-filter:blur(.8em);backdrop-filter:blur(.8em);opacity:1;z-index:-1}.header .menu__subitem{position:relative;text-align:left;width:100%}.header .menu__subitem a.link-menu{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;font-weight:400;font-size:.875em;padding:.3125em .75em;line-height:207%;letter-spacing:-.04em;color:#fff;-webkit-box-pack:start;-moz-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.header .menu__subitem a.link-menu:after,.header .menu__subitem a.link-menu:before{display:none}.header__btns{margin-left:31.875em;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center}.header__btns .header__btn{margin:0 .75em}.header__btns ul{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center}.header__btns li:last-child a{margin-right:0}.header__btns a{position:relative;font-size:1em;padding:.3125em .75em;letter-spacing:-.025em;-moz-border-radius:1.5em;border-radius:1.5em;border:.0625em solid transparent;line-height:1;height:2em;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;background:0 0}.header__btns a:before{content:&quot;&quot;;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-moz-border-radius:1.5em;border-radius:1.5em;display:inline-block;width:100%;height:100%;background:-moz-linear-gradient(8deg,hsla(0,0%,100%,.06) 6.84%,hsla(0,0%,100%,.15) 91.05%);background:linear-gradient(82deg,hsla(0,0%,100%,.06) 6.84%,hsla(0,0%,100%,.15) 91.05%);-webkit-backdrop-filter:blur(.5em);backdrop-filter:blur(.5em);opacity:0;z-index:-1}@media (max-width:1440px){html{font-size:1.1111111111vw}.container{max-width:82.125em}.header{padding:2.0625em 3.9375em 2.5em}.header__btns{margin-left:16.875em}}.footer__mapsite .mapsite .item__head img{display:none}.open{position:relative;width:1.5em;height:1em;z-index:2;display:none}.open__item{position:absolute;height:.0625em;width:1.5em;-moz-border-radius:1.875em;border-radius:1.875em;background-color:#fff}.open__item:first-child{top:0;right:0;-webkit-transform:translate(0) rotate(.01deg);-moz-transform:translate(0) rotate(.01deg);-ms-transform:translate(0) rotate(.01deg);transform:translate(0) rotate(.01deg)}.open__item:nth-child(2){top:50%;right:0;-webkit-transform:translateY(-50%) rotate(.01deg);-moz-transform:translateY(-50%) rotate(.01deg);-ms-transform:translateY(-50%) rotate(.01deg);transform:translateY(-50%) rotate(.01deg)}.open__item:nth-child(3){bottom:0;right:0;-webkit-transform:translate(0) rotate(.01deg);-moz-transform:translate(0) rotate(.01deg);-ms-transform:translate(0) rotate(.01deg);transform:translate(0) rotate(.01deg)}.button{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;height:3.1em;padding:0 1.2em;border:.05em solid transparent;-moz-border-radius:3.2em;border-radius:3.2em;outline:0;font-size:1.25em;font-weight:500;line-height:105.6%;letter-spacing:-.04em}.button-blue{background-color:#1a59fa}.main{overflow:hidden}.top-section{position:relative;padding-top:6.875em}.top-section__crumb{position:relative;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;width:100%}.top-section__crumb img{width:1.375em;margin-right:1.625em}.top-section__crumb h4{color:#dcdbdb;font-size:.875em;font-weight:500;line-height:130%;letter-spacing:-.02em;opacity:.5}.top-section__crumb:after{content:&quot;&quot;;position:absolute;right:0;top:50%;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);background:url('https://fintiko.com/public/img/crumb-line.svg') 50%/100% 100% no-repeat;display:inline-block;height:1em;width:103.375em}@media (max-width:1440px){.top-section__crumb:after{width:73.25em;-moz-background-size:auto 100%;background-size:auto 100%;background-position:100%}}.form{position:relative;width:100%}.form__item{position:relative;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;overflow:hidden;margin-bottom:1.5em;background-color:#1c2021;-moz-border-radius:.5em;border-radius:.5em}.form__item.select{overflow:visible}.form__item .error-text{top:.5625em;right:.8125em;position:absolute;font-size:.6875em;line-height:130%;text-align:right;color:#993a3d;opacity:0;visibility:hidden}.form__item .error-text,.form__item input{font-family:Inter;font-weight:400;letter-spacing:-.04em}.form__item input{border:none;font-size:1em;line-height:1;color:#fff;background:0 0;padding:0 1.0625em;height:4em;-moz-border-radius:.5em;border-radius:.5em;border:.0625em solid transparent;width:100%;z-index:3}.form__item .placeholder{position:absolute;color:#585c5d;font-size:1em;padding-left:1.0625em;line-height:1;letter-spacing:-.04em;left:0;top:50%;-webkit-transform:translateY(-50%) scale(1);-moz-transform:translateY(-50%) scale(1);-ms-transform:translateY(-50%) scale(1);transform:translateY(-50%) scale(1);-webkit-transform-origin:left top;-moz-transform-origin:left top;-ms-transform-origin:left top;transform-origin:left top;z-index:2}.form__item textarea{resize:none;width:100%;height:9.0625em;-moz-border-radius:.5em;border-radius:.5em;padding:1.625em 1em;font-family:Inter;font-weight:400;font-size:1em;line-height:130%;letter-spacing:-.04em;text-align:center;background:0 0;border:none;outline:0;display:inline-block;text-align:left;z-index:3;border:.0625em solid transparent}.form__item textarea+.placeholder{-webkit-transform:translateY(0) scale(1);-moz-transform:translateY(0) scale(1);-ms-transform:translateY(0) scale(1);transform:translateY(0) scale(1);top:1.625em;left:0;-webkit-transform-origin:left top;-moz-transform-origin:left top;-ms-transform-origin:left top;transform-origin:left top}@media (max-width:430px){.form .g-recaptcha{-webkit-transform:scale(.9);-moz-transform:scale(.9);-ms-transform:scale(.9);transform:scale(.9)}}@media (max-width:350px){.form .g-recaptcha{-webkit-transform:scale(.8);-moz-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8)}}.form__submit{position:relative;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:1.8125em}.form__submit button.button{color:#fff;font-size:1.25em;letter-spacing:0}.form .select-box{position:relative;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;overflow:visible;-webkit-box-orient:vertical;-webkit-box-direction:normal;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.form .select-box .selected{background-color:#1c2021;padding:0 1.0625em;height:4em;-moz-border-radius:.5em;border-radius:.5em;color:#fff;position:relative;-webkit-box-ordinal-group:1;-moz-box-ordinal-group:1;-ms-flex-order:0;order:0;width:26em;text-align:left;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;padding-top:.875em}.form .select-box .selector-wrapper{position:relative;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.form .select-box .selector-wrapper&gt;.arrow{display:inline-block;position:absolute;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);top:50%;right:.9375em;height:.375em;width:.5625em;z-index:99}.form .select-box .rotated{-webkit-transform:rotate(0)!important;-moz-transform:rotate(0)!important;-ms-transform:rotate(0)!important;transform:rotate(0)!important}.form .select-box .options-container{background:#1c2021;color:#585c5d;max-height:0;width:100%;opacity:0;overflow:hidden;-webkit-box-ordinal-group:2;-moz-box-ordinal-group:2;-ms-flex-order:1;order:1;position:absolute;z-index:90;text-align:left;margin-top:3.75em;-moz-border-radius:0 0 .5em .5em;border-radius:0 0 .5em .5em;padding:.5em 1em}.form .select-box label{display:block;padding:.5em 1.5em;position:relative}.form .select-box label:before{left:0;display:block;width:.6875em;height:.6875em;-moz-border-radius:50%;border-radius:50%;border:.0625em solid transparent;background:-webkit-gradient(linear,left top,left bottom,from(#11171a),to(#11171a)) padding-box,-webkit-gradient(linear,left top,left bottom,from(0),color-stop(transparent),to(hsla(0,0%,100%,.15))) border-box;background:-moz-linear-gradient(#11171a,#11171a) padding-box,-moz-linear-gradient(0,transparent,hsla(0,0%,100%,.15)) border-box;background:linear-gradient(#11171a,#11171a) padding-box,linear-gradient(0,transparent,hsla(0,0%,100%,.15)) border-box;overflow:hidden}.form .select-box label:after,.form .select-box label:before{content:&quot;&quot;;position:absolute;top:50%;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.form .select-box label:after{left:.125em;display:inline-block;width:.5em;height:.5em;-moz-border-radius:50%;border-radius:50%;background:-moz-linear-gradient(308deg,#d8e3e8,#a8b5bb);background:linear-gradient(142deg,#d8e3e8,#a8b5bb);opacity:0}.form .select-box .option .radio{display:none}.modal{text-transform:none;font-size:16px;width:68.5em;height:69.125em;border:.0625em solid transparent;background:-webkit-gradient(linear,left top,left bottom,from(#11171a),to(#11171a)) padding-box,-webkit-gradient(linear,left top,left bottom,from(0),color-stop(transparent),to(hsla(0,0%,100%,.15))) border-box;background:-moz-linear-gradient(#11171a,#11171a) padding-box,-moz-linear-gradient(0,transparent,hsla(0,0%,100%,.15)) border-box;background:linear-gradient(#11171a,#11171a) padding-box,linear-gradient(0,transparent,hsla(0,0%,100%,.15)) border-box;-moz-border-radius:2.5em;border-radius:2.5em;-webkit-box-orient:vertical;-webkit-box-direction:normal;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;position:relative}.modal,.modal-wrap{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;margin:auto}.modal-wrap{position:fixed;z-index:110;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.5);color:#fff;line-height:1.3;font-weight:400;text-align:center;padding-top:9em;padding-bottom:9em;overflow:auto;opacity:0;visibility:hidden}.modal-wrap .close{position:absolute;right:2.9375em;top:1.875em;width:1.25em;z-index:2;-ms-touch-action:none;touch-action:none}.modal-wrap hgroup{position:relative;margin-bottom:5.5625em}.modal-wrap hgroup:after{content:&quot;&quot;;position:absolute;right:0;bottom:0;display:inline-block;height:1em;width:25.9375em;background:url('https://fintiko.com/public/img/el-line-sm.svg') 50%/100% 100% no-repeat}.modal-wrap .title{text-align:left;font-size:4.375em;margin-bottom:.6428571429em;font-weight:500;font-size:70px;line-height:100%;letter-spacing:-.06em;color:#dcdbdb}.modal-wrap .descr{font-family:Inter;text-align:left;font-weight:400;font-size:1em;line-height:130%;letter-spacing:-.04em;color:#dcdbdb;max-width:20.625em}.modal-wrap.apply-form .form{width:26em;height:38.75em;-ms-flex-wrap:wrap;flex-wrap:wrap;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.modal-wrap.apply-form .form__item{width:26em;max-width:26em;margin-right:7.5em}.modal-wrap.apply-form .form__item.mr-0{margin-right:0}.modal-wrap.apply-form .form__item textarea{height:8em}.modal-wrap.apply-form .g-recaptcha{margin:0 auto}@media (max-width:430px){.modal-wrap.apply-form .g-recaptcha{-webkit-transform:scale(.9);-moz-transform:scale(.9);-ms-transform:scale(.9);transform:scale(.9);margin-left:0;margin-right:auto;-webkit-transform-origin:left;-moz-transform-origin:left;-ms-transform-origin:left;transform-origin:left}}@media (max-width:350px){.modal-wrap.apply-form .g-recaptcha{-webkit-transform:scale(.8);-moz-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8)}}.modal-wrap.apply-form .form__submit{margin-top:2.5em}.modal-wrap.apply-form .form__submit button.button{font-size:1.31em}.modal-wrap.fail .modal,.modal-wrap.success .modal{width:31.25em;height:12.5em}.modal-wrap.fail .modal__container,.modal-wrap.success .modal__container{padding:1.8125em 4.25em;height:100%;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center}.modal-wrap.fail .title,.modal-wrap.success .title{font-size:1.875em;text-align:center;margin-bottom:0}.modal__container{padding:8.75em 4.5em}.terms{color:#dcdbdb;padding-top:5.625em;padding-bottom:12.1875em}.terms .container{max-width:82em}.terms h1{font-size:4.375em}.terms h1,.terms h2{font-weight:500;line-height:99.6%;letter-spacing:-.06em}.terms h2{font-size:3.125em;margin-top:2.4em}.terms h3{font-size:1.875em;font-weight:500;line-height:99.6%;letter-spacing:-.06em;margin-top:2.7em;margin-bottom:1.8666666667em}.terms p{font-family:Inter;font-size:.875em;font-weight:400;line-height:130%;letter-spacing:-.035em;margin-bottom:1.2142857143em}.terms a{text-decoration:underline}</style><link rel="preload" href="./public/css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="preload" href="./public/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><link type="image/x-icon" rel="shortcut icon" href="./public/img/favicon.ico"></head><body><header class="header"><nav><a class="header__logo" href="index.html"><img src="public/img/logo.svg" width="135" height="24" alt="logo" srcset="public/img/logo.svg" sizes="(max-width: 768px) 206px"></a><div class="open"><div class="open__item"></div><div class="open__item"></div><div class="open__item"></div></div><ul class="menu"><li class="menu__item"><p class="link-menu">Products</p><ul class="menu__sublist"><li class="menu__subitem"><a class="link-menu" href="account.html">Accounts</a></li><li class="menu__subitem"><a class="link-menu" href="payments.html">Payments</a></li><li class="menu__subitem"><a class="link-menu" href="comming-soon-page.html">Pricing</a></li><li class="menu__subitem"><a class="link-menu" href="services.html">Services</a></li></ul></li><li class="menu__item"><p class="link-menu">Company</p><ul class="menu__sublist"><li class="menu__subitem"><a class="link-menu" href="about-us.html">About us</a></li></ul></li><li class="menu__item"><p class="link-menu">Extras</p><ul class="menu__sublist"><li class="menu__subitem"><a class="link-menu" href="https://fintiko.readme.io" target="_blank">API Documentation</a></li><li class="menu__subitem"><a class="link-menu" href="feautures.html">Feautures</a></li></ul></li><li class="menu__item"><div class="header__btns"><ul><li><button class="header__btn header__btn_apply popup-btn" data-popup="apply-form">Apply</button></li><li><a class="header__btn header__btn_signin" href="https://dashboard.fintiko.com/" target="_blank">Sign In</a></li></ul></div></li></ul></nav></header><main class="main"><section class="top-section"><nav class="container"><a class="top-section__crumb" href="index.html"><p><img src="public/img/crumb-arr.svg" alt="arrow"></p><h4>Terms of Use</h4></a></nav></section><section class="terms"><article class="container"><h1>Terms and Conditions</h1><h2>Last update: April, 2024</h2><h3>General information</h3><p>VERIDAN AXIS GROUP LTD, a company incorporated in the Republic of Cyprus with the registered office at Fysco Lotus Plaza, Flat 406, 8 Valter Gkropious 8, Limassol 3076, Cyprus, registration No. Company Number HE459899, operating under the brand “FINTIKO”, owns and operates this website www.fintiko.com (“COMPANY”, “We”, “Our”, “Us”).</p><p>Please read these Terms and Conditions (the “Terms”) carefully before using the website <a href="www.fintiko.com">www.fintiko.com</a> (the “Website”). These Terms together with the Privacy Notice and Cookie Notice and any other terms and conditions applicable to Our services, form a legal agreement (the “Agreement”) between the Client (“You”, “Your”) and the COMPANY.</p><p>These Terms regulate Your access to and use of the Website, including any content, functionality, and services available on or through the Website domains, subdomains, or subdirectories, regardless of Your means of access and use, i.e., whether online or mobile, whether guest or a registered user.</p><p>By continuing to access Website, link to it, use it in any other way, or any service accessible via this Website, You confirm Your acceptance of the Terms and agree to be bound by these Terms. If You are continuing to access Website, link to it, use it in any other way or any service accessible via this Website on behalf of a legal entity, then You confirm Your acceptance of the Terms and agree to be bound by these Terms on behalf of that legal entity and You represent and warrant that You have the authority to bind the legal entity to these Terms. If You do not accept or agree with these Terms, You must not access Websites, link to it, use it in any other way or any service accessible via this Website.</p><p>Our Website and services are not directed to individuals under the age of 18 (eighteen). If You are under the age of 18 (eighteen), You do not have authorization or permission to access or use Our Website or services. If You are using Our Website and services on behalf of a legal entity, You shall have authority and legal right to act on behalf of that legal entity. By accessing or using Our Website, You represent and warrant that You are of legal age and full legal capacity and/or have sufficient rights and authority to represent that legal entity and to enter into the agreement on behalf of that legal entity.</p><h3>Operation and use of the website</h3><p>Subject to the Terms, We grant You a worldwide limited, non-exclusive, revocable, and non-transferable right to use the Website and services. For clarity, You can use the tools and functions of the Website that We provide for their intended purpose only.</p><p>This Website or any portion of it may not be reproduced, duplicated, copied, sold, resold, or otherwise exploited for any purpose, commercial or otherwise, that is not expressly permitted by Us in writing.</p><p>We will make commercially reasonable efforts to always run the Website efficiently and accessible, subject to Our right to discontinue, temporarily or permanently, the operation of the Website, or any part thereof, or block, remove or delete any content from the Website at Our sole discretion and without prior notice. We may modify, replace, or discontinue the Website or any part thereof at any time, for any reason, with or without notice, in Our sole discretion. The operation of the Website is dependent upon various factors such as software, hardware, and communication networks. By their nature, these factors are not fault-free.</p><p>Accordingly, We do not warrant that the Website will operate in an uninterrupted or error free manner, or that it will always be available, free from all harmful components, or that at all times it will be completely safe, and secured from unauthorized access to Our computers, immune from damages, free from malfunctions, bugs or failures, including, but not limited to, hardware failures, software failures, and software communication failures, originating in Us or any other service provider. Such incidents and activities will not be considered a breach of the Terms.</p><p>In order to improve Our Website and/or services, We may from time to time change the Website’s structure, layout, design or display, as well as the scope and availability of the information and content herein, without giving any prior notice. Changes of this character by their very nature are likely to result in glitches and cause inconvenience. We will not be held responsible for any outcome of these changes, and failures resulting from them.</p><p>We will not be liable if for any reason all or any part of the Website is unavailable at any time for any period. From time to time, We may restrict access to the Website or to some parts of the Website to visitors and users, including registered users. You are responsible for making all arrangements necessary for You to have access to the Website.</p><h3>Your account</h3><p>In order to use some of Our services You must first register Your details on Our Website. As part of the signup process You may be asked to accept additional terms and conditions and/or agreement with Us. It is a condition of Your use of the Website that all the information You provide on the Website must be accurate, current, truthful and complete.</p><p>You must ensure that the information recorded on Your Account is always accurate and up to date and We shall not be liable for any loss arising out of Your failure to do so. We may ask You at any time to confirm the accuracy of Your information or to provide documents or other evidence.</p><p>You agree that all information You provide to Us through the Website or otherwise, including but not limited to the use of any interactive features on the Website, is governed by Our Privacy Notice and Cookies Notice, and Your consent to all actions We take with respect to Your information consistent with Our Privacy Notice and Cookies Notice.</p><h3>Account security</h3><p>You must take all reasonable steps to always keep Your account password and any other security features safe and never disclose them to anyone. We will never ask You to provide Your password to Us or to a third party. Any message You receive or Website You visit that asks for Your password or other security features, other than Our Website or payment gateway, should be reported to Us. If You are in doubt whether a Website is genuine, You should contact Us. It is advisable to change Your password regularly (at least every three (3) to six (6) months) in order to reduce the risk of a security breach in relation to Your Account. We also advise You not to choose a password that is easily guessed from information someone might know or gather about You or a password that has a meaning. Except as expressly stated in these Terms or other agreements with Us, You must never allow anyone to access Your Account or watch You accessing Your Account. You must comply with the security procedures We tell You about from time to time.</p><p>If You have any indication or suspicion of Your account, login details, password or other security feature being lost, stolen, misappropriated, used without authorisation, or otherwise compromised, You are advised to change Your password. You must contact Us without undue delay on becoming aware of any loss, theft, misappropriation or unauthorised use of Your Account, login details, password, or other security features. Any undue delay in notifying Us may not only affect the security of Your account but may result in You being liable for any losses as a result where Your failure to notify Us is intentional or grossly negligent.</p><h3>Fees</h3><p>The access to and use of the Website is free of charge and does not require to be a registered user or client of COMPANY, except where an express written agreement exists.</p><h3>Restrictions</h3><p>You are not allowed to use the Website for any commercial or business purpose that is not expressly permitted by the Terms, including, but not limited to, providing the Website or services to third parties by reselling, licensing, renting, leasing, transferring, lending, timesharing, assigning, mirroring, redistributing or displaying the Website, services or any part thereof, without Our prior written and explicit permission. Without limiting the aforesaid, You may not:</p><ul><li>modify any material or content that We make available on the Website, except as expressly permitted under the Terms;</li><li>engage in or attempt to engage in any form of testing, scanning, crawling, scraping, probing, robotic navigating, bulk extracting or hacking the Website;</li><li>interfere with, burden or disrupt the functionality of the Website;</li><li>circumvent, impair or manipulate the operation of the Website;</li><li>work around or circumvent any technical limitations in the Website or use any tool to enable features or functionalities that are otherwise disabled, inaccessible or undocumented in the Website;</li><li>embed, frame or otherwise link directly to the Website, from any other webpage, application or other resources, without Our prior written permission;</li><li>engage in any false, misleading or deceptive acts or practices involving the Website or our identity, agency or affiliation with any person or entity; and,</li><li>breach the security of the Website, or any network or server used by the Website.</li></ul><p>You must not access or use the Website and/or services for or in:</p><ul><li>any illegal purpose, or for promotion or for facilitation of the violation of any law or regulation;</li><li>any way that is unlawful or fraudulent, or has any unlawful or fraudulent purpose or effect;</li><li>inputting, distributing, uploading, posting, emailing, transmitting or otherwise making available any content via Website that is threatening, abusive, harassing, tortious, defamatory, vulgar, obscene, libellous, invasive of another’s privacy, hateful, or racially, ethically or otherwise objectionable;</li><li>any way that would locally or internationally evade any applicable taxes or facilitate tax evasion;</li><li>any unsolicited or unauthorized advertising, promotional material, or any other form of spam;</li><li>to deal in harmful programs such as viruses, spyware, or similar computer code designed to adversely affect the operation of any computer software or hardware;</li><li>introducing to the Site/Sites viruses, trojans, worms, logic bombs or other material that is malicious or technologically harmful;</li><li>probing, scanning, or testing the vulnerability of any system or network or breach or circumvent any security or authentication measures;</li><li>any other manner inconsistent with these Terms.</li></ul><p>The Website provision is not aimed at residents of jurisdictions from which for whatever reason the access to and use of the Website or any part thereof is either prohibited or strictly regulated. If You are subject to such restrictions, You may not access and use the Website or any part thereof. You must not access the Website and services, including without limitation through automated means, if You are located in a country sanctioned by the UN, EU and/or U.S., or are on the UN, EU and/or U.S. Treasury Department’s list of Specially Designated Nationals.</p><p>You confirm having been informed and understood that the Website does not constitute in itself a service of the COMPANY.</p><h3>Intellectual property</h3><p>Subject to Your compliance with these Terms and all applicable laws, statutes regulations and ordinances We remain the sole owner of all right, title, and interest in the Website and reserve all rights not expressly granted under these Terms.</p><p>The Website, including but not limited to text, content, photographs, video, audio, links, software and graphics, as well as selection and arrangement of the content, are protected by copyright, patent, trade secret and other intellectual property laws, international treaties and/or other proprietary rights and laws of the Republic of Cyprus and other countries.</p><p>All trade and service marks, logos and any other marks, whether registered or unregistered, shown in content are the property of their respective owners. You agree to abide by all applicable copyright and other laws, as well as any additional copyright notices or restrictions contained on the Website. You acknowledge that the Website has been developed, compiled, prepared, revised, selected, and arranged by Us, Our partners and others, including certain other information sources, through the application of methods and standards od judgement developed and applied through the expenditure of substantial time, effort, resources and money and constitutes Our and such others valuable intellectual property. You agree to protect Our proprietary rights and proprietary rights of all others having rights in the Website during and after the term of these Terms and to comply with all reasonable written requests made by Us or Our suppliers and licensors of content, equipment, or otherwise to protect Our and their, and others’ contractual, statutory, and legal rights in the Website.</p><p>You agree to notify Us in writing promptly upon becoming aware of any unauthorized access or use of the Website by any individual or legal entity or of any claim that the Website infringes upon any copyright, trademark, or other contractual, statutory, or legal rights. All present and future rights in and to trade secrets, patents, copyrights, trademarks, service marks, know-how, and other proprietary rights of any type under the laws of any governmental authority, domestic or foreign, including rights in and to all applications and registrations relating to the Website (“Intellectual Property Rights”) shall, as between You and Us, at all times be and remain the sole and exclusive property of the COMPANY. All present and future rights in and title to the Website, including the right to exploit the Website and any portions of it over any present or future technology, are reserved to Us for Our exclusive use.</p><p>Except as specifically permitted by the Terms, You may not copy, republish, frame, link to, download, transmit, modify, adapt, create derivative works based on, rent, lease, loan, sell, assign, distribute, display, perform, license, sublicense or reverse engineer the Website or any content or make any use of the Website or any portion thereof. In addition, You agree not to use any data mining, robots, computer codes or similar data and/or image gathering and extraction devices, programs, tools, algorithms, processes or methods in connection with the Website or content. Except as specifically permitted herein, You shall not use the Intellectual Property Rights or Website, or the names of any individual participant in, or contributor to, the Website, or any variations or derivatives thereof, for any purpose, without Our prior written approval.</p><h3>Limited license</h3><p>Subject to these Terms We give You the limited license to use the Website in compliance with the provisions of the Terms: to view, temporarily print and/or temporarily download a copy of the materials from this Website in compliance with the provisions of the Terms. You do not acquire any rights or licenses in or to the Website, content, and materials contained within the Website other than the limited right to use the Website in accordance with the Terms. Should You choose to download content from the Website, You must do so in accordance with the Terms. Such temporary download is a limited license granted to You by Us only for Your own personal, non-commercial use in accordance with the Terms and does not transfer any other rights to You. We reserve all rights not expressly granted in these Terms. We can terminate this license at any time for any reason or for no reason without prior notice.</p><h3>Termination</h3><p>We can terminate these Terms and/or suspend or terminate Your rights to use the Website or services, with or without cause at any time, at You sole discretion and without prior notice and effective immediately.</p><p>You may terminate these Terms and/or cancel Your account, with or without cause at any time, by discontinuing Your access and use of the Website and destroying all materials obtained from it and You may cancel Your account at any given time by contacting Us.</p><p>You understand and agree that any termination of Your account may involve the deletion of Your account along with all related information.</p><p>We shall not be liable to You or any third party for the termination or suspension of and/or access to the Website or services, or any claims related to the termination or suspension of the Website or services. Upon termination of these Terms by You or Us, You must discontinue Your access and use of the Website and services and destroy or return promptly all materials obtained from the Website and any copies thereof.</p><p>Termination of the Terms automatically terminates all licenses granted to You by Us under these Terms.</p><h3>Link the website</h3><p>You may not link to or frame the Website, or any portion thereof, except as provided herein or with preliminary express and evidenced consent of the COMPANY.</p><p>Upon linking to the Website pursuant to the Terms, You will be granted a non-exclusive, non-transferable, royalty-free sub-license to use the COMPANY mark owned by the COMPANY solely for providing an underlined, textual link from Your website to www.fintiko.com. No other use of the COMPANY marks, names or logos is permitted without express written permission from the COMPANY.</p><p>Without limiting other provisions contained in the Terms, You may include a link(s) on Your website to www.fintiko.com publicly accessible Web pages. You may not link to www.fintiko.com any website containing an inappropriate, profane, defamatory, infringing, obscene, indecent or unlawful topic, name, material including but not limited to pictures, videos, or information that violates any applicable intellectual property, proprietary, privacy or publicity rights.</p><h3>Limitation of liability and indemnification</h3><p>The content on Our Website is provided for general information only. It is not intended to amount to advice on which You should rely. You must obtain professional or specialist advice before taking or refraining from any action based on the content of Our Website.</p><p>You acknowledge and agree that the Website and services and anything contained within Our Website, includng, but not limited to, content or adverisements are being developed and provided for use “as is”, “as available”, “with all its faults”, and that We make no warranty of any kind, express or implied, as to the Website and services, including, but not limited to accuracy, reliability, likely-result, functionality, performance, merchantability, quiet enjoyment, system integration, data accuracy, non-infringement, title, fitness for particular purpose or use, compatibility, security or being up to date.</p><p>To the maximum extent permitted by law, we expressly disclaim any warranties, conditions, representations andguarantees concerning our website, services, the accuracy, reliability, adequacy or completeness of Our Website, services and any other material provided by any link to another website or service, whether express or implied, arising by law, custom, prior verbal or written statements, or otherwise, including, without limitation, any warranty of merchantability, likely-result, fitness for a particular purpose or non-infringement.</p><p>No representation or other affirmation of fact, including, without limitation, statements regarding capacity, suitability for use or performance of Our Website and services whether made by Our employees or otherwise, which is not contained in the Terms, will be deemed to be a warranty by Us for any purpose, or give rise to any liability of Us whatsoever.</p><p>Any use of the Website and/or services are at Your sole risk and You assume full responsibility and risk of loss resulting from Your access and/or usage, including, but not limited to, loss of service or data. We do not warrant that the Website is compatible with your equipment or that the Website, or email sent by the COMPANY or its representative, is free of errors or viruses, worms or “trojan horses”, or any harmful, invasive, or corrupted files, and is not liable for any damage You may suffer as a result of such destructive features.</p><p>You agree that the COMPANY and its suppliers, shareholders, agents, directors, officers, employees, representatives, successors, and assigns shall have no responsibility or liability for: (i) any injury or damages, whether caused by the negligence of the COMPANY, their respective affiliates, suppliers, agents, directors, officers, employees, representatives, subsidiaries, successors, and assigns, or otherwise arising in connection with the Website and shall not be liable for any lost profits, losses, punitive, incidential or consequential damages, or any claim against the COMPANY by any other party; or (ii) any fault, inaccuracy, omission, delay, or any other failure in Our Website on such equipment.</p><p>The content of other websites, services, goods, or advertisements that may be linked to Our Website is not maintained or controlled by the COMPANY. The COMPANY therefore is not responsible for the availability, content, or accuracy of other websites, services, or goods that may be linked to, or advertised on Our Website. The COMPANY does not: (a) make any warranty, express or implied, with respect to the use of the links provided on, or to, Our Website; (b) guarantee the accuracy, completeness, usefulness or adequacy of any other websites, services, goods, or advertisements that may be linked to Our Website; or (c) make any endorsement, express or implied, of any other websites, services, goods, or advertisements that may be linked to Our Website. The COMPANY is also not responsible for the reliability or continued availability of the telephone lines, wireless services, communications media, and equipment you use to access Our Website. You understand and acknowledge that The COMPANY and/or third-party contributors to Our Website may choose at any time to inhibit or prohibit their content from being accessed unther terms.</p><p>You acknowledge that: (i) Our Website is provided for information purposes only; (ii) Our Website may include certain information taken from other sources worldwide; (iii) We do not guarantee the sequence, accuracy, completeness, fitness for a specific purpose or timeliness of Our Website; (iv) the provision of certain parts of Our Website is subject to the terms and conditions of other agreements to which We are a party; (v) none of the information contained on the Website constitutes a solicitation, offer, opinion, or recommendation to use, buy, sell any financial instrument or service, or to provide legal, tax, accounting, or investment advice or suitability of any financial instrument or service; and (vi) the information provided on Our Website is not intended for use by, or distribution to, any person or legal entity in any jurisdiction or country where such use or distribution would be contrary to law or regulation. Accordingly, anything to the contrary herein set forth notwithstanding, Our suppliers, agents, directors, officers, employees, representatives, successors, and assigns shall not, directly or indirectly, be liable, in any way, to You or any other person for any: (a) inaccuracies or errors in or omissions from Our Website; (b) delays, errors, or interruptions in the transmission or delivery of Our Website and/or any part of its content; or (c) loss or damage arising therefrom or occasioned thereby, or by any reason of non-performance.</p><p>To the full extent permitted by applicable law, You agree to indemnify, defend and hold harmless Us, Our employees, directors, shareholders, affiliates, agents, advisors or anyone acting on Our behalf from and against any action, liability, claims, demands, damages, losses (including, without limitation, loss of profit), payments or expenses, including legal expenses and attorney fees that We incur if it directly or indirectly arises from Your use of Our Website or in connection with Your breach of the terms or any unlawful or tortuous action or inaction by You or anyone on Your behalf concerning Our Website and services.</p><h3>Amendments</h3><p>We may revise, update, and amend (“Changes”) these Terms from time to time in You sole discretion without prior notice. All Changes are effective immediately from the moment We post them on You Website and apply to all access and use of You Website thereafter. Your continued use of You Website following the posting of revised Terms means that You accept and agree to the Changes. You are expected to review this page from time to time so You are informed of any Changes, as they are binding on You. Any terms and conditions proposed by You which are in addition to or which conflict with the Terms are expressly rejected by Us and shall be not in force or effect.</p><p>Notice that We may modify, enhance or improve You Website and Services, and may accordingly offer additional services. Such additional services may be governed by additional or different terms, as provided by Us, where applicable.</p><h3>Miscellaneous</h3><p>You accept that We have the right to change the accessibility, content or technical specifications of any aspect of You Website at any time in You sole discretion. You further accept that such changes may result in You being unable to access and/or use You Website.</p><p>The failure of the COMPANY to exercise or enforce any right or provision of the Terms shall not constitute a waiver of such right or provision.</p><p>You acknowledge and agree that the COMPANY can freely assign these Terms or any of its rights under these Terms to any person without Your consent. You shall, however, not be entitled to assign these Terms, in whole or in part, to another person without the prior written approval of the COMPANY.</p><p>Any formation or interpretation of this Agreement and any disputes arising from it will be governed by the laws of the Republic of Cyprus. The competent courts in the Republic of Cyprus will have sole and exclusive jurisdiction concerning the Terms and any claim, cause of action or dispute arising out of or related thereto. You hereby agree to the exclusive jurisdiction of the above-mentioned courts, agree to accept service of process by any means permitted by the applicable law and waive any jurisdictional, conflict of law or venue defences otherwise available to You.</p><h3>Contact us</h3><p>You may contact Us at any time for any questions regarding these Terms via email: <a href="mailto:info@fintiko.com">info@fintiko.com.</a></p></article></section></main><footer class="footer"><div class="footer__top"><img class="logo" src="public/img/logo.svg" width="135" height="24" alt="logo"><h3 class="slogan">Smart Payment Orchestration</h3><nav class="buttons"><ul><li><button class="buttons__btn popup-btn" data-popup="apply-form">Apply</button></li><li><a class="buttons__btn" href="https://dashboard.fintiko.com/" target="_blank">Sign in</a></li></ul></nav></div><div class="footer__mapsite"><div class="mapsite"><div class="mapsite__item item"><div class="item__head"><h2>Products</h2><img src="public/img/footer-arr.svg" width="9" height="6" alt="arrow"></div><nav class="item__body"><ul><li><a href="account.html">Accounts</a></li><li><a href="payments.html">Payments</a></li><li><a href="comming-soon-page.html">Pricing</a></li><li><a href="services.html">Services</a></li></ul></nav></div><div class="mapsite__item item"><div class="item__head"><h2>Company</h2><img src="public/img/footer-arr.svg" width="9" height="6" alt="arrow"></div><nav class="item__body"><ul><li><a href="about-us.html">About us</a></li></ul></nav></div><div class="mapsite__item item"><div class="item__head"><h2>Extras</h2><img src="public/img/footer-arr.svg" width="9" height="6" alt="arrow"></div><nav class="item__body"><ul><li><a href="http://gate.fintiko.com/api/" target="_blank">API Documentation</a></li></ul></nav></div><div class="mapsite__item item"><div class="item__head"><h2>Help</h2><img src="public/img/footer-arr.svg" width="9" height="6" alt="arrow"></div><nav class="item__body"><ul><li><a href="faq.html">FAQ</a></li><li><a href="contacts.html">Contacts</a></li></ul></nav></div></div></div><div class="footer__bottom"><div class="footer__bottom_wrap"><div class="footer__bottom_left"><nav class="links"><ul><li><a class="links__item" href="cookies.html">Cookie policy</a></li><li><a class="links__item" href="privacy.html">Privacy Policy </a></li><li><a class="links__item" href="terms.html">Terms and Conditions</a></li></ul></nav></div><div class="footer__bottom_right"><div class="copyright"><small>© 2024 Fintiko LTD</small></div><a class="agency" href="https://www.bsagency.design/" target="_blank"><small>Designed by bsagency</small></a></div></div></div></footer><div class="cookies_popup" id="cookies"><section class="container"><article class="cookies_popup__wrap"><h2 class="cookies_popup__text">We use cookies to enhance your browsing experience on fintiko.com. By visiting our site, you agree to our <a href="cookies.html">Cookie Policy</a></h2><div class="cookies_popup__buttons"><button class="button button-blue">Consent</button><button class="button button-transparent-blue">Deny</button></div></article></section></div><div class="modal-wrap apply-form"><div class="modal"><div class="close"><img src="public/img/close.svg" width="20" height="20" alt="close icon"></div><div class="modal__container"><hgroup><h1 class="title">Application info</h1><p class="descr">Please make sure that all fields are completed, all information is provided fully and correctly.</p></hgroup><form class="form" id="formApply" action="apply_form.php"><label class="form__item"><input type="text" name="full_name" data-name="name" data-valid="false"><p class="placeholder">Full Name:</p><div class="error-text">Information Required</div></label><label class="form__item"><input type="text" name="email" data-name="email" data-valid="false"><p class="placeholder">Email Address:</p><div class="error-text">Information Required</div></label><label class="form__item"><input type="number" name="tel" data-name="tel" data-valid="false"><p class="placeholder">Phone Number:</p><div class="error-text">Information Required</div></label><label class="form__item"><input type="text" name="company_name" data-name="name" data-valid="false"><p class="placeholder">Company Name:</p><div class="error-text">Information Required</div></label><label class="form__item"><input type="text" name="address" data-name="name" data-valid="false"><p class="placeholder">Business Address:</p><div class="error-text">Information Required</div></label><label class="form__item"><input type="text" name="country" data-name="country" data-valid="false" list="countryList"><datalist id="countryList"></datalist><p class="placeholder">Country/Region:</p><div class="error-text">Information Required</div></label><label class="form__item"><input type="text" name="website" data-name="name" data-valid="false"><p class="placeholder">Business Website (if applicable):</p><div class="error-text">Information Required</div></label><label class="form__item mr-0"><input type="text" name="nature_of_business" data-name="name" data-valid="false"><p class="placeholder">Nature of Business (brief description):</p><div class="error-text">Information Required</div></label><div class="form__item select mr-0"><p class="placeholder">Estimated Monthly Transaction Volume:</p><div class="select-box"><div class="options-container"><div class="option"><input class="radio" id="first" type="radio" name="estimated" value="0 - 100 000"><label for="first">0 - 100 000</label></div><div class="option"><input class="radio" id="second" type="radio" name="estimated" value="100 000 - 250 000"><label for="second">100 000 - 250 000</label></div><div class="option"><input class="radio" id="third" type="radio" name="estimated" value="250 000 - 500 000"><label for="third">250 000 - 500 000</label></div><div class="option"><input class="radio" id="forth" type="radio" name="estimated" value="500 000 - 1 000 000"><label for="forth">500 000 - 1 000 000</label></div><div class="option"><input class="radio" id="fifth" type="radio" name="estimated" value="1 000 000 +"><label for="fifth">1 000 000 +</label></div></div><div class="selector-wrapper"><p class="selected"></p><svg class="arrow rotated" id="drp-arrow2" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L4.5 4L8 1" stroke="#DCDBDB" stroke-width="2" stroke-linecap="round"></path></svg></div></div><div class="error-text">Information Required</div></div><label class="form__item mr-0"><textarea type="text" data-valid="true" name="notes"></textarea><p class="placeholder">Notes and aditional information:</p></label><div class="g-recaptcha" id="g-recaptcha" data-sitekey="6LdkpX4qAAAAABDQx5OuUltaT6g5elYSBlxKDujq" data-valid="false"></div><div class="form__submit"><button class="btn button button-blue" type="submit">Submit Application</button></div><label class="form__checkbox"><input type="checkbox" data-valid="false" data-name="rule"><div class="checkbox__box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none"><rect x="0.5" y="0.5" width="14" height="14" stroke="url(#paint0_linear_1522_2630)"></rect><path d="M12 4.90446L11.06 4L6.66667 8.19745L4.94667 6.56051L4 7.4586L6.66667 10L12 4.90446Z" fill="white" opacity="0.4"></path><defs><lineargradient id="paint0_linear_1522_2630" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0.6"></stop><stop offset="1" stop-color="white" stop-opacity="0"></stop></lineargradient></defs></svg></div><p class="text">I agree to the <a href="terms.html">Business<br>Terms of Service </a>and our <a href="privacy.html">privacy policy</a></p><div class="error-text">Information Required</div></label></form></div></div></div><div class="modal-wrap fail"><div class="modal"><div class="close"><img src="public/img/close.svg" width="20" height="20" alt="close icon"></div><div class="modal__container"><h2 class="title">Something is wrong</h2></div></div></div><div class="modal-wrap success"><div class="modal"><div class="close"><img src="public/img/close.svg" width="20" height="20" alt="close icon"></div><div class="modal__container"><h2 class="title">Data sent successfully</h2></div></div></div><script src="./public/js/swiper-bundle.min.js" defer="defer"></script><script src="./public/js/validate.js" defer="defer"></script><script src="./public/js/main.min.js" defer="defer"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+	<title>Fintiko</title>
+	<meta name="description">
+	<style></style>
+	<link rel="stylesheet" href="./public/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./public/css/style.min.css">
+	<link type="image/x-icon" rel="shortcut icon" href="./public/img/favicon.ico">
+</head>
+
+<body>
+	<header class="header">
+		<nav> <a class="header__logo" href="index.html"> <img src="public/img/logo.svg" width="135" height="24"
+					alt="logo" srcset="public/img/logo.svg" sizes="(max-width: 768px) 206px"></a>
+			<div class="open">
+				<div class="open__item"></div>
+				<div class="open__item"></div>
+				<div class="open__item"></div>
+			</div>
+			<ul class="menu">
+				<li class="menu__item">
+					<p class="link-menu">Products</p>
+					<ul class="menu__sublist">
+						<li class="menu__subitem"><a class="link-menu" href="account.html">Accounts</a></li>
+						<li class="menu__subitem"><a class="link-menu" href="payments.html">Payments</a></li>
+						<li class="menu__subitem"><a class="link-menu" href="comming-soon-page.html">Pricing</a></li>
+						<li class="menu__subitem"><a class="link-menu" href="services.html">Services</a></li>
+					</ul>
+				</li>
+				<li class="menu__item">
+					<p class="link-menu">Company</p>
+					<ul class="menu__sublist">
+						<li class="menu__subitem"><a class="link-menu" href="about-us.html">About us</a></li>
+					</ul>
+				</li>
+				<li class="menu__item">
+					<p class="link-menu">Extras</p>
+					<ul class="menu__sublist">
+						<li class="menu__subitem"><a class="link-menu" href="#" target="_blank">API Documentation</a>
+						</li>
+						<li class="menu__subitem"><a class="link-menu" href="feautures.html">Feautures </a></li>
+					</ul>
+				</li>
+				<li class="menu__item">
+					<div class="header__btns">
+						<ul>
+							<li><button class="header__btn header__btn_apply popup-btn" data-popup="apply-form">
+									Apply</button></li>
+							<li><a class="header__btn header__btn_signin" href="#" target="_blank">Sign In</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="main">
+		<section class="top-section">
+			<nav class="container"><a class="top-section__crumb" href="index.html">
+					<p><img src="public/img/crumb-arr.svg" alt="arrow"></p>
+					<h4> Terms of Use</h4>
+				</a></nav>
+		</section>
+		<section class="terms">
+			<article class="container">
+				<h1>Terms and Conditions</h1>
+				<h2>Last update: April, 2024</h2>
+				<h3>General information</h3>
+				<p>VERIDAN AXIS GROUP LTD, a company incorporated in the Republic of Cyprus with the registered office
+					at Fysco Lotus Plaza, Flat 406, 8 Valter Gkropious 8, Limassol 3076, Cyprus, registration No.
+					Company Number HE459899, operating under the brand “FINTIKO”, owns and operates this website
+					www.fintiko.com (“COMPANY”, “We”, “Our”, “Us”).</p>
+				<p>Please read these Terms and Conditions (the “Terms”) carefully before using the website <a
+						href="www.fintiko.com">www.fintiko.com</a> (the “Website”). These Terms together with the
+					Privacy Notice and Cookie Notice and any other terms and conditions applicable to Our services, form
+					a legal agreement (the “Agreement”) between the Client (“You”, “Your”) and the COMPANY.</p>
+				<p>These Terms regulate Your access to and use of the Website, including any content, functionality, and
+					services available on or through the Website domains, subdomains, or subdirectories, regardless of
+					Your means of access and use, i.e., whether online or mobile, whether guest or a registered user.
+				</p>
+				<p>By continuing to access Website, link to it, use it in any other way, or any service accessible via
+					this Website, You confirm Your acceptance of the Terms and agree to be bound by these Terms. If You
+					are continuing to access Website, link to it, use it in any other way or any service accessible via
+					this Website on behalf of a legal entity, then You confirm Your acceptance of the Terms and agree to
+					be bound by these Terms on behalf of that legal entity and You represent and warrant that You have
+					the authority to bind the legal entity to these Terms. If You do not accept or agree with these
+					Terms, You must not access Websites, link to it, use it in any other way or any service accessible
+					via this Website.</p>
+				<p>Our Website and services are not directed to individuals under the age of 18 (eighteen). If You are
+					under the age of 18 (eighteen), You do not have authorization or permission to access or use Our
+					Website or services. If You are using Our Website and services on behalf of a legal entity, You
+					shall have authority and legal right to act on behalf of that legal entity. By accessing or using
+					Our Website, You represent and warrant that You are of legal age and full legal capacity and/or have
+					sufficient rights and authority to represent that legal entity and to enter into the agreement on
+					behalf of that legal entity.</p>
+				<h3>Operation and use of the website</h3>
+				<p>Subject to the Terms, We grant You a worldwide limited, non-exclusive, revocable, and
+					non-transferable right to use the Website and services. For clarity, You can use the tools and
+					functions of the Website that We provide for their intended purpose only.</p>
+				<p>This Website or any portion of it may not be reproduced, duplicated, copied, sold, resold, or
+					otherwise exploited for any purpose, commercial or otherwise, that is not expressly permitted by Us
+					in writing.</p>
+				<p>We will make commercially reasonable efforts to always run the Website efficiently and accessible,
+					subject to Our right to discontinue, temporarily or permanently, the operation of the Website, or
+					any part thereof, or block, remove or delete any content from the Website at Our sole discretion and
+					without prior notice. We may modify, replace, or discontinue the Website or any part thereof at any
+					time, for any reason, with or without notice, in Our sole discretion. The operation of the Website
+					is dependent upon various factors such as software, hardware, and communication networks. By their
+					nature, these factors are not fault-free.</p>
+				<p>Accordingly, We do not warrant that the Website will operate in an uninterrupted or error free
+					manner, or that it will always be available, free from all harmful components, or that at all times
+					it will be completely safe, and secured from unauthorized access to Our computers, immune from
+					damages, free from malfunctions, bugs or failures, including, but not limited to, hardware failures,
+					software failures, and software communication failures, originating in Us or any other service
+					provider. Such incidents and activities will not be considered a breach of the Terms.</p>
+				<p>In order to improve Our Website and/or services, We may from time to time change the Website’s
+					structure, layout, design or display, as well as the scope and availability of the information and
+					content herein, without giving any prior notice. Changes of this character by their very nature are
+					likely to result in glitches and cause inconvenience. We will not be held responsible for any
+					outcome of these changes, and failures resulting from them.</p>
+				<p>We will not be liable if for any reason all or any part of the Website is unavailable at any time for
+					any period. From time to time, We may restrict access to the Website or to some parts of the Website
+					to visitors and users, including registered users. You are responsible for making all arrangements
+					necessary for You to have access to the Website.</p>
+				<h3>Your account</h3>
+				<p>In order to use some of Our services You must first register Your details on Our Website. As part of
+					the signup process You may be asked to accept additional terms and conditions and/or agreement with
+					Us. It is a condition of Your use of the Website that all the information You provide on the Website
+					must be accurate, current, truthful and complete.</p>
+				<p>You must ensure that the information recorded on Your Account is always accurate and up to date and
+					We shall not be liable for any loss arising out of Your failure to do so. We may ask You at any time
+					to confirm the accuracy of Your information or to provide documents or other evidence.</p>
+				<p>You agree that all information You provide to Us through the Website or otherwise, including but not
+					limited to the use of any interactive features on the Website, is governed by Our Privacy Notice and
+					Cookies Notice, and Your consent to all actions We take with respect to Your information consistent
+					with Our Privacy Notice and Cookies Notice.</p>
+				<h3>Account security</h3>
+				<p>You must take all reasonable steps to always keep Your account password and any other security
+					features safe and never disclose them to anyone. We will never ask You to provide Your password to
+					Us or to a third party. Any message You receive or Website You visit that asks for Your password or
+					other security features, other than Our Website or payment gateway, should be reported to Us. If You
+					are in doubt whether a Website is genuine, You should contact Us. It is advisable to change Your
+					password regularly (at least every three (3) to six (6) months) in order to reduce the risk of a
+					security breach in relation to Your Account. We also advise You not to choose a password that is
+					easily guessed from information someone might know or gather about You or a password that has a
+					meaning. Except as expressly stated in these Terms or other agreements with Us, You must never allow
+					anyone to access Your Account or watch You accessing Your Account. You must comply with the security
+					procedures We tell You about from time to time.</p>
+				<p>If You have any indication or suspicion of Your account, login details, password or other security
+					feature being lost, stolen, misappropriated, used without authorisation, or otherwise compromised,
+					You are advised to change Your password. You must contact Us without undue delay on becoming aware
+					of any loss, theft, misappropriation or unauthorised use of Your Account, login details, password,
+					or other security features. Any undue delay in notifying Us may not only affect the security of Your
+					account but may result in You being liable for any losses as a result where Your failure to notify
+					Us is intentional or grossly negligent.</p>
+				<h3>Fees</h3>
+				<p>The access to and use of the Website is free of charge and does not require to be a registered user
+					or client of COMPANY, except where an express written agreement exists.</p>
+				<h3>Restrictions</h3>
+				<p>You are not allowed to use the Website for any commercial or business purpose that is not expressly
+					permitted by the Terms, including, but not limited to, providing the Website or services to third
+					parties by reselling, licensing, renting, leasing, transferring, lending, timesharing, assigning,
+					mirroring, redistributing or displaying the Website, services or any part thereof, without Our prior
+					written and explicit permission. Without limiting the aforesaid, You may not:</p>
+				<ul>
+					<li>modify any material or content that We make available on the Website, except as expressly
+						permitted under the Terms;</li>
+					<li>engage in or attempt to engage in any form of testing, scanning, crawling, scraping, probing,
+						robotic navigating, bulk extracting or hacking the Website;</li>
+					<li>interfere with, burden or disrupt the functionality of the Website;</li>
+					<li>circumvent, impair or manipulate the operation of the Website;</li>
+					<li>work around or circumvent any technical limitations in the Website or use any tool to enable
+						features or functionalities that are otherwise disabled, inaccessible or undocumented in the
+						Website;</li>
+					<li>embed, frame or otherwise link directly to the Website, from any other webpage, application or
+						other resources, without Our prior written permission;</li>
+					<li>engage in any false, misleading or deceptive acts or practices involving the Website or our
+						identity, agency or affiliation with any person or entity; and,</li>
+					<li>breach the security of the Website, or any network or server used by the Website.</li>
+				</ul>
+				<p>You must not access or use the Website and/or services for or in:</p>
+				<ul>
+					<li>any illegal purpose, or for promotion or for facilitation of the violation of any law or
+						regulation;</li>
+					<li>any way that is unlawful or fraudulent, or has any unlawful or fraudulent purpose or effect;
+					</li>
+					<li>inputting, distributing, uploading, posting, emailing, transmitting or otherwise making
+						available any content via Website that is threatening, abusive, harassing, tortious, defamatory,
+						vulgar, obscene, libellous, invasive of another’s privacy, hateful, or racially, ethically or
+						otherwise objectionable;</li>
+					<li>any way that would locally or internationally evade any applicable taxes or facilitate tax
+						evasion;</li>
+					<li>any unsolicited or unauthorized advertising, promotional material, or any other form of spam;
+					</li>
+					<li>to deal in harmful programs such as viruses, spyware, or similar computer code designed to
+						adversely affect the operation of any computer software or hardware;</li>
+					<li>introducing to the Site/Sites viruses, trojans, worms, logic bombs or other material that is
+						malicious or technologically harmful;</li>
+					<li>probing, scanning, or testing the vulnerability of any system or network or breach or circumvent
+						any security or authentication measures;</li>
+					<li>any other manner inconsistent with these Terms.</li>
+				</ul>
+				<p>The Website provision is not aimed at residents of jurisdictions from which for whatever reason the
+					access to and use of the Website or any part thereof is either prohibited or strictly regulated. If
+					You are subject to such restrictions, You may not access and use the Website or any part thereof.
+					You must not access the Website and services, including without limitation through automated means,
+					if You are located in a country sanctioned by the UN, EU and/or U.S., or are on the UN, EU and/or
+					U.S. Treasury Department’s list of Specially Designated Nationals.</p>
+				<p>You confirm having been informed and understood that the Website does not constitute in itself a
+					service of the COMPANY.</p>
+				<h3>Intellectual property</h3>
+				<p>Subject to Your compliance with these Terms and all applicable laws, statutes regulations and
+					ordinances We remain the sole owner of all right, title, and interest in the Website and reserve all
+					rights not expressly granted under these Terms.</p>
+				<p>The Website, including but not limited to text, content, photographs, video, audio, links, software
+					and graphics, as well as selection and arrangement of the content, are protected by copyright,
+					patent, trade secret and other intellectual property laws, international treaties and/or other
+					proprietary rights and laws of the Republic of Cyprus and other countries.</p>
+				<p>All trade and service marks, logos and any other marks, whether registered or unregistered, shown in
+					content are the property of their respective owners. You agree to abide by all applicable copyright
+					and other laws, as well as any additional copyright notices or restrictions contained on the
+					Website. You acknowledge that the Website has been developed, compiled, prepared, revised, selected,
+					and arranged by Us, Our partners and others, including certain other information sources, through
+					the application of methods and standards od judgement developed and applied through the expenditure
+					of substantial time, effort, resources and money and constitutes Our and such others valuable
+					intellectual property. You agree to protect Our proprietary rights and proprietary rights of all
+					others having rights in the Website during and after the term of these Terms and to comply with all
+					reasonable written requests made by Us or Our suppliers and licensors of content, equipment, or
+					otherwise to protect Our and their, and others’ contractual, statutory, and legal rights in the
+					Website.</p>
+				<p>You agree to notify Us in writing promptly upon becoming aware of any unauthorized access or use of
+					the Website by any individual or legal entity or of any claim that the Website infringes upon any
+					copyright, trademark, or other contractual, statutory, or legal rights. All present and future
+					rights in and to trade secrets, patents, copyrights, trademarks, service marks, know-how, and other
+					proprietary rights of any type under the laws of any governmental authority, domestic or foreign,
+					including rights in and to all applications and registrations relating to the Website (“Intellectual
+					Property Rights”) shall, as between You and Us, at all times be and remain the sole and exclusive
+					property of the COMPANY. All present and future rights in and title to the Website, including the
+					right to exploit the Website and any portions of it over any present or future technology, are
+					reserved to Us for Our exclusive use.</p>
+				<p>Except as specifically permitted by the Terms, You may not copy, republish, frame, link to, download,
+					transmit, modify, adapt, create derivative works based on, rent, lease, loan, sell, assign,
+					distribute, display, perform, license, sublicense or reverse engineer the Website or any content or
+					make any use of the Website or any portion thereof. In addition, You agree not to use any data
+					mining, robots, computer codes or similar data and/or image gathering and extraction devices,
+					programs, tools, algorithms, processes or methods in connection with the Website or content. Except
+					as specifically permitted herein, You shall not use the Intellectual Property Rights or Website, or
+					the names of any individual participant in, or contributor to, the Website, or any variations or
+					derivatives thereof, for any purpose, without Our prior written approval.</p>
+				<h3>Limited license</h3>
+				<p>Subject to these Terms We give You the limited license to use the Website in compliance with the
+					provisions of the Terms: to view, temporarily print and/or temporarily download a copy of the
+					materials from this Website in compliance with the provisions of the Terms. You do not acquire any
+					rights or licenses in or to the Website, content, and materials contained within the Website other
+					than the limited right to use the Website in accordance with the Terms. Should You choose to
+					download content from the Website, You must do so in accordance with the Terms. Such temporary
+					download is a limited license granted to You by Us only for Your own personal, non-commercial use in
+					accordance with the Terms and does not transfer any other rights to You. We reserve all rights not
+					expressly granted in these Terms. We can terminate this license at any time for any reason or for no
+					reason without prior notice.</p>
+				<h3>Termination</h3>
+				<p>We can terminate these Terms and/or suspend or terminate Your rights to use the Website or services,
+					with or without cause at any time, at You sole discretion and without prior notice and effective
+					immediately.</p>
+				<p>You may terminate these Terms and/or cancel Your account, with or without cause at any time, by
+					discontinuing Your access and use of the Website and destroying all materials obtained from it and
+					You may cancel Your account at any given time by contacting Us.</p>
+				<p>You understand and agree that any termination of Your account may involve the deletion of Your
+					account along with all related information.</p>
+				<p>We shall not be liable to You or any third party for the termination or suspension of and/or access
+					to the Website or services, or any claims related to the termination or suspension of the Website or
+					services. Upon termination of these Terms by You or Us, You must discontinue Your access and use of
+					the Website and services and destroy or return promptly all materials obtained from the Website and
+					any copies thereof.</p>
+				<p>Termination of the Terms automatically terminates all licenses granted to You by Us under these
+					Terms.</p>
+				<h3>Link the website</h3>
+				<p>You may not link to or frame the Website, or any portion thereof, except as provided herein or with
+					preliminary express and evidenced consent of the COMPANY.</p>
+				<p>Upon linking to the Website pursuant to the Terms, You will be granted a non-exclusive,
+					non-transferable, royalty-free sub-license to use the COMPANY mark owned by the COMPANY solely for
+					providing an underlined, textual link from Your website to www.fintiko.com. No other use of the
+					COMPANY marks, names or logos is permitted without express written permission from the COMPANY.</p>
+				<p>Without limiting other provisions contained in the Terms, You may include a link(s) on Your website
+					to www.fintiko.com publicly accessible Web pages. You may not link to www.fintiko.com any website
+					containing an inappropriate, profane, defamatory, infringing, obscene, indecent or unlawful topic,
+					name, material including but not limited to pictures, videos, or information that violates any
+					applicable intellectual property, proprietary, privacy or publicity rights.</p>
+				<h3>Limitation of liability and indemnification</h3>
+				<p>The content on Our Website is provided for general information only. It is not intended to amount to
+					advice on which You should rely. You must obtain professional or specialist advice before taking or
+					refraining from any action based on the content of Our Website.</p>
+				<p>You acknowledge and agree that the Website and services and anything contained within Our Website,
+					includng, but not limited to, content or adverisements are being developed and provided for use “as
+					is”, “as available”, “with all its faults”, and that We make no warranty of any kind, express or
+					implied, as to the Website and services, including, but not limited to accuracy, reliability,
+					likely-result, functionality, performance, merchantability, quiet enjoyment, system integration,
+					data accuracy, non-infringement, title, fitness for particular purpose or use, compatibility,
+					security or being up to date.</p>
+				<p>To the maximum extent permitted by law, we expressly disclaim any warranties, conditions,
+					representations andguarantees concerning our website, services, the accuracy, reliability, adequacy
+					or completeness of Our Website, services and any other material provided by any link to another
+					website or service, whether express or implied, arising by law, custom, prior verbal or written
+					statements, or otherwise, including, without limitation, any warranty of merchantability,
+					likely-result, fitness for a particular purpose or non-infringement.</p>
+				<p>No representation or other affirmation of fact, including, without limitation, statements regarding
+					capacity, suitability for use or performance of Our Website and services whether made by Our
+					employees or otherwise, which is not contained in the Terms, will be deemed to be a warranty by Us
+					for any purpose, or give rise to any liability of Us whatsoever.</p>
+				<p>Any use of the Website and/or services are at Your sole risk and You assume full responsibility and
+					risk of loss resulting from Your access and/or usage, including, but not limited to, loss of service
+					or data. We do not warrant that the Website is compatible with your equipment or that the Website,
+					or email sent by the COMPANY or its representative, is free of errors or viruses, worms or “trojan
+					horses”, or any harmful, invasive, or corrupted files, and is not liable for any damage You may
+					suffer as a result of such destructive features.</p>
+				<p>You agree that the COMPANY and its suppliers, shareholders, agents, directors, officers, employees,
+					representatives, successors, and assigns shall have no responsibility or liability for: (i) any
+					injury or damages, whether caused by the negligence of the COMPANY, their respective affiliates,
+					suppliers, agents, directors, officers, employees, representatives, subsidiaries, successors, and
+					assigns, or otherwise arising in connection with the Website and shall not be liable for any lost
+					profits, losses, punitive, incidential or consequential damages, or any claim against the COMPANY by
+					any other party; or (ii) any fault, inaccuracy, omission, delay, or any other failure in Our Website
+					on such equipment.</p>
+				<p>The content of other websites, services, goods, or advertisements that may be linked to Our Website
+					is not maintained or controlled by the COMPANY. The COMPANY therefore is not responsible for the
+					availability, content, or accuracy of other websites, services, or goods that may be linked to, or
+					advertised on Our Website. The COMPANY does not: (a) make any warranty, express or implied, with
+					respect to the use of the links provided on, or to, Our Website; (b) guarantee the accuracy,
+					completeness, usefulness or adequacy of any other websites, services, goods, or advertisements that
+					may be linked to Our Website; or (c) make any endorsement, express or implied, of any other
+					websites, services, goods, or advertisements that may be linked to Our Website. The COMPANY is also
+					not responsible for the reliability or continued availability of the telephone lines, wireless
+					services, communications media, and equipment you use to access Our Website. You understand and
+					acknowledge that The COMPANY and/or third-party contributors to Our Website may choose at any time
+					to inhibit or prohibit their content from being accessed unther terms.</p>
+				<p>You acknowledge that: (i) Our Website is provided for information purposes only; (ii) Our Website may
+					include certain information taken from other sources worldwide; (iii) We do not guarantee the
+					sequence, accuracy, completeness, fitness for a specific purpose or timeliness of Our Website; (iv)
+					the provision of certain parts of Our Website is subject to the terms and conditions of other
+					agreements to which We are a party; (v) none of the information contained on the Website constitutes
+					a solicitation, offer, opinion, or recommendation to use, buy, sell any financial instrument or
+					service, or to provide legal, tax, accounting, or investment advice or suitability of any financial
+					instrument or service; and (vi) the information provided on Our Website is not intended for use by,
+					or distribution to, any person or legal entity in any jurisdiction or country where such use or
+					distribution would be contrary to law or regulation. Accordingly, anything to the contrary herein
+					set forth notwithstanding, Our suppliers, agents, directors, officers, employees, representatives,
+					successors, and assigns shall not, directly or indirectly, be liable, in any way, to You or any
+					other person for any: (a) inaccuracies or errors in or omissions from Our Website; (b) delays,
+					errors, or interruptions in the transmission or delivery of Our Website and/or any part of its
+					content; or (c) loss or damage arising therefrom or occasioned thereby, or by any reason of
+					non-performance.</p>
+				<p>To the full extent permitted by applicable law, You agree to indemnify, defend and hold harmless Us,
+					Our employees, directors, shareholders, affiliates, agents, advisors or anyone acting on Our behalf
+					from and against any action, liability, claims, demands, damages, losses (including, without
+					limitation, loss of profit), payments or expenses, including legal expenses and attorney fees that
+					We incur if it directly or indirectly arises from Your use of Our Website or in connection with Your
+					breach of the terms or any unlawful or tortuous action or inaction by You or anyone on Your behalf
+					concerning Our Website and services.</p>
+				<h3>Amendments </h3>
+				<p>We may revise, update, and amend (“Changes”) these Terms from time to time in You sole discretion
+					without prior notice. All Changes are effective immediately from the moment We post them on You
+					Website and apply to all access and use of You Website thereafter. Your continued use of You Website
+					following the posting of revised Terms means that You accept and agree to the Changes. You are
+					expected to review this page from time to time so You are informed of any Changes, as they are
+					binding on You. Any terms and conditions proposed by You which are in addition to or which conflict
+					with the Terms are expressly rejected by Us and shall be not in force or effect.</p>
+				<p>Notice that We may modify, enhance or improve You Website and Services, and may accordingly offer
+					additional services. Such additional services may be governed by additional or different terms, as
+					provided by Us, where applicable.</p>
+				<h3>Miscellaneous</h3>
+				<p>You accept that We have the right to change the accessibility, content or technical specifications of
+					any aspect of You Website at any time in You sole discretion. You further accept that such changes
+					may result in You being unable to access and/or use You Website.</p>
+				<p>The failure of the COMPANY to exercise or enforce any right or provision of the Terms shall not
+					constitute a waiver of such right or provision.</p>
+				<p>You acknowledge and agree that the COMPANY can freely assign these Terms or any of its rights under
+					these Terms to any person without Your consent. You shall, however, not be entitled to assign these
+					Terms, in whole or in part, to another person without the prior written approval of the COMPANY.</p>
+				<p>Any formation or interpretation of this Agreement and any disputes arising from it will be governed
+					by the laws of the Republic of Cyprus. The competent courts in the Republic of Cyprus will have sole
+					and exclusive jurisdiction concerning the Terms and any claim, cause of action or dispute arising
+					out of or related thereto. You hereby agree to the exclusive jurisdiction of the above-mentioned
+					courts, agree to accept service of process by any means permitted by the applicable law and waive
+					any jurisdictional, conflict of law or venue defences otherwise available to You.</p>
+				<h3>Contact us</h3>
+				<p>You may contact Us at any time for any questions regarding these Terms via email: <a
+						href="mailto:info@fintiko.com">info@fintiko.com.</a></p>
+			</article>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__top"><img class="logo" src="public/img/logo.svg" width="135" height="24" alt="logo">
+			<h3 class="slogan"> Smart Payment Orchestration</h3>
+			<nav class="buttons">
+				<ul>
+					<li><button class="buttons__btn popup-btn" data-popup="apply-form">Apply</button></li>
+					<li><a class="buttons__btn" href="#" target="_blank">Sign in</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="footer__mapsite">
+			<div class="mapsite">
+				<div class="mapsite__item item">
+					<div class="item__head">
+						<h2>Products</h2><img src="public/img/footer-arr.svg" width="9" height="6" alt="arrow">
+					</div>
+					<nav class="item__body">
+						<ul>
+							<li> <a href="account.html">Accounts</a></li>
+							<li> <a href="payments.html">Payments</a></li>
+							<li> <a href="comming-soon-page.html">Pricing</a></li>
+							<li> <a href="services.html">Services</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="mapsite__item item">
+					<div class="item__head">
+						<h2>Company</h2><img src="public/img/footer-arr.svg" width="9" height="6" alt="arrow">
+					</div>
+					<nav class="item__body">
+						<ul>
+							<li> <a href="about-us.html">About us</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="mapsite__item item">
+					<div class="item__head">
+						<h2>Extras</h2><img src="public/img/footer-arr.svg" width="9" height="6" alt="arrow">
+					</div>
+					<nav class="item__body">
+						<ul>
+							<li> <a href="#" target="_blank">API Documentation</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="mapsite__item item">
+					<div class="item__head">
+						<h2>Help</h2><img src="public/img/footer-arr.svg" width="9" height="6" alt="arrow">
+					</div>
+					<nav class="item__body">
+						<ul>
+							<li> <a href="faq.html">FAQ</a></li>
+							<li> <a href="contacts.html">Contacts</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__bottom_wrap">
+				<div class="footer__bottom_left">
+					<nav class="links">
+						<ul>
+							<li><a class="links__item" href="cookies.html">Cookie policy</a></li>
+							<li><a class="links__item" href="privacy.html">Privacy Policy </a></li>
+							<li><a class="links__item" href="terms.html">Terms and Conditions</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__bottom_right">
+					<div class="copyright"> <small>© 2024 Fintiko LTD</small></div><a class="agency" href="#"
+						target="_blank"> <small>Designed by bsagency</small></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="cookies_popup" id="cookies">
+		<section class="container">
+			<article class="cookies_popup__wrap">
+				<h2 class="cookies_popup__text">We use cookies to enhance your browsing experience on fintiko.com. By
+					visiting our site, you agree to our <a href="cookies.html"> Cookie Policy</a></h2>
+				<div class="cookies_popup__buttons"><button class="button button-blue">Consent</button><button
+						class="button button-transparent-blue">Deny</button></div>
+			</article>
+		</section>
+	</div>
+	<div class="modal-wrap apply-form">
+		<div class="modal">
+			<div class="close"><img src="public/img/close.svg" width="20" height="20" alt="close icon"></div>
+			<div class="modal__container">
+				<hgroup>
+					<h1 class="title">Application info </h1>
+					<p class="descr">Please make sure that all fields are completed, all information is provided fully
+						and correctly.</p>
+				</hgroup>
+				<form class="form" id="formApply" action="apply_form.php"><label class="form__item"> <input type="text"
+							name="full_name" data-name="name" data-valid="false">
+						<p class="placeholder">Full Name:</p>
+						<div class="error-text">Information Required</div>
+					</label><label class="form__item"> <input type="text" name="email" data-name="email"
+							data-valid="false">
+						<p class="placeholder">Email Address:</p>
+						<div class="error-text">Information Required</div>
+					</label><label class="form__item"> <input type="number" name="tel" data-name="tel"
+							data-valid="false">
+						<p class="placeholder">Phone Number:</p>
+						<div class="error-text">Information Required</div>
+					</label><label class="form__item"> <input type="text" name="company_name" data-name="name"
+							data-valid="false">
+						<p class="placeholder">Company Name:</p>
+						<div class="error-text">Information Required</div>
+					</label><label class="form__item"> <input type="text" name="address" data-name="name"
+							data-valid="false">
+						<p class="placeholder">Business Address:</p>
+						<div class="error-text">Information Required</div>
+					</label><label class="form__item"> <input type="text" name="country" data-name="country"
+							data-valid="false" list="countryList"><datalist id="countryList"></datalist>
+						<p class="placeholder">Country/Region:</p>
+						<div class="error-text">Information Required</div>
+					</label><label class="form__item"> <input type="text" name="website" data-name="name"
+							data-valid="false">
+						<p class="placeholder">Business Website (if applicable):</p>
+						<div class="error-text">Information Required</div>
+					</label><label class="form__item mr-0"> <input type="text" name="nature_of_business"
+							data-name="name" data-valid="false">
+						<p class="placeholder">Nature of Business (brief description):</p>
+						<div class="error-text">Information Required</div>
+					</label>
+					<div class="form__item select mr-0">
+						<p class="placeholder">Estimated Monthly Transaction Volume:</p>
+						<div class="select-box">
+							<div class="options-container">
+								<div class="option"><input class="radio" id="first" type="radio" name="estimated"
+										value="0 - 100 000"><label for="first">0 - 100 000</label></div>
+								<div class="option"><input class="radio" id="second" type="radio" name="estimated"
+										value="100 000 - 250 000"><label for="second">100 000 - 250 000</label></div>
+								<div class="option"><input class="radio" id="third" type="radio" name="estimated"
+										value="250 000 - 500 000"><label for="third">250 000 - 500 000</label></div>
+								<div class="option"><input class="radio" id="forth" type="radio" name="estimated"
+										value="500 000 - 1 000 000"><label for="forth">500 000 - 1 000 000</label></div>
+								<div class="option"><input class="radio" id="fifth" type="radio" name="estimated"
+										value="1 000 000 +"><label for="fifth">1 000 000 +</label></div>
+							</div>
+							<div class="selector-wrapper">
+								<p class="selected"></p><svg class="arrow rotated" id="drp-arrow2" width="9" height="6"
+									viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1L4.5 4L8 1" stroke="#DCDBDB" stroke-width="2" stroke-linecap="round">
+									</path>
+								</svg>
+							</div>
+						</div>
+						<div class="error-text">Information Required</div>
+					</div><label class="form__item mr-0"><textarea type="text" data-valid="true"
+							name="notes"></textarea>
+						<p class="placeholder">Notes and aditional information:</p>
+					</label>
+					<div class="form__submit"><button class="btn button button-blue" type="submit">Submit
+							Application</button></div><label class="form__checkbox"><input type="checkbox"
+							data-valid="false" data-name="rule">
+						<div class="checkbox__box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"
+								fill="none">
+								<rect x="0.5" y="0.5" width="14" height="14" stroke="url(#paint0_linear_1522_2630)">
+								</rect>
+								<path
+									d="M12 4.90446L11.06 4L6.66667 8.19745L4.94667 6.56051L4 7.4586L6.66667 10L12 4.90446Z"
+									fill="white" opacity="0.4"></path>
+								<defs>
+									<lineargradient id="paint0_linear_1522_2630" x1="7.5" y1="0" x2="7.5" y2="15"
+										gradientUnits="userSpaceOnUse">
+										<stop stop-color="white" stop-opacity="0.6"></stop>
+										<stop offset="1" stop-color="white" stop-opacity="0"></stop>
+									</lineargradient>
+								</defs>
+							</svg></div>
+						<p class="text"> I agree to the <a href="terms.html">Business <br> Terms of Service </a>and our
+							<a href="privacy.html">privacy policy</a></p>
+						<div class="error-text">Information Required</div>
+					</label>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal-wrap fail">
+		<div class="modal">
+			<div class="close"><img src="public/img/close.svg" width="20" height="20" alt="close icon"></div>
+			<div class="modal__container">
+				<h2 class="title">Something is wrong</h2>
+			</div>
+		</div>
+	</div>
+	<div class="modal-wrap success">
+		<div class="modal">
+			<div class="close"><img src="public/img/close.svg" width="20" height="20" alt="close icon"></div>
+			<div class="modal__container">
+				<h2 class="title">Data sent successfully </h2>
+			</div>
+		</div>
+	</div>
+	<script src="./public/js/swiper-bundle.min.js" defer></script>
+	<script src="./public/js/validate.js" defer></script>
+	<script src="./public/js/main.min.js" defer></script>
+</body>
+
+</html>

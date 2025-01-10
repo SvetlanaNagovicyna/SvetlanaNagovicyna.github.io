@@ -1,21 +1,4 @@
-// var sass = require('gulp-sass')(require('sass'));
 
-// var gulp = require('gulp'),
-// 	// sass = require('gulp-sass'),
-// 	autoprefixer = require('gulp-autoprefixer'),
-// 	concat = require('gulp-concat'),
-// 	axis = require('axis'),
-// 	cssnano = require('gulp-cssnano'),
-// 	uglify = require('gulp-uglify'),
-// 	rename = require('gulp-rename'),
-// 	babel = require('gulp-babel'),
-// 	pug = require('gulp-pug'),
-// 	eslint = require('gulp-eslint'),
-// 	browserSync = require('browser-sync').create();
-
-// var htmlmin = require('gulp-htmlmin');
-// // var imagemin = require('gulp-imagemin');
-// import imagemin from 'gulp-imagemin';
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import sassModule from 'sass';
@@ -55,7 +38,6 @@ gulp.task('serve', function () {
 gulp.task('pug', function () {
 	return gulp.src('../frontend/pug/*.pug')
 		.pipe(pug({ pretty: false }))
-		.pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
 		.pipe(gulp.dest('../'))
 		.pipe(browserSync.stream());
 });
